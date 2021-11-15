@@ -9,7 +9,9 @@ export const ProfileModel = types
   .props({
     email : types.optional(types.string,"email@email.com"),
     password : types.optional(types.string,"password"),
-    token : types.optional(types.string,"token")
+    token : types.optional(types.string,"token"),
+    status : types.optional(types.number,123),
+
   })
   .views((self) => ({
     get getEmail(){
@@ -20,6 +22,9 @@ export const ProfileModel = types
     },
     get getToken(){
       return self.token
+    },
+    get getStatus(){
+      return self.status
     }
   })) // eslint-disable-line @typescript-eslint/no-unused-vars
   .actions((self) => ({
@@ -31,8 +36,10 @@ export const ProfileModel = types
       },
       setToken(value : string){
         self.token=value
-      }
-     
+      },
+     setStatus(value : number){
+       self.status=value
+     }
       
   })
   
@@ -42,7 +49,10 @@ export const ProfileModel = types
       const api = new Api()
       api.setup()
       yield api.ProfileLogin(email, password).then((response : any)=>{
-        //console.log(response)
+        self.setToken(response.token)
+        self.setEmail(response.email)
+        self.setPassword(response.password)
+        self.setStatus(response.status)
         
       })
       
@@ -54,6 +64,8 @@ export const ProfileModel = types
         self.setToken(response.token)
         self.setEmail(response.email)
         self.setPassword(response.password)
+        self.setStatus(response.status)
+
       })
     })
   })) // eslint-disable-line @typescript-eslint/no-unused-vars

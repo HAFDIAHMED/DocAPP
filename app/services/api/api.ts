@@ -109,7 +109,7 @@ export class Api {
 
     try {
         const ProfileResult=response.data
-        return {token : ProfileResult.access_token,email: data_input.email, password :data_input.password}
+        return {status: ProfileResult.status,token : ProfileResult.access_token,email: data_input.email, password :data_input.password}
     }catch {
       return {kind : "bad-data"}
     }
@@ -124,8 +124,8 @@ export class Api {
 
     try {
         const ProfileResult=response.data
-        console.log("response")
-        return {token : ProfileResult.access_token,email: data_input.email, password :data_input.password}
+        //console.log(response.status)
+        return {status: ProfileResult.status,token : ProfileResult.access_token,email: data_input.email, password :data_input.password}
     }catch {
       return {kind : "bad-data"}
     }
