@@ -7,8 +7,6 @@ import { color } from "../../../theme"
 import metrics from "../../../theme/metrics"
 import { useStores } from "../../../models"
 
-
-
 export const SignupScreen = observer(function SignupScreen() {
   // Pull in one of our MST stores
   // const { someStore, anotherStore } = useStores()

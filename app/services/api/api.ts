@@ -40,7 +40,7 @@ export class Api {
       timeout: this.config.timeout,
       headers: {
         Accept: "application/json",
-        
+
       },
     })
   }
@@ -132,9 +132,9 @@ export class Api {
   }
   async ProductFetch(token : string ): Promise<Types.ProfileType> {
     
-    this.apisauce.headers.authorization["token"]=token
+    this.apisauce.headers["token"]=token
     const response : ApiResponse<any>=await this.apisauce.get('/products');
-    console.log(response.status)
+    //console.log(response.status)
 
     if (!response.ok) {
       const problem = getGeneralApiProblem(response)
