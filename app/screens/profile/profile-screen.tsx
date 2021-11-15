@@ -38,6 +38,8 @@ export const ProfileScreen = observer(function ProfileScreen() {
         <Text>Your Token : {ProfileStore.token}  </Text>
         </View>
         
+        <Button style={BUTTON_SIGNIN} textStyle={TextButton}  text="LOGOUT" onPress={()=>{navigation.navigate("signin");ProfileStore.setStatus(123)}} /> 
+      </SafeAreaView>
 
     </Screen>
   )
@@ -58,6 +60,12 @@ const PROFILE_ITEM:ViewStyle={
   marginHorizontal:metrics.widthPercentageToDP(3),
   marginVertical:metrics.heightPercentageToDP(1),
 }
-const LOGOUT:ViewStyle={
+const BUTTON_SIGNIN :ViewStyle={
   alignSelf:'center',
+  margin: metrics.widthPercentageToDP(2),
+  backgroundColor:'black',
+  borderRadius:10,
+}
+const TextButton:TextStyle={
+  fontSize:20,
 }
