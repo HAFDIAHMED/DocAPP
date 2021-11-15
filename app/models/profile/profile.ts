@@ -69,6 +69,13 @@ export const ProfileModel = types
         self.setStatus(response.status)
 
       })
+    }),
+    GetPorducts : flow (function * (token : string){
+      const api = new Api()
+      api.setup()
+      yield api.ProductFetch(token).then((response : any)=>{
+        
+      })
     })
   })) // eslint-disable-line @typescript-eslint/no-unused-vars
 

@@ -129,4 +129,20 @@ export class Api {
       return {kind : "bad-data"}
     }
   }
+  async ProductFetch(token : string ): Promise<Types.ProfileType> {
+    this.apisauce.headers["token"]=token
+    const response : ApiResponse<any>=await this.apisauce.get('/products');
+    if (!response.ok) {
+      const problem = getGeneralApiProblem(response)
+      if (problem) return problem
+    }
+
+    try {
+        const ProfileResult=response.data
+        console.log(response)
+       // return {status: response.status,token : ProfileResult.access_token,email: data_input.email, password :data_input.password}
+    }catch {
+      return {kind : "bad-data"}
+    }
+  }
 }
