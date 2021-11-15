@@ -8,6 +8,7 @@ import { color } from "../../theme"
 import metrics from "../../theme/metrics"
 import { useStores } from "../../models"
 import { SafeAreaView } from "react-native-safe-area-context"
+import { TouchableOpacity } from "react-native-gesture-handler"
 
 const gear9_logo=require("../../../assets/images/gear9logo.jpg");
 
@@ -30,7 +31,19 @@ export const ProfileScreen = observer(function ProfileScreen() {
     <Screen style={ROOT} preset="scroll">
       <SafeAreaView>
       <Text preset="header" text="Welcome To Gear9" style={HEADER_STYLE} />
-    
+      <View style={PROFILE_ITEM}>
+        <Text>Your Email : ahmed@gmail.com </Text>
+        </View>  
+        <View style={PROFILE_ITEM}>
+        <Text>Your Password : ahmed </Text>
+        </View> 
+        <View style={PROFILE_ITEM}>
+        <Text>Your Token : ahmed </Text>
+        </View>
+        
+        <TouchableOpacity style={LogOut}>
+          <Text>LogOut</Text>
+          </TouchableOpacity>   
       </SafeAreaView>
 
     </Screen>
@@ -45,19 +58,13 @@ const HEADER_STYLE : ViewStyle = {
   marginVertical:metrics.heightPercentageToDP(5),
 }
 
-const BUTTON_SIGNIN :ViewStyle={
-  alignSelf:'center',
-  margin: metrics.widthPercentageToDP(2),
-  backgroundColor:'black',
-  borderRadius:10,
+const PROFILE_ITEM:ViewStyle={
+  borderWidth:1,
+  borderColor:"white",
+  borderRadius:5,
+  marginHorizontal:metrics.widthPercentageToDP(3),
+  marginVertical:metrics.heightPercentageToDP(1),
 }
-const TextButton:TextStyle={
-  fontSize:20,
-}
-const LOGO : ImageStyle={
+const LOGOUT:ViewStyle={
   alignSelf:'center',
-  margin:metrics.widthPercentageToDP(5),
-  borderRadius:20,
-  width:metrics.widthPercentageToDP(90),
-  height:metrics.heightPercentageToDP(25),
 }
