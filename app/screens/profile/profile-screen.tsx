@@ -8,7 +8,7 @@ import { color } from "../../theme"
 import metrics from "../../theme/metrics"
 import { useStores } from "../../models"
 
-const gear9_logo=require("");
+const gear9_logo=require("../../assets/images/gear9logo.jpeg");
 
 export const ProfileScreen = observer(function ProfileScreen() {
   // Pull in one of our MST stores
