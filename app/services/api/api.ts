@@ -130,12 +130,11 @@ export class Api {
     }
   }
   async ProductFetch(token : string ): Promise<Types.ProfileType> {
+    console.log(this.apisauce.headers["token"])
 
-    this.apisauce.headers["token"]=token
-
+    this.apisauce.headers["token"]="Bearer " +token
     
     const response : ApiResponse<any>=await this.apisauce.get('/products');
-    console.log(response)
 
     if (!response.ok) {
       const problem = getGeneralApiProblem(response)
