@@ -14,7 +14,7 @@ const gear9_logo=require("../../../assets/images/gear9logo.jpg");
 export const ProfileScreen = observer(function ProfileScreen() {
   // Pull in one of our MST stores
   // const { someStore, anotherStore } = useStores()
-  const {ProfileStore}=useStores();
+  //const {ProfileStore}=useStores();
   // Pull in navigation via hook
   // const navigation = useNavigation()
   const [profileInputs,SetProfileInputs]=useState({
@@ -22,7 +22,7 @@ export const ProfileScreen = observer(function ProfileScreen() {
     profilePassword:""
   })
   useEffect(()=>{
-    console.log(ProfileStore.getToken)
+    //console.log(ProfileStore.getToken)
       //console.log(ProfileStore.getEmail)
   })
   return (
