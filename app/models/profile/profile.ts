@@ -11,6 +11,7 @@ export const ProfileModel = types
     password : types.optional(types.string,"password"),
     token : types.optional(types.string,"token"),
     status : types.optional(types.number,123),
+    products: types.optional(types.array(types.string),[])
 
   })
   .views((self) => ({
