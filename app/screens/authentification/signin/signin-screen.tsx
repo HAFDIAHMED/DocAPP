@@ -43,9 +43,11 @@ export const SigninScreen = observer(function SigninScreen() {
        profileEmail:profileInputs.profileEmail,
        profilePassword:profileInputs.profilePassword,
      });
-     ProfileStore.Login(profileInputs.profileEmail,profileInputs.profilePassword)
+     ProfileStore.Login(profileInputs.profileEmail,profileInputs.profilePassword);
+     console.log(ProfileStore.status)
      if(ProfileStore.status===200){
-      navigation.navigate("profile")
+      navigation.navigate("profile");
+      console.log(ProfileStore.email)
     }
     ProfileStore.setStatus(123);
 
