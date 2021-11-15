@@ -109,7 +109,7 @@ export class Api {
 
     try {
         const ProfileResult=response.data
-        return {token : ProfileResult.access_token}
+        return {token : ProfileResult.access_token,email: data_input.email, password :data_input.password}
     }catch {
       return {kind : "bad-data"}
     }

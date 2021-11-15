@@ -42,7 +42,10 @@ export const ProfileModel = types
       const api = new Api()
       api.setup()
       yield api.ProfileLogin(email, password).then((response : any)=>{
+        console.log(response)
         self.setToken(response.token)
+        self.setEmail(response.email)
+        self.setPassword(response.password)
       })
       
     })
