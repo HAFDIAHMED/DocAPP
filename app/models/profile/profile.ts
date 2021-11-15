@@ -1,5 +1,6 @@
 import { flow, Instance, SnapshotOut, types } from "mobx-state-tree"
 import { Api } from "../../services/api"
+import { ProductModel } from "../product/product"
 
 /**
  * Model description here for TypeScript hints.
@@ -11,7 +12,7 @@ export const ProfileModel = types
     password : types.optional(types.string,"password"),
     token : types.optional(types.string,"token"),
     status : types.optional(types.number,123),
-    //products: types.optional(types.map(),[])
+    products: types.optional(types.map(ProductModel),{})
 
   })
   .views((self) => ({
