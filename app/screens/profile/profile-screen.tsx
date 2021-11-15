@@ -22,7 +22,7 @@ export const ProfileScreen = observer(function ProfileScreen() {
     profilePassword:""
   })
   useEffect(()=>{
-      console.log(ProfileStore.getEmail)
+      //console.log(ProfileStore.getEmail)
   })
   return (
     <Screen style={ROOT} preset="scroll">
