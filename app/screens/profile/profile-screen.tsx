@@ -21,7 +21,8 @@ export const ProfileScreen = observer(function ProfileScreen() {
   
   useEffect(()=>{
     //console.log(ProfileStore.Login("nilson@email.com","nilson"))
-   console.log(ProfileStore.GetPorducts(ProfileStore.token))
+   ProfileStore.GetPorducts(ProfileStore.token)
+   //console.log("hello")
       //console.log(ProfileStore.getEmail)
   })
   return (
