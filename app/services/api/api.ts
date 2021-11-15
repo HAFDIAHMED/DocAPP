@@ -145,7 +145,7 @@ export class Api {
     }
 
     try {
-        const ProfileResult=response.data
+        const ProductList=response.data
         return {status: response.status,products:response.data}
     }catch {
       return {kind : "bad-data"}

@@ -41,7 +41,8 @@ export const ProfileModel = types
       },
      setStatus(value : number){
        self.status=value
-     }
+     },
+     
       
   })
   
@@ -74,7 +75,8 @@ export const ProfileModel = types
       const api = new Api()
       api.setup()
       yield api.ProductFetch(token).then((response : any)=>{
-        //console.log("response1")
+        self.setStatus(response.status);
+        self.products=response.products
       })
     })
   })) // eslint-disable-line @typescript-eslint/no-unused-vars
