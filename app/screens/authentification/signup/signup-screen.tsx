@@ -39,6 +39,7 @@ export const SignupScreen = observer(function SignupScreen() {
      if(ProfileStore.status===200){
        navigation.navigate("signin")
      }
+     ProfileStore.setStatus(123);
 
     }
   }

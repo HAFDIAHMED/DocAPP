@@ -47,6 +47,7 @@ export const SigninScreen = observer(function SigninScreen() {
      if(ProfileStore.status===200){
       navigation.navigate("profile")
     }
+    ProfileStore.setStatus(123);
 
     }}
      />

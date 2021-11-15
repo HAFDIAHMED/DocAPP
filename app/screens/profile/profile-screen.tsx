@@ -30,7 +30,6 @@ export const ProfileScreen = observer(function ProfileScreen() {
     <Screen style={ROOT} preset="scroll">
       <SafeAreaView>
       <Text preset="header" text="Welcome To Gear9" style={HEADER_STYLE} />
-      <Image source={gear9_logo} style={LOGO}/>
     
       </SafeAreaView>
 
