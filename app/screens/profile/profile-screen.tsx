@@ -8,7 +8,7 @@ import { color } from "../../theme"
 import metrics from "../../theme/metrics"
 import { useStores } from "../../models"
 
-const gear9_logo=require("../../assets/images/gear9logo.jpeg");
+const gear9_logo=require("../../../assets/images/gear9logo.jpg");
 
 export const ProfileScreen = observer(function ProfileScreen() {
   // Pull in one of our MST stores
@@ -26,7 +26,7 @@ export const ProfileScreen = observer(function ProfileScreen() {
   return (
     <Screen style={ROOT} preset="scroll">
       <Text preset="header" text="SINGIN" style={HEADER_STYLE} />
-      
+      <Image source={gear9_logo}/>
      <Profile  textinput="Enter Your Email"
       onChangeText={(text)=>profileInputs.profileEmail=text}
       />
