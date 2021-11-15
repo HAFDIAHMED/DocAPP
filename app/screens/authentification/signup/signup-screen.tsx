@@ -1,10 +1,11 @@
 import React from "react"
 import { observer } from "mobx-react-lite"
-import { ViewStyle } from "react-native"
+import { SafeAreaView, ViewStyle } from "react-native"
 import { Screen, Text } from "../../../components"
 // import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "../../models"
 import { color } from "../../../theme"
+import metrics from "../../../theme/metrics"
 
 const ROOT: ViewStyle = {
   backgroundColor: color.palette.black,
@@ -19,7 +20,14 @@ export const SignupScreen = observer(function SignupScreen() {
   // const navigation = useNavigation()
   return (
     <Screen style={ROOT} preset="scroll">
-      <Text preset="header" text="" />
+         <SafeAreaView>
+      <Text preset="header" text="SINGUP To Gear9" style={HEADER_STYLE} />
+      </SafeAreaView>
     </Screen>
   )
 })
+
+const HEADER_STYLE : ViewStyle = {
+  alignSelf : 'center',
+  marginVertical:metrics.heightPercentageToDP(5),
+}
