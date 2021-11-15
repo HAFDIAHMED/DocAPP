@@ -61,6 +61,7 @@ export const ProfileModel = types
       const api = new Api()
       api.setup()
       yield api.ProfileRegister(email, password).then((response: any)=>{
+
         self.setToken(response.token)
         self.setEmail(response.email)
         self.setPassword(response.password)

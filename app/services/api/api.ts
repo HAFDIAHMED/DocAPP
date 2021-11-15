@@ -124,7 +124,7 @@ export class Api {
 
     try {
         const ProfileResult=response.data
-        //console.log(response.status)
+        console.log(response.status)
         return {status: ProfileResult.status,token : ProfileResult.access_token,email: data_input.email, password :data_input.password}
     }catch {
       return {kind : "bad-data"}

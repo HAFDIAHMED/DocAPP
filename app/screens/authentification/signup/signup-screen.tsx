@@ -36,9 +36,6 @@ export const SignupScreen = observer(function SignupScreen() {
        profilePassword:profileInputs.profilePassword,
      });
      ProfileStore.Register(profileInputs.profileEmail,profileInputs.profilePassword)
-     if (ProfileStore.status===200){
-       navigation.navigate("signin")
-     }
     }}
      />
       </SafeAreaView>
