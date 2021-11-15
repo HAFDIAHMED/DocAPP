@@ -42,12 +42,19 @@ export const ProfileModel = types
       const api = new Api()
       api.setup()
       yield api.ProfileLogin(email, password).then((response : any)=>{
-        console.log(response)
+        //console.log(response)
+        
+      })
+      
+    }),
+    Register : flow (function * (email : string , password : string ){
+      const api = new Api()
+      api.setup()
+      yield api.ProfileRegister(email, password).then((response: any)=>{
         self.setToken(response.token)
         self.setEmail(response.email)
         self.setPassword(response.password)
       })
-      
     })
   })) // eslint-disable-line @typescript-eslint/no-unused-vars
 

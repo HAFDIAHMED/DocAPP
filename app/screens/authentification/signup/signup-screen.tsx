@@ -6,13 +6,14 @@ import { Button, Profile, Screen, Text } from "../../../components"
 // import { useStores } from "../../models"
 import { color } from "../../../theme"
 import metrics from "../../../theme/metrics"
+import { useStores } from "../../../models"
 
 
 
 export const SignupScreen = observer(function SignupScreen() {
   // Pull in one of our MST stores
   // const { someStore, anotherStore } = useStores()
-
+  const {ProfileStore}=useStores();
   // Pull in navigation via hook
   // const navigation = useNavigation()
   const [profileInputs,SetProfileInputs]=useState({
@@ -35,7 +36,7 @@ export const SignupScreen = observer(function SignupScreen() {
        profileEmail:profileInputs.profileEmail,
        profilePassword:profileInputs.profilePassword,
      });
-     //ProfileStore.Login(profileInputs.profileEmail,profileInputs.profilePassword)
+     ProfileStore.Register(profileInputs.profileEmail,profileInputs.profilePassword)
     }}
      />
       </SafeAreaView>
