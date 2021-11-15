@@ -53,6 +53,7 @@ export const ProfileModel = types
         self.setEmail(response.email)
         self.setPassword(response.password)
         self.setStatus(response.status)
+        console.log(response.status)
         
       })
       
