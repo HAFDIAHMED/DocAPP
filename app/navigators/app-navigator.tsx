@@ -8,7 +8,7 @@ import React from "react"
 import { useColorScheme } from "react-native"
 import { NavigationContainer, DefaultTheme, DarkTheme } from "@react-navigation/native"
 import { createNativeStackNavigator } from "@react-navigation/native-stack"
-import { WelcomeScreen, DemoScreen, DemoListScreen, ProfileScreen } from "../screens"
+import { WelcomeScreen, DemoScreen, DemoListScreen, ProfileScreen, SigninScreen, SignupScreen } from "../screens"
 import { navigationRef } from "./navigation-utilities"
 
 /**
@@ -28,6 +28,8 @@ export type NavigatorParamList = {
   demo: undefined
   demoList: undefined
   profile : undefined
+  signin : undefined
+  signup : undefined
 }
 
 // Documentation: https://reactnavigation.org/docs/stack-navigator/
@@ -46,6 +48,9 @@ const AppStack = () => {
       <Stack.Screen name="welcome" component={WelcomeScreen} />
       <Stack.Screen name="demo" component={DemoScreen} />
       <Stack.Screen name="demoList" component={DemoListScreen} />
+      <Stack.Screen name="signin" component={SigninScreen} />
+      <Stack.Screen name="signup" component={SignupScreen} />
+
     </Stack.Navigator>
   )
 }
