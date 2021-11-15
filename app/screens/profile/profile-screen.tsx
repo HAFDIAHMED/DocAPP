@@ -22,8 +22,8 @@ export const ProfileScreen = observer(function ProfileScreen() {
     profilePassword:""
   })
   useEffect(()=>{
-    ProfileStore.Login("nilson@email.com","nilson")
-    console.log(ProfileStore.getToken)
+    //ProfileStore.Login("nilson@email.com","nilson")
+    //console.log(ProfileStore.getToken)
       //console.log(ProfileStore.getEmail)
   })
   return (
@@ -42,7 +42,9 @@ export const ProfileScreen = observer(function ProfileScreen() {
      onPress={()=>{SetProfileInputs({
        profileEmail:profileInputs.profileEmail,
        profilePassword:profileInputs.profilePassword,
-     })}}
+     });
+     ProfileStore.Login(profileInputs.profileEmail,profileInputs.profilePassword)
+    }}
      />
       </SafeAreaView>
 
