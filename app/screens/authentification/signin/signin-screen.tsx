@@ -24,7 +24,6 @@ export const SigninScreen = observer(function SigninScreen() {
     profilePassword:""
   })
   useEffect(()=>{
-      console.log("hello")
   })
   return (
     <Screen style={ROOT} preset="scroll">
