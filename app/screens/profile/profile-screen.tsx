@@ -1,7 +1,7 @@
 import React from "react"
 import { observer } from "mobx-react-lite"
-import { TextInput, View, ViewStyle } from "react-native"
-import { Profile, Screen, Text } from "../../components"
+import { TextInput, TextStyle, View, ViewStyle } from "react-native"
+import { Button, Profile, Screen, Text } from "../../components"
 // import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "../../models"
 import { color } from "../../theme"
@@ -19,14 +19,11 @@ export const ProfileScreen = observer(function ProfileScreen() {
     <Screen style={ROOT} preset="scroll">
       <Text preset="header" text="SINGIN" style={HEADER_STYLE} />
       
-      <View style={INPUT_STYLE}>
-          <TextInput 
-          placeholder="Enter your Password"
-          />
-      </View>
-     <Profile  textinput="email"
-     
-     />
+      
+     <Profile  textinput="Enter Your Email"/>
+     <Profile  textinput="Enter Your Password"/>
+     <Button text="SIGN IN " style={BUTTON_SIGNIN} />
+
     </Screen>
   )
 })
@@ -38,12 +35,11 @@ const HEADER_STYLE : ViewStyle = {
   alignSelf : 'center',
   marginVertical:metrics.heightPercentageToDP(5),
 }
-const INPUT_STYLE : ViewStyle={
-  borderWidth:1,
-  marginHorizontal:metrics.widthPercentageToDP(5),
-  marginVertical:metrics.heightPercentageToDP(1),
-  borderRadius:20,
-  backgroundColor:'white',
+
+const BUTTON_SIGNIN :ViewStyle={
+  alignSelf:'center',
+  margin: metrics.widthPercentageToDP(2),
 }
-const INPUT_CONTAINER : ViewStyle={
+const TextButton:TextStyle={
+  fontSize:10,
 }

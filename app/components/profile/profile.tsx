@@ -29,13 +29,14 @@ export interface ProfileProps extends TextInputProps {
    */
   style?: StyleProp<ViewStyle>
   textinput : string,
+  forwardeRef? : any
 }
 
 /**
  * Describe your component here
  */
 export const Profile = observer(function Profile(props: ProfileProps) {
-  const { style } = props
+  const { style,forwardeRef,...rest } = props
   const styles = flatten([CONTAINER, style])
 
   return (
@@ -43,6 +44,8 @@ export const Profile = observer(function Profile(props: ProfileProps) {
       <View style={INPUT_STYLE}> 
       <TextInput 
       placeholder={props.textinput}
+      {...rest}
+      ref={forwardeRef}
       />
       </View>
     </View>
