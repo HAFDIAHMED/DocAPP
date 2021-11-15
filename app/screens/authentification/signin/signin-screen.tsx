@@ -44,7 +44,9 @@ export const SigninScreen = observer(function SigninScreen() {
        profilePassword:profileInputs.profilePassword,
      });
      ProfileStore.Login(profileInputs.profileEmail,profileInputs.profilePassword)
-     navigation.navigate("profile")
+     if(ProfileStore.status===200){
+      navigation.navigate("profile")
+    }
     }}
      />
      <TouchableOpacity onPress={()=>navigation.navigate("signup")}>
