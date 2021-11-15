@@ -1,5 +1,5 @@
 import * as React from "react"
-import { StyleProp, TextInput, TextStyle, View, ViewStyle } from "react-native"
+import { StyleProp, TextInput, TextInputProps, TextStyle, View, ViewStyle } from "react-native"
 import { observer } from "mobx-react-lite"
 import { color, typography } from "../../theme"
 import { Text } from "../"
@@ -23,7 +23,7 @@ const INPUT_STYLE : ViewStyle={
   backgroundColor:'white',
 }
 
-export interface ProfileProps {
+export interface ProfileProps extends TextInputProps {
   /**
    * An optional style override useful for padding & margin.
    */

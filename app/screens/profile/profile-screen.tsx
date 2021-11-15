@@ -24,7 +24,9 @@ export const ProfileScreen = observer(function ProfileScreen() {
           placeholder="Enter your Password"
           />
       </View>
-     <Profile  textinput="email"/>
+     <Profile  textinput="email"
+     
+     />
     </Screen>
   )
 })
