@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 import { observer } from "mobx-react-lite"
 import { Image, ImageStyle, TextInput, TextStyle, View, ViewStyle } from "react-native"
 import { Button, Profile, Screen, Text } from "../../components"
-// import { useNavigation } from "@react-navigation/native"
+import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "../../models"
 import { color } from "../../theme"
 import metrics from "../../theme/metrics"
@@ -15,13 +15,10 @@ const gear9_logo=require("../../../assets/images/gear9logo.jpg");
 export const ProfileScreen = observer(function ProfileScreen() {
   // Pull in one of our MST stores
   // const { someStore, anotherStore } = useStores()
-  //const {ProfileStore}=useStores();
+  const {ProfileStore}=useStores();
   // Pull in navigation via hook
-  // const navigation = useNavigation()
-  const [profileInputs,SetProfileInputs]=useState({
-    profileEmail : "",
-    profilePassword:""
-  })
+   const navigation = useNavigation()
+  
   useEffect(()=>{
     //console.log(ProfileStore.Login("nilson@email.com","nilson"))
    // console.log(ProfileStore.getEmail)
@@ -32,16 +29,16 @@ export const ProfileScreen = observer(function ProfileScreen() {
       <SafeAreaView>
       <Text preset="header" text="Welcome To Gear9" style={HEADER_STYLE} />
       <View style={PROFILE_ITEM}>
-        <Text>Your Email : ahmed@gmail.com </Text>
+        <Text>Your Email : {ProfileStore.email} </Text>
         </View>  
         <View style={PROFILE_ITEM}>
-        <Text>Your Password : ahmed </Text>
+        <Text>Your Password : {ProfileStore.password}  </Text>
         </View> 
         <View style={PROFILE_ITEM}>
-        <Text>Your Token : ahmed </Text>
+        <Text>Your Token : {ProfileStore.token}  </Text>
         </View>
         
-        <TouchableOpacity style={LogOut}>
+        <TouchableOpacity style={LOGOUT} onPress={()=>navigation.goBack()}>
           <Text>LogOut</Text>
           </TouchableOpacity>   
       </SafeAreaView>
