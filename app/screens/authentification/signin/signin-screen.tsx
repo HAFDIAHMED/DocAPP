@@ -43,8 +43,10 @@ export const SigninScreen = observer(function SigninScreen() {
        profilePassword:profileInputs.profilePassword,
      });
      ProfileStore.Login(profileInputs.profileEmail,profileInputs.profilePassword);
-     //console.log(ProfileStore.status)
-      //navigation.navigate("profile");
+    if(ProfileStore.status===200){
+      navigation.navigate("profile")
+      ProfileStore.setStatus(123)
+    }
     
 
     }}

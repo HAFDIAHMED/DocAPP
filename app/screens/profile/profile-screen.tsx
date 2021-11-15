@@ -38,10 +38,6 @@ export const ProfileScreen = observer(function ProfileScreen() {
         <Text>Your Token : {ProfileStore.token}  </Text>
         </View>
         
-        <TouchableOpacity style={LOGOUT} onPress={()=>navigation.goBack()}>
-          <Text>LogOut</Text>
-          </TouchableOpacity>   
-      </SafeAreaView>
 
     </Screen>
   )

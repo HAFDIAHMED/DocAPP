@@ -36,9 +36,10 @@ export const SignupScreen = observer(function SignupScreen() {
        profilePassword:profileInputs.profilePassword,
      });
      ProfileStore.Register(profileInputs.profileEmail,profileInputs.profilePassword);
-       navigation.navigate("signin")
-     
-   
+     if(ProfileStore.status===200){
+      navigation.navigate("signin")
+      ProfileStore.setStatus(123)
+    }
 
     }
   }
