@@ -134,7 +134,7 @@ export class Api {
     
     this.apisauce.headers["token"]=token
     const response : ApiResponse<any>=await this.apisauce.get('/products');
-    console.log(this.apisauce.getBaseURL())
+    console.log(response)
 
     if (!response.ok) {
       const problem = getGeneralApiProblem(response)
