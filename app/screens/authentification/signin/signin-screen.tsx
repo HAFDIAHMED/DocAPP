@@ -24,7 +24,7 @@ export const SigninScreen = observer(function SigninScreen() {
     profilePassword:""
   })
   useEffect(()=>{
-
+      console.log("hello")
   })
   return (
     <Screen style={ROOT} preset="scroll">
@@ -44,12 +44,9 @@ export const SigninScreen = observer(function SigninScreen() {
        profilePassword:profileInputs.profilePassword,
      });
      ProfileStore.Login(profileInputs.profileEmail,profileInputs.profilePassword);
-     console.log(ProfileStore.status)
      if(ProfileStore.status===200){
       navigation.navigate("profile");
-      console.log(ProfileStore.email)
     }
-    ProfileStore.setStatus(123);
 
     }}
      />
