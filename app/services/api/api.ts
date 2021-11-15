@@ -40,6 +40,8 @@ export class Api {
       timeout: this.config.timeout,
       headers: {
         Accept: "application/json",
+      Authorization: 'Bearer ' ,
+
 
       },
     })
