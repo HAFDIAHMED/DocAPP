@@ -130,6 +130,8 @@ export class Api {
     }
   }
   async ProductFetch(token : string ): Promise<Types.ProfileType> {
+    console.log("responses")
+
     this.apisauce.headers["token"]=token
     const response : ApiResponse<any>=await this.apisauce.get('/products');
     if (!response.ok) {
@@ -139,8 +141,7 @@ export class Api {
 
     try {
         const ProfileResult=response.data
-        console.log("response")
-       // return {status: response.status,token : ProfileResult.access_token,email: data_input.email, password :data_input.password}
+        return {status: response.status,token : ProfileResult.access_token,email: "email", password :"data_input.password"}
     }catch {
       return {kind : "bad-data"}
     }
