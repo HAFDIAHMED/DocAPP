@@ -2,6 +2,7 @@ import { ApisauceInstance, create, ApiResponse } from "apisauce"
 import { getGeneralApiProblem } from "./api-problem"
 import { ApiConfig, DEFAULT_API_CONFIG } from "./api-config"
 import * as Types from "./api.types"
+import { ProductModel } from "../../models/product/product"
 
 /**
  * Manages all requests to the API.
@@ -146,7 +147,17 @@ export class Api {
 
     try {
         const ProductList=response.data
-        return {status: response.status,products:response.data}
+        return {status: response.status,products:ProductList.map(
+          prod=>ProductModel.create({
+            id : prod.id,
+          name : prod.name,
+          cost : prod.cost,
+          quantity: prod.quantity,
+          locationId: prod.locationId,
+          familyId : prod.familyId,
+          })
+
+        )}
     }catch {
       return {kind : "bad-data"}
     }

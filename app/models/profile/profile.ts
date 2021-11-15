@@ -77,6 +77,7 @@ export const ProfileModel = types
       yield api.ProductFetch(token).then((response : any)=>{
         self.setStatus(response.status);
         self.products=response.products
+        //console.log(response.products)
       })
     })
   })) // eslint-disable-line @typescript-eslint/no-unused-vars
