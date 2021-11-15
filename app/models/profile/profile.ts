@@ -46,6 +46,7 @@ export const ProfileModel = types
        self.status=value
      },
      
+     
       
   })
   
