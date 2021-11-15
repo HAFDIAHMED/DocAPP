@@ -133,6 +133,7 @@ export class Api {
   async ProductFetch(token : string ): Promise<Types.ProfileType> {
     
     this.apisauce.headers["token"]=token
+    
     const response : ApiResponse<any>=await this.apisauce.get('/products');
     console.log(response)
 
