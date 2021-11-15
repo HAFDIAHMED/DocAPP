@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react"
 import { observer } from "mobx-react-lite"
-import { Image, TextInput, TextStyle, View, ViewStyle } from "react-native"
+import { Image, ImageStyle, TextInput, TextStyle, View, ViewStyle } from "react-native"
 import { Button, Profile, Screen, Text } from "../../components"
 // import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "../../models"
 import { color } from "../../theme"
 import metrics from "../../theme/metrics"
 import { useStores } from "../../models"
+import { SafeAreaView } from "react-native-safe-area-context"
 
 const gear9_logo=require("../../../assets/images/gear9logo.jpg");
 
@@ -25,8 +26,9 @@ export const ProfileScreen = observer(function ProfileScreen() {
   })
   return (
     <Screen style={ROOT} preset="scroll">
-      <Text preset="header" text="SINGIN" style={HEADER_STYLE} />
-      <Image source={gear9_logo}/>
+      <SafeAreaView>
+      <Text preset="header" text="SINGIN To Gear9" style={HEADER_STYLE} />
+      <Image source={gear9_logo} style={LOGO}/>
      <Profile  textinput="Enter Your Email"
       onChangeText={(text)=>profileInputs.profileEmail=text}
       />
@@ -40,6 +42,7 @@ export const ProfileScreen = observer(function ProfileScreen() {
        profilePassword:profileInputs.profilePassword,
      })}}
      />
+      </SafeAreaView>
 
     </Screen>
   )
@@ -56,7 +59,16 @@ const HEADER_STYLE : ViewStyle = {
 const BUTTON_SIGNIN :ViewStyle={
   alignSelf:'center',
   margin: metrics.widthPercentageToDP(2),
+  backgroundColor:'black',
+  borderRadius:10,
 }
 const TextButton:TextStyle={
-  fontSize:15,
+  fontSize:20,
+}
+const LOGO : ImageStyle={
+  alignSelf:'center',
+  margin:metrics.widthPercentageToDP(5),
+  borderRadius:20,
+  width:metrics.widthPercentageToDP(90),
+  height:metrics.heightPercentageToDP(25),
 }
