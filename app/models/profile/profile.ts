@@ -11,10 +11,27 @@ export const ProfileModel = types
     token : types.optional(types.string,"token")
   })
   .views((self) => ({
-    
+    get getEmail(){
+      return self.email
+    },
+    get getPassword(){
+      return self.password
+    },
+    get getToken(){
+      return self.token
+    }
   })) // eslint-disable-line @typescript-eslint/no-unused-vars
   .actions((self) => ({
-
+      setEmail(value : string){
+        self.email=value
+      },
+      setPassword(value : string){
+        self.password=value
+      },
+      getToken(value : string){
+        self.token=value
+      }
+      
   })) // eslint-disable-line @typescript-eslint/no-unused-vars
 
 type ProfileType = Instance<typeof ProfileModel>
