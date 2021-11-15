@@ -22,6 +22,7 @@ export const ProfileScreen = observer(function ProfileScreen() {
   useEffect(()=>{
     //console.log(ProfileStore.Login("nilson@email.com","nilson"))
    ProfileStore.GetPorducts("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRhdGEiLCJwYXNzd29yZCI6ImRhdGEiLCJpYXQiOjE2MzY5OTI1NzgsImV4cCI6MTYzNjk5NjE3OH0.JJiI8pah1nFos9qvcEo6fCmHpjomHMI2nXgMAUTiNDs")
+   console.log(ProfileStore.status)
    //console.log("hello")
       //console.log(ProfileStore.getEmail)
   })
@@ -38,7 +39,6 @@ export const ProfileScreen = observer(function ProfileScreen() {
         <View style={PROFILE_ITEM}>
         <Text>Your Token : {ProfileStore.token}  </Text>
         </View>
-        
         <Button style={BUTTON_SIGNIN} textStyle={TextButton}  text="LOGOUT" onPress={()=>{navigation.navigate("signin");ProfileStore.setStatus(123)}} /> 
       </SafeAreaView>
 

@@ -27,6 +27,9 @@ export const ProfileModel = types
     },
     get getStatus(){
       return self.status
+    },
+    get getProduct(){
+      return self.products
     }
   })) // eslint-disable-line @typescript-eslint/no-unused-vars
   .actions((self) => ({
