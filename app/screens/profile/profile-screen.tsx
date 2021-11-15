@@ -22,6 +22,7 @@ export const ProfileScreen = observer(function ProfileScreen() {
     profilePassword:""
   })
   useEffect(()=>{
+    console.log(ProfileStore.getToken)
       //console.log(ProfileStore.getEmail)
   })
   return (

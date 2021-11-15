@@ -1,4 +1,5 @@
-import { Instance, SnapshotOut, types } from "mobx-state-tree"
+import { flow, Instance, SnapshotOut, types } from "mobx-state-tree"
+import { Api } from "../../services/api"
 
 /**
  * Model description here for TypeScript hints.
@@ -28,10 +29,23 @@ export const ProfileModel = types
       setPassword(value : string){
         self.password=value
       },
-      getToken(value : string){
+      setToken(value : string){
         self.token=value
       }
+     
       
+  })
+  
+  )
+  .actions((self)=>({
+    Login : flow (function* (email : string, password: string){
+      const api = new Api()
+      api.setup()
+      yield api.ProfileLogin(email, password).then((response : any)=>{
+        self.setToken(response.token)
+      })
+      
+    })
   })) // eslint-disable-line @typescript-eslint/no-unused-vars
 
 type ProfileType = Instance<typeof ProfileModel>
