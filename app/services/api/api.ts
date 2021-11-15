@@ -114,4 +114,19 @@ export class Api {
       return {kind : "bad-data"}
     }
   }
+  async ProfileRegister(email : string , password : string): Promise<Types.ProfileType> {
+    const data_input = {email,password}
+    const response : ApiResponse<any>=await this.apisauce.post('/auth/register',data_input);
+    if (!response.ok) {
+      const problem = getGeneralApiProblem(response)
+      if (problem) return problem
+    }
+
+    try {
+        const ProfileResult=response.data
+        return {token : ProfileResult.access_token,email: data_input.email, password :data_input.password}
+    }catch {
+      return {kind : "bad-data"}
+    }
+  }
 }

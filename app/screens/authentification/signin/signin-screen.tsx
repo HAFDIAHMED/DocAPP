@@ -43,6 +43,7 @@ export const SigninScreen = observer(function SigninScreen() {
        profilePassword:profileInputs.profilePassword,
      });
      //ProfileStore.Login(profileInputs.profileEmail,profileInputs.profilePassword)
+     navigation.navigate("profile")
     }}
      />
      <TouchableOpacity onPress={()=>navigation.navigate("signup")}>

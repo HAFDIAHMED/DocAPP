@@ -29,23 +29,9 @@ export const ProfileScreen = observer(function ProfileScreen() {
   return (
     <Screen style={ROOT} preset="scroll">
       <SafeAreaView>
-      <Text preset="header" text="SINGIN To Gear9" style={HEADER_STYLE} />
+      <Text preset="header" text="Welcome To Gear9" style={HEADER_STYLE} />
       <Image source={gear9_logo} style={LOGO}/>
-     <Profile  textinput="Enter Your Email"
-      onChangeText={(text)=>profileInputs.profileEmail=text}
-      />
-     <Profile  textinput="Enter Your Password"
-      onChangeText={(text)=>profileInputs.profilePassword=text}
-      secureTextEntry={true}
-     />
-     <Button text="SIGN IN" style={BUTTON_SIGNIN} textStyle={TextButton}
-     onPress={()=>{SetProfileInputs({
-       profileEmail:profileInputs.profileEmail,
-       profilePassword:profileInputs.profilePassword,
-     });
-     //ProfileStore.Login(profileInputs.profileEmail,profileInputs.profilePassword)
-    }}
-     />
+    
       </SafeAreaView>
 
     </Screen>
