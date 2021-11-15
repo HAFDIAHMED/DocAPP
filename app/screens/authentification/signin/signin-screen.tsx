@@ -7,6 +7,7 @@ import { Button, Profile, Screen, Text } from "../../../components"
 import { color } from "../../../theme"
 import metrics from "../../../theme/metrics"
 import { useNavigation } from "@react-navigation/core"
+import { useStores } from "../../../models"
 
 
 const gear9_logo=require("../../../../assets/images/gear9logo.jpg");
@@ -14,7 +15,7 @@ const gear9_logo=require("../../../../assets/images/gear9logo.jpg");
 export const SigninScreen = observer(function SigninScreen() {
   // Pull in one of our MST stores
   // const { someStore, anotherStore } = useStores()
-  //const {ProfileStore}=useStores();
+  const {ProfileStore}=useStores();
 
   // Pull in navigation via hook
    const navigation = useNavigation()
@@ -42,7 +43,7 @@ export const SigninScreen = observer(function SigninScreen() {
        profileEmail:profileInputs.profileEmail,
        profilePassword:profileInputs.profilePassword,
      });
-     //ProfileStore.Login(profileInputs.profileEmail,profileInputs.profilePassword)
+     ProfileStore.Login(profileInputs.profileEmail,profileInputs.profilePassword)
      navigation.navigate("profile")
     }}
      />

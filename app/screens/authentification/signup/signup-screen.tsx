@@ -1,8 +1,8 @@
 import React, { useState } from "react"
 import { observer } from "mobx-react-lite"
-import { SafeAreaView, ViewStyle } from "react-native"
+import { ImageStyle, SafeAreaView, TextStyle, ViewStyle } from "react-native"
 import { Button, Profile, Screen, Text } from "../../../components"
-// import { useNavigation } from "@react-navigation/native"
+import { useNavigation } from "@react-navigation/native"
 import { color } from "../../../theme"
 import metrics from "../../../theme/metrics"
 import { useStores } from "../../../models"
@@ -14,7 +14,7 @@ export const SignupScreen = observer(function SignupScreen() {
   // const { someStore, anotherStore } = useStores()
   const {ProfileStore}=useStores();
   // Pull in navigation via hook
-  // const navigation = useNavigation()
+   const navigation = useNavigation()
   const [profileInputs,SetProfileInputs]=useState({
     profileEmail : "",
     profilePassword:""
@@ -36,6 +36,9 @@ export const SignupScreen = observer(function SignupScreen() {
        profilePassword:profileInputs.profilePassword,
      });
      ProfileStore.Register(profileInputs.profileEmail,profileInputs.profilePassword)
+     if (ProfileStore.status===200){
+       navigation.navigate("signin")
+     }
     }}
      />
       </SafeAreaView>
