@@ -32,7 +32,7 @@ export const ProfileScreen = observer(function ProfileScreen() {
       />
      <Profile  textinput="Enter Your Password"
       onChangeText={(text)=>profileInputs.profilePassword=text}
-
+      secureTextEntry={true}
      />
      <Button text="SIGN IN " style={BUTTON_SIGNIN} textStyle={TextButton}
      onPress={()=>{SetProfileInputs({

@@ -5,9 +5,17 @@ import { Instance, SnapshotOut, types } from "mobx-state-tree"
  */
 export const ProfileModel = types
   .model("Profile")
-  .props({})
-  .views((self) => ({})) // eslint-disable-line @typescript-eslint/no-unused-vars
-  .actions((self) => ({})) // eslint-disable-line @typescript-eslint/no-unused-vars
+  .props({
+    email : types.optional(types.string,"email@email.com"),
+    password : types.optional(types.string,"password"),
+    token : types.optional(types.string,"token")
+  })
+  .views((self) => ({
+    
+  })) // eslint-disable-line @typescript-eslint/no-unused-vars
+  .actions((self) => ({
+
+  })) // eslint-disable-line @typescript-eslint/no-unused-vars
 
 type ProfileType = Instance<typeof ProfileModel>
 export interface Profile extends ProfileType {}
