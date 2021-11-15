@@ -12,7 +12,4 @@ import { AppRegistry } from "react-native"
 
 AppRegistry.registerComponent("PizzaApp", () => App)
 export default App
-if(__DEV__) {
-    import('./ReactotronConfig').then(() => console.log('Reactotron Configured'))
-  }
-  
+

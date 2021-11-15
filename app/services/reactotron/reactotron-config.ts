@@ -1,5 +1,3 @@
-import { AsyncStorage } from 'react-native'
-import Reactotron from 'reactotron-react-native'
 export interface ReactotronConfig {
   /** The name of the app. */
   name?: string
@@ -30,13 +28,3 @@ export const DEFAULT_REACTOTRON_CONFIG: ReactotronConfig = {
     snapshots: false,
   },
 }
-const middleware = (tron) => { /* plugin definition */ };
-
-Reactotron
-  .setAsyncStorageHandler(AsyncStorage) // AsyncStorage would either come from `react-native` or `@react-native-community/async-storage` depending on where you get it from
-  .configure({
-    name: "React Native Demo"
-  })
-  .useReactNative() // add all built-in react native plugins
-  .use(middleware) // plus some custom made plugin.
-  .connect();
