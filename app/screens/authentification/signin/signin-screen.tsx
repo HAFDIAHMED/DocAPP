@@ -32,14 +32,30 @@ export const SigninScreen = observer(function SigninScreen() {
      return true
     }
   }
+  const Password_RegExp=(text)=>{
+    let regpassword =/[0-9]{8}$/
+    if (regpassword.test(text)){
+      return true
+    }
+    else {
+      return false
+    }
+  }
+  const Email_RegExp=(text)=>{
+    let regemail =/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w\w+)+$/
+    if (regemail.test(text)){
+      return true
+    }
+    else {
+      return false
+    }
+  }
   const [profileInputs,SetProfileInputs]=useState({
     profileEmail : "",
     profilePassword:""
   })
-  const pattern = /[0-9]{1}$/
 
   useEffect(()=>{
-     console.log(pattern.test("1111"))
   })
   return (
     <Screen style={ROOT} preset="scroll">
@@ -49,20 +65,29 @@ export const SigninScreen = observer(function SigninScreen() {
      <Profile  textinput="Enter Your Email"
       onChangeText={(text)=>
         {
-          if (validate(text)){
+          if (Email_RegExp(text)){
           profileInputs.profileEmail=text
 
         }
         else {
-          console.log(validate(text))
+          console.log(Password_RegExp(text))
         }
       }
     }
   
       />
      <Profile  textinput="Enter Your Password"
-      onChangeText={(text)=>profileInputs.profilePassword=text}
-      secureTextEntry={true}
+  onChangeText={(text)=>
+    {
+      if (Password_RegExp(text)){
+      profileInputs.profileEmail=text
+
+    }
+    else {
+      console.log(Password_RegExp(text))
+    }
+  }
+}      secureTextEntry={true}
      />
      <Button text="SIGN IN" style={BUTTON_SIGNIN} textStyle={TextButton}
      onPress={()=>{SetProfileInputs({
