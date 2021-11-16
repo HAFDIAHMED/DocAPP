@@ -85,7 +85,7 @@ export const SigninScreen = observer(function SigninScreen() {
 
     }
     else {
-      console.log(Password_RegExp(text))
+      //console.log(Password_RegExp(text))
     }
   }
 }      secureTextEntry={true}
