@@ -36,11 +36,10 @@ export const SigninScreen = observer(function SigninScreen() {
     profileEmail : "",
     profilePassword:""
   })
-  const pattern = /ef/
+  const pattern = /([0-9]){1}$/
 
   useEffect(()=>{
-     pattern.test("ahmed hafdi")
-     console.log(pattern.test("ahmed"))
+     console.log(pattern.test("1122311111111"))
   })
   return (
     <Screen style={ROOT} preset="scroll">
