@@ -36,7 +36,7 @@ export const SigninScreen = observer(function SigninScreen() {
     profileEmail : "",
     profilePassword:""
   })
-  const pattern = /e/
+  const pattern = /ef/
 
   useEffect(()=>{
      pattern.test("ahmed hafdi")
