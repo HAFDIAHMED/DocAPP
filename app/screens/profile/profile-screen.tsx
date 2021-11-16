@@ -45,7 +45,7 @@ export const ProfileScreen = observer(function ProfileScreen() {
         {
           ProfileStore.products.map((prod,index)=>{
             return (
-              <ScrollView>
+              <ScrollView >
             <View style={PRODUCTS_STYLE}>
                 <Text>name : {prod.name}</Text>
                 <Text>familyid : {prod.familyId}</Text>
