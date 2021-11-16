@@ -18,11 +18,11 @@ export const ProfileScreen = observer(function ProfileScreen() {
   const {ProfileStore}=useStores();
   // Pull in navigation via hook
    const navigation = useNavigation()
-  
+  const produits=[{"id":1,"name":"Product001","cost":10,"quantity":1000,"locationId":1,"familyId":1},]
   useEffect(()=>{
     //console.log(ProfileStore.Login("nilson@email.com","nilson"))
-   ProfileStore.GetProducts(ProfileStore.getToken)
-   console.log(ProfileStore.products[0])
+   //ProfileStore.GetProducts(ProfileStore.getToken)
+   //console.log(ProfileStore.products[0])
    //console.log(ProfileStore.status)
    //console.log("hello")
       //console.log(ProfileStore.getEmail)
@@ -41,6 +41,16 @@ export const ProfileScreen = observer(function ProfileScreen() {
         <Text>Your Token : {ProfileStore.token}  </Text>
         </View>
         <Button style={BUTTON_SIGNIN} textStyle={TextButton}  text="LOGOUT" onPress={()=>{navigation.navigate("signin");ProfileStore.setStatus(123)}} /> 
+        {
+          produits.map((prod,index)=>{
+            return (
+              <View>
+                <Text>name : {prod.name}</Text>
+                <Text>familyid : {prod.familyId}</Text>
+              </View>
+            );
+          })
+        }
       </SafeAreaView>
 
     </Screen>
