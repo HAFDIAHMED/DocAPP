@@ -8,7 +8,7 @@ import { color } from "../../theme"
 import metrics from "../../theme/metrics"
 import { useStores } from "../../models"
 import { SafeAreaView } from "react-native-safe-area-context"
-import { TouchableOpacity } from "react-native-gesture-handler"
+import { ScrollView, TouchableOpacity } from "react-native-gesture-handler"
 
 const gear9_logo=require("../../../assets/images/gear9logo.jpg");
 
@@ -18,13 +18,11 @@ export const ProfileScreen = observer(function ProfileScreen() {
   const {ProfileStore}=useStores();
   // Pull in navigation via hook
    const navigation = useNavigation()
-  const produits=[{"id":1,"name":"Product001","cost":10,"quantity":1000,"locationId":1,"familyId":1},]
-  const [ProductsFetching,setProductsFetching]=useState([]);
+  const [loading,setLoading]=useState(false);
 
   useEffect(()=>{
     //console.log(ProfileStore.Login("nilson@email.com","nilson"))
    ProfileStore.GetProducts(ProfileStore.getToken)
-   setProductsFetching(ProfileStore.products)
    //console.log(ProfileStore.products[0])
    //console.log(ProfileStore.status)
    //console.log("hello")
@@ -45,12 +43,17 @@ export const ProfileScreen = observer(function ProfileScreen() {
         </View>
         <Button style={BUTTON_SIGNIN} textStyle={TextButton}  text="LOGOUT" onPress={()=>{navigation.navigate("signin");ProfileStore.setStatus(123)}} /> 
         {
-          ProductsFetching.map((prod,index)=>{
+          ProfileStore.products.map((prod,index)=>{
             return (
               <View style={PRODUCTS_STYLE}>
+                <ScrollView>
                 <Text>name : {prod.name}</Text>
                 <Text>familyid : {prod.familyId}</Text>
                 <Text>cost : {prod.cost}</Text>
+                <Text>Quantity : {prod.quantity}</Text>
+                </ScrollView>
+                
+
               </View>
             );
           })
@@ -90,4 +93,5 @@ const PRODUCTS_STYLE : ViewStyle={
   borderWidth:1,
   marginHorizontal:metrics.widthPercentageToDP(3),
   paddingHorizontal:metrics.heightPercentageToDP(1),
+  marginVertical:metrics.heightPercentageToDP(1),
 }
