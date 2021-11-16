@@ -45,7 +45,9 @@ export const ProfileModel = types
      setStatus(value : number){
        self.status=value
      },
-     
+     setProducts_id(value : number){
+       
+     }
      
       
   })
@@ -74,7 +76,7 @@ export const ProfileModel = types
         self.setStatus(response.status)
       })
     }),
-    GetPorducts : flow (function * (token : string){
+    GetProducts : flow (function * (token : string){
       const api = new Api()
       api.setup()
       yield api.ProductFetch(token).then((response : any)=>{
