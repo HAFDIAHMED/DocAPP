@@ -56,6 +56,7 @@ export const SigninScreen = observer(function SigninScreen() {
         }
       }
     }
+  
       />
      <Profile  textinput="Enter Your Password"
       onChangeText={(text)=>profileInputs.profilePassword=text}
