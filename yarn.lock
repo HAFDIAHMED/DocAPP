@@ -3286,6 +3286,11 @@
   resolved "https://registry.yarnpkg.com/@types/braces/-/braces-3.0.1.tgz#5a284d193cfc61abb2e5a50d36ebbc50d942a32b"
   integrity sha512-+euflG6ygo4bn0JHtn4pYqcXwRtLvElQ7/nnjDu7iYG56H0+OhCd7d6Ug0IE3WcFpZozBKW2+80FUbv5QGk5AQ==
 
+"@types/geojson@^7946.0.7":
+  version "7946.0.8"
+  resolved "https://registry.yarnpkg.com/@types/geojson/-/geojson-7946.0.8.tgz#30744afdb385e2945e22f3b033f897f76b1f12ca"
+  integrity sha512-1rkryxURpr6aWP7R786/UQOkJ3PcpQiWkAXBmdWc7ryFWqN6a4xfK7BtjXvFBKO9LjQ+MWQSWxYeZX1OApnArA==
+
 "@types/glob-base@^0.3.0":
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/@types/glob-base/-/glob-base-0.3.0.tgz#a581d688347e10e50dd7c17d6f2880a10354319d"
@@ -15717,6 +15722,13 @@ react-native-keychain@6.2.0:
   version "6.2.0"
   resolved "https://registry.yarnpkg.com/react-native-keychain/-/react-native-keychain-6.2.0.tgz#8f4cff503aad367141db5aea0189ead9240c28ff"
   integrity sha512-U6fnOQRJPq+c0Abl+FoYy9v0H3kQU587tMamU/o+MoBSUScFLE3DQpkyT1PW4NF5IObgiGuqQdmjC2KgtBpjGA==
+
+react-native-maps@^0.29.4:
+  version "0.29.4"
+  resolved "https://registry.yarnpkg.com/react-native-maps/-/react-native-maps-0.29.4.tgz#eb4a446104ed2aca5361422d06712f26d4c0d562"
+  integrity sha512-Td2KE8+KODcHOxfB1GBNnzFo4/89rlLiC7yTvqQZh0tGVrEzIcgSleUZRrjtq/WvSWSR4rql4AS+0VsBgDkYrw==
+  dependencies:
+    "@types/geojson" "^7946.0.7"
 
 react-native-safe-area-context@3.1.8:
   version "3.1.8"
