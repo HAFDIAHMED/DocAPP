@@ -83,7 +83,6 @@ export const ProfileModel = types
 
         self.setStatus(response.status);
         self.setProducts_id(response.products)
-        //console.log(response)
       })
     })
   })) // eslint-disable-line @typescript-eslint/no-unused-vars
