@@ -19,13 +19,12 @@ export const ProfileScreen = observer(function ProfileScreen() {
   // Pull in navigation via hook
    const navigation = useNavigation()
   const produits=[{"id":1,"name":"Product001","cost":10,"quantity":1000,"locationId":1,"familyId":1},]
-  const [ProductsFetching,setProductsFetching]=useState({});
+  const [ProductsFetching,setProductsFetching]=useState([]);
 
   useEffect(()=>{
     //console.log(ProfileStore.Login("nilson@email.com","nilson"))
    ProfileStore.GetProducts(ProfileStore.getToken)
    setProductsFetching(ProfileStore.products)
-   console.log(ProductsFetching)
    //console.log(ProfileStore.products[0])
    //console.log(ProfileStore.status)
    //console.log("hello")
@@ -45,7 +44,17 @@ export const ProfileScreen = observer(function ProfileScreen() {
         <Text>Your Token : {ProfileStore.token}  </Text>
         </View>
         <Button style={BUTTON_SIGNIN} textStyle={TextButton}  text="LOGOUT" onPress={()=>{navigation.navigate("signin");ProfileStore.setStatus(123)}} /> 
-        
+        {
+          ProductsFetching.map((prod,index)=>{
+            return (
+              <View style={PRODUCTS_STYLE}>
+                <Text>name : {prod.name}</Text>
+                <Text>familyid : {prod.familyId}</Text>
+                <Text>cost : {prod.cost}</Text>
+              </View>
+            );
+          })
+        }
       </SafeAreaView>
 
     </Screen>
@@ -75,4 +84,10 @@ const BUTTON_SIGNIN :ViewStyle={
 }
 const TextButton:TextStyle={
   fontSize:20,
+}
+const PRODUCTS_STYLE : ViewStyle={
+  alignSelf:'center',
+  borderWidth:1,
+  marginHorizontal:metrics.widthPercentageToDP(3),
+  paddingHorizontal:metrics.heightPercentageToDP(1),
 }
