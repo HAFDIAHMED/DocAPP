@@ -8,8 +8,6 @@ import { color } from "../../../theme"
 import metrics from "../../../theme/metrics"
 import { useNavigation } from "@react-navigation/core"
 import { useStores } from "../../../models"
-
-
 const gear9_logo=require("../../../../assets/images/gear9logo.jpg");
 
 export const SigninScreen = observer(function SigninScreen() {
