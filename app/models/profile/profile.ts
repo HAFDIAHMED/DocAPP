@@ -80,8 +80,8 @@ export const ProfileModel = types
       api.setup()
       yield api.ProductFetch(token).then((response : any)=>{
         self.setStatus(response.status);
-        self.products=response.products
-        //console.log(response.products)
+        //self.products=response.products
+        console.log(response.products[0])
       })
     })
   })) // eslint-disable-line @typescript-eslint/no-unused-vars

@@ -22,7 +22,7 @@ export const ProfileScreen = observer(function ProfileScreen() {
   useEffect(()=>{
     //console.log(ProfileStore.Login("nilson@email.com","nilson"))
    ProfileStore.GetPorducts(ProfileStore.getToken)
-   console.log(ProfileStore.status)
+   //console.log(ProfileStore.status)
    //console.log("hello")
       //console.log(ProfileStore.getEmail)
   })
