@@ -9,6 +9,8 @@ import metrics from "../../../theme/metrics"
 import { useNavigation } from "@react-navigation/core"
 import { useStores } from "../../../models"
 const gear9_logo=require("../../../../assets/images/gear9logo.jpg");
+import moment from 'moment';
+
 
 export const SigninScreen = observer(function SigninScreen() {
   // Pull in one of our MST stores
@@ -52,9 +54,9 @@ export const SigninScreen = observer(function SigninScreen() {
     profileEmail : "",
     profilePassword:""
   })
-  const moment = require("moment");
-  
+
   useEffect(()=>{
+    console.log(moment().format('YYYY DD MM'))
   })
   return (
     <Screen style={ROOT} preset="scroll">
