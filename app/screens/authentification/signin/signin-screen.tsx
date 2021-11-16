@@ -18,12 +18,25 @@ export const SigninScreen = observer(function SigninScreen() {
   const {ProfileStore}=useStores();
 
   // Pull in navigation via hook
-   const navigation = useNavigation()
+ 
+   const navigation = useNavigation();
+   const validate = (text) => {
+    console.log(text);
+    let reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w\w+)+$/;
+    if (reg.test(text) === false) {
+      
+      return false;
+    }
+    else {
+     return true
+    }
+  }
   const [profileInputs,SetProfileInputs]=useState({
     profileEmail : "",
     profilePassword:""
   })
   useEffect(()=>{
+    validate("ahmedgmail.Com")
   })
   return (
     <Screen style={ROOT} preset="scroll">
@@ -31,7 +44,18 @@ export const SigninScreen = observer(function SigninScreen() {
       <Text preset="header" text="SINGIN To Gear9" style={HEADER_STYLE} />
       <Image source={gear9_logo} style={LOGO}/>
      <Profile  textinput="Enter Your Email"
-      onChangeText={(text)=>profileInputs.profileEmail=text}
+      onChangeText={(text)=>
+        {
+          if (validate(text)){
+          profileInputs.profileEmail=text
+
+        }
+        else {
+          console.log(validate(text))
+
+        }
+      }
+    }
       />
      <Profile  textinput="Enter Your Password"
       onChangeText={(text)=>profileInputs.profilePassword=text}
