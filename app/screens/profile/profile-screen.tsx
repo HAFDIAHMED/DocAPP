@@ -32,6 +32,8 @@ export const ProfileScreen = observer(function ProfileScreen() {
     <Screen style={ROOT} preset="scroll">
       <SafeAreaView>
       <Text preset="header" text="Welcome To Gear9" style={HEADER_STYLE} />
+      <Button style={BUTTON_SIGNIN} textStyle={TextButton}  text="LOGOUT" onPress={()=>{navigation.navigate("signin");ProfileStore.setStatus(123)}} /> 
+
       <View style={PROFILE_ITEM}>
         <Text>Your Email : {ProfileStore.email} </Text>
         </View>  
@@ -41,7 +43,6 @@ export const ProfileScreen = observer(function ProfileScreen() {
         <View style={PROFILE_ITEM}>
         <Text>Your Token : {ProfileStore.token}  </Text>
         </View>
-        <Button style={BUTTON_SIGNIN} textStyle={TextButton}  text="LOGOUT" onPress={()=>{navigation.navigate("signin");ProfileStore.setStatus(123)}} /> 
         {
           ProfileStore.products.map((prod,index)=>{
             return (
@@ -91,6 +92,9 @@ const TextButton:TextStyle={
 const PRODUCTS_STYLE : ViewStyle={
   alignSelf:'center',
   borderWidth:1,
+  borderColor:"white",
+  borderRadius:10,
+
   marginHorizontal:metrics.widthPercentageToDP(3),
   paddingHorizontal:metrics.heightPercentageToDP(1),
   marginVertical:metrics.heightPercentageToDP(1),
