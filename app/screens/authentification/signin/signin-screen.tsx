@@ -25,7 +25,8 @@ export const SigninScreen = observer(function SigninScreen() {
     let reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w\w+)+$/;
     if (reg.test(text) === false) {
       
-      return false;
+      return false
+     
     }
     else {
      return true
@@ -52,7 +53,6 @@ export const SigninScreen = observer(function SigninScreen() {
         }
         else {
           console.log(validate(text))
-
         }
       }
     }
