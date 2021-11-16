@@ -10,6 +10,8 @@ import { useNavigation } from "@react-navigation/core"
 import { useStores } from "../../../models"
 const gear9_logo=require("../../../../assets/images/gear9logo.jpg");
 import moment from 'moment';
+import MapView from 'react-native-maps';
+
 
 
 export const SigninScreen = observer(function SigninScreen() {
@@ -109,6 +111,7 @@ export const SigninScreen = observer(function SigninScreen() {
      <Text>Dont you have an account , Register</Text>
 
      </TouchableOpacity>
+     
       </SafeAreaView>
     </Screen>
   )
