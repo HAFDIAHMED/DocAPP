@@ -1,5 +1,5 @@
 import { Instance, SnapshotOut, types } from "mobx-state-tree"
-import { ProfileModel } from ".."
+import { ProfileModel } from "../profile/profile"
 import { CharacterStoreModel } from "../character-store/character-store"
 
 /**
