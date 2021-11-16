@@ -22,7 +22,7 @@ export const ProfileScreen = observer(function ProfileScreen() {
 
   useEffect(()=>{
     //console.log(ProfileStore.Login("nilson@email.com","nilson"))
-   ProfileStore.GetProducts(ProfileStore.getToken)
+   //ProfileStore.GetProducts(ProfileStore.getToken)
    //console.log(ProfileStore.products[0])
    //console.log(ProfileStore.status)
    //console.log("hello")
@@ -45,16 +45,16 @@ export const ProfileScreen = observer(function ProfileScreen() {
         {
           ProfileStore.products.map((prod,index)=>{
             return (
-              <View style={PRODUCTS_STYLE}>
-                <ScrollView>
+              <ScrollView>
+            <View style={PRODUCTS_STYLE}>
                 <Text>name : {prod.name}</Text>
                 <Text>familyid : {prod.familyId}</Text>
                 <Text>cost : {prod.cost}</Text>
                 <Text>Quantity : {prod.quantity}</Text>
-                </ScrollView>
-                
 
               </View>
+              </ScrollView>
+              
             );
           })
         }
