@@ -36,8 +36,11 @@ export const SigninScreen = observer(function SigninScreen() {
     profileEmail : "",
     profilePassword:""
   })
+  const pattern = /e/
+
   useEffect(()=>{
-    validate("ahmedgmail.Com")
+     pattern.test("ahmed hafdi")
+     console.log(pattern.test("ahmed"))
   })
   return (
     <Screen style={ROOT} preset="scroll">
