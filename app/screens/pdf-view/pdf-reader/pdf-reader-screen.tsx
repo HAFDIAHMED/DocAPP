@@ -1,15 +1,15 @@
 import React from "react"
 import { observer } from "mobx-react-lite"
-import { ViewStyle } from "react-native"
+import { Dimensions, View, ViewStyle } from "react-native"
 import { Screen, Text } from "../../../components"
 // import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "../../models"
 import { color } from "../../../theme"
+import Pdf from "react-native-pdf"
+const source = { uri: 'http://samples.leanpub.com/thereactnativebook-sample.pdf' };
 
-const ROOT: ViewStyle = {
-  backgroundColor: color.palette.black,
-  flex: 1,
-}
+
+
 
 export const PdfReaderScreen = observer(function PdfReaderScreen() {
   // Pull in one of our MST stores
@@ -19,7 +19,39 @@ export const PdfReaderScreen = observer(function PdfReaderScreen() {
   // const navigation = useNavigation()
   return (
     <Screen style={ROOT} preset="scroll">
-      <Text preset="header" text="" />
+      <View>
+     <Pdf
+                    source={source}
+                    onLoadComplete={(numberOfPages) => {
+                        console.log(`Number of pages: ${numberOfPages}`);
+                    }}
+                    onPageChanged={(page) => {
+                        console.log(`Current page: ${page}`);
+                    }}
+                    onError={(error) => {
+                        console.log(error);
+                    }}
+                    onPressLink={(uri) => {
+                        console.log(`Link pressed: ${uri}`);
+                    }}
+                    style={PDF_View}/>
+                    </View>
     </Screen>
   )
 })
+
+
+const ROOT: ViewStyle = {
+  backgroundColor: color.palette.black,
+  flex: 1,
+        justifyContent: 'flex-start',
+        alignItems: 'center',
+        marginTop: 25,
+
+}
+const PDF_View : ViewStyle={
+  flex:1,
+        width:Dimensions.get('window').width,
+        height:Dimensions.get('window').height,
+}
+
