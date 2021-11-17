@@ -42,12 +42,13 @@ export const PdfReaderScreen = observer(function PdfReaderScreen() {
     <Screen style={ROOT} preset="scroll">
       <View style={TOOLS_PDF}>
       <Icon
-          name='long-arrow-alt-left'
+          name='long-arrow-left'
          type='FontAwesome'
           size={25}
           color='orange'
           
-          style={ICON_STYLE}
+          style={{ marginHorizontal: metrics.widthPercentageToDP(10),
+            margin : metrics.heightPercentageToDP(1)}}
             />
       <Icon
           name='share'
