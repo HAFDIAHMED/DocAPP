@@ -11,7 +11,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import metrics from "../../../theme/metrics"
 const source = { uri: 'http://samples.leanpub.com/thereactnativebook-sample.pdf' };
 
-
+import RNFetchBlob from 'rn-fetch-blob';
 
 export const PdfReaderScreen = observer(function PdfReaderScreen() {
   // Pull in one of our MST stores
