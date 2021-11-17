@@ -2,7 +2,7 @@ import React from "react"
 import { observer } from "mobx-react-lite"
 import { Dimensions, View, ViewStyle } from "react-native"
 import { Screen, Text } from "../../../components"
-// import { useNavigation } from "@react-navigation/native"
+import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "../../models"
 import { color, spacing } from "../../../theme"
 import Pdf from "react-native-pdf"
@@ -20,7 +20,7 @@ export const PdfReaderScreen = observer(function PdfReaderScreen() {
   // const { someStore, anotherStore } = useStores()
 
   // Pull in navigation via hook
-  // const navigation = useNavigation()
+  const navigation = useNavigation()
   const url = source.uri;
    const title = "Awesome Contents";
    const message = "Please check this out.";
@@ -48,7 +48,8 @@ export const PdfReaderScreen = observer(function PdfReaderScreen() {
           color='orange'
           
           style={{ marginHorizontal: metrics.widthPercentageToDP(10),
-            margin : metrics.heightPercentageToDP(1)}}
+            margin : metrics.heightPercentageToDP(2)}}
+            onPress={()=>navigation.goBack()}
             />
       <Icon
           name='share'
