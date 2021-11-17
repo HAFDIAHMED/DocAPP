@@ -7,6 +7,7 @@ import { Screen, Text } from "../../../components"
 import { color } from "../../../theme"
 import Pdf from "react-native-pdf"
 import Share from 'react-native-share';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 import metrics from "../../../theme/metrics"
 const source = { uri: 'http://samples.leanpub.com/thereactnativebook-sample.pdf' };
@@ -20,11 +21,24 @@ export const PdfReaderScreen = observer(function PdfReaderScreen() {
 
   // Pull in navigation via hook
   // const navigation = useNavigation()
- 
+  const share = async (customOptions = options) => {
+    try {
+      await Share.open(customOptions);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+  
   return (
     <Screen style={ROOT} preset="scroll">
       <View style={TOOLS_PDF}>
-      <Text>hellddo</Text>
+      <Icon
+          name='share'
+         // type='FontAwesome'
+          size={40}
+          color='orange'
+          onPress={async () => { await share() } }   />
+     
 
       </View> 
       <View>
