@@ -37,7 +37,7 @@ export const PdfReaderScreen = observer(function PdfReaderScreen() {
   const download_pdf = async ()=>{
       try {
             const response = await fetch("http://samples.leanpub.com/thereactnativebook-sample.pdf");
-            console.log(response.json());
+            console.log(response);
       }catch(error){
         console.error(error)
       }
