@@ -46,7 +46,13 @@ export const PdfViewScreen = observer(function PdfViewScreen() {
         }}
         text="Share"
       />
-      <Icon name="home" size={40} color="white" />
+      <Icon.Button
+    name="facebook"
+    backgroundColor="#3b5998"
+    onPress={()=>console.log("hello")}
+  >
+    Login with Facebook
+  </Icon.Button>
       </SafeAreaView>
     </Screen>
   )
