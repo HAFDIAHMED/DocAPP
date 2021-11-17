@@ -46,7 +46,31 @@ export const PdfReaderScreen = observer(function PdfReaderScreen() {
    download_pdf();
  });
 
-
+ const  DownloadHistory =async ()=> {
+  const { config, fs } = RNFetchBlob;
+  let PictureDir = fs.dirs.PictureDir;
+  let date = new Date();
+  let options = {
+    fileCache: true,
+    addAndroidDownloads: {
+      //Related to the Android only
+      useDownloadManager: true,
+      notification: true,
+      path:
+        PictureDir +
+        '/Report_Download' +
+        Math.floor(date.getTime() + date.getSeconds() / 2),
+      description: 'Risk Report Download',
+    },
+  };
+  config(options)
+    .fetch('GET', url)
+    .then((res) => {
+      //Showing alert after successful downloading
+      console.log('res -> ', JSON.stringify(res));
+      alert('Report Downloaded Successfully.');
+    });
+}
   return (
     <Screen style={ROOT} preset="scroll">
       <View style={TOOLS_PDF}>
