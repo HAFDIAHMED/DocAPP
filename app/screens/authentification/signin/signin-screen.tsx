@@ -11,7 +11,6 @@ import { useStores } from "../../../models"
 const gear9_logo=require("../../../../assets/images/gear9logo.jpg");
 import moment from 'moment';
 import MapView from 'react-native-maps';
-import Pdf from "react-native-pdf"
 
 
 
@@ -113,21 +112,7 @@ export const SigninScreen = observer(function SigninScreen() {
      <Text>Dont you have an account , Register</Text>
 
      </TouchableOpacity>
-     <Pdf
-                    source={source}
-                    onLoadComplete={(numberOfPages,filePath) => {
-                        console.log(`Number of pages: ${numberOfPages}`);
-                    }}
-                    onPageChanged={(page,numberOfPages) => {
-                        console.log(`Current page: ${page}`);
-                    }}
-                    onError={(error) => {
-                        console.log(error);
-                    }}
-                    onPressLink={(uri) => {
-                        console.log(`Link pressed: ${uri}`);
-                    }}
-                    style={PDF_View}/>
+     
      
       </SafeAreaView>
     </Screen>
