@@ -44,10 +44,10 @@ export const PdfViewScreen = observer(function PdfViewScreen() {
         onPress={async () => {
           await share();
         }}
-        text="Share"
+        text="share"
       />
               <Icon
-          name='share'
+          name='share-alt'
           type='evilicon'
           size={60}
           color='#517fa4'
