@@ -58,7 +58,7 @@ export const SigninScreen = observer(function SigninScreen() {
   })
   const formating=require("moment")
   useEffect(()=>{
-    console.log(formating().format('DD YYYY MM'))
+    //console.log(formating().format('DD YYYY MM'))
   })
   return (
     <Screen style={ROOT} preset="scroll">
