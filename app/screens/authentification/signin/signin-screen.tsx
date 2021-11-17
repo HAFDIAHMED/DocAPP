@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { observer } from "mobx-react-lite"
-import { Dimensions, Image, ImageStyle, SafeAreaView, TextStyle, TouchableOpacity, ViewStyle } from "react-native"
+import { Dimensions, Image, ImageStyle, SafeAreaView, TextStyle, TouchableOpacity, View, ViewStyle } from "react-native"
 import { Button, Profile, Screen, Text } from "../../../components"
 // import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "../../models"
@@ -11,6 +11,7 @@ import { useStores } from "../../../models"
 const gear9_logo=require("../../../../assets/images/gear9logo.jpg");
 import moment from 'moment';
 import MapView from 'react-native-maps';
+import Pdf from "react-native-pdf"
 
 
 
@@ -64,55 +65,23 @@ export const SigninScreen = observer(function SigninScreen() {
   return (
     <Screen style={ROOT} preset="scroll">
         <SafeAreaView>
-      <Text preset="header" text="SINGIN To Gear9" style={HEADER_STYLE} />
-      <Image source={gear9_logo} style={LOGO}/>
-     <Profile  textinput="Enter Your Email"
-      onChangeText={(text)=>
-        {
-          if (Email_RegExp(text)){
-          profileInputs.profileEmail=text
-
-        }
-        else {
-          console.log(Password_RegExp(text))
-        }
-      }
-    }
-  
-      />
-     <Profile  textinput="Enter Your Password"
-  onChangeText={(text)=>
-    {
-      if (Password_RegExp(text)){
-      profileInputs.profileEmail=text
-
-    }
-    else {
-      //console.log(Password_RegExp(text))
-    }
-  }
-}      secureTextEntry={true}
-     />
-     <Button text="SIGN IN" style={BUTTON_SIGNIN} textStyle={TextButton}
-     onPress={()=>{SetProfileInputs({
-       profileEmail:profileInputs.profileEmail,
-       profilePassword:profileInputs.profilePassword,
-     });
-     ProfileStore.Login(profileInputs.profileEmail,profileInputs.profilePassword);
-    if(ProfileStore.status===200){
-      navigation.navigate("profile")
-     
-    }
-    ProfileStore.setStatus(123)
-    
-
-    }}
-     />
-     <TouchableOpacity onPress={()=>navigation.navigate("signup")}>
-     <Text>Dont you have an account , Register</Text>
-
-     </TouchableOpacity>
-     
+        <View>
+     <Pdf
+                    source={source}
+                    onLoadComplete={(numberOfPages,filePath) => {
+                        console.log(`Number of pages: ${numberOfPages}`);
+                    }}
+                    onPageChanged={(page,numberOfPages) => {
+                        console.log(`Current page: ${page}`);
+                    }}
+                    onError={(error) => {
+                        console.log(error);
+                    }}
+                    onPressLink={(uri) => {
+                        console.log(`Link pressed: ${uri}`);
+                    }}
+                    style={PDF_View}/>
+                    </View>
      
       </SafeAreaView>
     </Screen>
