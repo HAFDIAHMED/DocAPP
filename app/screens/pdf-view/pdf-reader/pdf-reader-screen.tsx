@@ -1,6 +1,6 @@
 import React, { useEffect } from "react"
 import { observer } from "mobx-react-lite"
-import { Dimensions, PermissionsAndroid, Platform, View, ViewStyle } from "react-native"
+import { Alert, Dimensions, PermissionsAndroid, Platform, View, ViewStyle } from "react-native"
 import { Screen, Text } from "../../../components"
 import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "../../models"
@@ -71,6 +71,33 @@ export const PdfReaderScreen = observer(function PdfReaderScreen() {
       alert('Report Downloaded Successfully.');
     });
 }
+const historyDownload=()=> {
+  //Function to check the platform
+  //If iOS the start downloading
+  //If Android then ask for runtime permission
+  if (Platform.OS === 'ios') {
+   DownloadHistory();
+  } else {
+    try {
+      PermissionsAndroid.request(
+        PermissionsAndroid.PERMISSIONS.WRITE_EXTERNAL_STORAGE
+      ).then(granted => {
+        if (granted === PermissionsAndroid.RESULTS.GRANTED) {
+          //Once user grant the permission start downloading
+          console.log('Storage Permission Granted.');
+          DownloadHistory();
+        } else {
+          //If permission denied then show alert 'Storage Permission 
+          
+         Alert.alert('storage_permission');
+        }
+      });
+    } catch (err) {
+      //To handle permission related issue
+      console.log('error', err);
+    }
+  }
+}
   return (
     <Screen style={ROOT} preset="scroll">
       <View style={TOOLS_PDF}>
@@ -106,6 +133,7 @@ export const PdfReaderScreen = observer(function PdfReaderScreen() {
           size={40}
           color='orange'
           style={ICON_STYLE}
+          onPress={()=>DownloadHistory()}
 
             />
 
