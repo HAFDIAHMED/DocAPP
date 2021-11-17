@@ -8,7 +8,7 @@ import { color, spacing } from "../../../theme"
 import Pdf from "react-native-pdf"
 import Share from 'react-native-share';
 import Icon from 'react-native-vector-icons/FontAwesome';
-
+import RNFetchBlob from 'rn-fetch-blob';
 import metrics from "../../../theme/metrics"
 const source = { uri: 'http://samples.leanpub.com/thereactnativebook-sample.pdf' };
 
