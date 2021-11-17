@@ -5,7 +5,7 @@
  * and a "main" flow which the user will use once logged in.
  */
 import React from "react"
-import { useColorScheme } from "react-native"
+import { useColorScheme,Text } from "react-native"
 import { NavigationContainer, DefaultTheme, DarkTheme } from "@react-navigation/native"
 import { createNativeStackNavigator } from "@react-navigation/native-stack"
 import { WelcomeScreen, DemoScreen, DemoListScreen, ProfileScreen, SigninScreen, SignupScreen, PdfViewScreen } from "../screens"
@@ -49,8 +49,8 @@ const AppStack = () => {
                   <Stack.Screen name="pdf_reader" component={PdfReaderScreen} 
                    options={{
                     headerShown:true,
-                    headerTitle:"PDF READER"
-                    
+                    headerTitle:"PDF READER",
+                    headerRight:()=><Text>hello</Text>
                   }}
                   />
 
