@@ -10,6 +10,7 @@ import { NavigationContainer, DefaultTheme, DarkTheme } from "@react-navigation/
 import { createNativeStackNavigator } from "@react-navigation/native-stack"
 import { WelcomeScreen, DemoScreen, DemoListScreen, ProfileScreen, SigninScreen, SignupScreen, PdfViewScreen } from "../screens"
 import { navigationRef } from "./navigation-utilities"
+import { PdfReaderScreen } from "../screens/pdf-view/pdf-reader/pdf-reader-screen"
 
 /**
  * This type allows TypeScript to know what routes are defined in this navigator
@@ -31,6 +32,7 @@ export type NavigatorParamList = {
   signin : undefined
   signup : undefined
   pdf_view: undefined
+  pdf_reader : undefined
 }
 
 // Documentation: https://reactnavigation.org/docs/stack-navigator/
@@ -44,6 +46,8 @@ const AppStack = () => {
       }}
       initialRouteName="pdf_view"
     >
+                  <Stack.Screen name="pdf_reader" component={PdfReaderScreen} />
+
             <Stack.Screen name="pdf_view" component={PdfViewScreen} />
 
             <Stack.Screen name="signin" component={SigninScreen} />
