@@ -6,6 +6,7 @@ import { Screen, Text } from "../../../components"
 // import { useStores } from "../../models"
 import { color } from "../../../theme"
 import Pdf from "react-native-pdf"
+import metrics from "../../../theme/metrics"
 const source = { uri: 'http://samples.leanpub.com/thereactnativebook-sample.pdf' };
 
 
@@ -19,6 +20,10 @@ export const PdfReaderScreen = observer(function PdfReaderScreen() {
   // const navigation = useNavigation()
   return (
     <Screen style={ROOT} preset="scroll">
+      {/*<View style={TOOLS_PDF}>
+      <Text>hellddo</Text>
+
+      </View> */}
       <View>
      <Pdf
                     source={source}
@@ -46,7 +51,7 @@ const ROOT: ViewStyle = {
   flex: 1,
         justifyContent: 'flex-start',
         alignItems: 'center',
-        marginTop: 25,
+        //marginTop: metrics.heightPercentageToDP(7),
 
 }
 const PDF_View : ViewStyle={
@@ -54,4 +59,7 @@ const PDF_View : ViewStyle={
         width:Dimensions.get('window').width,
         height:Dimensions.get('window').height,
 }
+const TOOLS_PDF : ViewStyle={
+  backgroundColor:'white',
 
+}

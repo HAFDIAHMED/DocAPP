@@ -19,7 +19,7 @@ export const SigninScreen = observer(function SigninScreen() {
   // Pull in one of our MST stores
   // const { someStore, anotherStore } = useStores()
   const {ProfileStore}=useStores();
-  const source = { uri: 'http://samples.leanpub.com/thereactnativebook-sample.pdf' };
+  const source = { uri: 'http://samples.leanpub.com/thereactnativebook-sample.pdf', cache: true };
 
   // Pull in navigation via hook
  
@@ -65,23 +65,55 @@ export const SigninScreen = observer(function SigninScreen() {
   return (
     <Screen style={ROOT} preset="scroll">
         <SafeAreaView>
-        <View>
-     <Pdf
-                    source={source}
-                    onLoadComplete={(numberOfPages) => {
-                        console.log(`Number of pages: ${numberOfPages}`);
-                    }}
-                    onPageChanged={(page) => {
-                        console.log(`Current page: ${page}`);
-                    }}
-                    onError={(error) => {
-                        console.log(error);
-                    }}
-                    onPressLink={(uri) => {
-                        console.log(`Link pressed: ${uri}`);
-                    }}
-                    style={PDF_View}/>
-                    </View>
+      <Text preset="header" text="SINGIN To Gear9" style={HEADER_STYLE} />
+      <Image source={gear9_logo} style={LOGO}/>
+     <Profile  textinput="Enter Your Email"
+      onChangeText={(text)=>
+        {
+          if (Email_RegExp(text)){
+          profileInputs.profileEmail=text
+
+        }
+        else {
+          console.log(Password_RegExp(text))
+        }
+      }
+    }
+  
+      />
+     <Profile  textinput="Enter Your Password"
+  onChangeText={(text)=>
+    {
+      if (Password_RegExp(text)){
+      profileInputs.profileEmail=text
+
+    }
+    else {
+      //console.log(Password_RegExp(text))
+    }
+  }
+}      secureTextEntry={true}
+     />
+     <Button text="SIGN IN" style={BUTTON_SIGNIN} textStyle={TextButton}
+     onPress={()=>{SetProfileInputs({
+       profileEmail:profileInputs.profileEmail,
+       profilePassword:profileInputs.profilePassword,
+     });
+     ProfileStore.Login(profileInputs.profileEmail,profileInputs.profilePassword);
+    if(ProfileStore.status===200){
+      navigation.navigate("profile")
+     
+    }
+    ProfileStore.setStatus(123)
+    
+
+    }}
+     />
+     <TouchableOpacity onPress={()=>navigation.navigate("signup")}>
+     <Text>Dont you have an account , Register</Text>
+
+     </TouchableOpacity>
+     
      
       </SafeAreaView>
     </Screen>
@@ -90,9 +122,6 @@ export const SigninScreen = observer(function SigninScreen() {
 const ROOT: ViewStyle = {
   backgroundColor: color.palette.black,
   flex: 1,
-        justifyContent: 'flex-start',
-        alignItems: 'center',
-        marginTop: 25,
 }
 const HEADER_STYLE : ViewStyle = {
   alignSelf : 'center',
@@ -120,4 +149,3 @@ const PDF_View : ViewStyle={
         width:Dimensions.get('window').width,
         height:Dimensions.get('window').height,
 }
-
