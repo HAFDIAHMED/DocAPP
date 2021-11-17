@@ -4,7 +4,7 @@ import { Dimensions, View, ViewStyle } from "react-native"
 import { Screen, Text } from "../../../components"
 // import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "../../models"
-import { color } from "../../../theme"
+import { color, spacing } from "../../../theme"
 import Pdf from "react-native-pdf"
 import Share from 'react-native-share';
 import Icon from 'react-native-vector-icons/FontAwesome';
@@ -40,6 +40,12 @@ export const PdfReaderScreen = observer(function PdfReaderScreen() {
           onPress={async () => { await share() } }   />
      <Icon
           name='search'
+         // type='FontAwesome'
+          size={40}
+          color='orange'
+            />
+             <Icon
+          name='download'
          // type='FontAwesome'
           size={40}
           color='orange'
@@ -85,7 +91,7 @@ const PDF_View : ViewStyle={
 const TOOLS_PDF : ViewStyle={
   flexDirection:'row',
   height:metrics.heightPercentageToDP(6),
-  justifyContent:'space-between',
+  
 
 }
 
