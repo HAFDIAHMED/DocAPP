@@ -9,7 +9,7 @@ import { SafeAreaView } from "react-native-safe-area-context"
 import metrics from "../../theme/metrics"
 import Share from "react-native-share";
 
-import Icon from 'react-native-vector-icons/FontAwesome';
+import { Icon } from 'react-native-elements'
 
 export const PdfViewScreen = observer(function PdfViewScreen() {
   // Pull in one of our MST stores
@@ -46,13 +46,11 @@ export const PdfViewScreen = observer(function PdfViewScreen() {
         }}
         text="Share"
       />
-      <Icon.Button
-    name="facebook"
-    backgroundColor="#3b5998"
-    onPress={()=>console.log("hello")}
-  >
-    Login with Facebook
-  </Icon.Button>
+      <Icon
+  name='sc-telegram'
+  type='evilicon'
+  color='#517fa4'
+/>
       </SafeAreaView>
     </Screen>
   )
