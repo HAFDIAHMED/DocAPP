@@ -13,7 +13,6 @@ const source = { uri: 'http://samples.leanpub.com/thereactnativebook-sample.pdf'
 
 
 
-
 export const PdfReaderScreen = observer(function PdfReaderScreen() {
   // Pull in one of our MST stores
   // const { someStore, anotherStore } = useStores()
@@ -38,7 +37,7 @@ export const PdfReaderScreen = observer(function PdfReaderScreen() {
   const download_pdf = async ()=>{
       try {
             const response = await fetch("http://samples.leanpub.com/thereactnativebook-sample.pdf");
-            console.log(response);
+            console.log(response.json());
       }catch(error){
         console.error(error)
       }
