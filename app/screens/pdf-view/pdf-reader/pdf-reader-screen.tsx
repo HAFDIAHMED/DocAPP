@@ -6,6 +6,8 @@ import { Screen, Text } from "../../../components"
 // import { useStores } from "../../models"
 import { color } from "../../../theme"
 import Pdf from "react-native-pdf"
+import Share from 'react-native-share';
+
 import metrics from "../../../theme/metrics"
 const source = { uri: 'http://samples.leanpub.com/thereactnativebook-sample.pdf' };
 
