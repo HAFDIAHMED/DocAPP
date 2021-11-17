@@ -9,7 +9,7 @@ import { SafeAreaView } from "react-native-safe-area-context"
 import metrics from "../../theme/metrics"
 import Share from "react-native-share";
 
-import { Icon } from 'react-native-elements'
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 export const PdfViewScreen = observer(function PdfViewScreen() {
   // Pull in one of our MST stores
@@ -46,12 +46,7 @@ export const PdfViewScreen = observer(function PdfViewScreen() {
         }}
         text="Share"
       />
-      <Icon
-          raised
-          name='home'
-          type='font-awesome'
-          color='#f50'
-          onPress={() => console.log('hello')} tvParallaxProperties={undefined} />
+      <Icon name="home" size={40} color="white" />
       </SafeAreaView>
     </Screen>
   )
