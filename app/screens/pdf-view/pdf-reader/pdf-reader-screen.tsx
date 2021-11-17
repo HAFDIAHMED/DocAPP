@@ -20,6 +20,7 @@ export const PdfReaderScreen = observer(function PdfReaderScreen() {
 
   // Pull in navigation via hook
   // const navigation = useNavigation()
+ 
   return (
     <Screen style={ROOT} preset="scroll">
       {/*<View style={TOOLS_PDF}>
@@ -43,6 +44,7 @@ export const PdfReaderScreen = observer(function PdfReaderScreen() {
                     }}
                     style={PDF_View}/>
                     </View>
+                    
     </Screen>
   )
 })
