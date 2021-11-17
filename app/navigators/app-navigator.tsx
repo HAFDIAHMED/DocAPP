@@ -50,6 +50,7 @@ const AppStack = () => {
                    options={{
                     headerShown:true,
                     headerTitle:"PDF READER"
+                    
                   }}
                   />
 
