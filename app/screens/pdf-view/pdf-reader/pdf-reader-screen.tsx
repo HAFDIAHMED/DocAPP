@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { observer } from "mobx-react-lite"
 import { Dimensions, View, ViewStyle } from "react-native"
 import { Screen, Text } from "../../../components"
@@ -36,8 +36,17 @@ export const PdfReaderScreen = observer(function PdfReaderScreen() {
       console.log(err);
     }
   };
-  
- 
+  const download_pdf = async ()=>{
+      try {
+            const response = await fetch("http://samples.leanpub.com/thereactnativebook-sample.pdf");
+            console.log(response);
+      }catch(error){
+        console.error(error)
+      }
+  }
+ useEffect(()=>{
+   download_pdf();
+ })
   return (
     <Screen style={ROOT} preset="scroll">
       <View style={TOOLS_PDF}>
