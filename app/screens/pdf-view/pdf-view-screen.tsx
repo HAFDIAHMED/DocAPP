@@ -48,7 +48,7 @@ export const PdfViewScreen = observer(function PdfViewScreen() {
       />
               <Icon
           name='share'
-          //type='evilicon'
+          type='FontAwesome'
           size={60}
           color='#517fa4'
           onPress={async () => { await share() } } tvParallaxProperties={undefined}        />
