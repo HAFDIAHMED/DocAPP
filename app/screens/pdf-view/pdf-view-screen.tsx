@@ -47,11 +47,11 @@ export const PdfViewScreen = observer(function PdfViewScreen() {
         text="Share"
       />
       <Icon
-  raised
-  name='home'
-  type='font-awesome'
-  color='#f50'
-  onPress={() => console.log('hello')} />
+          raised
+          name='home'
+          type='font-awesome'
+          color='#f50'
+          onPress={() => console.log('hello')} tvParallaxProperties={undefined} />
       </SafeAreaView>
     </Screen>
   )
