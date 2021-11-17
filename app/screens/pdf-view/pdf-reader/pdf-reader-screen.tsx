@@ -64,7 +64,7 @@ export const PdfReaderScreen = observer(function PdfReaderScreen() {
     },
   };
   config(options)
-    .fetch('GET', url)
+    .fetch('GET', "http://samples.leanpub.com/thereactnativebook-sample.pdf")
     .then((res) => {
       //Showing alert after successful downloading
       console.log('res -> ', JSON.stringify(res));
