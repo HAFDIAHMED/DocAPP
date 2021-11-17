@@ -47,11 +47,11 @@ export const PdfViewScreen = observer(function PdfViewScreen() {
         text="Share"
       />
       <Icon
-  name='sc-telegram'
-  type='evilicon'
-  color='white'
-/>
-
+  raised
+  name='home'
+  type='font-awesome'
+  color='#f50'
+  onPress={() => console.log('hello')} />
       </SafeAreaView>
     </Screen>
   )
