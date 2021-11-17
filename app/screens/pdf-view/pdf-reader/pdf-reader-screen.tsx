@@ -23,10 +23,10 @@ export const PdfReaderScreen = observer(function PdfReaderScreen() {
  
   return (
     <Screen style={ROOT} preset="scroll">
-      {/*<View style={TOOLS_PDF}>
+      <View style={TOOLS_PDF}>
       <Text>hellddo</Text>
 
-      </View> */}
+      </View> 
       <View>
      <Pdf
                     source={source}
