@@ -47,11 +47,7 @@ const AppStack = () => {
       initialRouteName="pdf_view"
     >
                   <Stack.Screen name="pdf_reader" component={PdfReaderScreen} 
-                   options={{
-                    headerShown:true,
-                    headerTitle:"PDF READER",
-                    headerRight:()=><Text>hello</Text>
-                  }}
+                  
                   />
 
             <Stack.Screen name="pdf_view" component={PdfViewScreen} 

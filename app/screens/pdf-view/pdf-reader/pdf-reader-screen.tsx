@@ -65,5 +65,6 @@ const PDF_View : ViewStyle={
 }
 const TOOLS_PDF : ViewStyle={
   backgroundColor:'white',
+  width:metrics.widthPercentageToDP(1),
 
 }
