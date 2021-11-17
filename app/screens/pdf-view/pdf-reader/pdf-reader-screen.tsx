@@ -102,5 +102,6 @@ const TOOLS_PDF : ViewStyle={
 }
 const ICON_STYLE : ViewStyle={
   marginHorizontal: metrics.widthPercentageToDP(10),
+  margin : metrics.heightPercentageToDP(1)
 }
 
