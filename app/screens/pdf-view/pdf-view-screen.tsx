@@ -47,7 +47,7 @@ export const PdfViewScreen = observer(function PdfViewScreen() {
         text="share"
       />
               <Icon
-          name='share-alt'
+          name='share'
           //type='evilicon'
           size={60}
           color='#517fa4'
