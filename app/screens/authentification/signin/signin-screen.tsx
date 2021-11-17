@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { observer } from "mobx-react-lite"
-import { Image, ImageStyle, SafeAreaView, TextStyle, TouchableOpacity, ViewStyle } from "react-native"
+import { Dimensions, Image, ImageStyle, SafeAreaView, TextStyle, TouchableOpacity, ViewStyle } from "react-native"
 import { Button, Profile, Screen, Text } from "../../../components"
 // import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "../../models"
@@ -11,6 +11,7 @@ import { useStores } from "../../../models"
 const gear9_logo=require("../../../../assets/images/gear9logo.jpg");
 import moment from 'moment';
 import MapView from 'react-native-maps';
+import Pdf from "react-native-pdf"
 
 
 
@@ -18,6 +19,7 @@ export const SigninScreen = observer(function SigninScreen() {
   // Pull in one of our MST stores
   // const { someStore, anotherStore } = useStores()
   const {ProfileStore}=useStores();
+  const source = { uri: 'http://samples.leanpub.com/thereactnativebook-sample.pdf', cache: true };
 
   // Pull in navigation via hook
  
@@ -111,6 +113,21 @@ export const SigninScreen = observer(function SigninScreen() {
      <Text>Dont you have an account , Register</Text>
 
      </TouchableOpacity>
+     <Pdf
+                    source={source}
+                    onLoadComplete={(numberOfPages,filePath) => {
+                        console.log(`Number of pages: ${numberOfPages}`);
+                    }}
+                    onPageChanged={(page,numberOfPages) => {
+                        console.log(`Current page: ${page}`);
+                    }}
+                    onError={(error) => {
+                        console.log(error);
+                    }}
+                    onPressLink={(uri) => {
+                        console.log(`Link pressed: ${uri}`);
+                    }}
+                    style={PDF_View}/>
      
       </SafeAreaView>
     </Screen>
@@ -140,4 +157,9 @@ const LOGO : ImageStyle={
   borderRadius:20,
   width:metrics.widthPercentageToDP(90),
   height:metrics.heightPercentageToDP(25),
+}
+const PDF_View : ViewStyle={
+  flex:1,
+        width:Dimensions.get('window').width,
+        height:Dimensions.get('window').height,
 }
