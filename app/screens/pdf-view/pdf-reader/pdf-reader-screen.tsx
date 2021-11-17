@@ -38,7 +38,12 @@ export const PdfReaderScreen = observer(function PdfReaderScreen() {
           size={40}
           color='orange'
           onPress={async () => { await share() } }   />
-     
+     <Icon
+          name='search'
+         // type='FontAwesome'
+          size={40}
+          color='orange'
+            />
 
       </View> 
       <View>
@@ -80,6 +85,7 @@ const PDF_View : ViewStyle={
 const TOOLS_PDF : ViewStyle={
   flexDirection:'row',
   height:metrics.heightPercentageToDP(6),
+  justifyContent:'space-between',
 
 }
 
