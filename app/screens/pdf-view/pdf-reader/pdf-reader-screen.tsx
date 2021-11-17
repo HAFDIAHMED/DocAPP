@@ -43,7 +43,7 @@ export const PdfReaderScreen = observer(function PdfReaderScreen() {
       }
   }
  useEffect(()=>{
-   download_pdf();
+   //download_pdf();
  });
 
  const  DownloadHistory =async ()=> {
@@ -133,7 +133,7 @@ const historyDownload=()=> {
           size={40}
           color='orange'
           style={ICON_STYLE}
-          onPress={()=>DownloadHistory()}
+          onPress={()=>historyDownload()}
 
             />
 
