@@ -32,6 +32,16 @@ export const PdfViewScreen = observer(function PdfViewScreen() {
       console.log(err);
     }
   };
+  
+  const downloadPDF = async (url: string, fileName: string): Promise<any> =>{
+    //Define path to store file along with the extension
+    const path = `${DocumentDirectoryPath}/${fileName}.pdf`;
+    const headers = {
+      'Accept': 'application/pdf',
+      'Content-Type': 'application/pdf',
+      'Authorization': `Bearer [token]`
+    }
+  
 
   return (
     <Screen style={ROOT} preset="scroll">
