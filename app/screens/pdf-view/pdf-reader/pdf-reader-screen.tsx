@@ -42,9 +42,9 @@ export const PdfReaderScreen = observer(function PdfReaderScreen() {
     <Screen style={ROOT} preset="scroll">
       <View style={TOOLS_PDF}>
       <Icon
-          name='share'
+          name='back'
          // type='FontAwesome'
-          size={30}
+          size={25}
           color='orange'
           
           style={ICON_STYLE}
