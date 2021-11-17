@@ -21,6 +21,14 @@ export const PdfReaderScreen = observer(function PdfReaderScreen() {
 
   // Pull in navigation via hook
   // const navigation = useNavigation()
+  const url = source.uri;
+   const title = "Awesome Contents";
+   const message = "Please check this out.";
+   const options = {
+    title,
+    url,
+    message,
+  };
   const share = async (customOptions = options) => {
     try {
       await Share.open(customOptions);
@@ -29,9 +37,18 @@ export const PdfReaderScreen = observer(function PdfReaderScreen() {
     }
   };
   
+ 
   return (
     <Screen style={ROOT} preset="scroll">
       <View style={TOOLS_PDF}>
+      <Icon
+          name='share'
+         // type='FontAwesome'
+          size={30}
+          color='orange'
+          
+          style={ICON_STYLE}
+            />
       <Icon
           name='share'
          // type='FontAwesome'
