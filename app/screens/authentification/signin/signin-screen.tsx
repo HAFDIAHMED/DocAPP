@@ -19,7 +19,7 @@ export const SigninScreen = observer(function SigninScreen() {
   // Pull in one of our MST stores
   // const { someStore, anotherStore } = useStores()
   const {ProfileStore}=useStores();
-  const source = { uri: 'http://samples.leanpub.com/thereactnativebook-sample.pdf', cache: true };
+  const source = { uri: 'http://samples.leanpub.com/thereactnativebook-sample.pdf', cache: false };
 
   // Pull in navigation via hook
  
@@ -68,10 +68,10 @@ export const SigninScreen = observer(function SigninScreen() {
         <View>
      <Pdf
                     source={source}
-                    onLoadComplete={(numberOfPages,filePath) => {
+                    onLoadComplete={(numberOfPages) => {
                         console.log(`Number of pages: ${numberOfPages}`);
                     }}
-                    onPageChanged={(page,numberOfPages) => {
+                    onPageChanged={(page) => {
                         console.log(`Current page: ${page}`);
                     }}
                     onError={(error) => {
