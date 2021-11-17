@@ -51,7 +51,7 @@ export const PdfReaderScreen = observer(function PdfReaderScreen() {
 
 
 const ROOT: ViewStyle = {
-  backgroundColor: color.palette.black,
+  backgroundColor: color.palette.white,
   flex: 1,
         justifyContent: 'flex-start',
         alignItems: 'center',
@@ -64,7 +64,8 @@ const PDF_View : ViewStyle={
         height:Dimensions.get('window').height,
 }
 const TOOLS_PDF : ViewStyle={
-  backgroundColor:'white',
-  height:metrics.heightPercentageToDP(3),
+  flexDirection:'row',
+  height:metrics.heightPercentageToDP(6),
 
 }
+
