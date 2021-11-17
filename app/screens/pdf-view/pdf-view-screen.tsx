@@ -7,6 +7,7 @@ import { useNavigation } from "@react-navigation/native"
 import { color } from "../../theme"
 import { SafeAreaView } from "react-native-safe-area-context"
 import metrics from "../../theme/metrics"
+import Share from "react-native-share";
 
 
 
@@ -16,6 +17,22 @@ export const PdfViewScreen = observer(function PdfViewScreen() {
 
   // Pull in navigation via hook
    const navigation = useNavigation()
+   const url = "https://awesome.contents.com/";
+   const title = "Awesome Contents";
+   const message = "Please check this out.";
+   const options = {
+    title,
+    url,
+    message,
+  };
+  const share = async (customOptions = options) => {
+    try {
+      await Share.open(customOptions);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   return (
     <Screen style={ROOT} preset="scroll">
       <SafeAreaView>
@@ -23,7 +40,12 @@ export const PdfViewScreen = observer(function PdfViewScreen() {
 
       <Button text="SEE PDF FILE" style={Button_Pdf} textStyle={Button_Text} onPress={()=>navigation.navigate("pdf_reader")}/>
       <Button text="DOWNLOAD PDF FILE" style={Button_Pdf} textStyle={Button_Text}/>
-
+      <Button
+        onPress={async () => {
+          await share();
+        }}
+        text="Share"
+      />
       </SafeAreaView>
     </Screen>
   )
