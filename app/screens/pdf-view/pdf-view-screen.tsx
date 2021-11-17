@@ -1,15 +1,14 @@
 import React from "react"
 import { observer } from "mobx-react-lite"
 import { ViewStyle } from "react-native"
-import { Screen, Text } from "../../components"
+import { Button, Screen, Text } from "../../components"
 // import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "../../models"
 import { color } from "../../theme"
+import { SafeAreaView } from "react-native-safe-area-context"
+import metrics from "../../theme/metrics"
 
-const ROOT: ViewStyle = {
-  backgroundColor: color.palette.black,
-  flex: 1,
-}
+
 
 export const PdfViewScreen = observer(function PdfViewScreen() {
   // Pull in one of our MST stores
@@ -19,7 +18,14 @@ export const PdfViewScreen = observer(function PdfViewScreen() {
   // const navigation = useNavigation()
   return (
     <Screen style={ROOT} preset="scroll">
-      <Text preset="header" text="" />
+      <SafeAreaView>
+      <Text preset="header" text="PDF VIEW" style={{ alignSelf:'center',margin: metrics.heightPercentageToDP(2)}} />
+      <Button text="SEE PDF FILE"/>
+      </SafeAreaView>
     </Screen>
   )
 })
+const ROOT: ViewStyle = {
+  backgroundColor: color.palette.black,
+  flex: 1,
+}
