@@ -9,6 +9,7 @@ import com.facebook.react.PackageList;
 import com.facebook.react.ReactApplication;
 import com.RNFetchBlob.RNFetchBlobPackage;
 import com.RNFetchBlob.RNFetchBlobPackage;
+import com.RNFetchBlob.RNFetchBlobPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
 import org.wonday.pdf.RCTPdfView;
 import com.ReactNativeBlobUtil.ReactNativeBlobUtilPackage;
