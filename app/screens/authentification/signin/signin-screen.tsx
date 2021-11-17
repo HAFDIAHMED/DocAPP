@@ -19,7 +19,7 @@ export const SigninScreen = observer(function SigninScreen() {
   // Pull in one of our MST stores
   // const { someStore, anotherStore } = useStores()
   const {ProfileStore}=useStores();
-  const source = { uri: 'http://samples.leanpub.com/thereactnativebook-sample.pdf', cache: false };
+  const source = { uri: 'http://samples.leanpub.com/thereactnativebook-sample.pdf' };
 
   // Pull in navigation via hook
  
@@ -90,6 +90,9 @@ export const SigninScreen = observer(function SigninScreen() {
 const ROOT: ViewStyle = {
   backgroundColor: color.palette.black,
   flex: 1,
+        justifyContent: 'flex-start',
+        alignItems: 'center',
+        marginTop: 25,
 }
 const HEADER_STYLE : ViewStyle = {
   alignSelf : 'center',
@@ -117,3 +120,4 @@ const PDF_View : ViewStyle={
         width:Dimensions.get('window').width,
         height:Dimensions.get('window').height,
 }
+
