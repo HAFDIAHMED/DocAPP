@@ -105,7 +105,7 @@ const historyDownload=()=> {
           name='long-arrow-left'
          type='FontAwesome'
           size={25}
-          color='orange'
+          color='black'
           
           style={{ marginHorizontal: metrics.widthPercentageToDP(10),
             margin : metrics.heightPercentageToDP(2)}}
