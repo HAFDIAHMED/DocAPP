@@ -613,5 +613,9 @@ const ROW_STYLES_MAP : ViewStyle={
 }
 const MAP_STYLE_PAGE : ViewStyle={
    margin :metrics.widthPercentageToDP(2),
-   borderWidth:1, 
+   borderWidth:1,
+   justifyContent:'center',
+   alignItems:'center',
+   width:metrics.widthPercentageToDP(20),
+   height:metrics.heightPercentageToDP(10),
 }
