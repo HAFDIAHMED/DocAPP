@@ -516,7 +516,7 @@ export const MapGeoScreen = observer(function MapGeoScreen() {
   ]
   const Map_View =()=>{
 return(
-  <View>
+
     <MapView
 
 provider={PROVIDER_GOOGLE}
@@ -538,10 +538,7 @@ image={{uri : "https://www.pngkit.com/bigpic/u2q8a9e6y3w7a9u2/"}}
 />
 
 </MapView>
-<Callout>
-        <Text>heloo</Text>
-      </Callout>
-  </View>
+
 );
       }
  const Polygone_View =()=>{
