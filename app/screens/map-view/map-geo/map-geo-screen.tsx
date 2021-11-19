@@ -569,8 +569,8 @@ image={{uri : "https://www.pngkit.com/bigpic/u2q8a9e6y3w7a9u2/"}}
         <Switch
         value={styleChange}
         onValueChange={(value)=>{
-          setChecked(checked)
-          setStyleChange(!value)
+          setStyleChange(!styleChange)
+          console.log(styleChange)
         }}
         />
           
