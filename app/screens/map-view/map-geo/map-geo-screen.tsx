@@ -6,7 +6,8 @@ import { Screen, Button,Text } from "../../../components"
 // import { useStores } from "../../models"
 import { color } from "../../../theme"
 import metrics from "../../../theme/metrics"
-import MapView, { Marker, Polygon, PROVIDER_GOOGLE } from "react-native-maps"
+import MapView, { Callout, Marker, Polygon, PROVIDER_GOOGLE } from "react-native-maps"
+import { TextInput } from "react-native-gesture-handler"
 
 
 
@@ -519,7 +520,7 @@ return(
 
        provider={PROVIDER_GOOGLE}
       style={styles.map}
-      customMapStyle={mapStyle_Custom}
+      customMapStyle={mapStyle_Night}
       region={{
         
         latitude: 33.56729634144786,
@@ -534,6 +535,7 @@ return(
        image={{uri : "https://www.pngkit.com/bigpic/u2q8a9e6y3w7a9u2/"}}
        
        />
+      
        </MapView>
 );
       }
