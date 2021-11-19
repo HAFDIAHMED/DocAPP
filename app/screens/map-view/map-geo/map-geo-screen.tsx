@@ -21,7 +21,7 @@ export const MapGeoScreen = observer(function MapGeoScreen() {
    <MapView
        provider={PROVIDER_GOOGLE}
       style={styles.map}
-      
+      region={{          latitude: 42.882004,          longitude: 74.582748,          latitudeDelta: 0.0922,          longitudeDelta: 0.0421        }} 
        showUserLocation={true} >
        <Marker coordinate={{
          latitude: 37.78825,
