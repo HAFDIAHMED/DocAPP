@@ -135,13 +135,14 @@ customMapStyle={mapStyles}
    <Map_View />
    <MAPS/>
    <GooglePlacesAutocomplete
+   styles={{padding : 10}}
       placeholder='Search'
       onPress={(data, details = null) => {
         // 'details' is provided when fetchDetails = true
         console.log(data, details);
       }}
       query={{
-        key: 'YOUR API KEY',
+        key: 'AIzaSyC2vu-vZH1nysQT7xXxZ4J-H2CbDx0iDq0',
         language: 'en',
       }}
     />
