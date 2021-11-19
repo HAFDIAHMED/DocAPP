@@ -30,7 +30,9 @@ export const MapGeoScreen = observer(function MapGeoScreen() {
        <Marker coordinate={{
          latitude: 37.78825,
          longitude: -122.4324,
-       }}  />
+       }} 
+       image={{uri : "https://www.pngkit.com/bigpic/u2q8a9e6y3w7a9u2/"}}
+       />
        </MapView>
     </Screen>
   )
