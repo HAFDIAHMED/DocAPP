@@ -43,8 +43,8 @@ region={{
             onDragEnd={
               (e) => alert(JSON.stringify(e.nativeEvent.coordinate))
             }
-            title={'Test Marker'}
-            description={'This is a description of the marker'}
+            title={'El Marrif Casa'}
+            description={'This is El Maarif a broghout in CASABLANCA'}
 
 
 >
