@@ -135,7 +135,8 @@ customMapStyle={mapStyles}
    <Map_View />
    <MAPS/>
    <GooglePlacesAutocomplete
-   styles={{padding : 10}}
+                placeholder='Search'
+
       placeholder='Search'
       onPress={(data, details = null) => {
         // 'details' is provided when fetchDetails = true
