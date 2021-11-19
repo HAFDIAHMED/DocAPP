@@ -141,6 +141,7 @@ query={{
   key: 'AIzaSyC2vu-vZH1nysQT7xXxZ4J-H2CbDx0iDq0',
   language: 'en',
 }}
+
 styles={
   {
     container: {
