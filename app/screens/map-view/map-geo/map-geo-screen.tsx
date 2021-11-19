@@ -562,7 +562,7 @@ image={{uri : "https://www.pngkit.com/bigpic/u2q8a9e6y3w7a9u2/"}}
         
       <View style={ROW_STYLES_MAP}>
 
-      <TouchableOpacity style={MAP_STYLE_PAGE} onPress={()=>setMapStyles(Night)}>
+      <TouchableOpacity style={MAP_STYLE_PAGE} onPress={()=>setMapStyles(mapStyle_Night)}>
       <Icon  name ="home"  color="black" size={30} />
       <Text style={MAP_STYLE_TEXT}>Night</Text>
       </TouchableOpacity>
@@ -578,7 +578,7 @@ image={{uri : "https://www.pngkit.com/bigpic/u2q8a9e6y3w7a9u2/"}}
     );
   }
   useEffect(()=>{
-    console.log(Night)
+    console.log(mapStyles[0])
   })
   return (
     <Screen style={ROOT} preset="scroll">
