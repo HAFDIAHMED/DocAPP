@@ -9,6 +9,7 @@ import metrics from "../../../theme/metrics"
 import MapView, { Callout, Marker, Polygon, PROVIDER_GOOGLE } from "react-native-maps"
 import { TextInput } from "react-native-gesture-handler"
 import { Switch } from "react-native-elements/dist/switch/switch"
+import SwitchWithIcons from "react-native-switch-with-icons";
 
 
 
@@ -572,9 +573,12 @@ image={{uri : "https://www.pngkit.com/bigpic/u2q8a9e6y3w7a9u2/"}}
           setStyleChange(!styleChange)
           console.log(styleChange)
         }}
+       
         />
           
-        
+          <SwitchWithIcons
+  onValueChange={() => console.log(`Value has been updated to`)}
+/>
               </Callout>
     </Screen>
   )
