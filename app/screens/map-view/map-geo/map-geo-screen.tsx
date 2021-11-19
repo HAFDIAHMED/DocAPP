@@ -578,7 +578,7 @@ image={{uri : "https://www.pngkit.com/bigpic/u2q8a9e6y3w7a9u2/"}}
     );
   }
   useEffect(()=>{
-    console.log(mapStyles[0])
+    console.log(mapStyles)
   })
   return (
     <Screen style={ROOT} preset="scroll">
