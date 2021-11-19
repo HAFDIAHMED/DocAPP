@@ -11,8 +11,7 @@ import { TextInput } from "react-native-gesture-handler"
 import { Switch } from "react-native-elements/dist/switch/switch"
 import SwitchWithIcons from "react-native-switch-with-icons";
 import Icon from 'react-native-vector-icons/FontAwesome';
-
-
+import {Standard} from ".mapStyles_variation"
 
 export const MapGeoScreen = observer(function MapGeoScreen() {
   // Pull in one of our MST stores
