@@ -254,6 +254,7 @@ const PIN_MARKER_STYLE : ViewStyle={
   width:metrics.widthPercentageToDP(7),
 }
 const AUTO_STYLE :ViewStyle={
-  alignSelf:'center',
-  margin:metrics.heightPercentageToDP(1),
+  //alignSelf:'center',
+  
+  margin:metrics.heightPercentageToDP(10),
 }
