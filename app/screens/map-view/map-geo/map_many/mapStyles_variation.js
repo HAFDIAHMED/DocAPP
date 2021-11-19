@@ -1,1 +1,1 @@
-var ahmed="hello"
+let ahmed="hello"

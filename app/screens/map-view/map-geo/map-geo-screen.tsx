@@ -9,12 +9,14 @@ import metrics from "../../../theme/metrics"
 import MapView, { Callout, Marker, Polygon, PROVIDER_GOOGLE } from "react-native-maps"
 import { TextInput, TouchableOpacity } from "react-native-gesture-handler"
 import Icon from 'react-native-vector-icons/FontAwesome';
+import {ahmed} from "../map-geo/map_many/mapStyles_variation"
 export const MapGeoScreen = observer(function MapGeoScreen() {
   // Pull in one of our MST stores
   // const { someStore, anotherStore } = useStores()
 
   // Pull in navigation via hook
   // const navigation = useNavigation()
+  
   const [styleChange , setStyleChange]=useState(true)
   var mapStyle_Custom=[
     {
@@ -579,7 +581,7 @@ image={{uri : "https://www.pngkit.com/bigpic/u2q8a9e6y3w7a9u2/"}}
     );
   }
   useEffect(()=>{
-    console.log("ahmed")
+    console.log(ahmed)
   })
   return (
     <Screen style={ROOT} preset="scroll">
