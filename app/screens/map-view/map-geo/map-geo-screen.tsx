@@ -8,7 +8,7 @@ import { color } from "../../../theme"
 import metrics from "../../../theme/metrics"
 import MapView, { Callout, Marker, Polygon, PROVIDER_GOOGLE } from "react-native-maps"
 import { TextInput, TouchableOpacity } from "react-native-gesture-handler"
-import {Night,Standard,hello} from "./mapStyles_variation.js";
+import hello from "./mapStyles_variation.js";
 import Icon from 'react-native-vector-icons/FontAwesome';
 export const MapGeoScreen = observer(function MapGeoScreen() {
   // Pull in one of our MST stores
@@ -566,13 +566,15 @@ image={{uri : "https://www.pngkit.com/bigpic/u2q8a9e6y3w7a9u2/"}}
       <Icon  name ="home"  color="black" size={30} />
       <Text style={MAP_STYLE_TEXT}>Night</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={MAP_STYLE_PAGE} onPress={()=>setMapStyles(Standard)}>
+      <TouchableOpacity style={MAP_STYLE_PAGE} onPress={()=>setMapStyles(mapStyle_Custom)}>
       <Icon name ="home"  color="orange" size={30} />
       <Text style={MAP_STYLE_TEXT}>Standard</Text>
 
       </TouchableOpacity>
+
       
       </View>
+      <Text>zzz</Text>
            
               </Callout>
     );
