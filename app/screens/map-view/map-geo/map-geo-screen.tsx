@@ -551,14 +551,16 @@ return(
         ]}
     />
   </MapView>
-   );
+   );  
  }
   
   
   return (
     <Screen style={ROOT} preset="scroll">
    <Map_View />
-   <Text>sheloooo</Text>
+      <Callout>
+        <Text>heloo</Text>
+      </Callout>
     </Screen>
   )
 })
