@@ -563,12 +563,12 @@ image={{uri : "https://www.pngkit.com/bigpic/u2q8a9e6y3w7a9u2/"}}
         
       <View style={ROW_STYLES_MAP}>
 
-      <TouchableOpacity style={MAP_STYLE_PAGE}>
-      <Icon  name ="home"  color="black" size={30} onPress={()=>setMapStyles(mapStyle_Night)}/>
+      <TouchableOpacity style={MAP_STYLE_PAGE} onPress={()=>setMapStyles(mapStyle_Night)}>
+      <Icon  name ="home"  color="black" size={30} />
       <Text style={MAP_STYLE_TEXT}>Night</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={MAP_STYLE_PAGE}>
-      <Icon name ="home"  color="orange" size={30} onPress={()=>setMapStyles(mapStyle_Custom)}/>
+      <TouchableOpacity style={MAP_STYLE_PAGE} onPress={()=>setMapStyles(mapStyle_Custom)}>
+      <Icon name ="home"  color="orange" size={30} />
       <Text style={MAP_STYLE_TEXT}>Standard</Text>
 
       </TouchableOpacity>
