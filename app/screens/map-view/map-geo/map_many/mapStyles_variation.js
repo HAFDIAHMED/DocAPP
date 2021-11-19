@@ -1,1 +1,2 @@
-let ahmed="hello"
+const  ahmed="hello"
+export {ahmed} ;
