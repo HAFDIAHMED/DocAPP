@@ -10,6 +10,7 @@ import MapView, { Callout, Marker, Polygon, PROVIDER_GOOGLE } from "react-native
 import { TextInput, TouchableOpacity } from "react-native-gesture-handler"
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {Standard,Night,Retro} from "../map-geo/map_many/mapStyles_variation"
+import { icons } from "../../../components/icon/icons"
 export const MapGeoScreen = observer(function MapGeoScreen() {
   // Pull in one of our MST stores
   // const { someStore, anotherStore } = useStores()
@@ -68,7 +69,7 @@ image={{uri : "https://www.pngkit.com/bigpic/u2q8a9e6y3w7a9u2/"}}
       <View style={ROW_STYLES_MAP}>
 
       <TouchableOpacity style={MAP_STYLE_PAGE} onPress={()=>setMapStyles(Night)}>
-      <Icon  name ="moon"  color="black" size={30} />
+      <Icon  name ="school"  color="black" size={30} />
       <Text style={MAP_STYLE_TEXT}>Night</Text>
       </TouchableOpacity>
       <TouchableOpacity style={MAP_STYLE_PAGE} onPress={()=>setMapStyles(Standard)}>
