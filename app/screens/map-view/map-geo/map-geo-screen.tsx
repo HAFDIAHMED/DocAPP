@@ -131,7 +131,7 @@ customMapStyle={mapStyles}
     //console.log(Standard)
   })
   return (
-    <Screen style={ROOT} preset="scroll">
+    <Screen style={ROOT} >
    
    <GooglePlacesAutocomplete
 
