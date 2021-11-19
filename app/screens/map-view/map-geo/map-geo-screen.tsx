@@ -72,7 +72,7 @@ image={{uri : "https://www.pngkit.com/bigpic/u2q8a9e6y3w7a9u2/"}}
       <Text style={MAP_STYLE_TEXT}>Night</Text>
       </TouchableOpacity>
       <TouchableOpacity style={MAP_STYLE_PAGE} onPress={()=>setMapStyles(Retro)}>
-      <Icon name ="home"  color="yellow" size={30} />
+      <Icon name ="adjust"  color="black" size={30} />
       <Text style={MAP_STYLE_TEXT}>Retro</Text>
 
       </TouchableOpacity>
