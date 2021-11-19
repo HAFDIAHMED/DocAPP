@@ -8,7 +8,7 @@ import React from "react"
 import { useColorScheme,Text } from "react-native"
 import { NavigationContainer, DefaultTheme, DarkTheme } from "@react-navigation/native"
 import { createNativeStackNavigator } from "@react-navigation/native-stack"
-import { WelcomeScreen, DemoScreen, DemoListScreen, ProfileScreen, SigninScreen, SignupScreen, PdfViewScreen } from "../screens"
+import { WelcomeScreen, DemoScreen, DemoListScreen, ProfileScreen, SigninScreen, SignupScreen, PdfViewScreen, MapViewScreen, MapGeoScreen } from "../screens"
 import { navigationRef } from "./navigation-utilities"
 import { PdfReaderScreen } from "../screens/pdf-view/pdf-reader/pdf-reader-screen"
 
@@ -33,6 +33,8 @@ export type NavigatorParamList = {
   signup : undefined
   pdf_view: undefined
   pdf_reader : undefined
+  map_view : undefined
+  map_geo: undefined
 }
 
 // Documentation: https://reactnavigation.org/docs/stack-navigator/
@@ -44,7 +46,7 @@ const AppStack = () => {
       screenOptions={{
         headerShown: false,
       }}
-      initialRouteName="pdf_view"
+      initialRouteName="map_view"
     >
                   <Stack.Screen name="pdf_reader" component={PdfReaderScreen} 
                   
@@ -53,6 +55,8 @@ const AppStack = () => {
             <Stack.Screen name="pdf_view" component={PdfViewScreen} 
            
             />
+            <Stack.Screen name="map_view" component={MapViewScreen} />
+            <Stack.Screen name="map_geo" component={MapGeoScreen} />
 
             <Stack.Screen name="signin" component={SigninScreen} />
 
@@ -93,5 +97,5 @@ AppNavigator.displayName = "AppNavigator"
  *
  * `canExit` is used in ./app/app.tsx in the `useBackButtonHandler` hook.
  */
-const exitRoutes = ["pdf_view"]
+const exitRoutes = ["map_view"]
 export const canExit = (routeName: string) => exitRoutes.includes(routeName)
