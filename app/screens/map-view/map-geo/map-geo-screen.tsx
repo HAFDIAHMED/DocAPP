@@ -56,7 +56,7 @@ return(
   
   return (
     <Screen style={ROOT} preset="scroll">
-   <Polygone_View />
+   <Map_View />
     </Screen>
   )
 })
