@@ -517,6 +517,9 @@ export const MapGeoScreen = observer(function MapGeoScreen() {
       ]
     }
   ]
+  const icons = {
+    
+  }
   const Map_View =()=>{
 return(
 
