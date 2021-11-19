@@ -46,7 +46,7 @@ const AppStack = () => {
       screenOptions={{
         headerShown: false,
       }}
-      initialRouteName="map_view"
+      initialRouteName="pdf_view"
     >
                   <Stack.Screen name="pdf_reader" component={PdfReaderScreen} 
                   
@@ -97,5 +97,5 @@ AppNavigator.displayName = "AppNavigator"
  *
  * `canExit` is used in ./app/app.tsx in the `useBackButtonHandler` hook.
  */
-const exitRoutes = ["map_view"]
+const exitRoutes = ["pdf_view"]
 export const canExit = (routeName: string) => exitRoutes.includes(routeName)

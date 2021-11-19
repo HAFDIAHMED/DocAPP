@@ -37,27 +37,13 @@ export const PdfViewScreen = observer(function PdfViewScreen() {
 
   return (
     <Screen  preset="scroll">
-      <View style={Map_Container}>
-     {/*<Text preset="header" text="PDF VIEW" style={{ alignSelf:'center',margin: metrics.heightPercentageToDP(2)}} /> */} 
+      <View style={ROOT}>
+     <Text preset="header" text="PDF VIEW" style={{ alignSelf:'center',margin: metrics.heightPercentageToDP(2)}} /> 
 
-     {/*
+     
       <Button text="OPEN PDF FILE" style={Button_Pdf} textStyle={Button_Text} onPress={()=>navigation.navigate("pdf_reader")}/>
-      <Button text="DOWNLOAD PDF FILE" style={Button_Pdf} textStyle={Button_Text}/> */}
-       <MapView
-       provider={PROVIDER_GOOGLE}
-      style={styles.map}
-       initialRegion={{
-         latitude: 37.78825,
-         longitude: -122.4324,
-         latitudeDelta: 0.015,
-         longitudeDelta: 0.0121,
-       }}
-       showUserLocation={true} >
-       <Marker coordinate={{
-         latitude: 37.78825,
-         longitude: -122.4324,
-       }}  />
-       </MapView>
+      <Button text="DOWNLOAD PDF FILE" style={Button_Pdf} textStyle={Button_Text}/>
+   
        
       </View>
     </Screen>
