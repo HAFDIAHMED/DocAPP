@@ -1,4 +1,4 @@
-var Standard=[
+const  Standard=[
     {
       "elementType": "geometry",
       "stylers": [
