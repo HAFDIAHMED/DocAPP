@@ -576,12 +576,13 @@ image={{uri : "https://www.pngkit.com/bigpic/u2q8a9e6y3w7a9u2/"}}
             disabled={false}
              icon ={{
               
-                true : <Icon name ="night"  />,
+                true : <Icon name ="home"  color="red" />,
                 false :<Icon name ="night"  />,
               
              }}
 
           />
+           <Icon name ="home"  color="red" />
               </Callout>
     </Screen>
   )
