@@ -135,7 +135,6 @@ customMapStyle={mapStyles}
    <Map_View />
    <MAPS/>
    <GooglePlacesAutocomplete
-                placeholder='Search'
 
       placeholder='Search'
       onPress={(data, details = null) => {
