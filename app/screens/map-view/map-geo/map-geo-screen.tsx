@@ -557,10 +557,8 @@ image={{uri : "https://www.pngkit.com/bigpic/u2q8a9e6y3w7a9u2/"}}
   </MapView>
    );  
  }
- 
-  return (
-    <Screen style={ROOT} preset="scroll">
-   <Map_View />
+  const MAPS=()=>{
+    return (
       <Callout>
         
       <View style={ROW_STYLES_MAP}>
@@ -569,13 +567,19 @@ image={{uri : "https://www.pngkit.com/bigpic/u2q8a9e6y3w7a9u2/"}}
       <Text style={MAP_STYLE_TEXT}>Night</Text>
       </View>
       <View style={MAP_STYLE_PAGE}>
-      <Icon name ="home"  color="white" size={30} onPress={()=>setMapStyles(mapStyle_Custom)}/>
+      <Icon name ="home"  color="orange" size={30} onPress={()=>setMapStyles(mapStyle_Custom)}/>
       <Text style={MAP_STYLE_TEXT}>Standard</Text>
 
       </View>
       </View>
            
               </Callout>
+    );
+  }
+  return (
+    <Screen style={ROOT} preset="scroll">
+   <Map_View />
+     <MAPS/>
     </Screen>
   )
 })
@@ -613,11 +617,12 @@ const ROW_STYLES_MAP : ViewStyle={
 }
 const MAP_STYLE_PAGE : ViewStyle={
    margin :metrics.widthPercentageToDP(2),
-   borderWidth:1,
    justifyContent:'center',
    alignItems:'center',
    width:metrics.widthPercentageToDP(20),
    height:metrics.heightPercentageToDP(10),
+   backgroundColor:'white',
+   borderRadius:20,
 }
 const  MAP_STYLE_TEXT : TextStyle={
   color:'black',
