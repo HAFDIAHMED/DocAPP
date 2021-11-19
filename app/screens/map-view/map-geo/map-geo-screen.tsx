@@ -135,7 +135,7 @@ customMapStyle={mapStyles}
 placeholder='Search'
 onPress={(data, details = null) => {
   // 'details' is provided when fetchDetails = true
-  console.log(data, details);
+  console.log(data.place_id);
 }}
 query={{
   key: 'AIzaSyC2vu-vZH1nysQT7xXxZ4J-H2CbDx0iDq0',
@@ -169,7 +169,7 @@ styles={
     powered: {},
     listView: {},
     row: {
-      backgroundColor: 'transparent',
+      backgroundColor: 'white',
       padding: 13,
       height: 44,
       flexDirection: 'row',
