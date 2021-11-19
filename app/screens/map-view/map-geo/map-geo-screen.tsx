@@ -10,6 +10,8 @@ import MapView, { Callout, Marker, Polygon, PROVIDER_GOOGLE } from "react-native
 import { TextInput, TouchableOpacity } from "react-native-gesture-handler"
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import {Standard,Night,Retro} from "../map-geo/map_many/mapStyles_variation"
+import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
+
 export const MapGeoScreen = observer(function MapGeoScreen() {
   // Pull in one of our MST stores
   // const { someStore, anotherStore } = useStores()
@@ -132,6 +134,17 @@ customMapStyle={mapStyles}
     <Screen style={ROOT} preset="scroll">
    <Map_View />
    <MAPS/>
+   <GooglePlacesAutocomplete
+      placeholder='Search'
+      onPress={(data, details = null) => {
+        // 'details' is provided when fetchDetails = true
+        console.log(data, details);
+      }}
+      query={{
+        key: 'YOUR API KEY',
+        language: 'en',
+      }}
+    />
     </Screen>
   )
 })
