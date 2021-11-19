@@ -275,7 +275,7 @@ var Standard=[
       ]
     }
   ]
-  var Night =[
+  const Night =[
     {
       "elementType": "geometry",
       "stylers": [
