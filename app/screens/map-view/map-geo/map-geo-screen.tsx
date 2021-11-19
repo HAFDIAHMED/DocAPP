@@ -10,6 +10,7 @@ import MapView, { Callout, Marker, Polygon, PROVIDER_GOOGLE } from "react-native
 import { TextInput } from "react-native-gesture-handler"
 import { Switch } from "react-native-elements/dist/switch/switch"
 import SwitchWithIcons from "react-native-switch-with-icons";
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 
 
@@ -518,7 +519,7 @@ export const MapGeoScreen = observer(function MapGeoScreen() {
     }
   ]
   const icons = {
-    
+
   }
   const Map_View =()=>{
 return(
@@ -573,7 +574,12 @@ image={{uri : "https://www.pngkit.com/bigpic/u2q8a9e6y3w7a9u2/"}}
           value={styleChange}
             onValueChange={(value) =>{setStyleChange(!styleChange)}}
             disabled={false}
-         
+             icon ={{
+              
+                true : <Icon name ="night"  />,
+                false :<Icon name ="night"  />,
+              
+             }}
 
           />
               </Callout>
