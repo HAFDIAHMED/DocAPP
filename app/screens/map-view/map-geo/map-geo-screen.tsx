@@ -198,7 +198,7 @@ const ROOT: ViewStyle = {
   backgroundColor: color.palette.black,
   flex: 1,
   alignItems:'center',
-  justifyContent:'center',
+  //justifyContent:'center',
 }
 
 const Button_Style : ViewStyle={
