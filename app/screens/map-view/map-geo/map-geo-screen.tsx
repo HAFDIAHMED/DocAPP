@@ -132,8 +132,7 @@ customMapStyle={mapStyles}
   })
   return (
     <Screen style={ROOT} preset="scroll">
-   <Map_View />
-   <MAPS/>
+   
    <GooglePlacesAutocomplete
 
       placeholder='Search'
