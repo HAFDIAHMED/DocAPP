@@ -15861,6 +15861,11 @@ react-native-swipe-gestures@^1.0.4:
   resolved "https://registry.yarnpkg.com/react-native-swipe-gestures/-/react-native-swipe-gestures-1.0.5.tgz#a172cb0f3e7478ccd681fd36b8bfbcdd098bde7c"
   integrity sha512-Ns7Bn9H/Tyw278+5SQx9oAblDZ7JixyzeOczcBK8dipQk2pD7Djkcfnf1nB/8RErAmMLL9iXgW0QHqiII8AhKw==
 
+react-native-switch-with-icons@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/react-native-switch-with-icons/-/react-native-switch-with-icons-2.0.1.tgz#bcfe07014d3494ca3a6e8f7bef63238660e637e8"
+  integrity sha512-u/Sv3yOkrrfzCVrQ4+PmFXMoYIeBGcglLueVQbRLMkpx/firlM9u/OM/cC8aUEhzqQPHWXp3ueziK6q+ouPMrw==
+
 react-native-unimodules@0.12.0:
   version "0.12.0"
   resolved "https://registry.yarnpkg.com/react-native-unimodules/-/react-native-unimodules-0.12.0.tgz#f1c92eae92212ca44078c0991c78fa4d13fda0f8"
