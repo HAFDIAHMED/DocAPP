@@ -44,11 +44,9 @@ return(
     <Polygon
     coordinates={[
             { latitude: 37.8025259, longitude: -122.4351431 },
-            { latitude: 37.7896386, longitude: -122.421646 },
-            { latitude: 37.7665248, longitude: -122.4161628 },
-            { latitude: 37.7734153, longitude: -122.4577787 },
-            { latitude: 37.7948605, longitude: -122.4596065 },
-            { latitude: 37.8025259, longitude: -122.4351431 }
+             
+        {latitude: 33.56729634144786,
+        longitude: -7.6277178270787225,}
         ]}
     />
   </MapView>
