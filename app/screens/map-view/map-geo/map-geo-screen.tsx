@@ -557,6 +557,7 @@ image={{uri : "https://www.pngkit.com/bigpic/u2q8a9e6y3w7a9u2/"}}
   </MapView>
    );  
  }
+ const [checked, setChecked] = useState(false);
 
   
   return (
@@ -567,7 +568,10 @@ image={{uri : "https://www.pngkit.com/bigpic/u2q8a9e6y3w7a9u2/"}}
         <Button text="change style " onPress={()=>setStyleChange(!styleChange)}/>
         <Switch
         value={styleChange}
-        onValueChange={(value)=>setStyleChange(!value)}
+        onValueChange={(value)=>{
+          setChecked(checked)
+          setStyleChange(!value)
+        }}
         />
           
         
