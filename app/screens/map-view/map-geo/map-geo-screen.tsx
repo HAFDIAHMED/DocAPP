@@ -567,18 +567,13 @@ image={{uri : "https://www.pngkit.com/bigpic/u2q8a9e6y3w7a9u2/"}}
       <Callout>
         
         <Button text="change style " onPress={()=>setStyleChange(!styleChange)}/>
-        <Switch
-        value={styleChange}
-        onValueChange={(value)=>{
-          setStyleChange(!styleChange)
-          console.log(styleChange)
-        }}
        
-        />
+      
           
           <SwitchWithIcons
-  onValueChange={() => console.log(`Value has been updated to`)}
-/>
+            onValueChange={() =>setStyleChange(!styleChange) }
+
+          />
               </Callout>
     </Screen>
   )
