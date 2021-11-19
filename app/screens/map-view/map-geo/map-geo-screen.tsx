@@ -42,9 +42,11 @@ region={{
 
 
 >
-<Image source={{uri : "https://cdn-icons-png.flaticon.com/512/889/889647.png"}} 
-  style={PIN_MARKER_STYLE}
-/>
+      <View>
+    <Image source={{uri : "https://cdn-icons-png.flaticon.com/512/889/889647.png"}} 
+      style={PIN_MARKER_STYLE}
+    />
+    </View>
   </Marker>
  
 
