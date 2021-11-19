@@ -36,8 +36,8 @@ export const PdfViewScreen = observer(function PdfViewScreen() {
 
 
   return (
-    <Screen  preset="scroll">
-      <View style={ROOT}>
+    <Screen  style={ROOT} preset="scroll">
+      
      <Text preset="header" text="PDF VIEW" style={{ alignSelf:'center',margin: metrics.heightPercentageToDP(2)}} /> 
 
      
@@ -45,7 +45,7 @@ export const PdfViewScreen = observer(function PdfViewScreen() {
       <Button text="DOWNLOAD PDF FILE" style={Button_Pdf} textStyle={Button_Text}/>
    
        
-      </View>
+    
     </Screen>
   )
 })
@@ -64,15 +64,3 @@ const Button_Text:TextStyle={
   fontSize:20,
 }
 
-const Map_Container : ViewStyle={
-  height: metrics.heightPercentageToDP(100),
-           width: metrics.widthPercentageToDP(100),
-           justifyContent: 'flex-end',
-           alignItems: 'center',
-}
-const styles = StyleSheet.create({
-
-  map: {
-        ...StyleSheet.absoluteFillObject,
-  },
-})
