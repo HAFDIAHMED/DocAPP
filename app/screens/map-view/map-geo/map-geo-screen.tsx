@@ -523,7 +523,7 @@ return(
 
 provider={PROVIDER_GOOGLE}
 style={styles.map}
-customMapStyle={styleChange ? mapStyle_Custom :mapStyle_Night}
+customMapStyle={mapStyles}
 region={{
  
  latitude: 33.56729634144786,
@@ -564,10 +564,15 @@ image={{uri : "https://www.pngkit.com/bigpic/u2q8a9e6y3w7a9u2/"}}
       <Callout>
         
       <View style={ROW_STYLES_MAP}>
+      <View>
       <Icon  name ="home"  color="black" size={30} onPress={()=>setMapStyles(mapStyle_Night)}/>
+      <Text>Night</Text>
+      </View>
+      <View>
       <Icon name ="home"  color="white" size={30} onPress={()=>setMapStyles(mapStyle_Custom)}/>
-      <Button   text="change" onPress={()=>{setStyleChange(!styleChange)}}/>
+      <Text>Standard</Text>
 
+      </View>
       </View>
            
               </Callout>
