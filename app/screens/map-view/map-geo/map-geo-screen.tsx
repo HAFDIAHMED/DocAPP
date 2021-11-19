@@ -7,7 +7,7 @@ import { Screen, Button,Text } from "../../../components"
 import { color } from "../../../theme"
 import metrics from "../../../theme/metrics"
 import MapView, { Callout, Marker, Polygon, PROVIDER_GOOGLE } from "react-native-maps"
-import { TextInput } from "react-native-gesture-handler"
+import { TextInput, TouchableOpacity } from "react-native-gesture-handler"
 import { Switch } from "react-native-elements/dist/switch/switch"
 import SwitchWithIcons from "react-native-switch-with-icons";
 import Icon from 'react-native-vector-icons/FontAwesome';
@@ -580,7 +580,7 @@ image={{uri : "https://www.pngkit.com/bigpic/u2q8a9e6y3w7a9u2/"}}
   return (
     <Screen style={ROOT} preset="scroll">
    <Map_View />
-   <Button text="click"/>
+   <MAPS/>
     </Screen>
   )
 })
