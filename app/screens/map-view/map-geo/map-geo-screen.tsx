@@ -39,7 +39,7 @@ region={{
   latitude: 33.56729634144786,
   longitude: -7.6277178270787225,
 }} 
-image={{uri : "https://www.pngkit.com/bigpic/u2q8a9e6y3w7a9u2/"}}
+image={{uri : "https://cdn-icons-png.flaticon.com/512/889/889647.png"}}
 
 />
 
