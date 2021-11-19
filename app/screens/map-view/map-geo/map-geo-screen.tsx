@@ -11,7 +11,6 @@ import { TextInput } from "react-native-gesture-handler"
 import { Switch } from "react-native-elements/dist/switch/switch"
 import SwitchWithIcons from "react-native-switch-with-icons";
 import Icon from 'react-native-vector-icons/FontAwesome';
-import {Night} from "./mapStyles_variation" ;
 export const MapGeoScreen = observer(function MapGeoScreen() {
   // Pull in one of our MST stores
   // const { someStore, anotherStore } = useStores()
@@ -561,21 +560,16 @@ image={{uri : "https://www.pngkit.com/bigpic/u2q8a9e6y3w7a9u2/"}}
   </MapView>
    );  
  }
- const [checked, setChecked] = useState(true);
-
-  const icons={
-    true : <Icon name ="home"  color="red" />,
-    false :<Icon name ="night"  />,
-  }
+ 
   return (
     <Screen style={ROOT} preset="scroll">
    <Map_View />
       <Callout>
         
       <View style={ROW_STYLES_MAP}>
+      <Icon  name ="home"  color="red" size={30}/>
       <Icon name ="home"  color="red" size={30}/>
-      <Icon name ="home"  color="red" size={30}/>
-      <Button  text="change" onPress={()=>{setStyleChange(!styleChange)}}/>
+      <Button   text="change" onPress={()=>{setStyleChange(!styleChange)}}/>
 
       </View>
            
