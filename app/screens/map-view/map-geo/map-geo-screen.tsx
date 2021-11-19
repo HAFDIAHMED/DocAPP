@@ -576,6 +576,7 @@ image={{uri : "https://www.pngkit.com/bigpic/u2q8a9e6y3w7a9u2/"}}
       <View style={ROW_STYLES_MAP}>
       <Icon name ="home"  color="red" size={30}/>
       <Icon name ="home"  color="red" size={30}/>
+      <Button  text="change" onPress={()=>setStyleChange(!styleChange)}/>
 
       </View>
            
