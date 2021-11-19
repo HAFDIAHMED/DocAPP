@@ -40,6 +40,7 @@ region={{
   longitude: -7.6277178270787225,
 }} 
 image={{uri : "https://cdn-icons-png.flaticon.com/512/889/889647.png"}}
+style={PIN_MARKER_STYLE}
 
 />
 
@@ -146,4 +147,8 @@ const  MAP_STYLE_TEXT : TextStyle={
 const MAPS_STYLE :ViewStyle={
   alignSelf:'flex-end',
  
+}
+const PIN_MARKER_STYLE : ViewStyle={
+  height:metrics.heightPercentageToDP(2),
+  width:metrics.widthPercentageToDP(1),
 }
