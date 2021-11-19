@@ -566,14 +566,11 @@ image={{uri : "https://www.pngkit.com/bigpic/u2q8a9e6y3w7a9u2/"}}
    <Map_View />
       <Callout>
         
-        <Button text="change style " onPress={()=>setStyleChange(!styleChange)}/>
-       
-      
-          
-          <SwitchWithIcons
+      <SwitchWithIcons
           value={styleChange}
             onValueChange={(value) =>{setStyleChange(!styleChange)}}
             disabled={false}
+            
 
           />
               </Callout>
