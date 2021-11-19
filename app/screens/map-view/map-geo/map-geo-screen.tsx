@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { observer } from "mobx-react-lite"
-import { StyleSheet, TextStyle, View, ViewStyle } from "react-native"
+import { StyleSheet, TextStyle, View, ViewStyle ,Image} from "react-native"
 import { Screen, Button,Text } from "../../../components"
 // import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "../../models"
@@ -39,10 +39,14 @@ region={{
   latitude: 33.56729634144786,
   longitude: -7.6277178270787225,
 }} 
-image={{uri : "https://cdn-icons-png.flaticon.com/512/889/889647.png"}}
-style={PIN_MARKER_STYLE}
 
+
+>
+  </Marker>
+  <Image source={{uri : "https://cdn-icons-png.flaticon.com/512/889/889647.png"}} 
+  style={PIN_MARKER_STYLE}
 />
+
 
 </MapView>
 
@@ -149,6 +153,6 @@ const MAPS_STYLE :ViewStyle={
  
 }
 const PIN_MARKER_STYLE : ViewStyle={
-  height:metrics.heightPercentageToDP(2),
+  height:metrics.heightPercentageToDP(1),
   width:metrics.widthPercentageToDP(1),
 }
