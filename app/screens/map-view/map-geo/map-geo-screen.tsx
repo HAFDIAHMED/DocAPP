@@ -515,10 +515,7 @@ export const MapGeoScreen = observer(function MapGeoScreen() {
       ]
     }
   ]
- const [mapStyles,setMapStyles]=useState({
-   styleNight: mapStyle_Night,
-   styleStandard : mapStyle_Custom
- })
+ const [mapStyles,setMapStyles]=useState(mapStyle_Night)
   const Map_View =()=>{
 return(
 
