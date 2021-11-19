@@ -22,8 +22,9 @@ export const MapGeoScreen = observer(function MapGeoScreen() {
        provider={PROVIDER_GOOGLE}
       style={styles.map}
       region={{
-        latitude: 37.78825,
-        longitude: -122.4324,
+        
+        latitude: 33.56729634144786,
+        longitude: -7.6277178270787225,
         latitudeDelta: 0.015,
         longitudeDelta: 0.0121,
       }}       showsUserLocation={true} >
