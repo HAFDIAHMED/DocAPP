@@ -559,7 +559,7 @@ image={{uri : "https://www.pngkit.com/bigpic/u2q8a9e6y3w7a9u2/"}}
  }
   const MAPS=()=>{
     return (
-      <Callout>
+      <Callout style={MAPS_STYLE}>
         
       <View style={ROW_STYLES_MAP}>
       <View style={MAP_STYLE_PAGE}>
@@ -579,7 +579,7 @@ image={{uri : "https://www.pngkit.com/bigpic/u2q8a9e6y3w7a9u2/"}}
   return (
     <Screen style={ROOT} preset="scroll">
    <Map_View />
-     <MAPS/>
+     <MAPS />
     </Screen>
   )
 })
@@ -613,7 +613,7 @@ const styles = StyleSheet.create({
   },
 })
 const ROW_STYLES_MAP : ViewStyle={
-  flexDirection:'row',
+  //flexDirection:'row',
 }
 const MAP_STYLE_PAGE : ViewStyle={
    margin :metrics.widthPercentageToDP(2),
@@ -626,4 +626,7 @@ const MAP_STYLE_PAGE : ViewStyle={
 }
 const  MAP_STYLE_TEXT : TextStyle={
   color:'black',
+}
+const MAPS_STYLE :ViewStyle={
+
 }
