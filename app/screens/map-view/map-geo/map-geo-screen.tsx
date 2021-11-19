@@ -566,11 +566,11 @@ image={{uri : "https://www.pngkit.com/bigpic/u2q8a9e6y3w7a9u2/"}}
       <View style={ROW_STYLES_MAP}>
       <View style={MAP_STYLE_PAGE}>
       <Icon  name ="home"  color="black" size={30} onPress={()=>setMapStyles(mapStyle_Night)}/>
-      <Text>Night</Text>
+      <Text style={MAP_STYLE_TEXT}>Night</Text>
       </View>
       <View style={MAP_STYLE_PAGE}>
       <Icon name ="home"  color="white" size={30} onPress={()=>setMapStyles(mapStyle_Custom)}/>
-      <Text>Standard</Text>
+      <Text style={MAP_STYLE_TEXT}>Standard</Text>
 
       </View>
       </View>
@@ -618,4 +618,7 @@ const MAP_STYLE_PAGE : ViewStyle={
    alignItems:'center',
    width:metrics.widthPercentageToDP(20),
    height:metrics.heightPercentageToDP(10),
+}
+const  MAP_STYLE_TEXT : TextStyle={
+  color:'black',
 }
