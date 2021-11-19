@@ -558,6 +558,7 @@ return(
   return (
     <Screen style={ROOT} preset="scroll">
    <Map_View />
+   <Text>sheloooo</Text>
     </Screen>
   )
 })
