@@ -518,9 +518,7 @@ export const MapGeoScreen = observer(function MapGeoScreen() {
       ]
     }
   ]
-  const icons = {
 
-  }
   const Map_View =()=>{
 return(
 
@@ -564,7 +562,10 @@ image={{uri : "https://www.pngkit.com/bigpic/u2q8a9e6y3w7a9u2/"}}
  }
  const [checked, setChecked] = useState(true);
 
-  
+  const icons={
+    true : <Icon name ="home"  color="red" />,
+    false :<Icon name ="night"  />,
+  }
   return (
     <Screen style={ROOT} preset="scroll">
    <Map_View />
@@ -574,15 +575,10 @@ image={{uri : "https://www.pngkit.com/bigpic/u2q8a9e6y3w7a9u2/"}}
           value={styleChange}
             onValueChange={(value) =>{setStyleChange(!styleChange)}}
             disabled={false}
-             icon ={{
-              
-                true : <Icon name ="home"  color="red" />,
-                false :<Icon name ="night"  />,
-              
-             }}
+             icon ={icons}
 
           />
-           <Icon name ="home"  color="red" />
+           
               </Callout>
     </Screen>
   )
