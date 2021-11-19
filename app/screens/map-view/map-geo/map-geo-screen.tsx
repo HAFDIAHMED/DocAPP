@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import { observer } from "mobx-react-lite"
 import { StyleSheet, TextStyle, View, ViewStyle } from "react-native"
 import { Screen, Button,Text } from "../../../components"
@@ -11,7 +11,6 @@ import { TextInput, TouchableOpacity } from "react-native-gesture-handler"
 import { Switch } from "react-native-elements/dist/switch/switch"
 import SwitchWithIcons from "react-native-switch-with-icons";
 import Icon from 'react-native-vector-icons/FontAwesome';
-import { useEffect } from "markdown-to-jsx/node_modules/@types/react"
 export const MapGeoScreen = observer(function MapGeoScreen() {
   // Pull in one of our MST stores
   // const { someStore, anotherStore } = useStores()
