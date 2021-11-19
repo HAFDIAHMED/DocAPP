@@ -129,7 +129,7 @@ customMapStyle={mapStyles}
   }
   const AUTOCOMPLETE_SEARCH=()=>{
     return (
-        <View>
+        <View style={AUTO_STYLE}>
           <GooglePlacesAutocomplete
 
 placeholder='Search'
@@ -206,7 +206,7 @@ const ROOT: ViewStyle = {
   backgroundColor: color.palette.black,
   flex: 1,
   //alignItems:'center',
-  //justifyContent:'center',
+  justifyContent:'center',
 }
 
 const Button_Style : ViewStyle={
@@ -252,4 +252,8 @@ const MAPS_STYLE :ViewStyle={
 const PIN_MARKER_STYLE : ViewStyle={
   height:metrics.heightPercentageToDP(7),
   width:metrics.widthPercentageToDP(7),
+}
+const AUTO_STYLE :ViewStyle={
+  alignSelf:'center',
+  margin:metrics.heightPercentageToDP(1),
 }
