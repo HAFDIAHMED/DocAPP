@@ -571,8 +571,8 @@ image={{uri : "https://www.pngkit.com/bigpic/u2q8a9e6y3w7a9u2/"}}
       
           
           <SwitchWithIcons
-          value={checked}
-            onValueChange={(value) =>{setChecked(!checked)}}
+          value={styleChange}
+            onValueChange={(value) =>{setStyleChange(!styleChange)}}
             disabled={false}
 
           />
