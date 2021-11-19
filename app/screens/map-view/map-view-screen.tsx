@@ -1,10 +1,11 @@
 import React from "react"
 import { observer } from "mobx-react-lite"
 import { ViewStyle } from "react-native"
-import { Screen, Text } from "../../components"
+import { Button, Screen, Text } from "../../components"
 // import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "../../models"
 import { color } from "../../theme"
+import metrics from "../../theme/metrics"
 
 const ROOT: ViewStyle = {
   backgroundColor: color.palette.black,
@@ -19,7 +20,8 @@ export const MapViewScreen = observer(function MapViewScreen() {
   // const navigation = useNavigation()
   return (
     <Screen style={ROOT} preset="scroll">
-      <Text preset="header" text="Map View" />
-    </Screen>
+     <Text preset="header" text="MAP VIEW" style={{ alignSelf:'center',margin: metrics.heightPercentageToDP(2)}} />
+     <Button text="SEE MAP GEOLOCALISATION" />
+     </Screen>
   )
 })

@@ -6,10 +6,7 @@ import { Screen, Text } from "../../../components"
 // import { useStores } from "../../models"
 import { color } from "../../../theme"
 
-const ROOT: ViewStyle = {
-  backgroundColor: color.palette.black,
-  flex: 1,
-}
+
 
 export const MapGeoScreen = observer(function MapGeoScreen() {
   // Pull in one of our MST stores
@@ -23,3 +20,10 @@ export const MapGeoScreen = observer(function MapGeoScreen() {
     </Screen>
   )
 })
+
+const ROOT: ViewStyle = {
+  backgroundColor: color.palette.black,
+  flex: 1,
+  alignItems:'center',
+  justifyContent:'center',
+}
