@@ -628,5 +628,5 @@ const  MAP_STYLE_TEXT : TextStyle={
   color:'black',
 }
 const MAPS_STYLE :ViewStyle={
-
+  alignSelf:'flex-end',
 }
