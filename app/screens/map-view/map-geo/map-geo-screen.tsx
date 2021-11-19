@@ -1,7 +1,7 @@
 import React from "react"
 import { observer } from "mobx-react-lite"
 import { StyleSheet, TextStyle, ViewStyle } from "react-native"
-import { Screen, Text } from "../../../components"
+import { Screen, Button,Text } from "../../../components"
 // import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "../../models"
 import { color } from "../../../theme"
@@ -534,7 +534,6 @@ return(
        image={{uri : "https://www.pngkit.com/bigpic/u2q8a9e6y3w7a9u2/"}}
        
        />
-       <Button  text ="change style"/>
        </MapView>
 );
       }
@@ -568,7 +567,7 @@ const ROOT: ViewStyle = {
   justifyContent:'center',
 }
 
-const Button : ViewStyle={
+const Button_Style : ViewStyle={
 
   alignSelf:'center',
   margin: metrics.widthPercentageToDP(2)
