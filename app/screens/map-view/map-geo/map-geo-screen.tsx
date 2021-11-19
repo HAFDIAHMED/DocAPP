@@ -8,6 +8,7 @@ import { color } from "../../../theme"
 import metrics from "../../../theme/metrics"
 import MapView, { Callout, Marker, Polygon, PROVIDER_GOOGLE } from "react-native-maps"
 import { TextInput } from "react-native-gesture-handler"
+import { Switch } from "react-native-elements/dist/switch/switch"
 
 
 
@@ -564,6 +565,10 @@ image={{uri : "https://www.pngkit.com/bigpic/u2q8a9e6y3w7a9u2/"}}
       <Callout>
         
         <Button text="change style " onPress={()=>setStyleChange(!styleChange)}/>
+        <Switch
+        onValueChange={()=>setStyleChange(!styleChange)}
+        />
+          
         
               </Callout>
     </Screen>
