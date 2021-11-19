@@ -564,7 +564,7 @@ image={{uri : "https://www.pngkit.com/bigpic/u2q8a9e6y3w7a9u2/"}}
       <View style={ROW_STYLES_MAP}>
 
       <TouchableOpacity style={MAP_STYLE_PAGE} onPress={()=>setMapStyles(Night)}>
-      <Icon  name ="home"  color="black" size={30} />
+      <Icon  name ="moon"  color="black" size={30} />
       <Text style={MAP_STYLE_TEXT}>Night</Text>
       </TouchableOpacity>
       <TouchableOpacity style={MAP_STYLE_PAGE} onPress={()=>setMapStyles(Standard)}>
