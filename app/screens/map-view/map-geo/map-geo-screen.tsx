@@ -571,11 +571,7 @@ image={{uri : "https://www.pngkit.com/bigpic/u2q8a9e6y3w7a9u2/"}}
       <Text style={MAP_STYLE_TEXT}>Standard</Text>
 
       </View>
-      <View style={MAP_STYLE_PAGE}>
-      <Icon name ="home"  color="orange" size={30} onPress={()=>setMapStyles(mapStyle_Custom)}/>
-      <Text style={MAP_STYLE_TEXT}>Standard</Text>
-
-      </View>
+      
       </View>
            
               </Callout>
@@ -584,7 +580,22 @@ image={{uri : "https://www.pngkit.com/bigpic/u2q8a9e6y3w7a9u2/"}}
   return (
     <Screen style={ROOT} preset="scroll">
    <Map_View />
-     <MAPS />
+   <Callout style={MAPS_STYLE}>
+        
+        <View style={ROW_STYLES_MAP}>
+        <View style={MAP_STYLE_PAGE}>
+        <Icon  name ="home"  color="black" size={30} onPress={()=>setMapStyles(mapStyle_Night)}/>
+        <Text style={MAP_STYLE_TEXT}>Night</Text>
+        </View>
+        <View style={MAP_STYLE_PAGE}>
+        <Icon name ="home"  color="orange" size={30} onPress={()=>setMapStyles(mapStyle_Custom)}/>
+        <Text style={MAP_STYLE_TEXT}>Standard</Text>
+      <Button text="click" />
+        </View>
+        
+        </View>
+             
+                </Callout>
     </Screen>
   )
 })
