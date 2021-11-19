@@ -16,9 +16,9 @@ export const MapGeoScreen = observer(function MapGeoScreen() {
 
   // Pull in navigation via hook
   // const navigation = useNavigation()
-  return (
-    <Screen style={ROOT} preset="scroll">
-   <MapView
+  const Map_View =()=>{
+return(
+  <MapView
        provider={PROVIDER_GOOGLE}
       style={styles.map}
       region={{
@@ -35,6 +35,11 @@ export const MapGeoScreen = observer(function MapGeoScreen() {
        image={{uri : "https://www.pngkit.com/bigpic/u2q8a9e6y3w7a9u2/"}}
        />
        </MapView>
+);
+  }
+  return (
+    <Screen style={ROOT} preset="scroll">
+   <Map_View />
     </Screen>
   )
 })
