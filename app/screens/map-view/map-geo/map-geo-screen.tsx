@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { observer } from "mobx-react-lite"
 import { StyleSheet, TextStyle, View, ViewStyle } from "react-native"
 import { Screen, Button,Text } from "../../../components"
@@ -17,6 +17,7 @@ export const MapGeoScreen = observer(function MapGeoScreen() {
 
   // Pull in navigation via hook
   // const navigation = useNavigation()
+  const [styleChange , setStyleChange]=useState(true)
   var mapStyle_Custom=[
     {
       "elementType": "geometry",
