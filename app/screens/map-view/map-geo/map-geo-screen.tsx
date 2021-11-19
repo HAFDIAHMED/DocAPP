@@ -6,7 +6,7 @@ import { Screen, Text } from "../../../components"
 // import { useStores } from "../../models"
 import { color } from "../../../theme"
 import metrics from "../../../theme/metrics"
-import MapView, { Marker, PROVIDER_GOOGLE } from "react-native-maps"
+import MapView, { Marker, Polygon, PROVIDER_GOOGLE } from "react-native-maps"
 
 
 
@@ -19,6 +19,7 @@ export const MapGeoScreen = observer(function MapGeoScreen() {
   const Map_View =()=>{
 return(
   <MapView
+
        provider={PROVIDER_GOOGLE}
       style={styles.map}
       region={{
@@ -36,10 +37,28 @@ return(
        />
        </MapView>
 );
-  }
+      }
+ const Polygone_View =()=>{
+   return (
+    <MapView>
+    <Polygon
+    coordinates={[
+            { latitude: 37.8025259, longitude: -122.4351431 },
+            { latitude: 37.7896386, longitude: -122.421646 },
+            { latitude: 37.7665248, longitude: -122.4161628 },
+            { latitude: 37.7734153, longitude: -122.4577787 },
+            { latitude: 37.7948605, longitude: -122.4596065 },
+            { latitude: 37.8025259, longitude: -122.4351431 }
+        ]}
+    />
+  </MapView>
+   );
+ }
+  
+  
   return (
     <Screen style={ROOT} preset="scroll">
-   <Map_View />
+   <Polygone_View />
     </Screen>
   )
 })
