@@ -42,10 +42,11 @@ region={{
 
 
 >
-  </Marker>
-  <Image source={{uri : "https://cdn-icons-png.flaticon.com/512/889/889647.png"}} 
+<Image source={{uri : "https://cdn-icons-png.flaticon.com/512/889/889647.png"}} 
   style={PIN_MARKER_STYLE}
 />
+  </Marker>
+ 
 
 
 </MapView>
@@ -153,6 +154,6 @@ const MAPS_STYLE :ViewStyle={
  
 }
 const PIN_MARKER_STYLE : ViewStyle={
-  height:metrics.heightPercentageToDP(1),
-  width:metrics.widthPercentageToDP(1),
+  height:metrics.heightPercentageToDP(4),
+  width:metrics.widthPercentageToDP(4),
 }
