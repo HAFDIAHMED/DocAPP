@@ -571,6 +571,11 @@ image={{uri : "https://www.pngkit.com/bigpic/u2q8a9e6y3w7a9u2/"}}
       <Text style={MAP_STYLE_TEXT}>Standard</Text>
 
       </View>
+      <View style={MAP_STYLE_PAGE}>
+      <Icon name ="home"  color="orange" size={30} onPress={()=>setMapStyles(mapStyle_Custom)}/>
+      <Text style={MAP_STYLE_TEXT}>Standard</Text>
+
+      </View>
       </View>
            
               </Callout>
@@ -629,4 +634,6 @@ const  MAP_STYLE_TEXT : TextStyle={
 }
 const MAPS_STYLE :ViewStyle={
   alignSelf:'flex-end',
+  position:'absolute',
+  height:metrics.heightPercentageToDP(0.5),
 }
