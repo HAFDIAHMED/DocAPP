@@ -35,10 +35,16 @@ region={{
  latitudeDelta: 0.015,
  longitudeDelta: 0.0121,
 }}       showsUserLocation={true} >
-<Marker coordinate={{
-  latitude: 33.56729634144786,
-  longitude: -7.6277178270787225,
-}} 
+<Marker draggable
+            coordinate={{
+              latitude: 33.56729634144786,
+              longitude: -7.6277178270787225,
+            }}
+            onDragEnd={
+              (e) => alert(JSON.stringify(e.nativeEvent.coordinate))
+            }
+            title={'Test Marker'}
+            description={'This is a description of the marker'}
 
 
 >
