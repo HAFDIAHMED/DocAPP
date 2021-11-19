@@ -1,2 +1,3 @@
 const  ahmed="hello"
-export {ahmed} ;
+const hamid="hamid"
+export {ahmed ,hamid} ;
