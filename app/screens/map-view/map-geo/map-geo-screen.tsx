@@ -558,7 +558,7 @@ image={{uri : "https://www.pngkit.com/bigpic/u2q8a9e6y3w7a9u2/"}}
   </MapView>
    );  
  }
- const [checked, setChecked] = useState(false);
+ const [checked, setChecked] = useState(true);
 
   
   return (
@@ -572,7 +572,8 @@ image={{uri : "https://www.pngkit.com/bigpic/u2q8a9e6y3w7a9u2/"}}
           
           <SwitchWithIcons
           value={checked}
-            onValueChange={(value) =>{setChecked(!value);console.log(!checked)}}
+            onValueChange={(value) =>{setChecked(!checked);console.log(!checked)}}
+            disabled={false}
 
           />
               </Callout>
