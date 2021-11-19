@@ -16,20 +16,12 @@ export const MapGeoScreen = observer(function MapGeoScreen() {
 
   // Pull in navigation via hook
   // const navigation = useNavigation()
-  var mapStyle= [
+  var mapStyle=[
     {
       "elementType": "geometry",
       "stylers": [
         {
-          "color": "#f5f5f5"
-        }
-      ]
-    },
-    {
-      "elementType": "labels.icon",
-      "stylers": [
-        {
-          "visibility": "off"
+          "color": "#ebe3cd"
         }
       ]
     },
@@ -37,7 +29,7 @@ export const MapGeoScreen = observer(function MapGeoScreen() {
       "elementType": "labels.text.fill",
       "stylers": [
         {
-          "color": "#616161"
+          "color": "#523735"
         }
       ]
     },
@@ -45,7 +37,46 @@ export const MapGeoScreen = observer(function MapGeoScreen() {
       "elementType": "labels.text.stroke",
       "stylers": [
         {
-          "color": "#f5f5f5"
+          "color": "#f5f1e6"
+        }
+      ]
+    },
+    {
+      "featureType": "administrative",
+      "elementType": "geometry",
+      "stylers": [
+        {
+          "color": "#3da1ff"
+        },
+        {
+          "weight": 2.5
+        }
+      ]
+    },
+    {
+      "featureType": "administrative",
+      "elementType": "geometry.stroke",
+      "stylers": [
+        {
+          "color": "#c9b2a6"
+        }
+      ]
+    },
+    {
+      "featureType": "administrative",
+      "elementType": "labels.text",
+      "stylers": [
+        {
+          "weight": 4
+        }
+      ]
+    },
+    {
+      "featureType": "administrative",
+      "elementType": "labels.text.fill",
+      "stylers": [
+        {
+          "color": "#5c81a3"
         }
       ]
     },
@@ -63,10 +94,28 @@ export const MapGeoScreen = observer(function MapGeoScreen() {
     },
     {
       "featureType": "administrative.land_parcel",
+      "elementType": "geometry.stroke",
+      "stylers": [
+        {
+          "color": "#dcd2be"
+        }
+      ]
+    },
+    {
+      "featureType": "administrative.land_parcel",
       "elementType": "labels.text.fill",
       "stylers": [
         {
-          "color": "#bdbdbd"
+          "color": "#ae9e90"
+        }
+      ]
+    },
+    {
+      "featureType": "landscape.natural",
+      "elementType": "geometry",
+      "stylers": [
+        {
+          "color": "#dfd2ae"
         }
       ]
     },
@@ -75,7 +124,7 @@ export const MapGeoScreen = observer(function MapGeoScreen() {
       "elementType": "geometry",
       "stylers": [
         {
-          "color": "#eeeeee"
+          "color": "#dfd2ae"
         }
       ]
     },
@@ -84,16 +133,16 @@ export const MapGeoScreen = observer(function MapGeoScreen() {
       "elementType": "labels.text.fill",
       "stylers": [
         {
-          "color": "#757575"
+          "color": "#93817c"
         }
       ]
     },
     {
       "featureType": "poi.park",
-      "elementType": "geometry",
+      "elementType": "geometry.fill",
       "stylers": [
         {
-          "color": "#e5e5e5"
+          "color": "#a5b076"
         }
       ]
     },
@@ -102,7 +151,7 @@ export const MapGeoScreen = observer(function MapGeoScreen() {
       "elementType": "labels.text.fill",
       "stylers": [
         {
-          "color": "#9e9e9e"
+          "color": "#447530"
         }
       ]
     },
@@ -111,16 +160,16 @@ export const MapGeoScreen = observer(function MapGeoScreen() {
       "elementType": "geometry",
       "stylers": [
         {
-          "color": "#ffffff"
+          "color": "#f5f1e6"
         }
       ]
     },
     {
       "featureType": "road.arterial",
-      "elementType": "labels.text.fill",
+      "elementType": "geometry",
       "stylers": [
         {
-          "color": "#757575"
+          "color": "#fdfcf8"
         }
       ]
     },
@@ -129,16 +178,34 @@ export const MapGeoScreen = observer(function MapGeoScreen() {
       "elementType": "geometry",
       "stylers": [
         {
-          "color": "#dadada"
+          "color": "#f8c967"
         }
       ]
     },
     {
       "featureType": "road.highway",
-      "elementType": "labels.text.fill",
+      "elementType": "geometry.stroke",
       "stylers": [
         {
-          "color": "#616161"
+          "color": "#e9bc62"
+        }
+      ]
+    },
+    {
+      "featureType": "road.highway.controlled_access",
+      "elementType": "geometry",
+      "stylers": [
+        {
+          "color": "#e98d58"
+        }
+      ]
+    },
+    {
+      "featureType": "road.highway.controlled_access",
+      "elementType": "geometry.stroke",
+      "stylers": [
+        {
+          "color": "#db8555"
         }
       ]
     },
@@ -147,7 +214,7 @@ export const MapGeoScreen = observer(function MapGeoScreen() {
       "elementType": "labels.text.fill",
       "stylers": [
         {
-          "color": "#9e9e9e"
+          "color": "#806b63"
         }
       ]
     },
@@ -156,7 +223,25 @@ export const MapGeoScreen = observer(function MapGeoScreen() {
       "elementType": "geometry",
       "stylers": [
         {
-          "color": "#e5e5e5"
+          "color": "#dfd2ae"
+        }
+      ]
+    },
+    {
+      "featureType": "transit.line",
+      "elementType": "labels.text.fill",
+      "stylers": [
+        {
+          "color": "#8f7d77"
+        }
+      ]
+    },
+    {
+      "featureType": "transit.line",
+      "elementType": "labels.text.stroke",
+      "stylers": [
+        {
+          "color": "#ebe3cd"
         }
       ]
     },
@@ -165,16 +250,16 @@ export const MapGeoScreen = observer(function MapGeoScreen() {
       "elementType": "geometry",
       "stylers": [
         {
-          "color": "#eeeeee"
+          "color": "#dfd2ae"
         }
       ]
     },
     {
       "featureType": "water",
-      "elementType": "geometry",
+      "elementType": "geometry.fill",
       "stylers": [
         {
-          "color": "#c9c9c9"
+          "color": "#b9d3c2"
         }
       ]
     },
@@ -183,7 +268,7 @@ export const MapGeoScreen = observer(function MapGeoScreen() {
       "elementType": "labels.text.fill",
       "stylers": [
         {
-          "color": "#9e9e9e"
+          "color": "#92998d"
         }
       ]
     }
