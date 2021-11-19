@@ -8,7 +8,7 @@ import { color } from "../../../theme"
 import metrics from "../../../theme/metrics"
 import MapView, { Callout, Marker, Polygon, PROVIDER_GOOGLE } from "react-native-maps"
 import { TextInput, TouchableOpacity } from "react-native-gesture-handler"
-import hello from "./mapStyles_variation.js";
+import hello from "../map-geo/mapStyles_variation.js";
 import Icon from 'react-native-vector-icons/FontAwesome';
 export const MapGeoScreen = observer(function MapGeoScreen() {
   // Pull in one of our MST stores
