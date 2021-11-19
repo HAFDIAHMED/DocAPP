@@ -8,8 +8,7 @@ import { color } from "../../../theme"
 import metrics from "../../../theme/metrics"
 import MapView, { Callout, Marker, Polygon, PROVIDER_GOOGLE } from "react-native-maps"
 import { TextInput, TouchableOpacity } from "react-native-gesture-handler"
-import { Switch } from "react-native-elements/dist/switch/switch"
-import SwitchWithIcons from "react-native-switch-with-icons";
+import {Night} from "./mapStyles_variation";
 import Icon from 'react-native-vector-icons/FontAwesome';
 export const MapGeoScreen = observer(function MapGeoScreen() {
   // Pull in one of our MST stores
@@ -579,7 +578,7 @@ image={{uri : "https://www.pngkit.com/bigpic/u2q8a9e6y3w7a9u2/"}}
     );
   }
   useEffect(()=>{
-    console.log(mapStyles)
+    console.log(Night)
   })
   return (
     <Screen style={ROOT} preset="scroll">
