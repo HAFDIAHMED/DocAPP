@@ -64,6 +64,7 @@
     "reactotron-react-js": "^3.3.7",
     "reactotron-react-native": "^5.0.0",
     "rn-fetch-blob": "^0.12.0",
+    "switch-button-react-native": "^1.0.3",
     "validate.js": "0.13.1"
   },
   "devDependencies": {
