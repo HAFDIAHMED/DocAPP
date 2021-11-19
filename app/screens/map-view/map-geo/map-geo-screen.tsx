@@ -571,7 +571,8 @@ image={{uri : "https://www.pngkit.com/bigpic/u2q8a9e6y3w7a9u2/"}}
       
           
           <SwitchWithIcons
-            onValueChange={() =>setStyleChange(!styleChange) }
+          value={styleChange}
+            onValueChange={(value) =>setStyleChange(!styleChange) }
 
           />
               </Callout>
