@@ -169,7 +169,7 @@ styles={
     powered: {},
     listView: {},
     row: {
-      backgroundColor: '#FFFFFF',
+      backgroundColor: 'transparent',
       padding: 13,
       height: 44,
       flexDirection: 'row',
@@ -256,5 +256,6 @@ const PIN_MARKER_STYLE : ViewStyle={
 const AUTO_STYLE :ViewStyle={
   //alignSelf:'center',
   height:metrics.heightPercentageToDP(98),
-  marginHorizontal:metrics.widthPercentageToDP(20),
+  marginRight:metrics.widthPercentageToDP(20),
+  marginLeft:metrics.widthPercentageToDP(10)
 }
