@@ -156,6 +156,6 @@ const MAPS_STYLE :ViewStyle={
  
 }
 const PIN_MARKER_STYLE : ViewStyle={
-  height:metrics.heightPercentageToDP(4),
-  width:metrics.widthPercentageToDP(4),
+  height:metrics.heightPercentageToDP(7),
+  width:metrics.widthPercentageToDP(7),
 }
