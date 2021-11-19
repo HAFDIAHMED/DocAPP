@@ -564,11 +564,11 @@ image={{uri : "https://www.pngkit.com/bigpic/u2q8a9e6y3w7a9u2/"}}
       <Callout>
         
       <View style={ROW_STYLES_MAP}>
-      <View>
+      <View style={MAP_STYLE_PAGE}>
       <Icon  name ="home"  color="black" size={30} onPress={()=>setMapStyles(mapStyle_Night)}/>
       <Text>Night</Text>
       </View>
-      <View>
+      <View style={MAP_STYLE_PAGE}>
       <Icon name ="home"  color="white" size={30} onPress={()=>setMapStyles(mapStyle_Custom)}/>
       <Text>Standard</Text>
 
@@ -610,4 +610,8 @@ const styles = StyleSheet.create({
 })
 const ROW_STYLES_MAP : ViewStyle={
   flexDirection:'row',
+}
+const MAP_STYLE_PAGE : ViewStyle={
+   margin :metrics.widthPercentageToDP(2),
+   borderWidth:1, 
 }
