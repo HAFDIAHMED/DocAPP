@@ -64,6 +64,15 @@ export const MapGeoScreen = observer(function MapGeoScreen() {
     },
     {
       "featureType": "administrative",
+      "elementType": "labels.icon",
+      "stylers": [
+        {
+          "color": "#5c81a3"
+        }
+      ]
+    },
+    {
+      "featureType": "administrative",
       "elementType": "labels.text",
       "stylers": [
         {
@@ -251,6 +260,17 @@ export const MapGeoScreen = observer(function MapGeoScreen() {
       "stylers": [
         {
           "color": "#dfd2ae"
+        }
+      ]
+    },
+    {
+      "featureType": "water",
+      "stylers": [
+        {
+          "color": "#0ae2ff"
+        },
+        {
+          "weight": 4
         }
       ]
     },
