@@ -11,6 +11,7 @@ import { TextInput, TouchableOpacity } from "react-native-gesture-handler"
 import { Switch } from "react-native-elements/dist/switch/switch"
 import SwitchWithIcons from "react-native-switch-with-icons";
 import Icon from 'react-native-vector-icons/FontAwesome';
+import { useEffect } from "markdown-to-jsx/node_modules/@types/react"
 export const MapGeoScreen = observer(function MapGeoScreen() {
   // Pull in one of our MST stores
   // const { someStore, anotherStore } = useStores()
@@ -562,21 +563,25 @@ image={{uri : "https://www.pngkit.com/bigpic/u2q8a9e6y3w7a9u2/"}}
       <Callout style={MAPS_STYLE}>
         
       <View style={ROW_STYLES_MAP}>
-      <View style={MAP_STYLE_PAGE}>
+
+      <TouchableOpacity style={MAP_STYLE_PAGE}>
       <Icon  name ="home"  color="black" size={30} onPress={()=>setMapStyles(mapStyle_Night)}/>
       <Text style={MAP_STYLE_TEXT}>Night</Text>
-      </View>
-      <View style={MAP_STYLE_PAGE}>
+      </TouchableOpacity>
+      <TouchableOpacity style={MAP_STYLE_PAGE}>
       <Icon name ="home"  color="orange" size={30} onPress={()=>setMapStyles(mapStyle_Custom)}/>
       <Text style={MAP_STYLE_TEXT}>Standard</Text>
 
-      </View>
+      </TouchableOpacity>
       
       </View>
            
               </Callout>
     );
   }
+  useEffect(()=>{
+    console.log(mapStyles)
+  })
   return (
     <Screen style={ROOT} preset="scroll">
    <Map_View />
