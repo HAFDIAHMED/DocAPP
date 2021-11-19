@@ -7,10 +7,6 @@ import { Button, Screen, Text } from "../../components"
 import { color } from "../../theme"
 import metrics from "../../theme/metrics"
 
-const ROOT: ViewStyle = {
-  backgroundColor: color.palette.black,
-  flex: 1,
-}
 
 export const MapViewScreen = observer(function MapViewScreen() {
   // Pull in one of our MST stores
@@ -21,7 +17,25 @@ export const MapViewScreen = observer(function MapViewScreen() {
   return (
     <Screen style={ROOT} preset="scroll">
      <Text preset="header" text="MAP VIEW" style={{ alignSelf:'center',margin: metrics.heightPercentageToDP(2)}} />
-     <Button text="SEE MAP GEOLOCALISATION" />
+     <Button text="SEE MAP GEOLOCALISATION"  style={Button_Style} textStyle={Button_Text}/>
+
      </Screen>
   )
 })
+
+
+const ROOT: ViewStyle = {
+  backgroundColor: color.palette.black,
+  flex: 1,
+  alignItems:'center',
+  justifyContent:'center',
+}
+
+const Button_Style : ViewStyle={
+
+  alignSelf:'center',
+  margin: metrics.widthPercentageToDP(2)
+ }
+ const Button_Text:TextStyle={
+   fontSize:20,
+ }

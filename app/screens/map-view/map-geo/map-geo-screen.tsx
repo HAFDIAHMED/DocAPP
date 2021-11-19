@@ -1,10 +1,11 @@
 import React from "react"
 import { observer } from "mobx-react-lite"
-import { ViewStyle } from "react-native"
+import { TextStyle, ViewStyle } from "react-native"
 import { Screen, Text } from "../../../components"
 // import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "../../models"
 import { color } from "../../../theme"
+import metrics from "../../../theme/metrics"
 
 
 
@@ -27,3 +28,12 @@ const ROOT: ViewStyle = {
   alignItems:'center',
   justifyContent:'center',
 }
+
+const Button : ViewStyle={
+
+  alignSelf:'center',
+  margin: metrics.widthPercentageToDP(2)
+ }
+ const Button_Text:TextStyle={
+   fontSize:20,
+ }
