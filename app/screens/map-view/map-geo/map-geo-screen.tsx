@@ -191,6 +191,21 @@ styles={
         </View>
     );
   }
+  const [count,setCount]=useState(0);
+  const Increment=()=>{
+    setCount(count+1)
+  };
+  const Decrement=()=>{
+    if (count>=1){
+      setCount(count-1);
+    }
+    else {
+      setCount(0)
+    }
+    
+  };
+
+  
   useEffect(()=>{
     //console.log(Standard)
   })
