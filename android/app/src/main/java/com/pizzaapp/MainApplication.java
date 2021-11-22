@@ -8,6 +8,8 @@ import android.content.Context;
 import com.facebook.react.PackageList;
 import com.facebook.react.ReactApplication;
 import com.zoontek.rnpermissions.RNPermissionsPackage;
+import com.zoontek.rnpermissions.RNPermissionsPackage;
+import com.zoontek.rnpermissions.RNPermissionsPackage;
 import org.reactnative.camera.RNCameraPackage;
 import org.reactnative.camera.RNCameraPackage;
 import com.zoontek.rnpermissions.RNPermissionsPackage;
