@@ -19,9 +19,24 @@ export const QrCodeScannerCameraScreen = observer(function QrCodeScannerCameraSc
 
   // Pull in navigation via hook
   // const navigation = useNavigation()
+  const Read_Qr_Code= e =>{
+    Linking.openURL(e.data).catch(err=>
+      console.error("An error occured ",err)
+      )
+  }
   return (
     <Screen style={ROOT} preset="scroll">
       <Text preset="header" text="camera" />
+      <QRCodeScanner 
+      onRead={Read_Qr_Code}
+      flashMode={RNCamera.Constants.FlashMode.torch}
+      topContent={
+        <Text>
+          Go to {' '}
+        </Text>
+      }
+
+      />
     </Screen>
   )
 })
