@@ -22,9 +22,12 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
     <Screen style={ROOT} preset="scroll">
       
       <Text preset="header" text="Qr Code"  style={{alignSelf:'center'}}/>
+      <View style={INPUT_QR}>
       <TextInput 
       placeholder='put url to convert to qr code '
       />
+      </View>
+     
       <View style={QR_STYLE}>
       <QRCode
       value="https://gear9.ma/"
@@ -51,5 +54,11 @@ const QR_STYLE :ViewStyle={
   padding:metrics.widthPercentageToDP(8),
   backgroundColor:'white',
   alignSelf:'center',
+  margin:metrics.heightPercentageToDP(3),
  
+}
+const INPUT_QR : ViewStyle={
+  borderWidth:1,
+  borderColor:'white',
+  borderRadius:10,
 }
