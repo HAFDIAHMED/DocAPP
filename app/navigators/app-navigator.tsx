@@ -8,7 +8,7 @@ import React from "react"
 import { useColorScheme,Text } from "react-native"
 import { NavigationContainer, DefaultTheme, DarkTheme } from "@react-navigation/native"
 import { createNativeStackNavigator } from "@react-navigation/native-stack"
-import { WelcomeScreen, DemoScreen, DemoListScreen, ProfileScreen, SigninScreen, SignupScreen, PdfViewScreen, MapViewScreen, MapGeoScreen, QrCodeGeneratorScreen } from "../screens"
+import { WelcomeScreen, DemoScreen, DemoListScreen, ProfileScreen, SigninScreen, SignupScreen, PdfViewScreen, MapViewScreen, MapGeoScreen, QrCodeGeneratorScreen, QrCodeScannerCameraScreen } from "../screens"
 import { navigationRef } from "./navigation-utilities"
 import { PdfReaderScreen } from "../screens/pdf-view/pdf-reader/pdf-reader-screen"
 
@@ -36,6 +36,7 @@ export type NavigatorParamList = {
   map_view : undefined
   map_geo: undefined
   qr_code_g:undefined
+  qr_code_scanner:undefined
 }
 
 // Documentation: https://reactnavigation.org/docs/stack-navigator/
@@ -47,7 +48,7 @@ const AppStack = () => {
       screenOptions={{
         headerShown: false,
       }}
-      initialRouteName="qr_code_g"
+      initialRouteName="qr_code_scanner"
     >
                   <Stack.Screen name="pdf_reader" component={PdfReaderScreen} 
                   
@@ -68,6 +69,7 @@ const AppStack = () => {
       <Stack.Screen name="demoList" component={DemoListScreen} />
       <Stack.Screen name="signup" component={SignupScreen} />
       <Stack.Screen name="qr_code_g" component={QrCodeGeneratorScreen} />
+      <Stack.Screen name="qr_code_scanner" component={QrCodeScannerCameraScreen} />
 
 
     </Stack.Navigator>
@@ -100,5 +102,5 @@ AppNavigator.displayName = "AppNavigator"
  *
  * `canExit` is used in ./app/app.tsx in the `useBackButtonHandler` hook.
  */
-const exitRoutes = ["qr_code_g"]
+const exitRoutes = ["qr_code_scanner"]
 export const canExit = (routeName: string) => exitRoutes.includes(routeName)
