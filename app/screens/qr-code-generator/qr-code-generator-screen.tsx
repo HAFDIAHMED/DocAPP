@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { observer } from "mobx-react-lite"
-import { View, ViewStyle } from "react-native"
+import { TextInput, View, ViewStyle } from "react-native"
 import { Screen, Text } from "../../components"
 // import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "../../models"
@@ -22,11 +22,14 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
     <Screen style={ROOT} preset="scroll">
       
       <Text preset="header" text="Qr Code"  style={{alignSelf:'center'}}/>
+      <TextInput 
+      placeholder='put url to convert to qr code '
+      />
       <View style={QR_STYLE}>
       <QRCode
       value="https://gear9.ma/"
       size={300}
-     
+      
     />
       </View>
 
