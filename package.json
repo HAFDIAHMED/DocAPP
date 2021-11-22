@@ -57,6 +57,7 @@
     "react-native-keychain": "6.2.0",
     "react-native-maps": "^0.29.4",
     "react-native-pdf": "^6.4.0",
+    "react-native-qrcode-scanner": "^1.5.4",
     "react-native-qrcode-svg": "^6.1.1",
     "react-native-safe-area-context": "3.1.8",
     "react-native-screens": "3.4.0",
