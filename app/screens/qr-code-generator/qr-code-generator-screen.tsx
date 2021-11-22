@@ -18,10 +18,10 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
   return (
     <Screen style={ROOT} preset="scroll">
       
-      <Text preset="header" text="Qr Code"  style={{alignSelf:'center'}}/>
+      <Text preset="header" text="Qr Code"  style={{alignSelf:'center',color:"black"}}/>
       <View style={QR_STYLE}>
       <QRCode
-      value="helsslo"
+      value="https://gear9.ma/"
       size={300}
      
     />
@@ -34,7 +34,7 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
 })
 
 const ROOT: ViewStyle = {
-  backgroundColor: color.palette.black,
+  backgroundColor: color.palette.white,
   flex: 1,
   justifyContent:'center',
   alignItems:'center',
