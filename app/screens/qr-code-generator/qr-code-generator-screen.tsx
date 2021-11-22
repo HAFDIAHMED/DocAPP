@@ -23,6 +23,7 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
       <QRCode
       value="helsslo"
       size={300}
+     
     />
       </View>
 
