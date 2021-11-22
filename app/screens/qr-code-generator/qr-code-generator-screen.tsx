@@ -25,6 +25,7 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
       <View style={INPUT_QR}>
       <TextInput 
       placeholder='put url to convert to qr code '
+      style={{color:'white'}}
       />
       </View>
      
@@ -61,4 +62,5 @@ const INPUT_QR : ViewStyle={
   borderWidth:1,
   borderColor:'white',
   borderRadius:10,
+  backgroundColor:'white'
 }
