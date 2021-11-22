@@ -39,7 +39,7 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
     />
       </View>
       
-      <TouchableOpacity>
+      <TouchableOpacity style={SCANNER_QR} onPress={()=>navigation.navigate("qr_code_scanner")}>
         <Text>Open Scanner</Text>
       <Icon  name ="camera"  color="white" size={40}  />
 
@@ -72,4 +72,7 @@ const INPUT_QR : ViewStyle={
   borderColor:'white',
   borderRadius:10,
   backgroundColor:'white'
+}
+const SCANNER_QR :ViewStyle={
+  alignItems:'center',
 }
