@@ -26,8 +26,8 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
         SetQRValue(newValue);
         
       }
-      return newValue
   }
+  
 
   return (
     <Screen style={ROOT} preset="scroll">
@@ -37,7 +37,7 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
       <TextInput 
       placeholder='put url to convert to qr code '
       style={{fontSize:15}}
-      onChangeText={(value)=>SetQRValue(value)}
+      onChangeText={(value)=>Qr_Value_Validate(value)}
       />
       </View>
      
