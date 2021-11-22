@@ -9,7 +9,6 @@ import QRCode from 'react-native-qrcode-svg';
 import metrics from "../../theme/metrics"
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import QRCodeScanner from 'react-native-qrcode-scanner';
-import { RNCamera } from 'react-native-camera';
 
 
 export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
