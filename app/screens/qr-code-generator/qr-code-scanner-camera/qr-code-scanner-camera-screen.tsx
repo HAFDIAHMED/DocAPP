@@ -5,7 +5,8 @@ import { Screen, Text} from "../../../components"
 // import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "../../models"
 import { color } from "../../../theme"
-//import QRCodeScanner from 'react-native-qrcode-scanner';
+import QRCodeScanner from 'react-native-qrcode-scanner';
+import { RNCamera } from 'react-native-camera';
 
 const ROOT: ViewStyle = {
   backgroundColor: color.palette.black,
@@ -26,7 +27,7 @@ export const QrCodeScannerCameraScreen = observer(function QrCodeScannerCameraSc
   return (
     <Screen style={ROOT} preset="scroll">
       <Text preset="header" text="camera" />
-      {/*<QRCodeScanner 
+      <QRCodeScanner 
       onRead={Read_Qr_Code}
       flashMode={RNCamera.Constants.FlashMode.torch}
       topContent={
@@ -35,7 +36,7 @@ export const QrCodeScannerCameraScreen = observer(function QrCodeScannerCameraSc
         </Text>
       }
 
-      /> */}
+      /> 
     </Screen>
   )
 })
