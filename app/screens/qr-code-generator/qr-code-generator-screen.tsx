@@ -21,9 +21,12 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
       <Text preset="header" text="Qr Code"  style={{alignSelf:'center'}}/>
       <View style={QR_STYLE}>
       <QRCode
-      value="https://www.npmjs.com/package/react-native-qrcode-svg"
+      value="helsslo"
+      backgroundColor='white'
+      logoBackgroundColor='white'
     />
       </View>
+
       
 
     </Screen>
