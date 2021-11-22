@@ -16,7 +16,7 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
 
   // Pull in navigation via hook
   // const navigation = useNavigation()
-  const [qrValue,SetQRValue]=useState("");
+  const [qrValue,SetQRValue]=useState("hello");
 
   return (
     <Screen style={ROOT} preset="scroll">
@@ -25,13 +25,14 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
       <View style={INPUT_QR}>
       <TextInput 
       placeholder='put url to convert to qr code '
-      style={{color:'white'}}
+      style={{fontSize:15}}
+      onChangeText={(value)=>SetQRValue(value)}
       />
       </View>
      
       <View style={QR_STYLE}>
       <QRCode
-      value="https://gear9.ma/"
+      value={qrValue}
       size={300}
       
     />
