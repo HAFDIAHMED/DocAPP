@@ -15819,6 +15819,12 @@ react-native-blob-util@^0.13.17:
     base-64 "0.1.0"
     glob "^7.1.6"
 
+"react-native-camera@git+https://git@github.com/react-native-community/react-native-camera.git":
+  version "4.2.1"
+  resolved "git+https://git@github.com/react-native-community/react-native-camera.git#7cdfb6ec127decf1ac5686635afb7f07557becc5"
+  dependencies:
+    prop-types "^15.6.2"
+
 react-native-clean-project@^3.6.3:
   version "3.6.7"
   resolved "https://registry.yarnpkg.com/react-native-clean-project/-/react-native-clean-project-3.6.7.tgz#6d22ad22fe3a1e6efdb040eb66f9bdfb2273ac2e"
