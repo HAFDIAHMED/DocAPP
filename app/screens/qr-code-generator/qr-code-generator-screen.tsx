@@ -1,8 +1,8 @@
 import React, { useState } from "react"
 import { observer } from "mobx-react-lite"
 import { TextInput, View, ViewStyle } from "react-native"
-import { Screen, Text } from "../../components"
-// import { useNavigation } from "@react-navigation/native"
+import { Button, Screen, Text } from "../../components"
+import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "../../models"
 import { color } from "../../theme"
 import QRCode from 'react-native-qrcode-svg';
@@ -15,7 +15,7 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
   // const { someStore, anotherStore } = useStores()
 
   // Pull in navigation via hook
-  // const navigation = useNavigation()
+  const navigation = useNavigation()
   const [qrValue,SetQRValue]=useState("hello");
 
   return (
@@ -37,6 +37,7 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
       
     />
       </View>
+      <Button text="open scanner"  />
 
       
 
