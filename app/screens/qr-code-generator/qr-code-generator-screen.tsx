@@ -22,8 +22,7 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
       <View style={QR_STYLE}>
       <QRCode
       value="helsslo"
-      backgroundColor='white'
-      logoBackgroundColor='white'
+      size={300}
     />
       </View>
 
