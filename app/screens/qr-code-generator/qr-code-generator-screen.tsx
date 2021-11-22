@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { observer } from "mobx-react-lite"
 import { View, ViewStyle } from "react-native"
 import { Screen, Text } from "../../components"
@@ -15,6 +15,8 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
 
   // Pull in navigation via hook
   // const navigation = useNavigation()
+  const [qrValue,SetQRValue]=useState("");
+
   return (
     <Screen style={ROOT} preset="scroll">
       
