@@ -1,12 +1,13 @@
 import React, { useState } from "react"
 import { observer } from "mobx-react-lite"
-import { TextInput, View, ViewStyle } from "react-native"
+import { TextInput, TouchableOpacity, View, ViewStyle } from "react-native"
 import { Button, Screen, Text } from "../../components"
 import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "../../models"
 import { color } from "../../theme"
 import QRCode from 'react-native-qrcode-svg';
 import metrics from "../../theme/metrics"
+import Icon from 'react-native-vector-icons/FontAwesome5';
 
 
 
@@ -37,7 +38,13 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
       
     />
       </View>
-      <Button text="open scanner"  />
+      
+      <TouchableOpacity>
+        <Text>Open Scanner</Text>
+      <Icon  name ="camera"  color="white" size={40}  />
+
+      </TouchableOpacity>
+
 
       
 
