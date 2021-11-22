@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { observer } from "mobx-react-lite"
-import { TextInput, TouchableOpacity, View, ViewStyle } from "react-native"
+import { Alert, TextInput, TouchableOpacity, View, ViewStyle } from "react-native"
 import { Button, Screen, Text } from "../../components"
 import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "../../models"
@@ -18,6 +18,16 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
   // Pull in navigation via hook
   const navigation = useNavigation()
   const [qrValue,SetQRValue]=useState("hello");
+  const Qr_Value_Validate=(newValue)=>{
+      if (newValue===''){
+        Alert.alert("qr code value shouldnt be empty enter a not emply value !")
+      }
+      else{
+        SetQRValue(newValue);
+        
+      }
+      return newValue
+  }
 
   return (
     <Screen style={ROOT} preset="scroll">
