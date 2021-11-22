@@ -5,7 +5,7 @@ import { Screen, Text} from "../../../components"
 // import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "../../models"
 import { color } from "../../../theme"
-import QRCodeScanner from 'react-native-qrcode-scanner';
+//import QRCodeScanner from 'react-native-qrcode-scanner';
 
 const ROOT: ViewStyle = {
   backgroundColor: color.palette.black,
