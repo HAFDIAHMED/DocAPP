@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react"
 import { observer } from "mobx-react-lite"
-import { AppRegistry,Alert, Share ,TextInput, TouchableOpacity, View, ViewStyle } from "react-native"
+import { AppRegistry,Alert, Share ,TextInput, TouchableOpacity, View, ViewStyle, CameraRoll } from "react-native"
 import { Button, Screen, Text } from "../../components"
 import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "../../models"
@@ -11,7 +11,7 @@ import QRCode from 'react-native-qrcode-svg';
 import metrics from "../../theme/metrics"
 import Icon from 'react-native-vector-icons/FontAwesome5';
 //import QRCodeScanner from 'react-native-qrcode-scanner';
-//import RNFS from "react-native-fs"
+import RNFS from "react-native-fs"
 
 
 export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
@@ -36,6 +36,18 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
     //console.log(svg1)
   });
   let svg=useRef("");
+  const SaveQrCode=()=>{
+    svg.toDataURL((data)=>{
+
+      RNFS.writeFile(RNFS.CachesDirectoryPath+`/qr.png`,data,"base64" )
+      .then((success)=>{
+        return CameraRoll.saveToCameraRoll(RNFS.CachesDirectoryPath+`/qr.png`,"photo" );
+      })
+      .catch((e)=>{
+        console.log("saveToGallery",e)
+      })
+    })
+  }
   return (
     <Screen style={ROOT} preset="scroll">
       
