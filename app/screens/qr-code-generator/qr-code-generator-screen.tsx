@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react"
 import { observer } from "mobx-react-lite"
-import { AppRegistry,Alert, Share ,TextInput, TouchableOpacity, View, ViewStyle, CameraRoll } from "react-native"
+import { AppRegistry,Alert, Share ,TextInput, TouchableOpacity, View, ViewStyle } from "react-native"
 import { Button, Screen, Text } from "../../components"
 import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "../../models"
@@ -12,7 +12,7 @@ import metrics from "../../theme/metrics"
 import Icon from 'react-native-vector-icons/FontAwesome5';
 //import QRCodeScanner from 'react-native-qrcode-scanner';
 import RNFS from "react-native-fs"
-
+import CameraRoll from "@react-native-community/cameraroll";
 
 export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
   // Pull in one of our MST stores
