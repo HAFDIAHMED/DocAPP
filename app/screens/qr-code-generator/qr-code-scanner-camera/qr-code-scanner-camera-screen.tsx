@@ -59,7 +59,7 @@ const saveQrToDisk=()=> {
       showMarker={true}
       customMarker={
         <View >
-      <Icon  name ="ios-qr-scanner"  color="orange" size={300}   />
+      <Icon  name ="scan-outline"  color="orange" size={300}   />
 
         </View>
       }
