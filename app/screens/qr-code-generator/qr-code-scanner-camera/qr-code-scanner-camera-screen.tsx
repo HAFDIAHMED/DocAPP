@@ -44,12 +44,14 @@ const saveQrToDisk=()=> {
       <Text preset="header" text="camera" />
       <QRCodeScanner 
       onRead={Read_Qr_Code}
+    
       //flashMode={RNCamera.Constants.FlashMode.torch}
       topContent={
-        <Text>
+        <><Text>
           Go to {''}
-        </Text>
-        <Text>helooooooo</Text>
+        </Text><Text>
+            helooooooo
+          </Text></>
       }
 
       /> 
