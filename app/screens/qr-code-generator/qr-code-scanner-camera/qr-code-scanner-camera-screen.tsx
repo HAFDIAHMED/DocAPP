@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react"
 import { observer } from "mobx-react-lite"
 import { CameraRoll , ToastAndroid,Alert, Share ,TextInput, TouchableOpacity, View,Linking, ViewStyle } from "react-native"
-import { Button, Screen, Text} from "../../../components"
+import { Screen, Text} from "../../../components"
 // import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "../../models"
 import { color } from "../../../theme"
@@ -54,7 +54,7 @@ const saveQrToDisk=()=> {
       
       //flashMode={RNCamera.Constants.FlashMode.torch}
       topContent={
-        <><View style={URL_SCANNED}><Text>URL Scanned:{scanned}</Text>  </View> <Button  text="open url "/></> 
+        <><View style={URL_SCANNED}><Text>URL Scanned:{scanned}</Text> </View></> 
 
       }
 
