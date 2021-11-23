@@ -63,6 +63,7 @@ const saveQrToDisk=()=> {
 
       />
       <Button text="open url" style={{alignSelf:'center'}} onPress={()=>OpenQrCodeUrl(scanned)} />
+      <Text>URL Scanned:{scanned}</Text>
       
     </Screen>
   )
