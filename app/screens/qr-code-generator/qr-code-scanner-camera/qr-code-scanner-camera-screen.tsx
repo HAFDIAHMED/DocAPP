@@ -56,8 +56,9 @@ const saveQrToDisk=()=> {
         </Text>
       }
 
-      /> 
-      <Text>Url Scanned:</Text>
+      />
+      <View style={URL_SCANNED}><Text>URL Scanned:</Text></View> 
+      
       
     </Screen>
   )
@@ -66,4 +67,7 @@ const saveQrToDisk=()=> {
 const ROOT: ViewStyle = {
   backgroundColor: color.palette.black,
   flex: 1,
+}
+const URL_SCANNED :ViewStyle={
+    alignSelf:'center'
 }
