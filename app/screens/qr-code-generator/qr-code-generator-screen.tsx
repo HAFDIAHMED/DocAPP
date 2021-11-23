@@ -47,6 +47,7 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
 
       value={qrValue}
       size={300}
+      getRef={(c)=>svg1=c}
   
       
     />
