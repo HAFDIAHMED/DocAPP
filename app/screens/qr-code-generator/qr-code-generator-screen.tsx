@@ -29,18 +29,7 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
   }
   const [svg,setSvg]=useState();
   
-  const downloadQR = () => {
-    const canvas = document.getElementById("123456");
-    const pngUrl = canvas
-      .toDataURL("image/png")
-      .replace("image/png", "image/octet-stream");
-    let downloadLink = document.createElement("a");
-    downloadLink.href = pngUrl;
-    downloadLink.download = "123456.png";
-    document.body.appendChild(downloadLink);
-    downloadLink.click();
-    document.body.removeChild(downloadLink);
-  };
+  
   return (
     <Screen style={ROOT} preset="scroll">
       
