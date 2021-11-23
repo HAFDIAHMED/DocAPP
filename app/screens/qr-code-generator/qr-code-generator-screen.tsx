@@ -60,6 +60,11 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
     }
     Share.share(shareImageBase64).catch(error=>console.log(error));
   }
+  const QR_Code=()=>{
+    svg.toDataURL((data)=>{
+      ShareQrCode(data)
+    })
+  }
   
   return (
     <Screen style={ROOT} preset="scroll">
@@ -92,7 +97,7 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
       <Icon  name ="file"  color="white" size={40}  />
 
       </TouchableOpacity>
-      <TouchableOpacity style={SCANNER_QR} onPress={()=>{console.log("Share");ShareQrCode(svg.ToDataURL())}}>
+      <TouchableOpacity style={SCANNER_QR} onPress={()=>{console.log("Share");QR_Code()}}>
         <Text>Share Qr code</Text>
       <Icon  name ="share"  color="orange" size={40}  />
 
