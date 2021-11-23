@@ -78,12 +78,12 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
       </TouchableOpacity>
       <TouchableOpacity style={SCANNER_QR} onPress={()=>{console.log("hello");SaveQrCode();ToastAndroid.show('Saved to gallery !!', ToastAndroid.SHORT);}}>
         <Text>Save Qr code</Text>
-      <Icon  name ="file"  color="orange" size={40}  />
+      <Icon  name ="file"  color="white" size={40}  />
 
       </TouchableOpacity>
       <TouchableOpacity style={SCANNER_QR} onPress={()=>{console.log("Share")}}>
         <Text>Save Qr code</Text>
-      <Icon  name ="file"  color="white" size={40}  />
+      <Icon  name ="share"  color="orange" size={40}  />
 
       </TouchableOpacity>
       </View>
