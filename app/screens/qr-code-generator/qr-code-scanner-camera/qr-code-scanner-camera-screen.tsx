@@ -21,8 +21,6 @@ export const QrCodeScannerCameraScreen = observer(function QrCodeScannerCameraSc
   // Pull in navigation via hook
   // const navigation = useNavigation()
   let svg1= useRef("");
-
-
 const [imageSave,SetSave]=useState({ busy: false, imageSaved: true  })
 const saveQrToDisk=()=> {
   svg1.toDataURL((data) => {
@@ -44,14 +42,10 @@ const saveQrToDisk=()=> {
   const OpenQrCodeUrl=(url)=>{
     Linking.openURL(url)
   }
-
   const [scanned,setScanned]=useState("https://www.youtube.com/watch?v=iJzJ7d5CK4A");
-
   return (
     <Screen style={ROOT} preset="scroll">
-      <Text preset="header" text="QR Code Scanner" style={{alignSelf:'center'}} />
-
-      
+      <Text preset="header" text="QR Code Scanner" style={{alignSelf:'center'}} />   
       <QRCodeScanner 
       onRead={Read_Qr_Code}
       showMarker={true}
@@ -61,9 +55,6 @@ const saveQrToDisk=()=> {
 
         </View>
       }
-      
-      //flashMode={RNCamera.Constants.FlashMode.torch}
-    
       />
       <View style={URL_SCANNED}>
         <Text>URL Scanned : {scanned}</Text>
