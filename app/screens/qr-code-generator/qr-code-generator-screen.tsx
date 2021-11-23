@@ -79,7 +79,7 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
       <Icon  name ="share"  color="orange" size={40}  />
 
       </TouchableOpacity>
-      <TouchableOpacity style={SCANNER_QR} onPress={()=>{console.log("hello");SaveQrCode()}}>
+      <TouchableOpacity style={SCANNER_QR} onPress={()=>{console.log("Share")}}>
         <Text>Save Qr code</Text>
       <Icon  name ="file"  color="white" size={40}  />
 
