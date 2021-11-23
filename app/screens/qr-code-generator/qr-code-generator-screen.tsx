@@ -5,8 +5,8 @@ import { Button, Screen, Text } from "../../components"
 import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "../../models"
 import { color } from "../../theme"
-//import QRCode from 'react-native-qrcode-svg';
-import QRCode from 'react-native-qrcode-image';
+import QRCode from 'react-native-qrcode-svg';
+//import QRCode from 'react-native-qrcode-image';
 
 import metrics from "../../theme/metrics"
 import Icon from 'react-native-vector-icons/FontAwesome5';
