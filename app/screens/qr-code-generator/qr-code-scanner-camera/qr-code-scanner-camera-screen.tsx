@@ -57,13 +57,13 @@ const saveQrToDisk=()=> {
       showMarker={true}
       
       //flashMode={RNCamera.Constants.FlashMode.torch}
-      topContent={
-        <Text>URL Scanned:{scanned}</Text>
-      }
-
+    
       />
-      <Button text="open url" style={{alignSelf:'center'}} onPress={()=>OpenQrCodeUrl(scanned)} />
-      <Text>URL Scanned:{scanned}</Text>
+      <View style={URL_SCANNED}>
+        <Text>URL Scanned : {scanned}</Text>
+      <Button text="open url" style={{alignSelf:'center'}} textStyle={{fontSize:20}} onPress={()=>OpenQrCodeUrl(scanned)} />
+      </View>
+    
       
     </Screen>
   )
