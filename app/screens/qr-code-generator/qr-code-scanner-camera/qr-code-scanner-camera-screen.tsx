@@ -62,7 +62,7 @@ const saveQrToDisk=()=> {
       }
 
       />
-      <Button text="open url" style={{alignSelf:'center'}} onPress={()=>OpenQrCodeUrl("https://dev.to/aaronsm46722627/embedded-qr-code-scanner-and-browser-in-react-native-5752")} />
+      <Button text="open url" style={{alignSelf:'center'}} onPress={()=>OpenQrCodeUrl("https://www.youtube.com/watch?v=iJzJ7d5CK4A")} />
       
     </Screen>
   )
