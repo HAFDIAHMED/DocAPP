@@ -98,7 +98,8 @@ const INPUT_QR : ViewStyle={
   borderWidth:1,
   borderColor:'white',
   borderRadius:10,
-  backgroundColor:'white'
+  backgroundColor:'white',
+  //width : metrics.widthPercentageToDP(1),
 }
 const SCANNER_QR :ViewStyle={
   alignItems:'center',
