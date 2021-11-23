@@ -39,7 +39,7 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
     Share.share(shareableQrCode).catch(error=>console.log(error))
   }
   const saveQrcode =()=>{
-    svg1.toDataURL(callback);
+    callback(svg1.toDataURL())
   }
   
   return (
@@ -71,7 +71,7 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
       <Icon  name ="camera"  color="white" size={40}  />
 
       </TouchableOpacity>
-      <TouchableOpacity style={SCANNER_QR} onPress={()=>saveQrcode()}>
+      <TouchableOpacity style={SCANNER_QR} onPress={()=>callback("hhhh")}>
         <Text>Share Qr code</Text>
       <Icon  name ="share"  color="orange" size={40}  />
 
