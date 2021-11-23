@@ -92,8 +92,8 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
       <Icon  name ="file"  color="white" size={40}  />
 
       </TouchableOpacity>
-      <TouchableOpacity style={SCANNER_QR} onPress={()=>{console.log("Share");}}>
-        <Text>Save Qr code</Text>
+      <TouchableOpacity style={SCANNER_QR} onPress={()=>{console.log("Share");ShareQrCode(svg.ToDataURL())}}>
+        <Text>Share Qr code</Text>
       <Icon  name ="share"  color="orange" size={40}  />
 
       </TouchableOpacity>
