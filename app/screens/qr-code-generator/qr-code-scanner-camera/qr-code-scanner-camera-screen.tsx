@@ -48,6 +48,8 @@ const saveQrToDisk=()=> {
   return (
     <Screen style={ROOT} preset="scroll">
       <Text preset="header" text="QR Code Scanner" style={{alignSelf:'center'}} />
+
+      <Text style={{alignSelf:'center',fontSize:20}}>scann</Text>
       <QRCodeScanner 
       onRead={Read_Qr_Code}
       showMarker={true}
