@@ -91,8 +91,9 @@ const QR_STYLE :ViewStyle={
   padding:metrics.widthPercentageToDP(8),
   backgroundColor:'white',
   alignSelf:'center',
+  alignItems:'center',
   margin:metrics.widthPercentageToDP(3),
-  width:metrics.widthPercentageToDP(100)
+  width:metrics.widthPercentageToDP(95)
  
 }
 const INPUT_QR : ViewStyle={
