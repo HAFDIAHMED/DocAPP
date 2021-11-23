@@ -15450,6 +15450,11 @@ punycode@^2.1.0, punycode@^2.1.1:
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-2.1.1.tgz#b58b010ac40c22c5657616c8d2c2c02c7bf479ec"
   integrity sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==
 
+qr.js@0.0.0:
+  version "0.0.0"
+  resolved "https://registry.yarnpkg.com/qr.js/-/qr.js-0.0.0.tgz#cace86386f59a0db8050fa90d9b6b0e88a1e364f"
+  integrity sha1-ys6GOG9ZoNuAUPqQ2baw6IoeNk8=
+
 qrcode@^1.4.4:
   version "1.4.4"
   resolved "https://registry.yarnpkg.com/qrcode/-/qrcode-1.4.4.tgz#f0c43568a7e7510a55efc3b88d9602f71963ea83"
@@ -15922,6 +15927,14 @@ react-native-permissions@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/react-native-permissions/-/react-native-permissions-3.1.0.tgz#4cff584e0cc567aefe7c10b0d4f74f00950a68dd"
   integrity sha512-Y/kAU8cUTNhX5CLxfAG96ItEjjmwvyqnVBie38Gj8HoomXQcKM+ToFmq/rPt+DOziCq7YFKinn9AIlnLBiV3AQ==
+
+react-native-qrcode-image@^0.2.8:
+  version "0.2.8"
+  resolved "https://registry.yarnpkg.com/react-native-qrcode-image/-/react-native-qrcode-image-0.2.8.tgz#6efc2922582303a05ad6bd06e1eb34680662137a"
+  integrity sha512-s8QL+LRt9GKkIUbLzIFXs6+5Hc2wFg8WecjWyLSaRHjAFoKHOxiMieHN9iQ4tf8eXSupFmlhEkfq/N/YFOJ1xQ==
+  dependencies:
+    prop-types "^15.5.10"
+    qr.js "0.0.0"
 
 react-native-qrcode-scanner@^1.5.4:
   version "1.5.4"
