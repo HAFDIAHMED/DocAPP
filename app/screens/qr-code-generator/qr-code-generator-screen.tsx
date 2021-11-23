@@ -33,7 +33,7 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
     console.log(dataURL);
     let shareableQrCode={
       title : 'Qr Code Title ',
-      url: `data:image/png;base64,${dataURL}`,
+      url: `www.facebook.com`,
     
     }
     console.log(shareableQrCode.url)
@@ -43,7 +43,7 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
     callback(svg1.toDataURL())
   }
   useEffect(()=>{
-    console.log(svg1.current)
+    console.log(svg1)
   })
   return (
     <Screen style={ROOT} preset="scroll">
