@@ -52,7 +52,6 @@ const saveQrToDisk=()=> {
           Go to {''}
         </Text>
       }
-      ref={c => (svg1 = c)}
 
       /> 
     </Screen>
