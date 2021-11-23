@@ -20,7 +20,6 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
 
   // Pull in navigation via hook
   const navigation = useNavigation()
-  let svg1=useRef("");
   const [qrValue,SetQRValue]=useState("hello");
   const Qr_Value_Validate=(newValue)=>{
       if (newValue===''){
@@ -36,6 +35,7 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
   useEffect(()=>{
     //console.log(svg1)
   });
+  let svg1=useRef("");
   return (
     <Screen style={ROOT} preset="scroll">
       
