@@ -52,13 +52,13 @@ const saveQrToDisk=()=> {
       
       //flashMode={RNCamera.Constants.FlashMode.torch}
       topContent={
-        <Text>
-         Scan Qr Code
-        </Text>
+        <><Text>
+          Scan Qr Code
+        </Text><View style={URL_SCANNED}><Text>URL Scanned:</Text></View></> 
+
       }
 
       />
-      <View style={URL_SCANNED}><Text>URL Scanned:</Text></View> 
       
       
     </Screen>
@@ -71,5 +71,6 @@ const ROOT: ViewStyle = {
 }
 const URL_SCANNED :ViewStyle={
     alignSelf:'center',
-    marginBottom: metrics.heightPercentageToDP(3),
+    marginBottom: metrics.heightPercentageToDP(1)
+    
 }
