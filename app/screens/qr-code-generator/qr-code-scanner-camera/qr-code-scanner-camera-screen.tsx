@@ -58,7 +58,7 @@ const saveQrToDisk=()=> {
       showMarker={true}
       customMarker={
         <View >
-      <Icon  name ="qr"  color="orange" size={40}  />
+      <Icon  name ="square"  color="orange" size={40}  />
 
         </View>
       }
