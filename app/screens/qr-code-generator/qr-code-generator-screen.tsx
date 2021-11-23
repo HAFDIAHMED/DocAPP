@@ -46,7 +46,7 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
   const [imageSave,SetSave]=useState({ busy: false, imageSaved: true  })
   const saveQrToDisk=(imageexmple)=> {
     imageexmple.toDataURL((data) => {
-      RNFS.writeFile(RNFS.CachesDirectoryPath+"/1234.png", data, 'base64')
+      RNFS.writeFile(RNFS.CachesDirectoryPath+"/imag.svg", data, 'base64')
        console.log(RNFS.CachesDirectoryPath)
     })
  }
