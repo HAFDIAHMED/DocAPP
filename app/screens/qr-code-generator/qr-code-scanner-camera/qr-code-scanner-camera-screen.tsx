@@ -62,7 +62,7 @@ const saveQrToDisk=()=> {
       }
 
       />
-      <Button text="open url" style={{alignSelf:'center'}} onPress={()=>OpenQrCodeUrl("https://www.youtube.com/watch?v=iJzJ7d5CK4A")} />
+      <Button text="open url" style={{alignSelf:'center'}} onPress={()=>OpenQrCodeUrl(scanned)} />
       
     </Screen>
   )
