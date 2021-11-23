@@ -30,6 +30,8 @@ target 'PizzaApp' do
 
   pod 'RNPermissions', :path => '../node_modules/react-native-permissions'
 
+  pod 'RNFS', :path => '../node_modules/react-native-fs'
+
   target 'PizzaAppTests' do
     inherit! :complete
     # Pods for testing
