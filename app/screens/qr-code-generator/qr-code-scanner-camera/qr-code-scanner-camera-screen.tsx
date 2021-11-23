@@ -57,6 +57,8 @@ const saveQrToDisk=()=> {
       }
 
       /> 
+      <Text>Url Scanned:</Text>
+      
     </Screen>
   )
 })
