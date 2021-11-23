@@ -29,7 +29,7 @@ export const QrCodeScannerCameraScreen = observer(function QrCodeScannerCameraSc
       <Text preset="header" text="camera" />
       <QRCodeScanner 
       onRead={Read_Qr_Code}
-      flashMode={RNCamera.Constants.FlashMode.torch}
+      //flashMode={RNCamera.Constants.FlashMode.torch}
       topContent={
         <Text>
           Go to {''}
