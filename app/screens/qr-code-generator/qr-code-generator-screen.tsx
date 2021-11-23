@@ -33,7 +33,7 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
   
  
   useEffect(()=>{
-    //console.log(svg.toDataURL())
+    console.log(svg.toDataURL())
   });
   let svg=useRef("");
   const SaveQrCode=()=>{
