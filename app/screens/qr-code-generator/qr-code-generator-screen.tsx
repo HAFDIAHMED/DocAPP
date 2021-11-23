@@ -50,6 +50,14 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
       })
     })
   }
+  const ShareQrCode=(dataURL)=>{
+    let shareImageBase64={
+      title : `${qrValue}`,
+      url : `data:image/png;base64,${dataURL}`,
+      subject: `Share Qr Code : ${qrValue}`
+    }
+    Share.share(shareImageBase64).catch(error=>console.log(error));
+  }
   return (
     <Screen style={ROOT} preset="scroll">
       
