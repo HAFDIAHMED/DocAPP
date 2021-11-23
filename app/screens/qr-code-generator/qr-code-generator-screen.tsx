@@ -9,6 +9,7 @@ import QRCode from 'react-native-qrcode-svg';
 import metrics from "../../theme/metrics"
 import Icon from 'react-native-vector-icons/FontAwesome5';
 //import QRCodeScanner from 'react-native-qrcode-scanner';
+import RNFS from "react-native-fs"
 
 
 export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
@@ -42,9 +43,22 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
   const saveQrcode =()=>{
     callback(svg1.toDataURL())
   }
+  const [imageSave,SetSave]=useState({ busy: false, imageSaved: true  })
+  const saveQrToDisk=()=> {
+    svg1.toDataURL((data) => {
+      RNFS.writeFile(RNFS.CachesDirectoryPath+"/some-name.png", data, 'base64')
+        .then((success) => {
+          return CameraRoll.saveToCameraRoll(RNFS.CachesDirectoryPath+"/some-name.png", 'photo')
+        })
+        .then(() => {
+          SetSave({ busy: false, imageSaved: true  })
+          ToastAndroid.show('Saved to gallery !!', ToastAndroid.SHORT)
+        })
+    })
+ }
   useEffect(()=>{
     console.log(svg1)
-  })
+  });
   return (
     <Screen style={ROOT} preset="scroll">
       
