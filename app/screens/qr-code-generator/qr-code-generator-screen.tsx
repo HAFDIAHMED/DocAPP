@@ -32,11 +32,11 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
   const callback=(dataURL)=>{
     console.log(dataURL);
     let shareableQrCode={
-      message : 'Qr Code message ',
-      title: `data:image/png;base64,${dataURL}`,
+      //message : 'Qr Code message ',
+
+      message: `data:image/png;base64,${dataURL}`,
     
     }
-    console.log(shareableQrCode.url)
     Share.share(shareableQrCode).catch(error=>console.log(error))
   }
   const saveQrcode =()=>{
