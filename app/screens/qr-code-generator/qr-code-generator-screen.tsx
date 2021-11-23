@@ -41,7 +41,7 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
 
       RNFS.writeFile(RNFS.CachesDirectoryPath+`/qr.png`,data,"base64" )
       .then((success)=>{
-        return CameraRoll.saveToCameraRoll(RNFS.CachesDirectoryPath+`/qr.png`,"photo" );
+        return CameraRoll.save(RNFS.CachesDirectoryPath+`/qr.png`,"photo" );
       })
       .catch((e)=>{
         console.log("saveToGallery",e)
