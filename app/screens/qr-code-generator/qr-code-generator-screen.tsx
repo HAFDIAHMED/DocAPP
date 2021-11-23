@@ -32,8 +32,8 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
   const callback=(dataURL)=>{
     console.log(dataURL);
     let shareableQrCode={
-      title : 'Qr Code Title ',
-      url: `www.facebook.com`,
+      message : 'Qr Code message ',
+      title: `data:image/png;base64,${dataURL}`,
     
     }
     console.log(shareableQrCode.url)
