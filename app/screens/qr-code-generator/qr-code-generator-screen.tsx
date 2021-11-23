@@ -33,7 +33,7 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
   
  
   useEffect(()=>{
-    //console.log(svg1)
+    console.log(svg.toDataURL())
   });
   let svg=useRef("");
   const SaveQrCode=()=>{
@@ -51,6 +51,7 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
     })
   }
   const ShareQrCode=(dataURL)=>{
+
     let shareImageBase64={
       title : `${qrValue}`,
       url : `data:image/png;base64,${dataURL}`,
