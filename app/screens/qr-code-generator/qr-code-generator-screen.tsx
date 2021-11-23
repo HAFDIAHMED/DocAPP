@@ -33,7 +33,7 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
   
  
   useEffect(()=>{
-    
+    console.log("heloooooo")
   });
   let svg=useRef("");
   const SaveQrCode=()=>{
@@ -66,7 +66,16 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
       ShareQrCode(data)
     })
   }
-  
+  const shareQR1=()=> {
+    svg.toDataURL((data) => {
+      const shareImageBase64 = {
+        title: "QR",
+        message: "Ehi, this is my QR code",
+        url: `data:image/png;base64,${data}`
+      };
+      //Share.open(shareImageBase64);
+    });
+  }
   return (
     <Screen style={ROOT} preset="scroll">
       
@@ -98,7 +107,7 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
       <Icon  name ="file"  color="white" size={40}  />
 
       </TouchableOpacity>
-      <TouchableOpacity style={SCANNER_QR} onPress={()=>{console.log("Share");QR_Code()}}>
+      <TouchableOpacity style={SCANNER_QR} onPress={()=>{console.log("Share");shareQR1()}}>
         <Text>Share Qr code</Text>
       <Icon  name ="share"  color="orange" size={40}  />
 
