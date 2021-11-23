@@ -43,6 +43,7 @@ const saveQrToDisk=()=> {
   const OpenQrCodeUrl=(url)=>{
     Linking.openURL(url)
   }
+  const [scanned,setScanned]=useState("scann");
   return (
     <Screen style={ROOT} preset="scroll">
       <Text preset="header" text="QR Code Scanner" style={{alignSelf:'center'}} />
@@ -52,9 +53,7 @@ const saveQrToDisk=()=> {
       
       //flashMode={RNCamera.Constants.FlashMode.torch}
       topContent={
-        <><Text>
-          Scan Qr Code
-        </Text><View style={URL_SCANNED}><Text>URL Scanned:</Text></View></> 
+        <><View style={URL_SCANNED}><Text>URL Scanned:</Text></View></> 
 
       }
 
