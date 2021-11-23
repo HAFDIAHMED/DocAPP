@@ -50,7 +50,7 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
       <View style={QR_STYLE}>
       <QRCode
 
-      value={qrValue}
+      value={"qrValue"}
       size={300}
       //getRef={c => (svg1 = c)}
  
