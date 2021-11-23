@@ -48,12 +48,20 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
       
     />
       </View>
-      
+      <View style={QR_TOOLS_ROW}>
       <TouchableOpacity style={SCANNER_QR} onPress={()=>navigation.navigate("qr_code_scanner")}>
         <Text>Open Scanner</Text>
       <Icon  name ="camera"  color="white" size={40}  />
 
       </TouchableOpacity>
+      <TouchableOpacity style={SCANNER_QR} onPress={()=>console.log("hello")}>
+        <Text>Share Qr code</Text>
+      <Icon  name ="share"  color="white" size={40}  />
+
+      </TouchableOpacity>
+      </View>
+
+      
 
 
       
@@ -85,4 +93,7 @@ const INPUT_QR : ViewStyle={
 }
 const SCANNER_QR :ViewStyle={
   alignItems:'center',
+}
+const QR_TOOLS_ROW : ViewStyle={
+  flexDirection:'row',
 }
