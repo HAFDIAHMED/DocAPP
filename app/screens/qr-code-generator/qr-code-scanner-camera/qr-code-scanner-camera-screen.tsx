@@ -53,10 +53,7 @@ const saveQrToDisk=()=> {
       showMarker={true}
       
       //flashMode={RNCamera.Constants.FlashMode.torch}
-      topContent={
-        <><View style={URL_SCANNED}><Text>URL Scanned:{scanned}</Text> </View></> 
-
-      }
+     
 
       />
       
