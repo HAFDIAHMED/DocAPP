@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useRef, useState } from "react"
 import { observer } from "mobx-react-lite"
 import { Alert, TextInput, TouchableOpacity, View, ViewStyle } from "react-native"
 import { Button, Screen, Text } from "../../components"
@@ -28,7 +28,7 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
       }
   }
   const [svg,setSvg]=useState("");
-  const svg1="";
+  let svg1= useRef("");
   
   return (
     <Screen style={ROOT} preset="scroll">
@@ -47,7 +47,8 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
 
       value={qrValue}
       size={300}
-      getRef={(c)=>svg1=c}
+      getRef={c => (svg1 = c)}
+
   
       
     />
