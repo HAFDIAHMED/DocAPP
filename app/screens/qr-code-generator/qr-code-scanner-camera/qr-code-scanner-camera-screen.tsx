@@ -9,7 +9,8 @@ import QRCodeScanner from 'react-native-qrcode-scanner';
 //import { RNCamera } from 'react-native-camera';
 import RNFS from "react-native-fs"
 import metrics from "../../../theme/metrics"
-import Icon from 'react-native-vector-icons/FontAwesome5';
+//import Icon from 'react-native-vector-icons/FontAwesome5';
+import Icon from "react-native-vector-icons/Ionicons";
 
 
 
@@ -58,7 +59,7 @@ const saveQrToDisk=()=> {
       showMarker={true}
       customMarker={
         <View >
-      <Icon  name ="square"  color="orange" size={300}   />
+      <Icon  name ="ios-qr-scanner"  color="orange" size={300}   />
 
         </View>
       }
