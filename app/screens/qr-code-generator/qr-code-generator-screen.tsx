@@ -31,6 +31,12 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
   let svg1= useRef("");
   const callback=(dataURL)=>{
     console.log(dataURL);
+    let shareableQrCode={
+      title : 'Qr Code Title ',
+      url: `data:image/png;base64,${dataURL}`,
+    
+    }
+    Share.share(shareableQrCode).catch(error=>console.log(error))
   }
   const saveQrcode =()=>{
     svg1.toDataURL(callback);
