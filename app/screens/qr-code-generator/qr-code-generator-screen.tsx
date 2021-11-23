@@ -29,6 +29,12 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
   }
   const [svg,setSvg]=useState("");
   let svg1= useRef("");
+  const callback=(dataURL)=>{
+    console.log(dataURL);
+  }
+  const saveQrcode =()=>{
+    svg1.toDataURL(callback);
+  }
   
   return (
     <Screen style={ROOT} preset="scroll">
