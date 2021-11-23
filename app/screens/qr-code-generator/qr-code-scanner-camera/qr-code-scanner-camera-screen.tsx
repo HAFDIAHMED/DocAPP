@@ -8,6 +8,7 @@ import { color } from "../../../theme"
 import QRCodeScanner from 'react-native-qrcode-scanner';
 //import { RNCamera } from 'react-native-camera';
 import RNFS from "react-native-fs"
+import metrics from "../../../theme/metrics"
 
 
 
@@ -69,5 +70,6 @@ const ROOT: ViewStyle = {
   flex: 1,
 }
 const URL_SCANNED :ViewStyle={
-    alignSelf:'center'
+    alignSelf:'center',
+    marginBottom: metrics.heightPercentageToDP(3),
 }
