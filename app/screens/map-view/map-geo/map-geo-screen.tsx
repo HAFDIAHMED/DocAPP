@@ -45,8 +45,6 @@ customMapStyle={mapStyles}
             
             title={'Gear9 CASABLANCA'}
             description={'219 Bd Zerktouni, angle Bd Brahim Roudani, Casablanca 20000'}
-
-
 >
       <View>
     <Image source={{uri : "https://cdn-icons.flaticon.com/png/512/2377/premium/2377922.png?token=exp=1637334936~hmac=fb55cd244c2c62c66c10199bb1b18a92"}} 
@@ -56,8 +54,7 @@ customMapStyle={mapStyles}
   </Marker>
   <Marker 
             draggable
-            coordinate={{
-              
+            coordinate={{   
               latitude: 34.0222357021074,
               longitude:  -5.0075797678306015,
               
@@ -69,8 +66,6 @@ customMapStyle={mapStyles}
             
             title={'Gear9 FES'}
             description={'Angle Rue Tarik Ibn Ziad Et Rue Abdelkrim Benjelloun 6ème Etage, Commune Agdal, Fès'}
-
-
 >
       <View>
     <Image source={{uri : "https://cdn-icons.flaticon.com/png/512/2377/premium/2377922.png?token=exp=1637334936~hmac=fb55cd244c2c62c66c10199bb1b18a92"}} 
