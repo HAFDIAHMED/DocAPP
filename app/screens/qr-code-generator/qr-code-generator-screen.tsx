@@ -39,7 +39,7 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
     Share.share(shareableQrCode).catch(error=>console.log(error))
   }
   const saveQrcode =()=>{
-    svg1.current.toDataURL(callback);
+    svg1.toDataURL(callback);
   }
   
   return (
