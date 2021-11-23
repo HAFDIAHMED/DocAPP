@@ -55,7 +55,6 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
      
       <View style={QR_STYLE}>
       <QRCode
-      id="123456"
 
       value={qrValue}
       size={300}
@@ -69,7 +68,7 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
       <Icon  name ="camera"  color="white" size={40}  />
 
       </TouchableOpacity>
-      <TouchableOpacity style={SCANNER_QR} onPress={()=>downloadQR()}>
+      <TouchableOpacity style={SCANNER_QR} onPress={()=>console.log("hello")}>
         <Text>Share Qr code</Text>
       <Icon  name ="share"  color="orange" size={40}  />
 
