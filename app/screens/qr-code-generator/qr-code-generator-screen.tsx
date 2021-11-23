@@ -48,9 +48,10 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
     svg1.toDataURL((data) => {
       RNFS.writeFile(RNFS.CachesDirectoryPath+"/some-name.png", data, 'base64')
         
-        .then(() => {
+        .then((success) => {
           SetSave({ busy: false, imageSaved: true  })
           ToastAndroid.show('Saved to gallery !!', ToastAndroid.SHORT)
+          
         })
     })
  }
