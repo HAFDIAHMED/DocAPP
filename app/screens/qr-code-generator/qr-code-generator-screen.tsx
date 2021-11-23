@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react"
 import { observer } from "mobx-react-lite"
-import { AppRegistry,Alert, Share ,TextInput, TouchableOpacity, View, ViewStyle } from "react-native"
+import { AppRegistry,Alert, Share ,TextInput, TouchableOpacity, View, ViewStyle, ToastAndroid } from "react-native"
 import { Button, Screen, Text } from "../../components"
 import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "../../models"
@@ -41,7 +41,9 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
 
       RNFS.writeFile(RNFS.CachesDirectoryPath+`/qr.png`,data,"base64" )
       .then((success)=>{
+        
         return CameraRoll.save(RNFS.CachesDirectoryPath+`/qr.png`,"photo" );
+      
       })
       .catch((e)=>{
         console.log("saveToGallery",e)
@@ -74,9 +76,9 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
       <Icon  name ="camera"  color="white" size={40}  />
 
       </TouchableOpacity>
-      <TouchableOpacity style={SCANNER_QR} onPress={()=>{console.log("hello");SaveQrCode()}}>
-        <Text>Share Qr code</Text>
-      <Icon  name ="share"  color="orange" size={40}  />
+      <TouchableOpacity style={SCANNER_QR} onPress={()=>{console.log("hello");SaveQrCode();ToastAndroid.show('Saved to gallery !!', ToastAndroid.SHORT);}}>
+        <Text>Save Qr code</Text>
+      <Icon  name ="file"  color="orange" size={40}  />
 
       </TouchableOpacity>
       <TouchableOpacity style={SCANNER_QR} onPress={()=>{console.log("Share")}}>
