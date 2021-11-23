@@ -36,15 +36,16 @@ const saveQrToDisk=()=> {
 }
   const Read_Qr_Code= e =>{
     ///console.log(e.data);
-    Linking.openURL(e.data).catch(err=>
+    {/*Linking.openURL(e.data).catch(err=>
       console.error("An error occured ",err)
-      )
+      )*/}
+      setScanned(e.data)
   }
   const OpenQrCodeUrl=(url)=>{
     Linking.openURL(url)
   }
 
-  const [scanned,setScanned]=useState("scann");
+  const [scanned,setScanned]=useState("https://www.youtube.com/watch?v=iJzJ7d5CK4A");
 
   return (
     <Screen style={ROOT} preset="scroll">
@@ -61,7 +62,7 @@ const saveQrToDisk=()=> {
       }
 
       />
-      <Button text="open url" style={{alignSelf:'center'}} onPress={()=>console.log("url")} />
+      <Button text="open url" style={{alignSelf:'center'}} onPress={()=>OpenQrCodeUrl("https://dev.to/aaronsm46722627/embedded-qr-code-scanner-and-browser-in-react-native-5752")} />
       
     </Screen>
   )
