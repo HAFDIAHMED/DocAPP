@@ -20,6 +20,7 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
 
   // Pull in navigation via hook
   const navigation = useNavigation()
+  let svg1=useRef("");
   const [qrValue,SetQRValue]=useState("hello");
   const Qr_Value_Validate=(newValue)=>{
       if (newValue===''){
@@ -52,7 +53,7 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
 
       value={qrValue}
       size={300}
-      //getRef={c => (svg1 = c)}
+      getRef={c => (svg1 = c)}
     />
       </View>
       <View style={QR_TOOLS_ROW}>
