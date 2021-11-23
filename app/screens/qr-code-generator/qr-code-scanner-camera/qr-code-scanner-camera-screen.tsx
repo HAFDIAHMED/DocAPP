@@ -49,6 +49,7 @@ const saveQrToDisk=()=> {
         <Text>
           Go to {''}
         </Text>
+        <Text>helooooooo</Text>
       }
 
       /> 
