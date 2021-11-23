@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react"
 import { observer } from "mobx-react-lite"
 import { CameraRoll , ToastAndroid,Alert, Share ,TextInput, TouchableOpacity, View,Linking, ViewStyle } from "react-native"
-import { Screen, Text} from "../../../components"
+import { Button, Screen, Text} from "../../../components"
 // import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "../../models"
 import { color } from "../../../theme"
@@ -45,6 +45,7 @@ const saveQrToDisk=()=> {
   }
 
   const [scanned,setScanned]=useState("scann");
+
   return (
     <Screen style={ROOT} preset="scroll">
       <Text preset="header" text="QR Code Scanner" style={{alignSelf:'center'}} />
@@ -57,11 +58,10 @@ const saveQrToDisk=()=> {
       //flashMode={RNCamera.Constants.FlashMode.torch}
       topContent={
         <Text>URL Scanned:{scanned}</Text>
-
       }
 
       />
-      
+      <Button text="open url" style={{alignSelf:'center'}} onPress={()=>console.log("url")} />
       
     </Screen>
   )
