@@ -73,7 +73,7 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
         message: "Ehi, this is my QR code",
         url: `data:image/png;base64,${data}`
       };
-      //Share.open(shareImageBase64);
+      Share.open(shareImageBase64);
     });
   }
   return (
