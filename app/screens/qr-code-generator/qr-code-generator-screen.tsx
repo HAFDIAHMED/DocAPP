@@ -27,8 +27,20 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
         
       }
   }
+  const [svg,setSvg]=useState();
   
-
+  const downloadQR = () => {
+    const canvas = document.getElementById("123456");
+    const pngUrl = canvas
+      .toDataURL("image/png")
+      .replace("image/png", "image/octet-stream");
+    let downloadLink = document.createElement("a");
+    downloadLink.href = pngUrl;
+    downloadLink.download = "123456.png";
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+    document.body.removeChild(downloadLink);
+  };
   return (
     <Screen style={ROOT} preset="scroll">
       
@@ -43,8 +55,11 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
      
       <View style={QR_STYLE}>
       <QRCode
+      id="123456"
+
       value={qrValue}
       size={300}
+  
       
     />
       </View>
@@ -54,7 +69,7 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
       <Icon  name ="camera"  color="white" size={40}  />
 
       </TouchableOpacity>
-      <TouchableOpacity style={SCANNER_QR} onPress={()=>console.log("hello")}>
+      <TouchableOpacity style={SCANNER_QR} onPress={()=>downloadQR()}>
         <Text>Share Qr code</Text>
       <Icon  name ="share"  color="orange" size={40}  />
 
