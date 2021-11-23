@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react"
 import { observer } from "mobx-react-lite"
-import { Alert, TextInput, TouchableOpacity, View, ViewStyle } from "react-native"
+import { Alert, Share ,TextInput, TouchableOpacity, View, ViewStyle } from "react-native"
 import { Button, Screen, Text } from "../../components"
 import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "../../models"
@@ -65,7 +65,10 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
       <Icon  name ="camera"  color="white" size={40}  />
 
       </TouchableOpacity>
-      <TouchableOpacity style={SCANNER_QR} onPress={()=>console.log(svg1)}>
+      <TouchableOpacity style={SCANNER_QR} onPress={()=>Share.share({
+                                                  message:'send qr code',
+                                                  title :'qr code title' 
+                                              })}>
         <Text>Share Qr code</Text>
       <Icon  name ="share"  color="orange" size={40}  />
 
