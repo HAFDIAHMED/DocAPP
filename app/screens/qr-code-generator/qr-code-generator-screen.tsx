@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react"
 import { observer } from "mobx-react-lite"
-import { Alert, Share ,TextInput, TouchableOpacity, View, ViewStyle } from "react-native"
+import { CameraRoll , ToastAndroid,Alert, Share ,TextInput, TouchableOpacity, View, ViewStyle } from "react-native"
 import { Button, Screen, Text } from "../../components"
 import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "../../models"
@@ -32,9 +32,9 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
   const callback=(dataURL)=>{
     console.log(dataURL);
     let shareableQrCode={
-      //message : 'Qr Code message ',
+      message : 'Qr Code message ',
 
-      message: `data:image/png;base64,${dataURL}`,
+      dataURL: `data:image/png;base64,${dataURL}`,
     
     }
     Share.share(shareableQrCode).catch(error=>console.log(error))
