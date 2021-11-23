@@ -5,8 +5,8 @@ import { Button, Screen, Text } from "../../components"
 import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "../../models"
 import { color } from "../../theme"
-//import QRCode from 'react-native-qrcode-svg';
-import QRCode from 'react-native-qrcode-image';
+import QRCode from 'react-native-qrcode-svg';
+//import QRCode from 'react-native-qrcode-image';
 
 import metrics from "../../theme/metrics"
 import Icon from 'react-native-vector-icons/FontAwesome5';
@@ -50,7 +50,7 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
       <View style={QR_STYLE}>
       <QRCode
 
-      value={"qrValue"}
+      value={qrValue}
       size={300}
       //getRef={c => (svg1 = c)}
  
