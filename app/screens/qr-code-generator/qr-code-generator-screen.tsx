@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react"
 import { observer } from "mobx-react-lite"
-import { CameraRoll , ToastAndroid,Alert, Share ,TextInput, TouchableOpacity, View, ViewStyle } from "react-native"
+import { AppRegistry,Alert, Share ,TextInput, TouchableOpacity, View, ViewStyle } from "react-native"
 import { Button, Screen, Text } from "../../components"
 import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "../../models"
@@ -11,7 +11,7 @@ import QRCode from 'react-native-qrcode-image';
 import metrics from "../../theme/metrics"
 import Icon from 'react-native-vector-icons/FontAwesome5';
 //import QRCodeScanner from 'react-native-qrcode-scanner';
-import RNFS from "react-native-fs"
+//import RNFS from "react-native-fs"
 
 
 export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
@@ -53,10 +53,9 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
       value={qrValue}
       size={300}
       //getRef={c => (svg1 = c)}
-      
-  
-      
+ 
     />
+    
       </View>
       <View style={QR_TOOLS_ROW}>
       <TouchableOpacity style={SCANNER_QR} onPress={()=>navigation.navigate("qr_code_scanner")}>
