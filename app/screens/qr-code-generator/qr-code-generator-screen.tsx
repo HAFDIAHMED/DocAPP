@@ -53,9 +53,7 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
       value={qrValue}
       size={300}
       //getRef={c => (svg1 = c)}
- 
     />
-    
       </View>
       <View style={QR_TOOLS_ROW}>
       <TouchableOpacity style={SCANNER_QR} onPress={()=>navigation.navigate("qr_code_scanner")}>
@@ -69,12 +67,6 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
 
       </TouchableOpacity>
       </View>
-
-      
-
-
-      
-
     </Screen>
   )
 })
