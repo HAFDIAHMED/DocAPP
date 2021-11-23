@@ -39,12 +39,15 @@ const saveQrToDisk=()=> {
       console.error("An error occured ",err)
       )
   }
+  const OpenQrCodeUrl=(url)=>{
+    Linking.openURL(url)
+  }
   return (
     <Screen style={ROOT} preset="scroll">
       <Text preset="header" text="camera" />
       <QRCodeScanner 
       onRead={Read_Qr_Code}
-    
+      showMarker={true}
       //flashMode={RNCamera.Constants.FlashMode.torch}
       topContent={
         <><Text>
