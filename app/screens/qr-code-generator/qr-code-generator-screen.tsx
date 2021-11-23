@@ -44,15 +44,10 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
     callback(svg1.toDataURL())
   }
   const [imageSave,SetSave]=useState({ busy: false, imageSaved: true  })
-  const saveQrToDisk=()=> {
-    svg1.toDataURL((data) => {
-      RNFS.writeFile(RNFS.CachesDirectoryPath+"/some-name.png", data, 'base64')
-       
-        .then((success) => {
-          SetSave({ busy: false, imageSaved: true  })
-          ToastAndroid.show('Saved to gallery !!', ToastAndroid.SHORT)
-          
-        })
+  const saveQrToDisk=(imageexmple)=> {
+    imageexmple.toDataURL((data) => {
+      RNFS.writeFile(RNFS.CachesDirectoryPath+"/1234.png", data, 'base64')
+       console.log(RNFS.CachesDirectoryPath)
     })
  }
   useEffect(()=>{
@@ -87,7 +82,7 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
       <Icon  name ="camera"  color="white" size={40}  />
 
       </TouchableOpacity>
-      <TouchableOpacity style={SCANNER_QR} onPress={()=>{saveQrToDisk()}}>
+      <TouchableOpacity style={SCANNER_QR} onPress={()=>{saveQrToDisk(svg1)}}>
         <Text>Share Qr code</Text>
       <Icon  name ="share"  color="orange" size={40}  />
 
