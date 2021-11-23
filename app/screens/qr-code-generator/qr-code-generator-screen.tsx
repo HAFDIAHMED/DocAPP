@@ -28,7 +28,7 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
       }
   }
   const [svg,setSvg]=useState("");
-  
+  const svg1="";
   
   return (
     <Screen style={ROOT} preset="scroll">
@@ -47,7 +47,7 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
 
       value={qrValue}
       size={300}
-      getRef={(c)=>svg=c}
+      getRef={(c)=>svg1=c}
   
       
     />
