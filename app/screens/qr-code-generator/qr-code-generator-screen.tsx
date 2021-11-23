@@ -93,6 +93,13 @@ const INPUT_QR : ViewStyle={
 }
 const SCANNER_QR :ViewStyle={
   alignItems:'center',
+  margin:metrics.widthPercentageToDP(1),
+  borderWidth:1,
+  alignContent:'center',
+  justifyContent:'center',
+  padding:metrics.widthPercentageToDP(1),
+  borderColor:'white',
+  borderRadius:10,
 }
 const QR_TOOLS_ROW : ViewStyle={
   flexDirection:'row',
