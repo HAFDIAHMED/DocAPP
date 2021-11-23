@@ -9,10 +9,7 @@ import QRCodeScanner from 'react-native-qrcode-scanner';
 //import { RNCamera } from 'react-native-camera';
 import RNFS from "react-native-fs"
 
-const ROOT: ViewStyle = {
-  backgroundColor: color.palette.black,
-  flex: 1,
-}
+
 
 export const QrCodeScannerCameraScreen = observer(function QrCodeScannerCameraScreen() {
   // Pull in one of our MST stores
@@ -58,3 +55,8 @@ const saveQrToDisk=()=> {
     </Screen>
   )
 })
+
+const ROOT: ViewStyle = {
+  backgroundColor: color.palette.black,
+  flex: 1,
+}
