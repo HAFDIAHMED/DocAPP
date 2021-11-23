@@ -5,7 +5,9 @@ import { Button, Screen, Text } from "../../components"
 import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "../../models"
 import { color } from "../../theme"
-import QRCode from 'react-native-qrcode-svg';
+//import QRCode from 'react-native-qrcode-svg';
+import QRCode from 'react-native-qrcode-image';
+
 import metrics from "../../theme/metrics"
 import Icon from 'react-native-vector-icons/FontAwesome5';
 //import QRCodeScanner from 'react-native-qrcode-scanner';
@@ -29,27 +31,7 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
       }
   }
   const [svg,setSvg]=useState("");
-  let svg1= useRef("");
-  const callback=(dataURL)=>{
-    console.log(dataURL);
-    let shareableQrCode={
-      message : 'Qr Code message ',
-
-      dataURL: `data:image/png;base64,${dataURL}`,
-    
-    }
-    Share.share(shareableQrCode).catch(error=>console.log(error))
-  }
-  const saveQrcode =()=>{
-    callback(svg1.toDataURL())
-  }
-  const [imageSave,SetSave]=useState({ busy: false, imageSaved: true  })
-  const saveQrToDisk=(imageexmple)=> {
-    imageexmple.toDataURL((data) => {
-      RNFS.writeFile(RNFS.CachesDirectoryPath+"/imag.svg", data, 'base64')
-       console.log(RNFS.CachesDirectoryPath)
-    })
- }
+ 
   useEffect(()=>{
     //console.log(svg1)
   });
@@ -70,7 +52,7 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
 
       value={qrValue}
       size={300}
-      getRef={c => (svg1 = c)}
+      //getRef={c => (svg1 = c)}
       
   
       
@@ -82,7 +64,7 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
       <Icon  name ="camera"  color="white" size={40}  />
 
       </TouchableOpacity>
-      <TouchableOpacity style={SCANNER_QR} onPress={()=>{saveQrToDisk(svg1)}}>
+      <TouchableOpacity style={SCANNER_QR} onPress={()=>{console.log("hello")}}>
         <Text>Share Qr code</Text>
       <Icon  name ="share"  color="orange" size={40}  />
 
