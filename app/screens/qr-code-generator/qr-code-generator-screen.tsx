@@ -30,12 +30,12 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
         
       }
   }
-  const [svg,setSvg]=useState("");
+  
  
   useEffect(()=>{
     //console.log(svg1)
   });
-  let svg1=useRef("");
+  let svg=useRef("");
   return (
     <Screen style={ROOT} preset="scroll">
       
@@ -53,7 +53,7 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
 
       value={qrValue}
       size={300}
-      getRef={c => (svg1 = c)}
+      getRef={c => (svg = c)}
     />
       </View>
       <View style={QR_TOOLS_ROW}>
