@@ -74,7 +74,7 @@ export const QrCodeGeneratorScreen = observer(function QrCodeGeneratorScreen() {
         url: `data:image/png;base64,${data}`
       };
       Share.share(shareImageBase64);
-      console.log(url)
+      //console.log(shareImageBase64.url)
     });
   }
   return (
