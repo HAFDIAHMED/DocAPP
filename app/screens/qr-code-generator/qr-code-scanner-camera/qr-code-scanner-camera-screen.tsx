@@ -38,9 +38,7 @@ const saveQrToDisk=()=> {
 }
   const Read_Qr_Code= e =>{
     ///console.log(e.data);
-    Linking.openURL(e.data).catch(err=>
-      console.error("An error occured ",err)
-      )
+    Linking.openURL(e.data);
       setScanned(e.data)
   }
   const OpenQrCodeUrl=(url)=>{
