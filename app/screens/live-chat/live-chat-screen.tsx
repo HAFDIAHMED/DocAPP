@@ -23,7 +23,6 @@ export const LiveChatScreen = observer(function LiveChatScreen() {
   return (
     <Screen style={ROOT} preset="scroll">
       <Text preset="header" text="live chat screen"   style= {TEXT_STYLE}/>
-      <Button text="Live Message" style={Button_Message}  textStyle={TEXT_STYLE} onPress={()=>navigation.navigate("live_message")}/>
       <View style={CHAT_container}>
       <TouchableOpacity style={CHAT_BUTTON} onPress={()=>setOpenChat(true)}>
         <Icon  name ="chatbox-outline"  color="orange" size={40}  />
