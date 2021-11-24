@@ -41,11 +41,13 @@ const Button_Message : ViewStyle={
 }
 const CHAT_BUTTON :ViewStyle={
   borderWidth:1,
-  borderRadius:20,
-  width:metrics.widthPercentageToDP(40),
+  borderRadius:50,
+  //width:metrics.widthPercentageToDP(50),
+  //height:metrics.heightPercentageToDP(50),
   //position: 'absolute',
-  bottom:0,
-  left:metrics.widthPercentageToDP(10),
+ height:100,
+ width:100,
+  //left:metrics.widthPercentageToDP(10),
  marginHorizontal:metrics.widthPercentageToDP(9),
- justifyContent:'flex-start',
+ //justifyContent:'flex-start',
 }
