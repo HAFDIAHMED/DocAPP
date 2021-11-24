@@ -22,14 +22,16 @@ export const AllProjectsScreen = observer(function AllProjectsScreen() {
   return (
     <Screen style={ROOT} preset="scroll">
       <Text preset="header" text="All Projects" style={{alignSelf:'center'}} />
-      <View>
-      <ButtonProject    onPress={() => navigation.navigate("live_chat")} textLabel="hello" iconName={"chatbubbles-outline"} iconColor={"black"} iconSize={40} textStyleInside={false} textlabelColor={"black"}   />
+      <View style={BUTTONS_COLUMN}>
+      <ButtonProject    onPress={() => navigation.navigate("live_chat")} textLabel="hello" iconName={"chatbubbles-outline"} iconColor={"black"} iconSize={40} textlabelColor={"black"}  style={{margin:5}}  />
+      <ButtonProject    onPress={() => navigation.navigate("live_chat")} textLabel="hello" iconName={"chatbubbles-outline"} iconColor={"black"} iconSize={40} textlabelColor={"black"}  style={{margin:5}} />
 
       </View>
     </Screen>
   )
 })
 
-const OPEN_PROJECTS :ViewStyle={
+const BUTTONS_COLUMN :ViewStyle={
+  flexDirection:'column'
   
 }

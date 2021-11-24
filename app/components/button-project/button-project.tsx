@@ -26,7 +26,6 @@ export interface ButtonProjectProps extends  TouchableOpacityProps {
   iconColor:string
   iconSize :number
   forwardeRef? : any
-  textStyleInside : StyleProp<TextStyle>
   textlabelColor:string
   
 
