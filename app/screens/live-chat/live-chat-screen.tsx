@@ -6,6 +6,7 @@ import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "../../models"
 import { color } from "../../theme"
 import metrics from "../../theme/metrics"
+import { FAB } from 'react-native-elements';
 
 
 
@@ -19,7 +20,7 @@ export const LiveChatScreen = observer(function LiveChatScreen() {
     <Screen style={ROOT} preset="scroll">
       <Text preset="header" text="live chat screen"   style= {TEXT_STYLE}/>
       <Button text="Live Message" style={Button_Message}  textStyle={TEXT_STYLE} onPress={()=>navigation.navigate("live_message")}/>
-      
+
     </Screen>
   )
 })
