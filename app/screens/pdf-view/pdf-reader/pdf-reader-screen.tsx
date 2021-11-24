@@ -122,7 +122,7 @@ const historyDownload=()=> {
      <Icon
           name='search'
          // type='FontAwesome'
-          size={40}
+          size={30}
           color='orange'
           style={ICON_STYLE}
 
