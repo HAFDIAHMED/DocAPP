@@ -1,5 +1,5 @@
 import * as React from "react"
-import { StyleProp, TextStyle, View, ViewStyle } from "react-native"
+import { StyleProp, TextStyle, TouchableOpacityProps, View, ViewStyle } from "react-native"
 import { observer } from "mobx-react-lite"
 import { color, typography } from "../../theme"
 import { Text } from "../"
@@ -15,11 +15,13 @@ const TEXT: TextStyle = {
   color: color.primary,
 }
 
-export interface ButtonProjectProps {
+export interface ButtonProjectProps extends  TouchableOpacityProps {
   /**
    * An optional style override useful for padding & margin.
    */
   style?: StyleProp<ViewStyle>
+  textLabel : string
+
 }
 
 /**
@@ -31,7 +33,7 @@ export const ButtonProject = observer(function ButtonProject(props: ButtonProjec
 
   return (
     <View style={styles}>
-      <Text style={TEXT}>Hello</Text>
+      <Text style={TEXT}>{props.textLabel}</Text>
     </View>
   )
 })
