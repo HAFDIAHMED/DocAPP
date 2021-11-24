@@ -2,7 +2,7 @@ import React from "react"
 import { observer } from "mobx-react-lite"
 import { ViewStyle } from "react-native"
 import { ButtonProject, Screen, Text } from "../../components"
-// import { useNavigation } from "@react-navigation/native"
+import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "../../models"
 import { color } from "../../theme"
 import { TouchableOpacity } from "react-native-gesture-handler"
@@ -18,7 +18,7 @@ export const AllProjectsScreen = observer(function AllProjectsScreen() {
   // const { someStore, anotherStore } = useStores()
 
   // Pull in navigation via hook
-  // const navigation = useNavigation()
+   const navigation = useNavigation()
   return (
     <Screen style={ROOT} preset="scroll">
       <Text preset="header" text="All Projects" style={{alignSelf:'center'}} />
@@ -26,7 +26,7 @@ export const AllProjectsScreen = observer(function AllProjectsScreen() {
         <Icon name ="home" color='white'  size={30}/> 
         <Text style={{margin:10}}>Home</Text>
       </TouchableOpacity>
-      <ButtonProject  textLabel="hello" iconName={"home"} iconColor={"black"} iconSize={40}   />
+      <ButtonProject  onPress={()=>navigation.navigate("live_chat")} textLabel="hello" iconName={"home"} iconColor={"black"} iconSize={40}   />
     </Screen>
   )
 })
