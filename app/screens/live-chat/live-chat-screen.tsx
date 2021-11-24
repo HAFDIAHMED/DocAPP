@@ -28,7 +28,7 @@ const ROOT: ViewStyle = {
 }
 
 const TEXT_STYLE : TextStyle={
-  color : "black", fontSize:20,
+  color : "black", fontSize:20,alignSelf:'center'
 }
 const Button_Message : ViewStyle={
   alignSelf:'center',
