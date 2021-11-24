@@ -13,18 +13,17 @@ import WebView from "react-native-webview"
 export const LiveMessageScreen = observer(function LiveMessageScreen() {
   // Pull in one of our MST stores
   // const { someStore, anotherStore } = useStores()
-
+  // client secret : 84685d2008af7a3cdb6e6494a87587d0779d6e1a
   // Pull in navigation via hook
   // const navigation = useNavigation()
   return (
     <Screen style={ROOT} preset="scroll">
       <Text preset="header" text="live message" style={TEXT_STYLE} />
-      <WebView
+      {/*<WebView
           source={{
             uri: 'https://secure.livechatinc.com/licence/13309296/v2/open_chat.cgi',
           }}
-        />
-        <Text style={TEXT_STYLE}>Hello</Text>
+        /> */}
     </Screen>
   )
 })
