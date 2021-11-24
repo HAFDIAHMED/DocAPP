@@ -56,18 +56,12 @@ const CHAT_BUTTON :ViewStyle={
   justifyContent:'center',
   //position:'absolute',
  marginRight:metrics.widthPercentageToDP(4),
- shadowColor: "#000",
-shadowOffset: {
-	width: 0,
-	height: 3,
-},
-shadowOpacity: 0.27,
-shadowRadius: 4.65,
-
-elevation: 6,
+ 
+ 
 }
 const CHAT_container :ViewStyle={
   position:'absolute',
   bottom:metrics.heightPercentageToDP(10),
   alignSelf :'flex-end',
+  
 }
