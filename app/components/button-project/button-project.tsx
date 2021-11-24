@@ -64,5 +64,5 @@ const OPEN_PROJECT :ViewStyle={
   backgroundColor:"orange",
   padding:10,
   width:metrics.widthPercentageToDP(50),
-  maxWidth:metrics.widthPercentageToDP(70),
+  maxWidth:metrics.widthPercentageToDP(50),
 }
