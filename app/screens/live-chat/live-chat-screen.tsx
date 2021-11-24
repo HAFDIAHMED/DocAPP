@@ -28,9 +28,10 @@ export const LiveChatScreen = observer(function LiveChatScreen() {
         <Icon  name ="chatbox-outline"  color="black" size={40}  />
 
       </TouchableOpacity>
+      
+      </View>
       <View style={CIRCLE}>
 
-      </View>
       </View>
       
     </Screen>
@@ -74,4 +75,5 @@ const CIRCLE : ViewStyle={
   borderRadius:50,
   borderColor:'red',
   borderWidth:1,
+  alignSelf:'center',
 }
