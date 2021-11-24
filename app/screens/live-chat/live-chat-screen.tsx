@@ -51,7 +51,10 @@ const CHAT_BUTTON :ViewStyle={
   alignItems:'center',
   justifyContent:'center',
   //position:'absolute',
+ // marginRight:''
 }
 const CHAT_container :ViewStyle={
-  position:'absolute'
+  position:'absolute',
+  bottom:metrics.heightPercentageToDP(10),
+  alignSelf :'flex-end',
 }
