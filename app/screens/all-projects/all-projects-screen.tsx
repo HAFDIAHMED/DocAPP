@@ -1,6 +1,6 @@
 import React from "react"
 import { observer } from "mobx-react-lite"
-import { ViewStyle } from "react-native"
+import { View, ViewStyle } from "react-native"
 import { ButtonProject, Screen, Text } from "../../components"
 import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "../../models"
@@ -22,21 +22,14 @@ export const AllProjectsScreen = observer(function AllProjectsScreen() {
   return (
     <Screen style={ROOT} preset="scroll">
       <Text preset="header" text="All Projects" style={{alignSelf:'center'}} />
-      <TouchableOpacity style={OPEN_PROJECT}>
-        <Icon name ="home" color='white'  size={30}/> 
-        <Text style={{margin:10}}>Home</Text>
-      </TouchableOpacity>
-      <ButtonProject  onPress={()=>navigation.navigate("live_chat")} textLabel="hello" iconName={"home"} iconColor={"black"} iconSize={40}   />
+      <View>
+      <ButtonProject  onPress={()=>navigation.navigate("live_chat")} textLabel="hello" iconName={"chatbubbles-outline"} iconColor={"black"} iconSize={40}   />
+
+      </View>
     </Screen>
   )
 })
 
-const OPEN_PROJECT :ViewStyle={
-  flexDirection:'row',
-  alignItems:'center',
-  borderWidth:1,
-  alignSelf:'center',
-  borderRadius:20,
-  backgroundColor:'orange',
-  padding:10,
+const OPEN_PROJECTS :ViewStyle={
+  
 }
