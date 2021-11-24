@@ -5,6 +5,8 @@ import { Screen, Text } from "../../components"
 // import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "../../models"
 import { color } from "../../theme"
+import { TouchableOpacity } from "react-native-gesture-handler"
+import Icon from "react-native-vector-icons/Ionicons"
 
 const ROOT: ViewStyle = {
   backgroundColor: color.palette.black,
@@ -19,7 +21,10 @@ export const AllProjectsScreen = observer(function AllProjectsScreen() {
   // const navigation = useNavigation()
   return (
     <Screen style={ROOT} preset="scroll">
-      <Text preset="header" text="All Projects" />
+      <Text preset="header" text="All Projects" style={{alignSelf:'center'}} />
+      <TouchableOpacity>
+        <Icon name ="home" color='white' /> 
+      </TouchableOpacity>
     </Screen>
   )
 })

@@ -8,7 +8,7 @@ import React from "react"
 import { useColorScheme,Text } from "react-native"
 import { NavigationContainer, DefaultTheme, DarkTheme } from "@react-navigation/native"
 import { createNativeStackNavigator } from "@react-navigation/native-stack"
-import { WelcomeScreen, DemoScreen, DemoListScreen, ProfileScreen, SigninScreen, SignupScreen, PdfViewScreen, MapViewScreen, MapGeoScreen, QrCodeGeneratorScreen, QrCodeScannerCameraScreen, LiveChatScreen, LiveMessageScreen } from "../screens"
+import { WelcomeScreen, DemoScreen, DemoListScreen, ProfileScreen, SigninScreen, SignupScreen, PdfViewScreen, MapViewScreen, MapGeoScreen, QrCodeGeneratorScreen, QrCodeScannerCameraScreen, LiveChatScreen, LiveMessageScreen, AllProjectsScreen } from "../screens"
 import { navigationRef } from "./navigation-utilities"
 import { PdfReaderScreen } from "../screens/pdf-view/pdf-reader/pdf-reader-screen"
 
@@ -39,6 +39,7 @@ export type NavigatorParamList = {
   qr_code_scanner:undefined
   live_chat:undefined
   live_message : undefined
+  all_projects : undefined
 }
 
 // Documentation: https://reactnavigation.org/docs/stack-navigator/
@@ -50,7 +51,7 @@ const AppStack = () => {
       screenOptions={{
         headerShown: false,
       }}
-      initialRouteName="live_chat"
+      initialRouteName="all_projects"
     >
                   <Stack.Screen name="pdf_reader" component={PdfReaderScreen} />
 
@@ -70,6 +71,7 @@ const AppStack = () => {
       <Stack.Screen name="qr_code_scanner" component={QrCodeScannerCameraScreen} />
       <Stack.Screen name="live_chat" component={LiveChatScreen} />
       <Stack.Screen name="live_message" component={LiveMessageScreen} />
+      <Stack.Screen name="all_projects" component={AllProjectsScreen} />
 
 
 
@@ -103,5 +105,5 @@ AppNavigator.displayName = "AppNavigator"
  *
  * `canExit` is used in ./app/app.tsx in the `useBackButtonHandler` hook.
  */
-const exitRoutes = ["live_chat"]
+const exitRoutes = ["all_projects"]
 export const canExit = (routeName: string) => exitRoutes.includes(routeName)
