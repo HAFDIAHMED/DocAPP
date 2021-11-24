@@ -26,14 +26,16 @@ export const LiveChatScreen = observer(function LiveChatScreen() {
       <Button text="Live Message" style={Button_Message}  textStyle={TEXT_STYLE} onPress={()=>navigation.navigate("live_message")}/>
       <View style={CHAT_container}>
       <TouchableOpacity style={CHAT_BUTTON} onPress={()=>setOpenChat(true)}>
-        <Icon  name ="chatbox-outline"  color="black" size={40}  />
+        <Icon  name ="chatbox-outline"  color="orange" size={40}  />
 
       </TouchableOpacity>
       <Modal isVisible={openChat} >
 
       <View style={MESSAGE_VIEW}>
           
-          <View style={MESSAGE_HEADER}><Button text="Hide modal" onPress={()=>setOpenChat(!openChat)} />
+          <View style={MESSAGE_HEADER}>
+            
+            <Icon  name ="close" size={30} onPress={()=>setOpenChat(false)}/>
           
           </View>
           
