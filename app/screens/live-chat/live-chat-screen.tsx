@@ -33,8 +33,10 @@ export const LiveChatScreen = observer(function LiveChatScreen() {
 
       <View style={MESSAGE_VIEW}>
           
-
-          <Button text="Hide modal" onPress={()=>setOpenChat(!openChat)} />
+          <View style={MESSAGE_HEADER}><Button text="Hide modal" onPress={()=>setOpenChat(!openChat)} />
+          
+          </View>
+          
           <WebView
           source={{
             uri: 'https://secure.livechatinc.com/licence/13309296/v2/open_chat.cgi',
@@ -93,5 +95,9 @@ const CHAT_container :ViewStyle={
 const MESSAGE_VIEW :ViewStyle={
   flex: 1 ,backgroundColor:'white',
 
+}
+const MESSAGE_HEADER :ViewStyle={
+  flexDirection:'row',
+  justifyContent:'flex-end'
 }
  
