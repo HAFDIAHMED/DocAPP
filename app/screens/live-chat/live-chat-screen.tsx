@@ -31,7 +31,7 @@ export const LiveChatScreen = observer(function LiveChatScreen() {
       
       </View>
       <View style={CIRCLE}>
-
+        <Text style={TEXT_STYLE}>helooo</Text>
       </View>
       
     </Screen>
@@ -70,10 +70,19 @@ const CHAT_container :ViewStyle={
 }
  
 const CIRCLE : ViewStyle={
-  height:100,
-  width:100,
+  //height:100,
+  //width:100,
   borderRadius:50,
   borderColor:'red',
   borderWidth:1,
   alignSelf:'center',
+  shadowColor: "#000",
+shadowOffset: {
+	width: 0,
+	height: 12,
+},
+shadowOpacity: 0.58,
+shadowRadius: 16.00,
+
+elevation: 24,
 }
