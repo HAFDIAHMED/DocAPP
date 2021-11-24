@@ -19,7 +19,7 @@ export const LiveMessageScreen = observer(function LiveMessageScreen() {
   // const navigation = useNavigation()
   return (
     <Screen style={ROOT} preset="scroll">
-      <Text preset="header" text="" />
+      <Text preset="header" text="live message " />
     </Screen>
   )
 })

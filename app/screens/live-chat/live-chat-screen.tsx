@@ -6,10 +6,7 @@ import { Screen, Text } from "../../components"
 // import { useStores } from "../../models"
 import { color } from "../../theme"
 
-const ROOT: ViewStyle = {
-  backgroundColor: color.palette.black,
-  flex: 1,
-}
+
 
 export const LiveChatScreen = observer(function LiveChatScreen() {
   // Pull in one of our MST stores
@@ -19,7 +16,11 @@ export const LiveChatScreen = observer(function LiveChatScreen() {
   // const navigation = useNavigation()
   return (
     <Screen style={ROOT} preset="scroll">
-      <Text preset="header" text="" />
+      <Text preset="header" text="live chat screen" />
     </Screen>
   )
 })
+const ROOT: ViewStyle = {
+  backgroundColor: color.palette.black,
+  flex: 1,
+}

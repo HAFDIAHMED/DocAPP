@@ -50,7 +50,7 @@ const AppStack = () => {
       screenOptions={{
         headerShown: false,
       }}
-      initialRouteName="live_message"
+      initialRouteName="live_chat"
     >
                   <Stack.Screen name="pdf_reader" component={PdfReaderScreen} />
 
@@ -103,5 +103,5 @@ AppNavigator.displayName = "AppNavigator"
  *
  * `canExit` is used in ./app/app.tsx in the `useBackButtonHandler` hook.
  */
-const exitRoutes = ["live_message"]
+const exitRoutes = ["live_chat"]
 export const canExit = (routeName: string) => exitRoutes.includes(routeName)
