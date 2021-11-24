@@ -25,6 +25,8 @@ export interface ButtonProjectProps extends  TouchableOpacityProps {
   iconName : string
   iconColor:string
   iconSize :number
+  forwardeRef? : any
+
 
 }
 
@@ -32,14 +34,18 @@ export interface ButtonProjectProps extends  TouchableOpacityProps {
  * Describe your component here
  */
 export const ButtonProject = observer(function ButtonProject(props: ButtonProjectProps) {
-  const { style } = props
+  const { style ,forwardeRef,...rest} = props
   const styles = flatten([CONTAINER, style])
 
   return (
     <View style={styles}>
-      <TouchableOpacity style={OPEN_PROJECT}>
+      <TouchableOpacity style={OPEN_PROJECT}
+      {...rest}
+      ref={forwardeRef}>
         <Icon name ={props.iconName} color={props.iconColor}  size={props.iconSize}/> 
         <Text style={{margin:10}}>Home</Text>
+       
+      
         </TouchableOpacity>
     </View>
   )
