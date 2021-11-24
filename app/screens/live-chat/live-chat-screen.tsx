@@ -30,9 +30,7 @@ export const LiveChatScreen = observer(function LiveChatScreen() {
       </TouchableOpacity>
       
       </View>
-      <View style={CIRCLE}>
-        <Text style={TEXT_STYLE}>helooo</Text>
-      </View>
+      
       
     </Screen>
   )
@@ -51,7 +49,7 @@ const Button_Message : ViewStyle={
  
 }
 const CHAT_BUTTON :ViewStyle={
-  borderWidth:3,
+  //borderWidth:3,
   borderColor:'orange',
   borderRadius:50,
   height:100,
@@ -59,7 +57,17 @@ const CHAT_BUTTON :ViewStyle={
   alignItems:'center',
   justifyContent:'center',
   //position:'absolute',
+  backgroundColor:'white',
  marginRight:metrics.widthPercentageToDP(4),
+ shadowColor: "#000",
+shadowOffset: {
+	width: 0,
+	height: 12,
+},
+shadowOpacity: 0.58,
+shadowRadius: 16.00,
+
+elevation: 24,
  
 }
 const CHAT_container :ViewStyle={
@@ -69,21 +77,3 @@ const CHAT_container :ViewStyle={
   
 }
  
-const CIRCLE : ViewStyle={
-  height:100,
-  width:100,
-  backgroundColor:'white',
-  borderRadius:50,
-  borderColor:'red',
-  borderWidth:1,
-  alignSelf:'center',
-  shadowColor: "#000",
-shadowOffset: {
-	width: 0,
-	height: 12,
-},
-shadowOpacity: 0.58,
-shadowRadius: 16.00,
-
-elevation: 24,
-}
