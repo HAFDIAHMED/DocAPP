@@ -42,4 +42,6 @@ const Button_Message : ViewStyle={
 const CHAT_BUTTON :ViewStyle={
   borderWidth:1,
   borderRadius:20,
+  //position:'absolute',
+ // height:10,
 }
