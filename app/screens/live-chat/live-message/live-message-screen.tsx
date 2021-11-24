@@ -19,11 +19,11 @@ export const LiveMessageScreen = observer(function LiveMessageScreen() {
   return (
     <Screen style={ROOT} preset="scroll">
       <Text preset="header" text="live message" style={TEXT_STYLE} />
-      {/*<WebView
+      <WebView
           source={{
             uri: 'https://secure.livechatinc.com/licence/13309296/v2/open_chat.cgi',
           }}
-        /> */}
+        />
     </Screen>
   )
 })
