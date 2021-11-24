@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { observer } from "mobx-react-lite"
-import { StyleSheet, TextStyle, View, ViewStyle ,Image} from "react-native"
+import { StyleSheet, TextStyle, View, ViewStyle ,Image, ImageStyle} from "react-native"
 import { Screen, Button,Text } from "../../../components"
 // import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "../../models"
@@ -238,7 +238,7 @@ const MAPS_STYLE :ViewStyle={
   alignSelf:'flex-end',
  
 }
-const PIN_MARKER_STYLE : ViewStyle={
+const PIN_MARKER_STYLE : ImageStyle={
   height:metrics.heightPercentageToDP(7),
   width:metrics.widthPercentageToDP(7),
 }
