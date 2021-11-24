@@ -25,7 +25,11 @@ export const AllProjectsScreen = observer(function AllProjectsScreen() {
       <View style={BUTTONS_COLUMN}>
       <ButtonProject    onPress={() => navigation.navigate("live_chat")} textLabel="LiveChat" iconName={"chatbubbles"} iconColor={"black"} iconSize={40} textlabelColor={"black"}  style={{margin:5}}  />
       <ButtonProject    onPress={() => navigation.navigate("signin")} textLabel="Authentification" iconName={"people"} iconColor={"black"} iconSize={40} textlabelColor={"black"}  style={{margin:5}} />
-      <ButtonProject    onPress={() => navigation.navigate("pdf_view")} textLabel="PDF System" iconName={"people"} iconColor={"black"} iconSize={40} textlabelColor={"black"}  style={{margin:5}} />
+      <ButtonProject    onPress={() => navigation.navigate("pdf_view")} textLabel="PDF System" iconName={"document"} iconColor={"black"} iconSize={40} textlabelColor={"black"}  style={{margin:5}} />
+      <ButtonProject    onPress={() => navigation.navigate("qr_code_g")} textLabel="QR Code System" iconName={"document"} iconColor={"black"} iconSize={40} textlabelColor={"black"}  style={{margin:5}} />
+      <ButtonProject    onPress={() => navigation.navigate("map_view")} textLabel="Gealocalisation" iconName={"document"} iconColor={"black"} iconSize={40} textlabelColor={"black"}  style={{margin:5}} />
+
+
 
       </View>
     </Screen>
