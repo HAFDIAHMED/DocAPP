@@ -17,7 +17,7 @@ export const LiveChatScreen = observer(function LiveChatScreen() {
   // const { someStore, anotherStore } = useStores()
 
   // Pull in navigation via hook
-  const [openChat,setOpenChat]=useState(true);
+  const [openChat,setOpenChat]=useState(false);
   const navigation = useNavigation()
   return (
     <Screen style={ROOT} preset="scroll">
@@ -28,8 +28,10 @@ export const LiveChatScreen = observer(function LiveChatScreen() {
         <Icon  name ="chatbox-outline"  color="black" size={40}  />
 
       </TouchableOpacity>
-      <Modal>
-        
+      <Modal isVisible={false}>
+
+      <Button text="Live Message" style={Button_Message}  textStyle={TEXT_STYLE} onPress={()=>navigation.navigate("live_message")}/>
+
       </Modal>
       </View>
       
