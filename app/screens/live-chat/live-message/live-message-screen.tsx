@@ -6,6 +6,7 @@ import { Screen, Text } from "../../../components"
 // import { useStores } from "../../models"
 import { color } from "../../../theme"
 import metrics from "../../../theme/metrics"
+import WebView from "react-native-webview"
 
 
 
@@ -18,6 +19,12 @@ export const LiveMessageScreen = observer(function LiveMessageScreen() {
   return (
     <Screen style={ROOT} preset="scroll">
       <Text preset="header" text="live message" style={TEXT_STYLE} />
+      <WebView
+          source={{
+            uri: 'https://secure.livechatinc.com/licence/13309296/v2/open_chat.cgi',
+          }}
+        />
+        <Text style={TEXT_STYLE}>Hello</Text>
     </Screen>
   )
 })
