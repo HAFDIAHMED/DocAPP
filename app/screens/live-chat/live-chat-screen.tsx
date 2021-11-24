@@ -28,6 +28,9 @@ export const LiveChatScreen = observer(function LiveChatScreen() {
         <Icon  name ="chatbox-outline"  color="black" size={40}  />
 
       </TouchableOpacity>
+      <View style={CIRCLE}>
+
+      </View>
       </View>
       
     </Screen>
@@ -56,15 +59,6 @@ const CHAT_BUTTON :ViewStyle={
   justifyContent:'center',
   //position:'absolute',
  marginRight:metrics.widthPercentageToDP(4),
- shadowColor: "#000",
- shadowOffset: {
-   width: 0,
-   height: 6,
- },
- shadowOpacity: 0.32,
- shadowRadius: 6,
- 
- elevation: 8,
  
 }
 const CHAT_container :ViewStyle={
@@ -72,4 +66,12 @@ const CHAT_container :ViewStyle={
   bottom:metrics.heightPercentageToDP(10),
   alignSelf :'flex-end',
   
+}
+ 
+const CIRCLE : ViewStyle={
+  height:100,
+  width:100,
+  borderRadius:50,
+  borderColor:'red',
+  borderWidth:1,
 }
