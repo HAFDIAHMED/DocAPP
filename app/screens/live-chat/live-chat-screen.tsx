@@ -44,4 +44,6 @@ const CHAT_BUTTON :ViewStyle={
   borderRadius:20,
   //position:'absolute',
  // height:10,
+ marginHorizontal:metrics.widthPercentageToDP(9),
+ justifyContent:'flex-start',
 }
