@@ -6,18 +6,12 @@ import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "../../models"
 import { color } from "../../theme"
 import metrics from "../../theme/metrics"
-import { FAB } from 'react-native-elements';
 import { TouchableOpacity } from "react-native-gesture-handler"
 //import Icon from 'react-native-vector-icons/FontAwesome5';
 import Icon from "react-native-vector-icons/Ionicons";
 import Modal from "react-native-modal";
 import WebView from "react-native-webview"
-
 export const LiveChatScreen = observer(function LiveChatScreen() {
-  // Pull in one of our MST stores
-  // const { someStore, anotherStore } = useStores()
-
-  // Pull in navigation via hook
   const [openChat,setOpenChat]=useState(false);
   const navigation = useNavigation()
   return (
@@ -26,18 +20,13 @@ export const LiveChatScreen = observer(function LiveChatScreen() {
       <View style={CHAT_container}>
       <TouchableOpacity style={CHAT_BUTTON} onPress={()=>setOpenChat(true)}>
         <Icon  name ="chatbox-outline"  color="orange" size={40}  />
-
       </TouchableOpacity>
       <Modal isVisible={openChat} >
 
-      <View style={MESSAGE_VIEW}>
-          
-          <View style={MESSAGE_HEADER}>
-            
-            <Icon  name ="close" size={30} onPress={()=>setOpenChat(false)}/>
-          
-          </View>
-          
+      <View style={MESSAGE_VIEW}>  
+          <View style={MESSAGE_HEADER}>  
+            <Icon  name ="close" size={30} onPress={()=>setOpenChat(false)}/>   
+          </View>    
           <WebView
           source={{
             uri: 'https://secure.livechatinc.com/licence/13309296/v2/open_chat.cgi',
@@ -45,10 +34,7 @@ export const LiveChatScreen = observer(function LiveChatScreen() {
         />
         </View>
       </Modal>
-      </View>
-      
-      
-      
+      </View> 
     </Screen>
   )
 })
@@ -56,7 +42,6 @@ const ROOT: ViewStyle = {
   backgroundColor: color.palette.lighterGrey,
   flex: 1,
 }
-
 const TEXT_STYLE : TextStyle={
   color : "black", fontSize:20,alignSelf:'center'
 }
