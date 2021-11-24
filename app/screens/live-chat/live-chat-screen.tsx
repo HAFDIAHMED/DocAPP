@@ -36,7 +36,7 @@ export const LiveChatScreen = observer(function LiveChatScreen() {
   )
 })
 const ROOT: ViewStyle = {
-  backgroundColor: color.palette.white,
+  backgroundColor: color.palette.lighterGrey,
   flex: 1,
 }
 
