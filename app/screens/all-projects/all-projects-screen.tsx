@@ -23,8 +23,9 @@ export const AllProjectsScreen = observer(function AllProjectsScreen() {
     <Screen style={ROOT} preset="scroll">
       <Text preset="header" text="All Projects" style={{alignSelf:'center'}} />
       <View style={BUTTONS_COLUMN}>
-      <ButtonProject    onPress={() => navigation.navigate("live_chat")} textLabel="LiveChat" iconName={"chatbubbles-outline"} iconColor={"black"} iconSize={40} textlabelColor={"black"}  style={{margin:5}}  />
-      <ButtonProject    onPress={() => navigation.navigate("live_chat")} textLabel="Authentification" iconName={"chatbubbles-outline"} iconColor={"black"} iconSize={40} textlabelColor={"black"}  style={{margin:5}} />
+      <ButtonProject    onPress={() => navigation.navigate("live_chat")} textLabel="LiveChat" iconName={"chatbubbles"} iconColor={"black"} iconSize={40} textlabelColor={"black"}  style={{margin:5}}  />
+      <ButtonProject    onPress={() => navigation.navigate("live_chat")} textLabel="Authentification" iconName={"people"} iconColor={"black"} iconSize={40} textlabelColor={"black"}  style={{margin:5}} />
+      <ButtonProject    onPress={() => navigation.navigate("live_chat")} textLabel="Authentification" iconName={"people"} iconColor={"black"} iconSize={40} textlabelColor={"black"}  style={{margin:5}} />
 
       </View>
     </Screen>
