@@ -1,6 +1,6 @@
 import React from "react"
 import { observer } from "mobx-react-lite"
-import { TextStyle, View, ViewStyle } from "react-native"
+import { Modal, TextStyle, View, ViewStyle } from "react-native"
 import { Button, Screen, Text } from "../../components"
 import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "../../models"
@@ -30,6 +30,7 @@ export const LiveChatScreen = observer(function LiveChatScreen() {
       </TouchableOpacity>
       
       </View>
+      
       
       
     </Screen>
