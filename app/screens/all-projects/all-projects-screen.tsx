@@ -24,7 +24,7 @@ export const AllProjectsScreen = observer(function AllProjectsScreen() {
       <Text preset="header" text="All Projects" style={{alignSelf:'center'}} />
       <TouchableOpacity style={OPEN_PROJECT}>
         <Icon name ="home" color='white'  size={30}/> 
-        <Text>Home</Text>
+        <Text style={{margin:10}}>Home</Text>
       </TouchableOpacity>
     </Screen>
   )
@@ -33,5 +33,9 @@ export const AllProjectsScreen = observer(function AllProjectsScreen() {
 const OPEN_PROJECT :ViewStyle={
   flexDirection:'row',
   alignItems:'center',
-  
+  borderWidth:1,
+  alignSelf:'center',
+  borderRadius:20,
+  backgroundColor:'orange',
+  padding:10,
 }
