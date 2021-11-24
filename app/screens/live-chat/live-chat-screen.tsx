@@ -8,7 +8,8 @@ import { color } from "../../theme"
 import metrics from "../../theme/metrics"
 import { FAB } from 'react-native-elements';
 import { TouchableOpacity } from "react-native-gesture-handler"
-import Icon from 'react-native-vector-icons/FontAwesome5';
+//import Icon from 'react-native-vector-icons/FontAwesome5';
+import Icon from "react-native-vector-icons/Ionicons";
 
 
 
@@ -24,7 +25,7 @@ export const LiveChatScreen = observer(function LiveChatScreen() {
       <Button text="Live Message" style={Button_Message}  textStyle={TEXT_STYLE} onPress={()=>navigation.navigate("live_message")}/>
       <View style={CHAT_container}>
       <TouchableOpacity style={CHAT_BUTTON}>
-        <Icon  name ="comment-alt-dots"  color="black" size={40}  />
+        <Icon  name ="chatbox-outline"  color="black" size={40}  />
 
       </TouchableOpacity>
       </View>
@@ -47,6 +48,7 @@ const Button_Message : ViewStyle={
 }
 const CHAT_BUTTON :ViewStyle={
   borderWidth:3,
+  borderColor:'orange',
   borderRadius:50,
   height:100,
   width:100, 
@@ -54,6 +56,15 @@ const CHAT_BUTTON :ViewStyle={
   justifyContent:'center',
   //position:'absolute',
  marginRight:metrics.widthPercentageToDP(4),
+ shadowColor: "#000",
+shadowOffset: {
+	width: 0,
+	height: 3,
+},
+shadowOpacity: 0.27,
+shadowRadius: 4.65,
+
+elevation: 6,
 }
 const CHAT_container :ViewStyle={
   position:'absolute',
