@@ -24,14 +24,17 @@ export const LiveChatScreen = observer(function LiveChatScreen() {
       <Text preset="header" text="live chat screen"   style= {TEXT_STYLE}/>
       <Button text="Live Message" style={Button_Message}  textStyle={TEXT_STYLE} onPress={()=>navigation.navigate("live_message")}/>
       <View style={CHAT_container}>
-      <TouchableOpacity style={CHAT_BUTTON}>
+      <TouchableOpacity style={CHAT_BUTTON} onPress={()=>setOpenChat(true)}>
         <Icon  name ="chatbox-outline"  color="black" size={40}  />
 
       </TouchableOpacity>
-      <Modal isVisible={false}>
+      <Modal isVisible={openChat} >
 
-      <Button text="Live Message" style={Button_Message}  textStyle={TEXT_STYLE} onPress={()=>navigation.navigate("live_message")}/>
+      <View style={{ flex: 1 ,backgroundColor:'white'}}>
+          <Text>Hello!</Text>
 
+          <Button text="Hide modal" onPress={()=>setOpenChat(!openChat)} />
+        </View>
       </Modal>
       </View>
       
