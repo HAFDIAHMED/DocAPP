@@ -70,8 +70,9 @@ const CHAT_container :ViewStyle={
 }
  
 const CIRCLE : ViewStyle={
-  //height:100,
-  //width:100,
+  height:100,
+  width:100,
+  backgroundColor:'white',
   borderRadius:50,
   borderColor:'red',
   borderWidth:1,
