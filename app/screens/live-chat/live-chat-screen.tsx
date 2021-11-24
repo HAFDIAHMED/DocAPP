@@ -44,7 +44,7 @@ const TEXT_STYLE : TextStyle={
 const Button_Message : ViewStyle={
   alignSelf:'center',
   margin:metrics.widthPercentageToDP(2),
-  
+ 
 }
 const CHAT_BUTTON :ViewStyle={
   borderWidth:3,
@@ -56,16 +56,15 @@ const CHAT_BUTTON :ViewStyle={
   justifyContent:'center',
   //position:'absolute',
  marginRight:metrics.widthPercentageToDP(4),
-
  shadowColor: "#000",
  shadowOffset: {
    width: 0,
-   height: 3,
+   height: 6,
  },
- shadowOpacity: 0.27,
- shadowRadius: 4.65,
+ shadowOpacity: 0.32,
+ shadowRadius: 6,
  
- elevation: 7,
+ elevation: 8,
  
 }
 const CHAT_container :ViewStyle={
