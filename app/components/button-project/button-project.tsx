@@ -43,7 +43,7 @@ export const ButtonProject = observer(function ButtonProject(props: ButtonProjec
       <TouchableOpacity style={OPEN_PROJECT}
       {...rest}
       ref={forwardeRef}>
-        <Icon name ={props.iconName} color={props.iconColor}  size={props.iconSize} /> 
+        <Icon name ={props.iconName} color={props.iconColor}  size={props.iconSize} style={{}}/> 
         <Text style={{margin:10}}>Home</Text>
        
       

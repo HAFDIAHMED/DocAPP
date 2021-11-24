@@ -23,7 +23,7 @@ export const AllProjectsScreen = observer(function AllProjectsScreen() {
     <Screen style={ROOT} preset="scroll">
       <Text preset="header" text="All Projects" style={{alignSelf:'center'}} />
       <View>
-      <ButtonProject  onPress={()=>navigation.navigate("live_chat")} textLabel="hello" iconName={"chatbubbles-outline"} iconColor={"black"} iconSize={40}   />
+      <ButtonProject    onPress={()=>navigation.navigate("live_chat")} textLabel="hello" iconName={"chatbubbles-outline"} iconColor={"black"} iconSize={40}   />
 
       </View>
     </Screen>
