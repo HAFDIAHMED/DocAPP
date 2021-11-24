@@ -21,7 +21,7 @@ export const LiveChatScreen = observer(function LiveChatScreen() {
     <Screen style={ROOT} preset="scroll">
       <Text preset="header" text="live chat screen"   style= {TEXT_STYLE}/>
       <Button text="Live Message" style={Button_Message}  textStyle={TEXT_STYLE} onPress={()=>navigation.navigate("live_message")}/>
-      <View>
+      <View style={CHAT_container}>
       <TouchableOpacity style={CHAT_BUTTON}>
         <Text style={TEXT_STYLE}>Live Message</Text>
       </TouchableOpacity>
@@ -51,7 +51,7 @@ const CHAT_BUTTON :ViewStyle={
   alignItems:'center',
   justifyContent:'center',
   //position:'absolute',
-
- 
- 
+}
+const CHAT_container :ViewStyle={
+  position:'absolute'
 }
