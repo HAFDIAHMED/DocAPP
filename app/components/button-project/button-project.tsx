@@ -26,6 +26,7 @@ export interface ButtonProjectProps extends  TouchableOpacityProps {
   iconColor:string
   iconSize :number
   forwardeRef? : any
+  ButtonColor:string
 
 
 }
@@ -58,6 +59,6 @@ const OPEN_PROJECT :ViewStyle={
   borderWidth:1,
   alignSelf:'center',
   borderRadius:20,
-  backgroundColor:'orange',
+  backgroundColor:"orange",
   padding:10,
 }

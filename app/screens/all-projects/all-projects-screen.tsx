@@ -26,7 +26,7 @@ export const AllProjectsScreen = observer(function AllProjectsScreen() {
         <Icon name ="home" color='white'  size={30}/> 
         <Text style={{margin:10}}>Home</Text>
       </TouchableOpacity>
-      <ButtonProject  textLabel="hello" iconName={"home"} iconColor={"black"} iconSize={40} style={{backgroundColor:'green'}} />
+      <ButtonProject  textLabel="hello" iconName={"home"} iconColor={"black"} iconSize={40} style={{ backgroundColor: 'green' }} ButtonColor={""} />
     </Screen>
   )
 })
