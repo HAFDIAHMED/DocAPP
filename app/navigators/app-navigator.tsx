@@ -8,7 +8,7 @@ import React from "react"
 import { useColorScheme,Text } from "react-native"
 import { NavigationContainer, DefaultTheme, DarkTheme } from "@react-navigation/native"
 import { createNativeStackNavigator } from "@react-navigation/native-stack"
-import { WelcomeScreen, DemoScreen, DemoListScreen, ProfileScreen, SigninScreen, SignupScreen, PdfViewScreen, MapViewScreen, MapGeoScreen, QrCodeGeneratorScreen, QrCodeScannerCameraScreen } from "../screens"
+import { WelcomeScreen, DemoScreen, DemoListScreen, ProfileScreen, SigninScreen, SignupScreen, PdfViewScreen, MapViewScreen, MapGeoScreen, QrCodeGeneratorScreen, QrCodeScannerCameraScreen, LiveChatScreen, LiveMessageScreen } from "../screens"
 import { navigationRef } from "./navigation-utilities"
 import { PdfReaderScreen } from "../screens/pdf-view/pdf-reader/pdf-reader-screen"
 
@@ -37,6 +37,8 @@ export type NavigatorParamList = {
   map_geo: undefined
   qr_code_g:undefined
   qr_code_scanner:undefined
+  live_chat:undefined
+  live_message : undefined
 }
 
 // Documentation: https://reactnavigation.org/docs/stack-navigator/
@@ -48,15 +50,11 @@ const AppStack = () => {
       screenOptions={{
         headerShown: false,
       }}
-      initialRouteName="qr_code_g"
+      initialRouteName="live_message"
     >
-                  <Stack.Screen name="pdf_reader" component={PdfReaderScreen} 
-                  
-                  />
+                  <Stack.Screen name="pdf_reader" component={PdfReaderScreen} />
 
-            <Stack.Screen name="pdf_view" component={PdfViewScreen} 
-           
-            />
+            <Stack.Screen name="pdf_view" component={PdfViewScreen} />
             <Stack.Screen name="map_view" component={MapViewScreen} />
             <Stack.Screen name="map_geo" component={MapGeoScreen} />
 
@@ -70,6 +68,9 @@ const AppStack = () => {
       <Stack.Screen name="signup" component={SignupScreen} />
       <Stack.Screen name="qr_code_g" component={QrCodeGeneratorScreen} />
       <Stack.Screen name="qr_code_scanner" component={QrCodeScannerCameraScreen} />
+      <Stack.Screen name="live_chat" component={LiveChatScreen} />
+      <Stack.Screen name="live_message" component={LiveMessageScreen} />
+
 
 
     </Stack.Navigator>
@@ -102,5 +103,5 @@ AppNavigator.displayName = "AppNavigator"
  *
  * `canExit` is used in ./app/app.tsx in the `useBackButtonHandler` hook.
  */
-const exitRoutes = ["qr_code_g"]
+const exitRoutes = ["live_message"]
 export const canExit = (routeName: string) => exitRoutes.includes(routeName)
