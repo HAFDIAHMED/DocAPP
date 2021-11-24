@@ -80,19 +80,8 @@ customMapStyle={mapStyles}
 
 );
       }
- const Polygone_View =()=>{
-   return (
-    <MapView>
-    <Polygon
-    coordinates={[
-            { latitude: 37.8025259, longitude: -122.4351431 },
-             
-        {latitude: 33.56729634144786,
-        longitude: -7.6277178270787225,}
-        ]}
-    />
-  </MapView>
-   );  
+ const OnClickMarker =()=>{
+      
  }
   const MAPS=()=>{
     return (
