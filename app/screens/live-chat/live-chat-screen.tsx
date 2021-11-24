@@ -2,7 +2,7 @@ import React from "react"
 import { observer } from "mobx-react-lite"
 import { TextStyle, ViewStyle } from "react-native"
 import { Button, Screen, Text } from "../../components"
-// import { useNavigation } from "@react-navigation/native"
+import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "../../models"
 import { color } from "../../theme"
 import metrics from "../../theme/metrics"
@@ -14,11 +14,11 @@ export const LiveChatScreen = observer(function LiveChatScreen() {
   // const { someStore, anotherStore } = useStores()
 
   // Pull in navigation via hook
-  // const navigation = useNavigation()
+  const navigation = useNavigation()
   return (
     <Screen style={ROOT} preset="scroll">
       <Text preset="header" text="live chat screen"   style= {TEXT_STYLE}/>
-      <Button text="Live Message" style={Button_Message} />
+      <Button text="Live Message" style={Button_Message}  textStyle={TEXT_STYLE} onPress={()=>navigation.navigate("live_message")}/>
     </Screen>
   )
 })
@@ -28,9 +28,9 @@ const ROOT: ViewStyle = {
 }
 
 const TEXT_STYLE : TextStyle={
-  color : "black"
+  color : "black", fontSize:20,
 }
 const Button_Message : ViewStyle={
   alignSelf:'center',
-  margin:metrics.widthPercentageToDP(2)
+  margin:metrics.widthPercentageToDP(2),
 }
