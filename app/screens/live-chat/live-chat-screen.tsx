@@ -30,7 +30,7 @@ export const LiveChatScreen = observer(function LiveChatScreen() {
       </TouchableOpacity>
       <Modal isVisible={openChat} >
 
-      <View style={{ flex: 1 ,backgroundColor:'white'}}>
+      <View style={MESSAGE_VIEW}>
           <Text>Hello!</Text>
 
           <Button text="Hide modal" onPress={()=>setOpenChat(!openChat)} />
@@ -83,5 +83,8 @@ const CHAT_container :ViewStyle={
   bottom:metrics.heightPercentageToDP(10),
   alignSelf :'flex-end',
   
+}
+const MESSAGE_VIEW :ViewStyle={
+  flex: 1 ,backgroundColor:'white'
 }
  
