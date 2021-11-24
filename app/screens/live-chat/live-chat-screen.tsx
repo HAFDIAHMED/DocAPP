@@ -1,6 +1,6 @@
-import React from "react"
+import React, { useState } from "react"
 import { observer } from "mobx-react-lite"
-import { Modal, TextStyle, View, ViewStyle } from "react-native"
+import {  TextStyle, View, ViewStyle } from "react-native"
 import { Button, Screen, Text } from "../../components"
 import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "../../models"
@@ -10,14 +10,14 @@ import { FAB } from 'react-native-elements';
 import { TouchableOpacity } from "react-native-gesture-handler"
 //import Icon from 'react-native-vector-icons/FontAwesome5';
 import Icon from "react-native-vector-icons/Ionicons";
-
-
+import Modal from "react-native-modal";
 
 export const LiveChatScreen = observer(function LiveChatScreen() {
   // Pull in one of our MST stores
   // const { someStore, anotherStore } = useStores()
 
   // Pull in navigation via hook
+  const [openChat,setOpenChat]=useState(true);
   const navigation = useNavigation()
   return (
     <Screen style={ROOT} preset="scroll">
@@ -28,7 +28,9 @@ export const LiveChatScreen = observer(function LiveChatScreen() {
         <Icon  name ="chatbox-outline"  color="black" size={40}  />
 
       </TouchableOpacity>
-      
+      <Modal>
+        
+      </Modal>
       </View>
       
       
