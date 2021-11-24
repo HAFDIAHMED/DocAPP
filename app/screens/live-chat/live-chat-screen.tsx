@@ -38,20 +38,17 @@ const TEXT_STYLE : TextStyle={
 const Button_Message : ViewStyle={
   alignSelf:'center',
   margin:metrics.widthPercentageToDP(2),
+  
 }
 const CHAT_BUTTON :ViewStyle={
   borderWidth:3,
   borderRadius:50,
-  //width:metrics.widthPercentageToDP(50),
-  //height:metrics.heightPercentageToDP(50),
-  //position: 'absolute',
- height:100,
- width:100,
-  //left:metrics.widthPercentageToDP(10),
- //marginHorizontal:metrics.widthPercentageToDP(9),
- //justifyContent:'flex-start',
- alignItems:'center',
- justifyContent:'center',
+  height:100,
+  width:100, 
+  alignItems:'center',
+  justifyContent:'center',
+  //position:'absolute',
+
  
  
 }
