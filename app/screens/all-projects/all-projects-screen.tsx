@@ -1,7 +1,7 @@
 import React from "react"
 import { observer } from "mobx-react-lite"
 import { ViewStyle } from "react-native"
-import { Screen, Text } from "../../components"
+import { ButtonProject, Screen, Text } from "../../components"
 // import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "../../models"
 import { color } from "../../theme"
@@ -26,6 +26,7 @@ export const AllProjectsScreen = observer(function AllProjectsScreen() {
         <Icon name ="home" color='white'  size={30}/> 
         <Text style={{margin:10}}>Home</Text>
       </TouchableOpacity>
+      <ButtonProject  textLabel="hello"/>
     </Screen>
   )
 })
