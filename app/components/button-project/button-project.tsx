@@ -5,6 +5,7 @@ import { color, typography } from "../../theme"
 import { Text } from "../"
 import { flatten } from "ramda"
 import Icon from "react-native-vector-icons/Ionicons"
+import metrics from "../../theme/metrics"
 
 const CONTAINER: ViewStyle = {
   justifyContent: "center",
@@ -62,4 +63,5 @@ const OPEN_PROJECT :ViewStyle={
   borderRadius:20,
   backgroundColor:"orange",
   padding:10,
+  width:metrics.widthPercentageToDP(50),
 }

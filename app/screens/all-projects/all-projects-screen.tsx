@@ -28,9 +28,6 @@ export const AllProjectsScreen = observer(function AllProjectsScreen() {
       <ButtonProject    onPress={() => navigation.navigate("pdf_view")} textLabel="PDF System" iconName={"document"} iconColor={"black"} iconSize={40} textlabelColor={"black"}  style={{margin:5}} />
       <ButtonProject    onPress={() => navigation.navigate("qr_code_g")} textLabel="QR Code System" iconName={"qr-code"} iconColor={"black"} iconSize={40} textlabelColor={"black"}  style={{margin:5}} />
       <ButtonProject    onPress={() => navigation.navigate("map_view")} textLabel="Gealocalisation" iconName={"map"} iconColor={"black"} iconSize={40} textlabelColor={"black"}  style={{margin:5}} />
-
-
-
       </View>
     </Screen>
   )
@@ -38,7 +35,7 @@ export const AllProjectsScreen = observer(function AllProjectsScreen() {
 
 const BUTTONS_COLUMN :ViewStyle={
   flexDirection:'column',
-  marginTop:300,
+  marginTop:170,
   
   
 }
