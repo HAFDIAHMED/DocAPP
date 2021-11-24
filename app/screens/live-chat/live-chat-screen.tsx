@@ -11,6 +11,7 @@ import { TouchableOpacity } from "react-native-gesture-handler"
 //import Icon from 'react-native-vector-icons/FontAwesome5';
 import Icon from "react-native-vector-icons/Ionicons";
 import Modal from "react-native-modal";
+import WebView from "react-native-webview"
 
 export const LiveChatScreen = observer(function LiveChatScreen() {
   // Pull in one of our MST stores
@@ -31,9 +32,14 @@ export const LiveChatScreen = observer(function LiveChatScreen() {
       <Modal isVisible={openChat} >
 
       <View style={MESSAGE_VIEW}>
-          <Text>Hello!</Text>
+          
 
           <Button text="Hide modal" onPress={()=>setOpenChat(!openChat)} />
+          <WebView
+          source={{
+            uri: 'https://secure.livechatinc.com/licence/13309296/v2/open_chat.cgi',
+          }}
+        />
         </View>
       </Modal>
       </View>
@@ -85,6 +91,7 @@ const CHAT_container :ViewStyle={
   
 }
 const MESSAGE_VIEW :ViewStyle={
-  flex: 1 ,backgroundColor:'white'
+  flex: 1 ,backgroundColor:'white',
+
 }
  
