@@ -22,6 +22,9 @@ export interface ButtonProjectProps extends  TouchableOpacityProps {
    */
   style?: StyleProp<ViewStyle>
   textLabel : string
+  iconName : string
+  iconColor:string
+  iconSize :number
 
 }
 
@@ -35,7 +38,7 @@ export const ButtonProject = observer(function ButtonProject(props: ButtonProjec
   return (
     <View style={styles}>
       <TouchableOpacity style={OPEN_PROJECT}>
-        <Icon name ="home" color='white'  size={30}/> 
+        <Icon name ={props.iconName} color={props.iconColor}  size={props.iconSize}/> 
         <Text style={{margin:10}}>Home</Text>
         </TouchableOpacity>
     </View>
