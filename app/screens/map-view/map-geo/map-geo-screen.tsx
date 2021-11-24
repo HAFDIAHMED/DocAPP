@@ -66,6 +66,7 @@ customMapStyle={mapStyles}
             
             title={'Gear9 FES'}
             description={'Angle Rue Tarik Ibn Ziad Et Rue Abdelkrim Benjelloun 6ème Etage, Commune Agdal, Fès'}
+            onPress={()=>console.log("hello")}
 >
       <View>
     <Image source={{uri : "https://cdn-icons.flaticon.com/png/512/2377/premium/2377922.png?token=exp=1637334936~hmac=fb55cd244c2c62c66c10199bb1b18a92"}} 
@@ -175,19 +176,7 @@ styles={
         </View>
     );
   }
-  const [count,setCount]=useState(0);
-  const Increment=()=>{
-    setCount(count+1)
-  };
-  const Decrement=()=>{
-    if (count>=1){
-      setCount(count-1);
-    }
-    else {
-      setCount(0)
-    }
-    
-  };
+  
 
   
   useEffect(()=>{
