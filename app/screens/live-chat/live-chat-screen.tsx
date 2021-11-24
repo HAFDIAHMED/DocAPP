@@ -24,7 +24,7 @@ export const LiveChatScreen = observer(function LiveChatScreen() {
       <Button text="Live Message" style={Button_Message}  textStyle={TEXT_STYLE} onPress={()=>navigation.navigate("live_message")}/>
       <View style={CHAT_container}>
       <TouchableOpacity style={CHAT_BUTTON}>
-        <Icon  name ="message"  color="black" size={40}  />
+        <Icon  name ="comment-alt-dots"  color="black" size={40}  />
 
       </TouchableOpacity>
       </View>
