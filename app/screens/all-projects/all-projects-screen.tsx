@@ -10,6 +10,8 @@ import { BottomSheet } from 'react-native-elements/dist/bottomSheet/BottomSheet'
 //import { TouchableOpacity } from 'react-native-gesture-handler';
 import Icon from "react-native-vector-icons/Ionicons"
 import metrics from '../../theme/metrics';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import { ScrollView } from 'react-native-gesture-handler';
 
 
 const ROOT: ViewStyle = {
@@ -57,12 +59,19 @@ export const AllProjectsScreen = observer(function AllProjectsScreen() {
         }}
         
         >
-           <TouchableOpacity onPress={()=>setVisilibe(false)} style={CLOSE_BOTTOM}>
+          <TouchableOpacity onPress={()=>setVisilibe(false)} style={CLOSE_BOTTOM}>
           <Icon  name="close-circle" color="white" size={30}/>
         </TouchableOpacity>
+          <SafeAreaView>
+         
+            
 
         <Button text="hello from bottomsheet2" onPress={()=>setVisilibe(!isVisible)}/>
         <Text>helooooooooo</Text>
+           
+          
+          </SafeAreaView>
+           
        
         
 
