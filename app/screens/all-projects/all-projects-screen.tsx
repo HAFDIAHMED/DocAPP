@@ -56,7 +56,7 @@ export const AllProjectsScreen = observer(function AllProjectsScreen() {
         }}
         
         >
-           <TouchableOpacity onPress={()=>setVisilibe(false)}>
+           <TouchableOpacity onPress={()=>setVisilibe(false)} style={CLOSE_BOTTOM}>
           <Icon  name="close-circle" color="white" size={30}/>
         </TouchableOpacity>
 
@@ -77,4 +77,9 @@ const BUTTONS_COLUMN :ViewStyle={
   marginTop:170,
   
   
+}
+const CLOSE_BOTTOM : ViewStyle={
+  alignSelf:'flex-end',
+  
+  marginBottom:metrics.heightPercentageToDP(10),
 }
