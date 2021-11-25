@@ -8,7 +8,7 @@ import React from "react"
 import { useColorScheme,Text } from "react-native"
 import { NavigationContainer, DefaultTheme, DarkTheme } from "@react-navigation/native"
 import { createNativeStackNavigator } from "@react-navigation/native-stack"
-import { WelcomeScreen, DemoScreen, DemoListScreen, ProfileScreen, SigninScreen, SignupScreen, PdfViewScreen, MapViewScreen, MapGeoScreen, QrCodeGeneratorScreen, QrCodeScannerCameraScreen, LiveChatScreen, LiveMessageScreen, AllProjectsScreen } from "../screens"
+import { WelcomeScreen, DemoScreen, DemoListScreen, ProfileScreen, SigninScreen, SignupScreen, PdfViewScreen, MapViewScreen, MapGeoScreen, QrCodeGeneratorScreen, QrCodeScannerCameraScreen, LiveChatScreen, LiveMessageScreen, AllProjectsScreen, BottomSheetExampleScreen } from "../screens"
 import { navigationRef } from "./navigation-utilities"
 import { PdfReaderScreen } from "../screens/pdf-view/pdf-reader/pdf-reader-screen"
 
@@ -39,7 +39,8 @@ export type NavigatorParamList = {
   qr_code_scanner:undefined
   live_chat:undefined
   live_message : undefined
-  all_projects : undefined
+  all_projects : false
+  bottom_sheet : undefined
 }
 
 // Documentation: https://reactnavigation.org/docs/stack-navigator/
@@ -72,6 +73,7 @@ const AppStack = () => {
       <Stack.Screen name="live_chat" component={LiveChatScreen} />
       <Stack.Screen name="live_message" component={LiveMessageScreen} />
       <Stack.Screen name="all_projects" component={AllProjectsScreen} />
+      <Stack.Screen name="bottom_sheet" component={BottomSheetExampleScreen} />
 
 
 
