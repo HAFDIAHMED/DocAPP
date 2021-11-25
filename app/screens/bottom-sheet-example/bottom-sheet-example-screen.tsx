@@ -1,7 +1,7 @@
 import React, { useCallback, useMemo, useRef } from 'react';
 import { observer } from "mobx-react-lite"
 import { View, ViewStyle } from "react-native"
-import { Screen, Text } from "../../components"
+import { Button, Screen, Text } from "../../components"
 // import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "../../models"
 import { color } from "../../theme"
@@ -41,6 +41,7 @@ export const BottomSheetExampleScreen = observer(function BottomSheetExampleScre
   return (
     <Screen style={ROOT} preset="scroll">
       <Text preset="header" text="bottom sheet example" style={{alignSelf:'center'}} />
+      <Button text="open sheet" onPress={()=>renderBackdrop} />
       <BottomSheet
         ref={bottomSheetRef}
         index={1}
