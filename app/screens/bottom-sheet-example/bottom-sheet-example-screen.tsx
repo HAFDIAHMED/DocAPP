@@ -22,7 +22,7 @@ export const BottomSheetExampleScreen = observer(function BottomSheetExampleScre
   const bottomSheetRef = useRef<BottomSheet>(null);
 
   // variables
-  const snapPoints = useMemo(() => ['25%', '50%'], []);
+  const snapPoints = useMemo(() => ['1%','25%', '50%','70%'], []);
 
   // callbacks
   const handleSheetChanges = useCallback((index: number) => {
@@ -40,7 +40,7 @@ export const BottomSheetExampleScreen = observer(function BottomSheetExampleScre
       >
         <View style={{flex: 1,
     alignItems: 'center',}}>
-          <Text>Awesome 🎉</Text>
+          <Text style={{color:"black"}}>Awesome 🎉</Text>
         </View>
       </BottomSheet>
     </Screen>
