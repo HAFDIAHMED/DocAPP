@@ -13,12 +13,23 @@ const ROOT: ViewStyle = {
   flex: 1,
 }
 
+
 export const AllProjectsScreen = observer(function AllProjectsScreen() {
   // Pull in one of our MST stores
   // const { someStore, anotherStore } = useStores()
 
   // Pull in navigation via hook
-   const navigation = useNavigation()
+    const navigation = useNavigation()
+    // ref
+  const bottomSheetRef = useRef<BottomSheet>(null);
+
+  // variables
+  const snapPoints = useMemo(() => ['25%', '50%'], []);
+
+  // callbacks
+  const handleSheetChanges = useCallback((index: number) => {
+    console.log('handleSheetChanges', index);
+  }, []);
   return (
     <Screen style={ROOT} preset="scroll">
       <Text preset="header" text="All Projects" style={{alignSelf:'center'}} />
