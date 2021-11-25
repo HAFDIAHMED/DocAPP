@@ -50,6 +50,7 @@ export const AllProjectsScreen = observer(function AllProjectsScreen() {
       modalProps={{
         animationType: 'fade',
         hardwareAccelerated: true,
+        
         onRequestClose: () => {
           setVisilibe(!isVisible);
         },
