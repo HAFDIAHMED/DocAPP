@@ -6,6 +6,8 @@ module.exports = {
   plugins: [
     [
       "@babel/plugin-proposal-decorators",
+      'react-native-reanimated/plugin',
+
       
       {
         legacy: true,
