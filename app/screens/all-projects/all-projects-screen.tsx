@@ -62,15 +62,10 @@ export const AllProjectsScreen = observer(function AllProjectsScreen() {
           <TouchableOpacity onPress={()=>setVisilibe(false)} style={CLOSE_BOTTOM}>
           <Icon  name="close-circle" color="white" size={30}/>
         </TouchableOpacity>
-          <SafeAreaView>
-         
-            
 
         <Button text="hello from bottomsheet2" onPress={()=>setVisilibe(!isVisible)}/>
-        <Text>helooooooooo</Text>
-           
-          
-          </SafeAreaView>
+        <Text>helooooooooo</Text> 
+        
            
        
         
@@ -90,7 +85,8 @@ const BUTTONS_COLUMN :ViewStyle={
   
 }
 const Bottom_Sheet : ViewStyle={
-  backgroundColor:'green',marginTop:metrics.heightPercentageToDP(50),borderTopLeftRadius:20,borderTopRightRadius:20
+  flexDirection:'row',
+  backgroundColor:'green',marginTop:metrics.heightPercentageToDP(70),borderTopLeftRadius:20,borderTopRightRadius:20
 }
 const CLOSE_BOTTOM : ViewStyle={
   alignSelf:'flex-end',
