@@ -57,7 +57,9 @@ export const AllProjectsScreen = observer(function AllProjectsScreen() {
         <Icon  name="close" color="white" size={50} onPress={()=>setVisilibe(false)} style={{alignSelf:'center'}}/>
 
         <Button text="hello from bottomsheet2" onPress={()=>setVisilibe(!isVisible)}/>
-        
+        <TouchableOpacity onPress={()=>setVisilibe(!isVisible)} style={{borderWidth:2}}>
+          <Text>helooooooooooooo</Text>
+        </TouchableOpacity>
         
 
 
