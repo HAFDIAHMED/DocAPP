@@ -39,7 +39,7 @@ export type NavigatorParamList = {
   qr_code_scanner:undefined
   live_chat:undefined
   live_message : undefined
-  all_projects : false
+  all_projects : undefined
   bottom_sheet : undefined
 }
 
