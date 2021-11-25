@@ -81,8 +81,6 @@ import com.android.build.OutputFile
 
 project.ext.react = [
     enableHermes: true,  // clean and rebuild if changing
-    //enableHermes: true  // <- here | clean and rebuild if changing
-
 ]
 
 apply from: "../../node_modules/react-native/react.gradle"
@@ -134,7 +132,6 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-  enableHermes: true  // <- here | clean and rebuild if changing
 
     defaultConfig {
         applicationId "com.pizzaapp"
