@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { observer } from "mobx-react-lite"
-import { View, ViewStyle } from "react-native"
+import { TouchableWithoutFeedback, View, ViewStyle } from "react-native"
 import { Button, ButtonProject, Screen, Text } from "../../components"
 import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "../../models"
@@ -54,12 +54,9 @@ export const AllProjectsScreen = observer(function AllProjectsScreen() {
           setVisilibe(!isVisible);
         },
         }}>
-             
         <Button text="hello from bottomsheet2" onPress={()=>setVisilibe(!isVisible)}/>
+        
 
-        <TouchableOpacity  style={{alignSelf:'center'}}onPress={()=>setVisilibe(!isVisible)}>
-          <Icon  name="close" color="red" size={30}/>
-        </TouchableOpacity>
 
       </BottomSheet>
       <Text>hellooooooooo</Text>
