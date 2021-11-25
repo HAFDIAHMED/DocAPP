@@ -1,11 +1,16 @@
-import React, { useCallback, useMemo, useRef } from 'react';
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { observer } from "mobx-react-lite"
 import { View, ViewStyle } from "react-native"
-import { ButtonProject, Screen, Text } from "../../components"
+import { Button, ButtonProject, Screen, Text } from "../../components"
 import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "../../models"
 import { color } from "../../theme"
 //import { TouchableOpacity } from 'react-native-gesture-handler';
+import I18n from "i18n-js";
+import { BottomSheet } from 'react-native-elements/dist/bottomSheet/BottomSheet';
+import { TouchableOpacity } from 'react-native-gesture-handler';
+import Icon from "react-native-vector-icons/Ionicons"
+import metrics from '../../theme/metrics';
 
 
 const ROOT: ViewStyle = {
@@ -20,7 +25,10 @@ export const AllProjectsScreen = observer(function AllProjectsScreen() {
 
   // Pull in navigation via hook
   const navigation = useNavigation()
-   
+  const [isVisible,setVisilibe]=useState(false);
+   useEffect(()=>{
+     console.log(isVisible)
+   })
   return (
     <Screen style={ROOT} preset="scroll">
       <Text preset="header" text="All Projects" style={{alignSelf:'center'}} />
@@ -30,7 +38,32 @@ export const AllProjectsScreen = observer(function AllProjectsScreen() {
       <ButtonProject    onPress={() => navigation.navigate("pdf_view")} textLabel="PDF System" iconName={"document"} iconColor={"black"} iconSize={40} textlabelColor={"black"}  style={{margin:5}} />
       <ButtonProject    onPress={() => navigation.navigate("qr_code_g")} textLabel="QR Code System" iconName={"qr-code"} iconColor={"black"} iconSize={40} textlabelColor={"black"}  style={{margin:5}} />
       <ButtonProject    onPress={() => navigation.navigate("map_view")} textLabel="Gealocalisation" iconName={"map"} iconColor={"black"} iconSize={40} textlabelColor={"black"}  style={{margin:5}} />
+      <Text>{I18n.translate("welcomePartOne")}</Text>
+      <TouchableOpacity onPress={()=>setVisilibe(true)}>
+          <Icon  name="close" color="white" size={30}/>
+        </TouchableOpacity>
+        
+      <BottomSheet
+      isVisible={isVisible}
+      containerStyle={{backgroundColor:'green',marginTop:metrics.heightPercentageToDP(50),borderRadius:20,}}
+      modalProps={{
+        animationType: 'fade',
+        hardwareAccelerated: true,
+        onRequestClose: () => {
+          setVisilibe(!isVisible);
+        },
+        }}>
       
+       
+
+       
+        <Button text="hello from bottomsheet" onPress={()=>setVisilibe(!isVisible)}/>
+        <TouchableOpacity  style={{alignSelf:'center'}}onPress={()=>console.log("hello")}>
+          <Icon  name="close" color="white" size={30}/>
+        </TouchableOpacity>
+
+      </BottomSheet>
+      <Text>hellooooooooo</Text>
       </View>
     </Screen>
   )

@@ -1,40 +1,44 @@
 {
-  "common": {
-    "ok": "OK!",
-    "cancel": "Cancel",
-    "back": "Back"
-  },
-  "errors": {
-    "invalidEmail": "Invalid email address."
-  },
-  "welcomeScreen": {
-    "poweredBy": "POWERED BY IGNITE",
-    "readyForLaunch": "Ready for launch.",
-    "continue": "CONTINUE"
-  },
-  "demoScreen": {
-    "howTo": "HOW TO",
-    "title": "What’s In This Stack?",
-    "tagLine": "Congratulations, you’ve got a very advanced React Native app template here.  Take advantage of this boilerplate!",
-    "reactotron": "Demo Reactotron",
-    "demoList": "Demo List",
-    "androidReactotronHint": "If this doesn't work, ensure the Reactotron desktop app is running, run adb reverse tcp:9090 tcp:9090 from your terminal, and reload the app.",
-    "iosReactotronHint": "If this doesn't work, ensure the Reactotron desktop app is running and reload app.",
-    "macosReactotronHint": "If this doesn't work, ensure the Reactotron desktop app is running and reload app.",
-    "webReactotronHint": "If this doesn't work, ensure the Reactotron desktop app is running and reload app.",
-    "windowsReactotronHint": "If this doesn't work, ensure the Reactotron desktop app is running and reload app."
-  },
-  "demoListScreen": {
-    "title": "Demo List"
-  },
-  "errorScreen": {
-    "title": "Something went wrong!",
-    "friendlySubtitle": "This is the screen that your users will see in production when an error is thrown. You'll want to customize this message (located in `app/i18n/en.json`) and probably the layout as well (`app/screens/error`). If you want to remove this entirely, check `app/app.tsx` for the <ErrorBoundary> component.",
-    "traceTitle": "Error from %{name} stack",
-    "reset": "RESET APP"
-  },
-  "storybook": {
-    "placeholder": "Placeholder",
-    "field": "Field"
-  }
+  "welcomePartOne": "مرحبا بكم",
+  "welcomePartTwo": "في تطبيق",
+  "red": " ريد",
+  "phone": "رقم الهاتف",
+  "password": "كلمة المرور",
+  "rememberMe": "تذكر كلمة المرور",
+  "forgotPass": "هل نسيت كلمة المرور؟",
+  "login": "دخول",
+  "withoutAccount": "معندكش حساب؟",
+  "register": "تسجل معانا هنا",
+  "copyright": "2020 @RED",
+  "terms": "الشروط والبنود",
+  "confidentiality": "إشعار بسرية التعاقد",
+  "policy": "سياسة الكوكيز",
+  "companyInfo": "معلومات الشركة",
+  "fullName": "الإسم الكامل",
+  "email": "البريد الإلكتروني",
+  "cityName": "إسم المدينة",
+  "jobName": "مهنتي ...",
+  "cin": "رقم بطاقة التعريف",
+  "passwordConfirmation": "تأكيد كلمة المرور",
+  "next": "التالي",
+  "back": "رجوع",
+  "registerShort": "تسجل",
+  "home":"الرئيسية",
+  "challenges":"تحدياتي",
+  "earnings": "أرباحي",
+  "points": "نقاطي",
+  "conditions": "الشروط",
+  "news": "أخبار و جديد السوق",
+  "needHelp": "محتاج شي مساعدة؟",
+  "callUs": "إتصل بنا",
+  "whatsapp": "واتساب",
+  "pointsHistory": "سجل النقاط",
+  "totalPoints": "مجموع النقاط",
+  "point": "نقطة",
+  "takePhoto": "إلتقط الصورة",
+  "uploadPhoto": "حمل الصورة ديالك",
+  "sendPhoto": "إرسال الصورة",
+  "changeSettings": "تغيير الإعدادات",
+  "logout": "تسجيل الخروج",
+  "profile": "الملف الشخصي"
 }
