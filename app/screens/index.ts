@@ -15,3 +15,4 @@ export * from "./qr-code-generator/qr-code-scanner-camera/qr-code-scanner-camera
 export * from "./live-chat/live-chat-screen"
 export * from "./live-chat/live-message/live-message-screen"
 export * from "./all-projects/all-projects-screen"
+export * from "./bottom-sheet-example/bottom-sheet-example-screen"
