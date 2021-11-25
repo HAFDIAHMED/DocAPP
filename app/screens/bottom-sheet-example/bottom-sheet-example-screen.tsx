@@ -44,6 +44,7 @@ export const BottomSheetExampleScreen = observer(function BottomSheetExampleScre
       <Text preset="header" text="bottom sheet example" style={{alignSelf:'center'}} />
       <Button text="open sheet" onPress={()=>{setSheetIndex(3);console.log("")}} />
       <BottomSheet
+      visible ={true}
         ref={bottomSheetRef}
         index={sheetIndex}
         snapPoints={snapPoints}
