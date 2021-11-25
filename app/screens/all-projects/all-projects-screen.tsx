@@ -5,6 +5,8 @@ import { ButtonProject, Screen, Text } from "../../components"
 import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "../../models"
 import { color } from "../../theme"
+import BottomSheet from '@gorhom/bottom-sheet';
+
 
 const ROOT: ViewStyle = {
   backgroundColor: color.palette.black,
