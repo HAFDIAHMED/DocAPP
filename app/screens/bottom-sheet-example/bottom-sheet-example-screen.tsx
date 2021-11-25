@@ -1,10 +1,12 @@
-import React from "react"
+import React, { useCallback, useMemo, useRef } from 'react';
 import { observer } from "mobx-react-lite"
 import { ViewStyle } from "react-native"
 import { Screen, Text } from "../../components"
 // import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "../../models"
 import { color } from "../../theme"
+//import BottomSheet from '@gorhom/bottom-sheet';
+
 
 const ROOT: ViewStyle = {
   backgroundColor: color.palette.black,
