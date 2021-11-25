@@ -1,11 +1,10 @@
-import React, { useCallback, useMemo, useRef } from 'react';
+import React from 'react';
 import { observer } from "mobx-react-lite"
 import { View, ViewStyle } from "react-native"
 import { ButtonProject, Screen, Text } from "../../components"
 import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "../../models"
 import { color } from "../../theme"
-import BottomSheet from '@gorhom/bottom-sheet';
 
 
 const ROOT: ViewStyle = {
@@ -19,17 +18,8 @@ export const AllProjectsScreen = observer(function AllProjectsScreen() {
   // const { someStore, anotherStore } = useStores()
 
   // Pull in navigation via hook
-    const navigation = useNavigation()
-    // ref
-  const bottomSheetRef = useRef<BottomSheet>(null);
-
-  // variables
-  const snapPoints = useMemo(() => ['25%', '50%'], []);
-
-  // callbacks
-  const handleSheetChanges = useCallback((index: number) => {
-    console.log('handleSheetChanges', index);
-  }, []);
+  const navigation = useNavigation()
+   
   return (
     <Screen style={ROOT} preset="scroll">
       <Text preset="header" text="All Projects" style={{alignSelf:'center'}} />
