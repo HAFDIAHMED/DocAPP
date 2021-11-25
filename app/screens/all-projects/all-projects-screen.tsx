@@ -40,7 +40,7 @@ export const AllProjectsScreen = observer(function AllProjectsScreen() {
       <Text>{I18n.translate("welcomePartOne")}</Text>
       
       <TouchableOpacity onPress={()=>setVisilibe(true)}>
-          <Icon  name="close" color="white" size={30}/>
+          <Icon  name="lock-open" color="white" size={30}/>
         </TouchableOpacity>
         
       <BottomSheet
@@ -57,9 +57,8 @@ export const AllProjectsScreen = observer(function AllProjectsScreen() {
         
         >
            <TouchableOpacity onPress={()=>setVisilibe(false)}>
-          <Icon  name="home" color="white" size={30}/>
+          <Icon  name="close-circle" color="white" size={30}/>
         </TouchableOpacity>
-        <Icon  name="close" color="white" size={50} onPress={()=>setVisilibe(false)} style={{alignSelf:'center'}}/>
 
         <Button text="hello from bottomsheet2" onPress={()=>setVisilibe(!isVisible)}/>
        
