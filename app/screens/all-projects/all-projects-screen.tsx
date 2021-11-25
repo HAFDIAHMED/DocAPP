@@ -81,5 +81,6 @@ const BUTTONS_COLUMN :ViewStyle={
 const CLOSE_BOTTOM : ViewStyle={
   alignSelf:'flex-end',
   
-  marginBottom:metrics.heightPercentageToDP(10),
+  marginBottom:metrics.heightPercentageToDP(50),
+  margin:metrics.widthPercentageToDP(3),
 }
