@@ -62,6 +62,7 @@ export const AllProjectsScreen = observer(function AllProjectsScreen() {
         </TouchableOpacity>
 
         <Button text="hello from bottomsheet2" onPress={()=>setVisilibe(!isVisible)}/>
+        <Text>helooooooooo</Text>
        
         
 
@@ -82,6 +83,6 @@ const BUTTONS_COLUMN :ViewStyle={
 const CLOSE_BOTTOM : ViewStyle={
   alignSelf:'flex-end',
   
-  marginBottom:metrics.heightPercentageToDP(50),
-  margin:metrics.widthPercentageToDP(3),
+  marginBottom:metrics.heightPercentageToDP(39),
+  //margin:metrics.widthPercentageToDP(3),
 }
