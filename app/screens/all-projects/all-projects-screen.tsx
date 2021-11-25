@@ -45,7 +45,7 @@ export const AllProjectsScreen = observer(function AllProjectsScreen() {
         
       <BottomSheet
       isVisible={isVisible}
-      containerStyle={{backgroundColor:'green',marginTop:metrics.heightPercentageToDP(50),borderTopLeftRadius:20,borderTopRightRadius:20}}
+      containerStyle={Bottom_Sheet}
       
       modalProps={{
         animationType: 'fade',
@@ -80,9 +80,12 @@ const BUTTONS_COLUMN :ViewStyle={
   
   
 }
+const Bottom_Sheet : ViewStyle={
+  backgroundColor:'green',marginTop:metrics.heightPercentageToDP(50),borderTopLeftRadius:20,borderTopRightRadius:20
+}
 const CLOSE_BOTTOM : ViewStyle={
   alignSelf:'flex-end',
   
   marginBottom:metrics.heightPercentageToDP(39),
-  //margin:metrics.widthPercentageToDP(3),
+  margin:metrics.widthPercentageToDP(3),
 }
