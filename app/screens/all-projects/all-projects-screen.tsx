@@ -1,14 +1,13 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { observer } from "mobx-react-lite"
-import { View, ViewStyle } from "react-native"
+import { TouchableOpacity, View, ViewStyle } from "react-native"
 import { Button, ButtonProject, Screen, Text } from "../../components"
 import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "../../models"
 import { color } from "../../theme"
-//import { TouchableOpacity } from 'react-native-gesture-handler';
 import I18n from "i18n-js";
 import { BottomSheet } from 'react-native-elements/dist/bottomSheet/BottomSheet';
-import { TouchableOpacity } from 'react-native-gesture-handler';
+//import { TouchableOpacity } from 'react-native-gesture-handler';
 import Icon from "react-native-vector-icons/Ionicons"
 import metrics from '../../theme/metrics';
 
@@ -57,6 +56,9 @@ export const AllProjectsScreen = observer(function AllProjectsScreen() {
         }}
         
         >
+           <TouchableOpacity onPress={()=>setVisilibe(false)}>
+          <Icon  name="home" color="white" size={30}/>
+        </TouchableOpacity>
         <Icon  name="close" color="white" size={50} onPress={()=>setVisilibe(false)} style={{alignSelf:'center'}}/>
 
         <Button text="hello from bottomsheet2" onPress={()=>setVisilibe(!isVisible)}/>
