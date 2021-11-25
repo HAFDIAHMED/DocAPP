@@ -37,6 +37,7 @@ export const BottomSheetExampleScreen = observer(function BottomSheetExampleScre
         index={1}
         snapPoints={snapPoints}
         onChange={handleSheetChanges}
+        //onClose={()=>}
       >
         <View style={{flex: 1,
     alignItems: 'center',}}>
