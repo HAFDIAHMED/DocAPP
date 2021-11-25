@@ -46,7 +46,7 @@ export const AllProjectsScreen = observer(function AllProjectsScreen() {
         
       <BottomSheet
       isVisible={isVisible}
-      containerStyle={{backgroundColor:'green',marginTop:metrics.heightPercentageToDP(50),borderRadius:20,}}
+      containerStyle={{backgroundColor:'green',marginTop:metrics.heightPercentageToDP(50),borderTopLeftRadius:20,borderTopRightRadius:20}}
       modalProps={{
         animationType: 'fade',
         hardwareAccelerated: true,
@@ -59,7 +59,7 @@ export const AllProjectsScreen = observer(function AllProjectsScreen() {
 
 
       </BottomSheet>
-      <Text>hellooooooooo</Text>
+   
       </View>
     </Screen>
   )
