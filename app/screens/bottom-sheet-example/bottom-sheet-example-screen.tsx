@@ -46,10 +46,10 @@ export const BottomSheetExampleScreen = observer(function BottomSheetExampleScre
       <BottomSheet
      
         ref={bottomSheetRef}
-        index={sheetIndex}
+        index={1}
         snapPoints={snapPoints}
         onChange={handleSheetChanges}
-       backdropComponent={renderBackdrop}
+       //backdropComponent={renderBackdrop}
       
         //onClose={()=>}
       >
