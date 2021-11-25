@@ -85,8 +85,8 @@ const BUTTONS_COLUMN :ViewStyle={
   
 }
 const Bottom_Sheet : ViewStyle={
-  flexDirection:'row',
-  backgroundColor:'green',marginTop:metrics.heightPercentageToDP(70),borderTopLeftRadius:20,borderTopRightRadius:20
+  //flexDirection:'row',
+  backgroundColor:'green',marginTop:metrics.heightPercentageToDP(10),borderTopLeftRadius:20,borderTopRightRadius:20
 }
 const CLOSE_BOTTOM : ViewStyle={
   alignSelf:'flex-end',
