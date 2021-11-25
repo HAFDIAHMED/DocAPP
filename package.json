@@ -28,6 +28,7 @@
     "clean-all": "npx react-native clean-project-auto"
   },
   "dependencies": {
+    "@gorhom/bottom-sheet": "^4",
     "@react-native-async-storage/async-storage": "^1.14.1",
     "@react-native-community/cameraroll": "^4.1.2",
     "@react-native-community/masked-view": "0.1.10",
