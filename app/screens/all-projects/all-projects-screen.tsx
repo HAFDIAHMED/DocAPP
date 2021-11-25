@@ -53,7 +53,6 @@ export const AllProjectsScreen = observer(function AllProjectsScreen() {
         //hardwareAccelerated: true,
         onRequestClose: () => {
           setVisilibe(!isVisible);
-          console.log("hello")
         },
         }}
         
