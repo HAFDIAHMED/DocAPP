@@ -50,6 +50,7 @@ export const AllProjectsScreen = observer(function AllProjectsScreen() {
       containerStyle={Bottom_Sheet}
       
       modalProps={{
+        
         animationType: 'fade',
         hardwareAccelerated: true,
         
