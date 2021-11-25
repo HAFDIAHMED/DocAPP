@@ -38,19 +38,19 @@ export const BottomSheetExampleScreen = observer(function BottomSheetExampleScre
     ),
     []
   );
-  const [sheetIndex,setSheetIndex]=useState(2)
+  const [sheetIndex,setSheetIndex]=useState(true)
   return (
     <Screen style={ROOT} preset="scroll">
       <Text preset="header" text="bottom sheet example" style={{alignSelf:'center'}} />
-      <Button text="open sheet" onPress={()=>{setSheetIndex(3);console.log("")}} />
+      <Button text="open sheet" onPress={()=>{setSheetIndex(true);console.log("")}} />
       <BottomSheet
-      visible ={true}
+      visible ={sheetIndex}
         ref={bottomSheetRef}
-        index={sheetIndex}
+        index={2}
         snapPoints={snapPoints}
         onChange={handleSheetChanges}
-       backdropComponent={renderBackdrop}
-
+       //backdropComponent={renderBackdrop}
+       onBackdropPress={()=>setSheetIndex(false)}
         //onClose={()=>}
       >
         <View style={{flex: 1,
