@@ -47,13 +47,16 @@ export const AllProjectsScreen = observer(function AllProjectsScreen() {
       <BottomSheet
       isVisible={isVisible}
       containerStyle={{backgroundColor:'green',marginTop:metrics.heightPercentageToDP(50),borderTopLeftRadius:20,borderTopRightRadius:20}}
+      
       modalProps={{
         animationType: 'fade',
         hardwareAccelerated: true,
         onRequestClose: () => {
           setVisilibe(!isVisible);
         },
-        }}>
+        }}
+        
+        >
         <Icon  name="close" color="white" size={50} onPress={()=>setVisilibe(false)} style={{alignSelf:'center'}}/>
 
         <Button text="hello from bottomsheet2" onPress={()=>setVisilibe(!isVisible)}/>
