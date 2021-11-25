@@ -39,7 +39,7 @@ export const AllProjectsScreen = observer(function AllProjectsScreen() {
       <ButtonProject    onPress={() => navigation.navigate("map_view")} textLabel="Gealocalisation" iconName={"map"} iconColor={"black"} iconSize={40} textlabelColor={"black"}  style={{margin:5}} />
       <Text>{I18n.translate("welcomePartOne")}</Text>
       
-      <TouchableOpacity onPress={()=>setVisilibe(true)}>
+      <TouchableOpacity onPress={()=>setVisilibe(true)} style={{alignSelf:'center'}}>
           <Icon  name="lock-open" color="white" size={30}/>
         </TouchableOpacity>
         
