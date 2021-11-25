@@ -40,7 +40,7 @@ export type NavigatorParamList = {
   live_chat:undefined
   live_message : undefined
   all_projects : undefined
-  //bottom_sheet : undefined
+  bottom_sheet : undefined
 }
 
 // Documentation: https://reactnavigation.org/docs/stack-navigator/
@@ -73,6 +73,7 @@ const AppStack = () => {
       <Stack.Screen name="live_chat" component={LiveChatScreen} />
       <Stack.Screen name="live_message" component={LiveMessageScreen} />
       <Stack.Screen name="all_projects" component={AllProjectsScreen} />
+      <Stack.Screen name="bottom_sheet" component={BottomSheetExampleScreen} />
 
 
 
