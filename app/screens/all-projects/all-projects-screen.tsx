@@ -5,6 +5,7 @@ import { ButtonProject, Screen, Text } from "../../components"
 import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "../../models"
 import { color } from "../../theme"
+//import { TouchableOpacity } from 'react-native-gesture-handler';
 
 
 const ROOT: ViewStyle = {
