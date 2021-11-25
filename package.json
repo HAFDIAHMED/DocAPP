@@ -28,6 +28,7 @@
     "clean-all": "npx react-native clean-project-auto"
   },
   "dependencies": {
+    "@gorhom/bottom-sheet": "^4",
     "@react-native-async-storage/async-storage": "^1.14.1",
     "@react-native-community/cameraroll": "^4.1.2",
     "@react-native-community/masked-view": "0.1.10",
@@ -54,7 +55,7 @@
     "react-native-camera": "^4.2.1",
     "react-native-elements": "^3.4.2",
     "react-native-fs": "^2.18.0",
-    "react-native-gesture-handler": "1.10.3",
+    "react-native-gesture-handler": "^1.10.3",
     "react-native-google-places-autocomplete": "^2.4.1",
     "react-native-keychain": "6.2.0",
     "react-native-livechat": "^2.0.1",
@@ -65,6 +66,7 @@
     "react-native-qrcode-image": "^0.2.8",
     "react-native-qrcode-scanner": "^1.5.4",
     "react-native-qrcode-svg": "^6.1.1",
+    "react-native-reanimated": "^2.2.4",
     "react-native-rename": "^2.9.0",
     "react-native-safe-area-context": "3.1.8",
     "react-native-screens": "3.4.0",
