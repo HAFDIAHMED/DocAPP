@@ -42,13 +42,13 @@ export const BottomSheetExampleScreen = observer(function BottomSheetExampleScre
   return (
     <Screen style={ROOT} preset="scroll">
       <Text preset="header" text="bottom sheet example" style={{alignSelf:'center'}} />
-      <Button text="open sheet" onPress={()=>{setSheetIndex(2);console.log("")}} />
+      <Button text="open sheet" onPress={()=>{setSheetIndex(3);console.log("")}} />
       <BottomSheet
         ref={bottomSheetRef}
         index={sheetIndex}
         snapPoints={snapPoints}
         onChange={handleSheetChanges}
-       //backdropComponent={renderBackdrop}
+       backdropComponent={renderBackdrop}
 
         //onClose={()=>}
       >
