@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback, useMemo, useRef } from 'react';
 import { observer } from "mobx-react-lite"
 import { View, ViewStyle } from "react-native"
 import { ButtonProject, Screen, Text } from "../../components"
