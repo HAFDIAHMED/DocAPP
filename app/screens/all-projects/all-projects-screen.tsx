@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { observer } from "mobx-react-lite"
-import { TouchableWithoutFeedback, View, ViewStyle } from "react-native"
+import { View, ViewStyle } from "react-native"
 import { Button, ButtonProject, Screen, Text } from "../../components"
 import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "../../models"
@@ -49,8 +49,8 @@ export const AllProjectsScreen = observer(function AllProjectsScreen() {
       containerStyle={{backgroundColor:'green',marginTop:metrics.heightPercentageToDP(50),borderTopLeftRadius:20,borderTopRightRadius:20}}
       
       modalProps={{
-        //animationType: 'fade',
-        //hardwareAccelerated: true,
+        animationType: 'fade',
+        hardwareAccelerated: true,
         onRequestClose: () => {
           setVisilibe(!isVisible);
         },
@@ -60,9 +60,7 @@ export const AllProjectsScreen = observer(function AllProjectsScreen() {
         <Icon  name="close" color="white" size={50} onPress={()=>setVisilibe(false)} style={{alignSelf:'center'}}/>
 
         <Button text="hello from bottomsheet2" onPress={()=>setVisilibe(!isVisible)}/>
-        <TouchableOpacity onPress={()=>setVisilibe(!isVisible)} style={{borderWidth:2}}>
-          <Text>helooooooooooooo</Text>
-        </TouchableOpacity>
+       
         
 
 
