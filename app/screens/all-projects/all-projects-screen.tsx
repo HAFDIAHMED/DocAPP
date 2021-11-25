@@ -49,10 +49,11 @@ export const AllProjectsScreen = observer(function AllProjectsScreen() {
       containerStyle={{backgroundColor:'green',marginTop:metrics.heightPercentageToDP(50),borderTopLeftRadius:20,borderTopRightRadius:20}}
       
       modalProps={{
-        animationType: 'fade',
-        hardwareAccelerated: true,
+        //animationType: 'fade',
+        //hardwareAccelerated: true,
         onRequestClose: () => {
           setVisilibe(!isVisible);
+          console.log("hello")
         },
         }}
         
