@@ -39,6 +39,9 @@ export const AllProjectsScreen = observer(function AllProjectsScreen() {
       <ButtonProject    onPress={() => navigation.navigate("qr_code_g")} textLabel="QR Code System" iconName={"qr-code"} iconColor={"black"} iconSize={40} textlabelColor={"black"}  style={{margin:5}} />
       <ButtonProject    onPress={() => navigation.navigate("map_view")} textLabel="Gealocalisation" iconName={"map"} iconColor={"black"} iconSize={40} textlabelColor={"black"}  style={{margin:5}} />
       <Text>{I18n.translate("welcomePartOne")}</Text>
+      <TouchableOpacity  style={{alignSelf:'center'}}onPress={()=>console.log("hello")}>
+          <Icon  name="close" color="red" size={30}/>
+        </TouchableOpacity>
       <TouchableOpacity onPress={()=>setVisilibe(true)}>
           <Icon  name="close" color="white" size={30}/>
         </TouchableOpacity>
@@ -53,11 +56,9 @@ export const AllProjectsScreen = observer(function AllProjectsScreen() {
           setVisilibe(!isVisible);
         },
         }}>
-      
-       
+             
+        <Button text="hello from bottomsheet2" onPress={()=>setVisilibe(!isVisible)}/>
 
-       
-        <Button text="hello from bottomsheet" onPress={()=>setVisilibe(!isVisible)}/>
         <TouchableOpacity  style={{alignSelf:'center'}}onPress={()=>console.log("hello")}>
           <Icon  name="close" color="white" size={30}/>
         </TouchableOpacity>
