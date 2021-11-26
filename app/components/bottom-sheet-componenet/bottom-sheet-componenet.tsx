@@ -59,7 +59,7 @@ export const BottomSheetComponenet = observer(function BottomSheetComponenet(pro
   return (
     <BottomSheet
      
-        ref={bottomSheetRef}
+        //ref={bottomSheetRef}
         //index={1}
         snapPoints={snapPoints}
         //onChange={handleSheetChanges}
