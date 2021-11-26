@@ -25,8 +25,8 @@ export const BottomSheetExampleScreen = observer(function BottomSheetExampleScre
   const snapPoints = useMemo(() => ['15%','25%', '50%','70%'], []);
 
   // callbacks
-  const handleSheetChanges = useCallback((index: number) => {
-    console.log('handleSheetChanges', index);
+  const handleSnapPress = useCallback((index) => {
+    bottomSheetRef.current?.snapToIndex(index);
   }, []);
   const renderBackdrop = useCallback(
     props => (
@@ -44,7 +44,7 @@ export const BottomSheetExampleScreen = observer(function BottomSheetExampleScre
   return (
     <Screen style={ROOT} preset="scroll">
       <Text preset="header" text="bottom sheet example" style={{alignSelf:'center'}} />
-      <Button text="open sheet" onPress={()=>{handleClosePress;}} />
+      <Button text="open sheet" onPress={()=>{handleSnapPress(1);}} />
       <BottomSheet
      
         ref={bottomSheetRef}
