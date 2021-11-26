@@ -1,8 +1,8 @@
 import React from "react"
 import { observer } from "mobx-react-lite"
 import { ViewStyle } from "react-native"
-import { Screen, Text } from "../../components"
-// import { useNavigation } from "@react-navigation/native"
+import { Button, Screen, Text } from "../../components"
+ import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "../../models"
 import { color } from "../../theme"
 
@@ -16,10 +16,11 @@ export const Page1Screen = observer(function Page1Screen() {
   // const { someStore, anotherStore } = useStores()
 
   // Pull in navigation via hook
-  // const navigation = useNavigation()
+  const navigation = useNavigation()
   return (
     <Screen style={ROOT} preset="scroll">
       <Text preset="header" text="page 1" />
+      <Button text="go to page 1" onPress={()=>navigation.navigate("page_2")} />
     </Screen>
   )
 })
