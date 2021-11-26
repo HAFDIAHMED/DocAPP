@@ -43,6 +43,7 @@ export const ExamplesScreen = observer(function ExamplesScreen() {
       </Picker> */}
       <View
       style={{
+        margin : metrics.heightPercentageToDP(3),
         width: 100,
         height: 100,
         backgroundColor: 'orange',
@@ -51,6 +52,7 @@ export const ExamplesScreen = observer(function ExamplesScreen() {
     />
     <View
       style={{
+        margin : metrics.heightPercentageToDP(3),
         width: 100,
         height: 100,
         borderRadius:50,
