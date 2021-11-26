@@ -7,7 +7,7 @@ export function PagesNavigator(){
     return (
         <PagesStack.Navigator
         screenOptions={{
-            headerShown: true
+            headerShown: false
         }}
         >
             <PagesStack.Screen name="page_1" component={Page1Screen}/>
