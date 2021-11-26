@@ -44,7 +44,7 @@ export const LiveChatScreen = observer(function LiveChatScreen() {
 
       </View> 
       <Button  text ="open sheet" onPress={()=>handleSnapPress(1)}/>
-      <BottomSheetComponenet  ref={bottomSheetRef} snapPoints={snapPoints} children={undefined}  ></BottomSheetComponenet>
+      <BottomSheetComponenet  ref={bottomSheetRef} snapPoints={snapPoints}   ></BottomSheetComponenet>
     </Screen>
   )
 })
