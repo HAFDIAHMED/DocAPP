@@ -15,7 +15,7 @@ export interface Page1Props extends NavigationInjectedProps<{}> {
     
 } 
 
-export const Page1Screen :FC<Page1Props> = observer(function Page1Screen()  {
+export const Page1Screen :FC<Page1Props> = observer(function Page1Screen(props)  {
   // Pull in one of our MST stores
   // const { someStore, anotherStore } = useStores()
 
@@ -24,7 +24,7 @@ export const Page1Screen :FC<Page1Props> = observer(function Page1Screen()  {
   return (
     <Screen style={ROOT} preset="scroll">
       <Text preset="header" text="page 1" />
-      <Button text="go to page 2" onPress={()=>navigation.navigate("page_2")} />
+      <Button text="go to page 2" onPress={()=>props.navigation.navigate("page_2")} />
     </Screen>
   )
 })
