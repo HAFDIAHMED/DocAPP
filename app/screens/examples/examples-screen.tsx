@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { observer } from "mobx-react-lite"
-import { View, ViewStyle,Animated } from "react-native"
+import { View, ViewStyle,Animated, PanResponder } from "react-native"
 import { Screen, Text } from "../../components"
 // import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "../../models"
@@ -17,6 +17,24 @@ export const ExamplesScreen = observer(function ExamplesScreen() {
   // const navigation = useNavigation()
   const [selectedLanguage,setSelectedLanguage]=useState("");
   const [translation, setTranslation] = useState(0);
+  const position = new Animated.ValueXY();
+  const panResponder = PanResponder.create({
+    onMoveShouldSetPanResponderCapture : ()=> true ,
+    onPanResponderGrant : ()=>{
+          position.setOffset({
+            x: position.x._value,
+            y: position.x._value,
+          });
+          position.setValue({ x:0,y:0});
+    },
+    onPanResponderMove : Animated.event([
+      null,
+      { dx: position.x, dy:position.y},
+    ]),
+    onPanResponderRelease : ()=>{
+      position.flattenOffset();
+    }
+  })
   useEffect(() => {
     //setTranslation(80);
     for (let i = 0; i < 100; i++) {
@@ -24,8 +42,10 @@ export const ExamplesScreen = observer(function ExamplesScreen() {
         setTranslation(i);
       }, 100 * i);
     }
+
     
-    
+    new Array(5000).fill(0).map(() => console.log("JS thread busy!"))
+
   }, []);
   return (
     <Screen style={ROOT} preset="scroll">
@@ -72,8 +92,9 @@ export const ExamplesScreen = observer(function ExamplesScreen() {
         height: 100,
         borderRadius:50,
         backgroundColor: 'red',
-        transform: [{ translateY:animatedValue }],
+        //position.getLayout()
       }}
+      {...panResponder.panHandlers}
       />
     </Screen>
   )
