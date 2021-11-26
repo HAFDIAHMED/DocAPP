@@ -13,14 +13,14 @@ const ROOT: ViewStyle = {
 }
 export interface Page1Props extends NavigationInjectedProps<{}> {
     
-} 
+} //u should create a interface of props 
 
-export const Page1Screen :FC<Page1Props> = observer(function Page1Screen(props)  {
+export const Page1Screen :FC<Page1Props> = observer(function Page1Screen(props)  {// then use the interface for the functional component
   // Pull in one of our MST stores
   // const { someStore, anotherStore } = useStores()
 
   // Pull in navigation via hook
-  const navigation = useNavigation()
+  //const navigation = useNavigation()
   return (
     <Screen style={ROOT} preset="scroll">
       <Text preset="header" text="page 1" />
