@@ -7,11 +7,9 @@ import { Button, Screen, Text } from "../../components"
 import { color } from "../../theme"
 import { NavigationInjectedProps } from "react-navigation";
 import { TextInput } from "react-native-gesture-handler"
+import metrics from "../../theme/metrics"
 
-const ROOT: ViewStyle = {
-  backgroundColor: color.palette.black,
-  flex: 1,
-}
+
 export interface Page1Props extends NavigationInjectedProps<{}> {
     
 } //u should create a interface of props 
@@ -41,8 +39,8 @@ export const Page1Screen :FC<Page1Props> = observer(function Page1Screen(props) 
   })
   return (
     <Screen style={ROOT} preset="scroll">
-      <Text preset="header" text="page 1" />
-      <View>
+      <Text preset="header" text="page 1" style={{alignSelf:'center'}} />
+      <View style={CITY_INPUT}>
         <TextInput  placeholder ="Enter Your City"/>
       </View>
       <Text> Imsak : {prayTimes[0].times.Imsak}</Text>
@@ -50,3 +48,13 @@ export const Page1Screen :FC<Page1Props> = observer(function Page1Screen(props) 
     </Screen>
   )
 })
+const ROOT: ViewStyle = {
+  backgroundColor: color.palette.black,
+  flex: 1,
+}
+const CITY_INPUT :ViewStyle={
+  borderWidth:1,
+  backgroundColor:'white',
+  borderRadius: 20,
+  margin:metrics.widthPercentageToDP(2),
+}
