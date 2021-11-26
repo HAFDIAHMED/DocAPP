@@ -42,15 +42,7 @@ export const Page1Screen :FC<Page1Props> = observer(function Page1Screen(props) 
     <Screen style={ROOT} preset="scroll">
       <Text preset="header" text="page 1" />
       <Button text="go to page 2" onPress={()=>props.navigation.navigate("page_2")} />
-      {
-        prayTimes.map((timesday,index)=>{
-          return (
-            <View>
-             <Text>text</Text>
-            </View>
-          );
-        })
-      }
+     
 
     </Screen>
   )
