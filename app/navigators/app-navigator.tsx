@@ -41,6 +41,7 @@ export type NavigatorParamList = {
   live_message : undefined
   all_projects : undefined
   bottom_sheet : undefined
+  PagesStack: undefined
 }
 
 // Documentation: https://reactnavigation.org/docs/stack-navigator/
