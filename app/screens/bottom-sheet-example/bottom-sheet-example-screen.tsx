@@ -38,8 +38,9 @@ export const BottomSheetExampleScreen = observer(function BottomSheetExampleScre
     ),
     []
   );
-  const handleClosePress = () => bottomSheetRef.current.close()
-
+  const handleClosePress = useCallback(() => {
+    bottomSheetRef.current?.close();
+  }, []);
   const [sheetIndex,setSheetIndex]=useState(0)
   return (
     <Screen style={ROOT} preset="scroll">
