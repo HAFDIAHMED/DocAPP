@@ -1,4 +1,4 @@
-import React, { useCallback, useRef, useState } from "react"
+import React, { useCallback, useMemo, useRef, useState } from "react"
 import { observer } from "mobx-react-lite"
 import {  TextStyle, View, ViewStyle } from "react-native"
 import { BottomSheetComponenet, Button, Screen, Text } from "../../components"
@@ -19,6 +19,7 @@ export const LiveChatScreen = observer(function LiveChatScreen() {
   const handleSnapPress = useCallback((index) => {
     bottomSheetRef.current?.snapToIndex(index);
   }, []);
+  const snapPoints = useMemo(() => ['1%','15%','25%', '50%','70%'], []);
 
   return (
     <Screen style={ROOT} preset="scroll">
@@ -43,7 +44,7 @@ export const LiveChatScreen = observer(function LiveChatScreen() {
 
       </View> 
       <Button  text ="open sheet" onPress={()=>handleSnapPress(1)}/>
-      <BottomSheetComponenet  ref={bottomSheetRef} snapPoints={['1%','15%','25%', '50%','70%']} children={undefined}  ></BottomSheetComponenet>
+      <BottomSheetComponenet  ref={bottomSheetRef} snapPoints={snapPoints} children={undefined}  ></BottomSheetComponenet>
     </Screen>
   )
 })
