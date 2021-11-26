@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { observer } from "mobx-react-lite"
-import { ViewStyle } from "react-native"
+import { View, ViewStyle } from "react-native"
 import { Screen, Text } from "../../components"
 // import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "../../models"
@@ -16,6 +16,8 @@ export const ExamplesScreen = observer(function ExamplesScreen() {
   // Pull in navigation via hook
   // const navigation = useNavigation()
   const [selectedLanguage,setSelectedLanguage]=useState("");
+  const [translation, setTranslation] = useState(0);
+
   return (
     <Screen style={ROOT} preset="scroll">
       <Text preset="header" text="Animations" style={{alignSelf:'center'}} />
@@ -31,6 +33,14 @@ export const ExamplesScreen = observer(function ExamplesScreen() {
         <Picker.Item label="Go" value="Go"/>
         <Picker.Item label="java" value="java"/>
       </Picker> */}
+      <View
+      style={{
+        width: 100,
+        height: 100,
+        backgroundColor: 'orange',
+        transform: [{ translateX: translation }],
+      }}
+    />
     </Screen>
   )
 })
