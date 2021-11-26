@@ -58,7 +58,7 @@ export const ExamplesScreen = observer(function ExamplesScreen() {
         height: 100,
         borderRadius:50,
         backgroundColor: 'green',
-        transform: [{ rotateY:'45deg' }],
+        transform: [{ translateY:translation }],
       }}
     >
       <Text style={{alignSelf:'center'}}>circle</Text>
