@@ -45,7 +45,7 @@ export const Page1Screen :FC<Page1Props> = observer(function Page1Screen(props) 
         <TextInput  placeholder ="Enter Your City" onChangeText={(value_city)=>setCityPray(value_city)}/>
       </View>
       <Button  text="find pray times" onPress={()=>{GetPrayerTimes(cityPray)}}/>
-      {/*<Text> Imsak : {prayTimes[0].times.Imsak}</Text> */}
+      <Text> Imsak : {prayTimes[0].times.Imsak}</Text> 
 
     </Screen>
   )
