@@ -70,9 +70,22 @@ export const ExamplesScreen = observer(function ExamplesScreen() {
         height: 100,
         backgroundColor: 'orange',
         transform: [{ translateX: translation }],
+        justifyContent:'center',
       }}
     >
-      <Text style={{alignSelf:'center'}}> Translating </Text>
+      <Text style={{alignSelf:'center'}}> Translating X </Text>
+      </View>
+      <View
+      style={{
+        margin : metrics.heightPercentageToDP(3),
+        width: 100,
+        height: 100,
+        backgroundColor: 'green',
+        transform: [{ translateY: translation }],
+        justifyContent:'center',
+      }}
+    >
+      <Text style={{alignSelf:'center'}}> Translating Y </Text>
       </View>
     
       <Animated.View 
