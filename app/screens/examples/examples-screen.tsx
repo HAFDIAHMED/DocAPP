@@ -102,7 +102,12 @@ export const ExamplesScreen = observer(function ExamplesScreen() {
       >
         <Text style={{alignSelf:'center'}}>Move me </Text>
       </Animated.View>
-      <Icon  name="car" size={50} color="white"/>
+      <Icon  name="walk" size={50} color="white" style={{
+        margin : metrics.heightPercentageToDP(3),
+        
+        
+        transform: [{ translateX: translation }],
+        justifyContent:'center',}}/>
 
     </Screen>
   )
