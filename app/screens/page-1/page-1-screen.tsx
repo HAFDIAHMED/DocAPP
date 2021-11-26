@@ -43,7 +43,7 @@ export const Page1Screen :FC<Page1Props> = observer(function Page1Screen(props) 
       <View style={CITY_INPUT}>
         <TextInput  placeholder ="Enter Your City" onChangeText={(value_city)=>GetPrayerTimes(value_city)}/>
       </View>
-      <Text> Imsak : {prayTimes[0].times.Imsak}</Text>
+      {/*<Text> Imsak : {prayTimes[0].times.Imsak}</Text> */}
 
     </Screen>
   )
