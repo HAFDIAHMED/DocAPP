@@ -52,6 +52,8 @@ export const BottomSheetExampleScreen = observer(function BottomSheetExampleScre
         snapPoints={snapPoints}
         //onChange={handleSheetChanges}
        backdropComponent={renderBackdrop}
+       detached={true}
+
      
       >
         <View style={{flex: 1,
