@@ -52,14 +52,17 @@ export const ExamplesScreen = observer(function ExamplesScreen() {
     />
     <View
       style={{
+        justifyContent:'center',
         margin : metrics.heightPercentageToDP(3),
         width: 100,
         height: 100,
         borderRadius:50,
         backgroundColor: 'green',
-        transform: [{ translateY: translation }],
+        transform: [{ rotateY:'45deg' }],
       }}
-    />
+    >
+      <Text style={{alignSelf:'center'}}>circle</Text>
+      </View>
     </Screen>
   )
 })
