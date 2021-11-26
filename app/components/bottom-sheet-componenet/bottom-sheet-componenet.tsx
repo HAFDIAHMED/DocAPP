@@ -22,6 +22,7 @@ export interface BottomSheetComponenetProps extends BottomSheetProps {
    * An optional style override useful for padding & margin.
    */
   style?: StyleProp<ViewStyle>
+  
 }
 
 /**
