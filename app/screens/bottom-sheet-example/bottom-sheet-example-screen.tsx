@@ -22,7 +22,7 @@ export const BottomSheetExampleScreen = observer(function BottomSheetExampleScre
   const bottomSheetRef = useRef<BottomSheet>(null);
 
   // variables
-  const snapPoints = useMemo(() => ['1%','25%', '50%','70%'], []);
+  const snapPoints = useMemo(() => ['15%','25%', '50%','70%'], []);
 
   // callbacks
   const handleSheetChanges = useCallback((index: number) => {
@@ -51,9 +51,8 @@ export const BottomSheetExampleScreen = observer(function BottomSheetExampleScre
         //index={1}
         snapPoints={snapPoints}
         //onChange={handleSheetChanges}
-       backdropComponent={renderBackdrop}
-       detached={true}
-
+       //backdropComponent={renderBackdrop}
+       //enablePanDownToClose={true}
      
       >
         <View style={{flex: 1,
