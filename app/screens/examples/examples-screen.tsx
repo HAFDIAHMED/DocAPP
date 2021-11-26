@@ -92,7 +92,7 @@ export const ExamplesScreen = observer(function ExamplesScreen() {
         height: 100,
         borderRadius:50,
         backgroundColor: 'red',
-        position.getLayout()
+        //position : position.getLayout(),
       }}
       {...panResponder.panHandlers}
       />
