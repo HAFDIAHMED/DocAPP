@@ -19,6 +19,14 @@ export const ExamplesScreen = observer(function ExamplesScreen() {
   const [translation, setTranslation] = useState(0);
   useEffect(() => {
     setTranslation(80);
+    while(true){
+      for (let i = 0; i < 100; i++) {
+        setTimeout(() => {
+          setTranslation(i);
+        }, 100 * i);
+      }
+    }
+    
   }, []);
   return (
     <Screen style={ROOT} preset="scroll">
