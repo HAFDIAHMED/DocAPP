@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { observer } from "mobx-react-lite"
 import { ViewStyle } from "react-native"
 import { Screen, Text } from "../../components"
@@ -14,9 +14,19 @@ export const ExamplesScreen = observer(function ExamplesScreen() {
 
   // Pull in navigation via hook
   // const navigation = useNavigation()
+  const [selectedLanguage,setSelectedLanguage]=useState("");
   return (
     <Screen style={ROOT} preset="scroll">
       <Text preset="header" text="Examples" style={{alignSelf:'center'}} />
+      <Picker
+      selectedValue={selectedLanguage}
+      onValueChange={(itemValue,itemIndex)=>{
+        setSelectedLanguage(itemValue)
+      }}
+      >
+        <Picker.Item label="Go" value="Go"/>
+        <Picker.Item label="java" value="java"/>
+      </Picker>
     </Screen>
   )
 })
