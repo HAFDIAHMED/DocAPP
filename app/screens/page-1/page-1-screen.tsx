@@ -26,7 +26,7 @@ export const Page1Screen :FC<Page1Props> = observer(function Page1Screen(props) 
     try {
         const response= await fetch("https://api.pray.zone/v2/times/today.json/?city="+cityName);
         const json = await response.json()
-       // console.log(json.results.datetime)
+        console.log(json.results.datetime)
         setPrayTimes(json.results.datetime)
     }catch(error){
       console.error(error)
@@ -44,7 +44,7 @@ export const Page1Screen :FC<Page1Props> = observer(function Page1Screen(props) 
       <View style={CITY_INPUT}>
         <TextInput  placeholder ="Enter Your City" onChangeText={(value_city)=>setCityPray(value_city)}/>
       </View>
-      <Button  text="find pray times" onPress={()=>GetPrayerTimes(cityPray)}/>
+      <Button  text="find pray times" onPress={()=>{GetPrayerTimes(cityPray)}}/>
       {/*<Text> Imsak : {prayTimes[0].times.Imsak}</Text> */}
 
     </Screen>
