@@ -56,6 +56,7 @@ export const BottomSheetExampleScreen = observer(function BottomSheetExampleScre
       // style={{backgroundColor:"green",borderWidth:2,borderRadius:40}}
        //handleStyle={{backgroundColor:'red'}}
         //backgroundStyle={{backgroundColor:'pink'}}
+        keyboardBehavior='extend'
       >
         <View style={{flex: 1,
     alignItems: 'center',}}>
