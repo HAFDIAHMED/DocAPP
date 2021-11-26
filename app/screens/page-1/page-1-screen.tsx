@@ -20,7 +20,7 @@ export const Page1Screen = observer(function Page1Screen() {
   return (
     <Screen style={ROOT} preset="scroll">
       <Text preset="header" text="page 1" />
-      <Button text="go to page 1" onPress={()=>navigation.navigate("page_2")} />
+      <Button text="go to page 2" onPress={()=>navigation.navigate("page_2")} />
     </Screen>
   )
 })
