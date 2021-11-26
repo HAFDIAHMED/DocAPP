@@ -1,6 +1,6 @@
 import React, { FC, useEffect, useState } from "react"
 import { observer } from "mobx-react-lite"
-import { ViewStyle } from "react-native"
+import { View, ViewStyle } from "react-native"
 import { Button, Screen, Text } from "../../components"
  import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "../../models"
@@ -40,6 +40,15 @@ export const Page1Screen :FC<Page1Props> = observer(function Page1Screen(props) 
     <Screen style={ROOT} preset="scroll">
       <Text preset="header" text="page 1" />
       <Button text="go to page 2" onPress={()=>props.navigation.navigate("page_2")} />
+      {
+        prayTimes.map((timesday,index)=>{
+          return (
+            <View>
+              <Text>{prayTimes.times}</Text>
+            </View>
+          );
+        })
+      }
 
     </Screen>
   )
