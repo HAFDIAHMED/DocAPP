@@ -6,6 +6,7 @@ import { Button, Screen, Text } from "../../components"
 // import { useStores } from "../../models"
 import { color } from "../../theme"
 import { NavigationInjectedProps } from "react-navigation";
+import { TextInput } from "react-native-gesture-handler"
 
 const ROOT: ViewStyle = {
   backgroundColor: color.palette.black,
@@ -35,14 +36,16 @@ export const Page1Screen :FC<Page1Props> = observer(function Page1Screen(props) 
   }
   useEffect(()=>{
     //GetPrayerTimes()
-    console.log(prayTimes[0].times)
+    console.log(prayTimes[0].times.Imsak)
     console.log("hello")
   })
   return (
     <Screen style={ROOT} preset="scroll">
       <Text preset="header" text="page 1" />
-      <Button text="go to page 2" onPress={()=>props.navigation.navigate("page_2")} />
-     
+      <View>
+        <TextInput  placeholder ="Enter Your City"/>
+      </View>
+      <Text> Imsak : {prayTimes[0].times.Imsak}</Text>
 
     </Screen>
   )
