@@ -12,6 +12,7 @@ import { WelcomeScreen, DemoScreen, DemoListScreen, ProfileScreen, SigninScreen,
 import { navigationRef } from "./navigation-utilities"
 import { PdfReaderScreen } from "../screens/pdf-view/pdf-reader/pdf-reader-screen"
 import { PagesNavigator } from "./main-navigator"
+import { ExamplesScreen } from "../screens/examples/examples-screen"
 
 /**
  * This type allows TypeScript to know what routes are defined in this navigator
@@ -43,6 +44,7 @@ export type NavigatorParamList = {
   all_projects : undefined
   bottom_sheet : undefined
   PagesStack: undefined
+  examplesPage : undefined
 }
 
 // Documentation: https://reactnavigation.org/docs/stack-navigator/
@@ -77,6 +79,8 @@ const AppStack = () => {
       <Stack.Screen name="all_projects" component={AllProjectsScreen} />
       <Stack.Screen name="bottom_sheet" component={BottomSheetExampleScreen} />
       <Stack.Screen name="PagesStack" component={PagesNavigator} />
+      <Stack.Screen name="examplesPage" component={ExamplesScreen} />
+
       
 
 
