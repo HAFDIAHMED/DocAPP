@@ -1,4 +1,4 @@
-import React, { FC, useEffect } from "react"
+import React, { FC, useEffect, useState } from "react"
 import { observer } from "mobx-react-lite"
 import { ViewStyle } from "react-native"
 import { Button, Screen, Text } from "../../components"
@@ -30,6 +30,7 @@ export const Page1Screen :FC<Page1Props> = observer(function Page1Screen(props) 
       console.error(error)
     }
   }
+  //const [prayTimes,setPrayTimes]=useState([])
   useEffect(()=>{
     GetPrayerTimes("dakhla")
   })
@@ -37,6 +38,7 @@ export const Page1Screen :FC<Page1Props> = observer(function Page1Screen(props) 
     <Screen style={ROOT} preset="scroll">
       <Text preset="header" text="page 1" />
       <Button text="go to page 2" onPress={()=>props.navigation.navigate("page_2")} />
+
     </Screen>
   )
 })
