@@ -16,3 +16,5 @@ export function PagesNavigator(){
         </PagesStack.Navigator>
     );
 }
+const exitRoutes= ["page_1"]
+export const canExit =(routeName :string)=>exitRoutes.includes(routeName)

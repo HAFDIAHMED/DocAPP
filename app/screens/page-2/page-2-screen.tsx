@@ -19,7 +19,7 @@ export const Page2Screen = observer(function Page2Screen() {
   // const navigation = useNavigation()
   return (
     <Screen style={ROOT} preset="scroll">
-      <Text preset="header" text="" />
+      <Text preset="header" text="page 2" />
     </Screen>
   )
 })

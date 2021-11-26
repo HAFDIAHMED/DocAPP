@@ -19,7 +19,7 @@ export const Page1Screen = observer(function Page1Screen() {
   // const navigation = useNavigation()
   return (
     <Screen style={ROOT} preset="scroll">
-      <Text preset="header" text="" />
+      <Text preset="header" text="page 1" />
     </Screen>
   )
 })
