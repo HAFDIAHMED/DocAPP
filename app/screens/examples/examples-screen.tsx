@@ -7,6 +7,7 @@ import { Screen, Text } from "../../components"
 import { color } from "../../theme"
 import {Picker} from '@react-native-picker/picker';
 import metrics from "../../theme/metrics"
+import Icon from "react-native-vector-icons/Ionicons"
 
 
 export const ExamplesScreen = observer(function ExamplesScreen() {
@@ -87,7 +88,6 @@ export const ExamplesScreen = observer(function ExamplesScreen() {
     >
       <Text style={{alignSelf:'center'}}> Translating Y </Text>
       </View>
-    
       <Animated.View 
       style={[{
         justifyContent:'center',
@@ -102,6 +102,8 @@ export const ExamplesScreen = observer(function ExamplesScreen() {
       >
         <Text style={{alignSelf:'center'}}>Move me </Text>
       </Animated.View>
+      <Icon  name="car" size={50} color="white"/>
+
     </Screen>
   )
 })
