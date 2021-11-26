@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useCallback, useRef, useState } from "react"
 import { observer } from "mobx-react-lite"
 import {  TextStyle, View, ViewStyle } from "react-native"
 import { BottomSheetComponenet, Button, Screen, Text } from "../../components"
@@ -11,9 +11,15 @@ import { TouchableOpacity } from "react-native-gesture-handler"
 import Icon from "react-native-vector-icons/Ionicons";
 import Modal from "react-native-modal";
 import WebView from "react-native-webview"
+import BottomSheet from "@gorhom/bottom-sheet"
 export const LiveChatScreen = observer(function LiveChatScreen() {
   const [openChat,setOpenChat]=useState(false);
   const navigation = useNavigation()
+  const bottomSheetRef = useRef<BottomSheet>(null);
+  const handleSnapPress = useCallback((index) => {
+    bottomSheetRef.current?.snapToIndex(index);
+  }, []);
+
   return (
     <Screen style={ROOT} preset="scroll">
       <Text preset="header" text="live chat screen"   style= {TEXT_STYLE}/>
@@ -36,8 +42,8 @@ export const LiveChatScreen = observer(function LiveChatScreen() {
       </Modal>
 
       </View> 
-      <Button  text ="open sheet" onPress={()=>console.log("hello")}/>
-      <BottomSheetComponenet snapPoints={[]} children={undefined}  ></BottomSheetComponenet>
+      <Button  text ="open sheet" onPress={()=>handleSnapPress(1)}/>
+      <BottomSheetComponenet  ref={bottomSheetRef} snapPoints={['1%','15%','25%', '50%','70%']} children={undefined}  ></BottomSheetComponenet>
     </Screen>
   )
 })
