@@ -38,20 +38,21 @@ export const BottomSheetExampleScreen = observer(function BottomSheetExampleScre
     ),
     []
   );
+  const handleClosePress = () => bottomSheetRef.current.close()
+
   const [sheetIndex,setSheetIndex]=useState(0)
   return (
     <Screen style={ROOT} preset="scroll">
       <Text preset="header" text="bottom sheet example" style={{alignSelf:'center'}} />
-      <Button text="open sheet" onPress={()=>{setSheetIndex(2);console.log(sheetIndex)}} />
+      <Button text="open sheet" onPress={()=>{handleClosePress;}} />
       <BottomSheet
      
         ref={bottomSheetRef}
-        index={1}
+        //index={1}
         snapPoints={snapPoints}
-        onChange={handleSheetChanges}
+        //onChange={handleSheetChanges}
        //backdropComponent={renderBackdrop}
-      
-        //onClose={()=>}
+     
       >
         <View style={{flex: 1,
     alignItems: 'center',}}>
