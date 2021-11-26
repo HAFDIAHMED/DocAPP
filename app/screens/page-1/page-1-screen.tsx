@@ -23,9 +23,9 @@ export const Page1Screen :FC<Page1Props> = observer(function Page1Screen(props) 
   //const navigation = useNavigation()
   const [prayTimes,setPrayTimes]=useState([""])
 
-  const GetPrayerTimes= async(cityname)=>{
+  const GetPrayerTimes= async()=>{
     try {
-        const response= await fetch("https://api.pray.zone/v2/times/today.json/?city="+cityname);
+        const response= await fetch("https://api.pray.zone/v2/times/today.json/?city=kenitra");
         const json = await response.json()
        // console.log(json.results.datetime)
         setPrayTimes(json.results.datetime)
@@ -34,8 +34,8 @@ export const Page1Screen :FC<Page1Props> = observer(function Page1Screen(props) 
     }
   }
   useEffect(()=>{
-    //GetPrayerTimes("dakhla")
-    //console.log(prayTimes)
+    GetPrayerTimes()
+    console.log(prayTimes.date)
   })
   return (
     <Screen style={ROOT} preset="scroll">
@@ -45,7 +45,7 @@ export const Page1Screen :FC<Page1Props> = observer(function Page1Screen(props) 
         prayTimes.map((timesday,index)=>{
           return (
             <View>
-             <Text>helllo</Text>
+             <Text>text</Text>
             </View>
           );
         })
