@@ -23,13 +23,15 @@ export interface BottomSheetComponenetProps extends BottomSheetProps {
    * An optional style override useful for padding & margin.
    */
   style?: StyleProp<ViewStyle>
+  forwardeRef? : any
+
 }
 
 /**
  * Describe your component here
  */
 export const BottomSheetComponenet = observer(function BottomSheetComponenet(props: BottomSheetComponenetProps) {
-  const { style } = props
+  const { style ,forwardeRef,...rest} = props
   const styles = flatten([CONTAINER, style])
   const bottomSheetRef = useRef<BottomSheet>(null);
 
@@ -67,6 +69,7 @@ export const BottomSheetComponenet = observer(function BottomSheetComponenet(pro
        //handleStyle={{backgroundColor:'red'}}
         //backgroundStyle={{backgroundColor:'pink'}}
        // keyboardBehavior='extend'
+      
       >
         <View style={{flex: 1,
     alignItems: 'center',}}>
