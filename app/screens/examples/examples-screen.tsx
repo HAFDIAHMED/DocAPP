@@ -19,10 +19,13 @@ export const ExamplesScreen = observer(function ExamplesScreen() {
     <Screen style={ROOT} preset="scroll">
       <Text preset="header" text="Examples" style={{alignSelf:'center'}} />
       <Picker
+      style={PICKER}
       selectedValue={selectedLanguage}
       onValueChange={(itemValue,itemIndex)=>{
         setSelectedLanguage(itemValue)
       }}
+      mode="dropdown"
+
       >
         <Picker.Item label="Go" value="Go"/>
         <Picker.Item label="java" value="java"/>
@@ -35,4 +38,7 @@ export const ExamplesScreen = observer(function ExamplesScreen() {
 const ROOT: ViewStyle = {
   backgroundColor: color.palette.black,
   flex: 1,
+}
+const PICKER : ViewStyle={
+  backgroundColor: "white"
 }
