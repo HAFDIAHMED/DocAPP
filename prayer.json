@@ -1,0 +1,44 @@
+{
+    "code": 200,
+    "status": "OK",
+    "results": {
+        "datetime": [
+            {
+                "times": {
+                    "Imsak": "05:32",
+                    "Sunrise": "07:09",
+                    "Fajr": "05:42",
+                    "Dhuhr": "12:14",
+                    "Asr": "14:58",
+                    "Sunset": "17:18",
+                    "Maghrib": "17:34",
+                    "Isha": "18:46",
+                    "Midnight": "23:30"
+                },
+                "date": {
+                    "timestamp": 1637884800,
+                    "gregorian": "2021-11-26",
+                    "hijri": "1443-04-21"
+                }
+            }
+        ],
+        "location": {
+            "latitude": 34.25,
+            "longitude": -6.5833330154418945,
+            "elevation": 31.0,
+            "city": "Kenitra",
+            "country": "Morocco",
+            "country_code": "MA",
+            "timezone": "Africa/Casablanca",
+            "local_offset": 0.0
+        },
+        "settings": {
+            "timeformat": "HH:mm",
+            "school": "Ithna Ashari",
+            "juristic": "Shafii",
+            "highlat": "None",
+            "fajr_angle": 18.0,
+            "isha_angle": 18.0
+        }
+    }
+}
