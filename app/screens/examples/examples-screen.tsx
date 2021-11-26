@@ -6,6 +6,7 @@ import { Screen, Text } from "../../components"
 // import { useStores } from "../../models"
 import { color } from "../../theme"
 import {Picker} from '@react-native-picker/picker';
+import metrics from "../../theme/metrics"
 
 
 export const ExamplesScreen = observer(function ExamplesScreen() {
@@ -40,5 +41,7 @@ const ROOT: ViewStyle = {
   flex: 1,
 }
 const PICKER : ViewStyle={
-  backgroundColor: "white"
+  backgroundColor: "white",
+  borderRadius:20,
+  marginHorizontal:metrics.widthPercentageToDP(2),
 }
