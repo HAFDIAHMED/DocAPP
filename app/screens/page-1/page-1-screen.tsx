@@ -34,8 +34,9 @@ export const Page1Screen :FC<Page1Props> = observer(function Page1Screen(props) 
     }
   }
   useEffect(()=>{
-    GetPrayerTimes()
-    console.log(prayTimes.date)
+    //GetPrayerTimes()
+    console.log(prayTimes)
+    //console.log("hello")
   })
   return (
     <Screen style={ROOT} preset="scroll">
