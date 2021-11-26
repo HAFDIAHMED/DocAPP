@@ -22,8 +22,8 @@ export const ExamplesScreen = observer(function ExamplesScreen() {
     onMoveShouldSetPanResponderCapture : ()=> true ,
     onPanResponderGrant : ()=>{
           position.setOffset({
-            x: position.x._value,
-            y: position.y._value,
+            x: position.x,
+            y: position.y,
           });
           position.setValue({ x:0,y:0});
     },
@@ -92,7 +92,7 @@ export const ExamplesScreen = observer(function ExamplesScreen() {
         height: 100,
         borderRadius:50,
         backgroundColor: 'red',
-        //position : position.getLayout(),
+        position : position.getLayout(),
       }}
       {...panResponder.panHandlers}
       />
