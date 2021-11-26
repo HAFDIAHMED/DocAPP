@@ -4,7 +4,7 @@ import { observer } from "mobx-react-lite"
 import { color, typography } from "../../theme"
 import { Text } from "../"
 import { flatten } from "ramda"
-import BottomSheet, { BottomSheetBackdrop } from '@gorhom/bottom-sheet';
+import BottomSheet, { BottomSheetBackdrop, BottomSheetProps } from '@gorhom/bottom-sheet';
 import { useCallback, useMemo, useRef } from "react"
 
 const CONTAINER: ViewStyle = {
@@ -17,7 +17,7 @@ const TEXT: TextStyle = {
   color: color.primary,
 }
 
-export interface BottomSheetComponenetProps {
+export interface BottomSheetComponenetProps extends BottomSheetProps {
   /**
    * An optional style override useful for padding & margin.
    */
@@ -54,8 +54,23 @@ export const BottomSheetComponenet = observer(function BottomSheetComponenet(pro
   );
   
   return (
-    <View style={styles}>
-      <Text style={TEXT}>Hello</Text>
-    </View>
+    <BottomSheet
+     
+        ref={bottomSheetRef}
+        //index={1}
+        snapPoints={snapPoints}
+        //onChange={handleSheetChanges}
+       backdropComponent={renderBackdrop}
+       enablePanDownToClose={true}
+      // style={{backgroundColor:"green",borderWidth:2,borderRadius:40}}
+       //handleStyle={{backgroundColor:'red'}}
+        //backgroundStyle={{backgroundColor:'pink'}}
+       // keyboardBehavior='extend'
+      >
+        <View style={{flex: 1,
+    alignItems: 'center',}}>
+          <Text style={{color:"black"}}>Awesome 🎉</Text>
+        </View>
+      </BottomSheet>
   )
 })
