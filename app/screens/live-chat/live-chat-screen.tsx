@@ -11,16 +11,10 @@ import { TouchableOpacity } from "react-native-gesture-handler"
 import Icon from "react-native-vector-icons/Ionicons";
 import Modal from "react-native-modal";
 import WebView from "react-native-webview"
-import BottomSheet from "@gorhom/bottom-sheet"
 export const LiveChatScreen = observer(function LiveChatScreen() {
   const [openChat,setOpenChat]=useState(false);
   const navigation = useNavigation()
-  const bottomSheetRef = useRef<BottomSheet>(null);
-  const handleSnapPress = useCallback((index) => {
-    bottomSheetRef.current?.snapToIndex(index);
-  }, []);
-  const snapPoints = useMemo(() => ['1%','15%','25%', '50%','70%'], []);
-
+ 
   return (
     <Screen style={ROOT} preset="scroll">
       <Text preset="header" text="live chat screen"   style= {TEXT_STYLE}/>
@@ -43,8 +37,7 @@ export const LiveChatScreen = observer(function LiveChatScreen() {
       </Modal>
 
       </View> 
-      <Button  text ="open sheet" onPress={()=>handleSnapPress(1)}/>
-      <BottomSheetComponenet  ref={bottomSheetRef} snapPoints={snapPoints}   ></BottomSheetComponenet>
+      
     </Screen>
   )
 })
