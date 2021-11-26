@@ -45,6 +45,7 @@ export const BottomSheetExampleScreen = observer(function BottomSheetExampleScre
     <Screen style={ROOT} preset="scroll">
       <Text preset="header" text="bottom sheet example" style={{alignSelf:'center'}} />
       <Button text="open sheet" onPress={()=>{handleSnapPress(1);}} />
+      <Button text="close sheet" onPress={()=>{handleClosePress;}} />
       <BottomSheet
      
         ref={bottomSheetRef}
