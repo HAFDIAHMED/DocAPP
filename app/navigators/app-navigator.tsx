@@ -11,6 +11,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack"
 import { WelcomeScreen, DemoScreen, DemoListScreen, ProfileScreen, SigninScreen, SignupScreen, PdfViewScreen, MapViewScreen, MapGeoScreen, QrCodeGeneratorScreen, QrCodeScannerCameraScreen, LiveChatScreen, LiveMessageScreen, AllProjectsScreen, BottomSheetExampleScreen } from "../screens"
 import { navigationRef } from "./navigation-utilities"
 import { PdfReaderScreen } from "../screens/pdf-view/pdf-reader/pdf-reader-screen"
+import { PagesNavigator } from "./main-navigator"
 
 /**
  * This type allows TypeScript to know what routes are defined in this navigator
@@ -53,7 +54,7 @@ const AppStack = () => {
       screenOptions={{
         headerShown: false,
       }}
-      initialRouteName="all_projects"
+      initialRouteName="PagesStack"
     >
                   <Stack.Screen name="pdf_reader" component={PdfReaderScreen} />
 
@@ -75,7 +76,8 @@ const AppStack = () => {
       <Stack.Screen name="live_message" component={LiveMessageScreen} />
       <Stack.Screen name="all_projects" component={AllProjectsScreen} />
       <Stack.Screen name="bottom_sheet" component={BottomSheetExampleScreen} />
-
+      <Stack.Screen name="PagesStack" component={PagesNavigator} />
+      
 
 
     </Stack.Navigator>
@@ -108,5 +110,5 @@ AppNavigator.displayName = "AppNavigator"
  *
  * `canExit` is used in ./app/app.tsx in the `useBackButtonHandler` hook.
  */
-const exitRoutes = ["all_projects"]
+const exitRoutes = ["PagesStack"]
 export const canExit = (routeName: string) => exitRoutes.includes(routeName)
