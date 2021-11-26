@@ -17,6 +17,7 @@ export const ExamplesScreen = observer(function ExamplesScreen() {
   // const navigation = useNavigation()
   const [selectedLanguage,setSelectedLanguage]=useState("");
   const [translation, setTranslation] = useState(0);
+  const animatedValue= new Animated.Value(0);
   useEffect(() => {
     //setTranslation(80);
     for (let i = 0; i < 100; i++) {
