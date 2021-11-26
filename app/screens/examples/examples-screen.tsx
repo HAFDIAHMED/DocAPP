@@ -18,7 +18,7 @@ export const ExamplesScreen = observer(function ExamplesScreen() {
   const [selectedLanguage,setSelectedLanguage]=useState("");
   return (
     <Screen style={ROOT} preset="scroll">
-      <Text preset="header" text="Examples" style={{alignSelf:'center'}} />
+      <Text preset="header" text="Animations" style={{alignSelf:'center'}} />
       {/*<Picker
       style={PICKER}
       selectedValue={selectedLanguage}

@@ -40,7 +40,7 @@ export const AllProjectsScreen = observer(function AllProjectsScreen() {
       <ButtonProject    onPress={() => navigation.navigate("qr_code_g")} textLabel="QR Code System" iconName={"qr-code"} iconColor={"black"} iconSize={40} textlabelColor={"black"}  style={{margin:5}} />
       <ButtonProject    onPress={() => navigation.navigate("map_view")} textLabel="Gealocalisation" iconName={"map"} iconColor={"black"} iconSize={40} textlabelColor={"black"}  style={{margin:5}} />
       <ButtonProject    onPress={() => navigation.navigate("bottom_sheet")} textLabel="bottom sheet" iconName={"phone-portrait"} iconColor={"black"} iconSize={40} textlabelColor={"black"}  style={{margin:5}} />
-      <ButtonProject    onPress={() => navigation.navigate("examplesPage")} textLabel="Examples" iconName={"apps"} iconColor={"black"} iconSize={40} textlabelColor={"black"}  style={{margin:5}} />
+      <ButtonProject    onPress={() => navigation.navigate("examplesPage")} textLabel="Animations" iconName={"game-controller"} iconColor={"black"} iconSize={40} textlabelColor={"black"}  style={{margin:5}} />
 
       <Text>{I18n.translate("welcomePartOne")}</Text>
       
