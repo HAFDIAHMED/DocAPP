@@ -28,6 +28,9 @@ export const BottomSheetExampleScreen = observer(function BottomSheetExampleScre
   const handleSnapPress = useCallback((index) => {
     bottomSheetRef.current?.snapToIndex(index);
   }, []);
+  const handleClosePress = useCallback(() => {
+    bottomSheetRef.current?.close();
+  }, []);
   const renderBackdrop = useCallback(
     props => (
       <BottomSheetBackdrop
@@ -38,10 +41,7 @@ export const BottomSheetExampleScreen = observer(function BottomSheetExampleScre
     ),
     []
   );
-  const handleClosePress = useCallback(() => {
-    bottomSheetRef.current?.close();
-  }, []);
-  const [sheetIndex,setSheetIndex]=useState(0)
+  
   return (
     <Screen style={ROOT} preset="scroll">
       <Text preset="header" text="bottom sheet example" style={{alignSelf:'center'}} />
