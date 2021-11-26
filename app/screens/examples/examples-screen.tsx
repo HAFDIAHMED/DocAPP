@@ -22,15 +22,16 @@ export const ExamplesScreen = observer(function ExamplesScreen() {
     onMoveShouldSetPanResponderCapture : ()=> true ,
     onPanResponderGrant : ()=>{
           position.setOffset({
-            x: position.x,
-            y: position.y,
+            x: position.x._value,
+            y: position.y._value,
           });
           position.setValue({ x:0,y:0});
     },
     onPanResponderMove : Animated.event([
       null,
       { dx: position.x, dy:position.y},
-    ]),
+    ],        {useNativeDriver: false}
+    ),
     onPanResponderRelease : ()=>{
       position.flattenOffset();
     }
