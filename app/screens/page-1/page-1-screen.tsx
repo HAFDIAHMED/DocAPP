@@ -1,4 +1,4 @@
-import React, { FC } from "react"
+import React, { FC, useEffect } from "react"
 import { observer } from "mobx-react-lite"
 import { ViewStyle } from "react-native"
 import { Button, Screen, Text } from "../../components"
@@ -21,6 +21,17 @@ export const Page1Screen :FC<Page1Props> = observer(function Page1Screen(props) 
 
   // Pull in navigation via hook
   //const navigation = useNavigation()
+  const GetPrayerTimes= async()=>{
+    try {
+        const response= await fetch("https://api.pray.zone/v2/times/today.json/?city=kenitra");
+        console.log(response.json())
+    }catch(error){
+      console.error(error)
+    }
+  }
+  useEffect(()=>{
+    GetPrayerTimes()
+  })
   return (
     <Screen style={ROOT} preset="scroll">
       <Text preset="header" text="page 1" />
