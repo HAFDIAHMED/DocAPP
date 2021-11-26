@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { observer } from "mobx-react-lite"
-import { View, ViewStyle,Animated, PanResponder } from "react-native"
+import { View, ViewStyle,Animated, PanResponder, Button } from "react-native"
 import { Screen, Text } from "../../components"
 // import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "../../models"
@@ -92,10 +92,11 @@ export const ExamplesScreen = observer(function ExamplesScreen() {
         height: 100,
         borderRadius:50,
         backgroundColor: 'red',
-        position : position.getLayout(),
+        //position : position.getLayout(),
       }}
       {...panResponder.panHandlers}
       />
+      <Button title="hello"/>
     </Screen>
   )
 })
