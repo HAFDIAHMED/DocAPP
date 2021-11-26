@@ -71,20 +71,10 @@ export const ExamplesScreen = observer(function ExamplesScreen() {
         backgroundColor: 'orange',
         transform: [{ translateX: translation }],
       }}
-    />
-    <View
-      style={{
-        justifyContent:'center',
-        margin : metrics.heightPercentageToDP(3),
-        width: 100,
-        height: 100,
-        borderRadius:50,
-        backgroundColor: 'green',
-        transform: [{ translateY:translation }],
-      }}
     >
-      <Text style={{alignSelf:'center'}}>circle</Text>
+      <Text style={{alignSelf:'center'}}> Translating </Text>
       </View>
+    
       <Animated.View 
       style={[{
         justifyContent:'center',
@@ -96,7 +86,9 @@ export const ExamplesScreen = observer(function ExamplesScreen() {
         //position : position.getLayout(),
       },position.getLayout()]}
       {...panResponder.panHandlers}
-      />
+      >
+        <Text style={{alignSelf:'center'}}>Move me </Text>
+      </Animated.View>
     </Screen>
   )
 })
