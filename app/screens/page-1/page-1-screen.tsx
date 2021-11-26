@@ -34,9 +34,9 @@ export const Page1Screen :FC<Page1Props> = observer(function Page1Screen(props) 
     }
   }
   useEffect(()=>{
-    GetPrayerTimes()
-    console.log(prayTimes[0])
-    //console.log("hello")
+    //GetPrayerTimes()
+    console.log(prayTimes[0].times)
+    console.log("hello")
   })
   return (
     <Screen style={ROOT} preset="scroll">
@@ -46,7 +46,7 @@ export const Page1Screen :FC<Page1Props> = observer(function Page1Screen(props) 
         prayTimes.map((timesday,index)=>{
           return (
             <View>
-             <Text>{prayTimes[0].date}</Text>
+             <Text>text</Text>
             </View>
           );
         })
