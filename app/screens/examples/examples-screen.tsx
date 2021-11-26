@@ -25,6 +25,10 @@ export const ExamplesScreen = observer(function ExamplesScreen() {
         setTranslation(i);
       }, 100 * i);
     }
+    Animated.timing(animatedValue, {
+      toValue: 300,
+      duration: 500
+  }).start();
     
   }, []);
   return (
@@ -64,6 +68,17 @@ export const ExamplesScreen = observer(function ExamplesScreen() {
     >
       <Text style={{alignSelf:'center'}}>circle</Text>
       </View>
+      <Animated.View 
+      style={{
+        justifyContent:'center',
+        margin : metrics.heightPercentageToDP(3),
+        width: 100,
+        height: 100,
+        borderRadius:50,
+        backgroundColor: 'red',
+        transform: [{ translateY:animatedValue }],
+      }}
+      />
     </Screen>
   )
 })
