@@ -57,7 +57,7 @@ export const ExamplesScreen = observer(function ExamplesScreen() {
         height: 100,
         borderRadius:50,
         backgroundColor: 'green',
-        transform: [{ translateX: translation }],
+        transform: [{ translateY: translation }],
       }}
     />
     </Screen>
