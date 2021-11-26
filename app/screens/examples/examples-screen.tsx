@@ -23,7 +23,7 @@ export const ExamplesScreen = observer(function ExamplesScreen() {
     onPanResponderGrant : ()=>{
           position.setOffset({
             x: position.x._value,
-            y: position.x._value,
+            y: position.y._value,
           });
           position.setValue({ x:0,y:0});
     },
