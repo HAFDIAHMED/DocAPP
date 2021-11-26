@@ -85,7 +85,7 @@ export const ExamplesScreen = observer(function ExamplesScreen() {
       <Text style={{alignSelf:'center'}}>circle</Text>
       </View>
       <Animated.View 
-      style={{
+      style={[{
         justifyContent:'center',
         margin : metrics.heightPercentageToDP(3),
         width: 100,
@@ -93,7 +93,7 @@ export const ExamplesScreen = observer(function ExamplesScreen() {
         borderRadius:50,
         backgroundColor: 'red',
         //position : position.getLayout(),
-      }}
+      },position.getLayout()]}
       {...panResponder.panHandlers}
       />
       <Button title="hello"/>
