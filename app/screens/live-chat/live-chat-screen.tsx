@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { observer } from "mobx-react-lite"
 import {  TextStyle, View, ViewStyle } from "react-native"
-import { Button, Screen, Text } from "../../components"
+import { BottomSheetComponenet, Button, Screen, Text } from "../../components"
 import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "../../models"
 import { color } from "../../theme"
@@ -34,7 +34,9 @@ export const LiveChatScreen = observer(function LiveChatScreen() {
         />
         </View>
       </Modal>
+
       </View> 
+      <BottomSheetComponenet snapPoints={[]} children={undefined}></BottomSheetComponenet>
     </Screen>
   )
 })
