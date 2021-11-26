@@ -39,7 +39,11 @@ export const ExamplesScreen = observer(function ExamplesScreen() {
   useEffect(() => {
     //setTranslation(80);
     
-
+    for (let i = 0; i < 50; i++) {
+      setTimeout(() => {
+        setTranslation(i);
+      }, 25 * i);
+    }
     
     //new Array(5000).fill(0).map(() => console.log("JS thread busy!"))
 
@@ -93,7 +97,6 @@ export const ExamplesScreen = observer(function ExamplesScreen() {
       },position.getLayout()]}
       {...panResponder.panHandlers}
       />
-      <Button title="hello"/>
     </Screen>
   )
 })
