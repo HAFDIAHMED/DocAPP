@@ -49,6 +49,15 @@ export const ExamplesScreen = observer(function ExamplesScreen() {
         transform: [{ translateX: translation }],
       }}
     />
+    <View
+      style={{
+        width: 100,
+        height: 100,
+        borderRadius:50,
+        backgroundColor: 'green',
+        transform: [{ translateX: translation }],
+      }}
+    />
     </Screen>
   )
 })
