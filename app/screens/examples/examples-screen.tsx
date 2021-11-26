@@ -18,13 +18,11 @@ export const ExamplesScreen = observer(function ExamplesScreen() {
   const [selectedLanguage,setSelectedLanguage]=useState("");
   const [translation, setTranslation] = useState(0);
   useEffect(() => {
-    setTranslation(80);
-    while(true){
-      for (let i = 0; i < 100; i++) {
-        setTimeout(() => {
-          setTranslation(i);
-        }, 100 * i);
-      }
+    //setTranslation(80);
+    for (let i = 0; i < 100; i++) {
+      setTimeout(() => {
+        setTranslation(i);
+      }, 100 * i);
     }
     
   }, []);
