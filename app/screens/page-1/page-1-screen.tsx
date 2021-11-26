@@ -22,9 +22,9 @@ export const Page1Screen :FC<Page1Props> = observer(function Page1Screen(props) 
   //const navigation = useNavigation()
   const [prayTimes,setPrayTimes]=useState([""])
 
-  const GetPrayerTimes= async()=>{
+  const GetPrayerTimes= async(cityName)=>{
     try {
-        const response= await fetch("https://api.pray.zone/v2/times/today.json/?city=kenitra");
+        const response= await fetch("https://api.pray.zone/v2/times/today.json/?city="+cityName);
         const json = await response.json()
        // console.log(json.results.datetime)
         setPrayTimes(json.results.datetime)
@@ -34,14 +34,14 @@ export const Page1Screen :FC<Page1Props> = observer(function Page1Screen(props) 
   }
   useEffect(()=>{
     //GetPrayerTimes()
-    console.log(prayTimes[0].times.Imsak)
+    //console.log(prayTimes[0].times.Imsak)
     console.log("hello")
   })
   return (
     <Screen style={ROOT} preset="scroll">
-      <Text preset="header" text="page 1" style={{alignSelf:'center'}} />
+      <Text preset="header" text="Pray Times by City" style={{alignSelf:'center'}} />
       <View style={CITY_INPUT}>
-        <TextInput  placeholder ="Enter Your City"/>
+        <TextInput  placeholder ="Enter Your City" onChangeText={(value_city)=>GetPrayerTimes(value_city)}/>
       </View>
       <Text> Imsak : {prayTimes[0].times.Imsak}</Text>
 
