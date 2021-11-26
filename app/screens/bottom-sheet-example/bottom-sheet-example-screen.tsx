@@ -22,7 +22,7 @@ export const BottomSheetExampleScreen = observer(function BottomSheetExampleScre
   const bottomSheetRef = useRef<BottomSheet>(null);
 
   // variables
-  const snapPoints = useMemo(() => ['15%','25%', '50%','70%'], []);
+  const snapPoints = useMemo(() => ['1%','15%','25%', '50%','70%'], []);
 
   // callbacks
   const handleSnapPress = useCallback((index) => {
@@ -46,7 +46,7 @@ export const BottomSheetExampleScreen = observer(function BottomSheetExampleScre
     <Screen style={ROOT} preset="scroll">
       <Text preset="header" text="bottom sheet example" style={{alignSelf:'center'}} />
       <Button text="open sheet" onPress={()=>{handleSnapPress(1);}} />
-      <Button text="close sheet" onPress={()=>{handleClosePress;}} />
+      <Button text="close sheet" onPress={()=>{handleClosePress();}} />
       <BottomSheet
      
         ref={bottomSheetRef}
@@ -58,7 +58,7 @@ export const BottomSheetExampleScreen = observer(function BottomSheetExampleScre
       // style={{backgroundColor:"green",borderWidth:2,borderRadius:40}}
        //handleStyle={{backgroundColor:'red'}}
         //backgroundStyle={{backgroundColor:'pink'}}
-        keyboardBehavior='extend'
+       // keyboardBehavior='extend'
       >
         <View style={{flex: 1,
     alignItems: 'center',}}>
