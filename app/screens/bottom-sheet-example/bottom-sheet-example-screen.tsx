@@ -53,7 +53,9 @@ export const BottomSheetExampleScreen = observer(function BottomSheetExampleScre
         //onChange={handleSheetChanges}
        backdropComponent={renderBackdrop}
        enablePanDownToClose={true}
-       style={{borderColor:"green",borderWidth:2}}
+      // style={{backgroundColor:"green",borderWidth:2,borderRadius:40}}
+       //handleStyle={{backgroundColor:'red'}}
+        //backgroundStyle={{backgroundColor:'pink'}}
      
       >
         <View style={{flex: 1,
