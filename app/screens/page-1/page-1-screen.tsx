@@ -28,6 +28,7 @@ export const Page1Screen :FC<Page1Props> = observer(function Page1Screen(props) 
         const response= await fetch("https://api.pray.zone/v2/times/today.json/?city="+cityname);
         const json = await response.json()
         console.log(json.results.datetime)
+        setPrayTimes(json.results.datetime)
     }catch(error){
       console.error(error)
     }
