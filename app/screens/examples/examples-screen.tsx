@@ -19,7 +19,7 @@ export const ExamplesScreen = observer(function ExamplesScreen() {
   return (
     <Screen style={ROOT} preset="scroll">
       <Text preset="header" text="Examples" style={{alignSelf:'center'}} />
-      <Picker
+      {/*<Picker
       style={PICKER}
       selectedValue={selectedLanguage}
       onValueChange={(itemValue,itemIndex)=>{
@@ -30,7 +30,7 @@ export const ExamplesScreen = observer(function ExamplesScreen() {
       >
         <Picker.Item label="Go" value="Go"/>
         <Picker.Item label="java" value="java"/>
-      </Picker>
+      </Picker> */}
     </Screen>
   )
 })
