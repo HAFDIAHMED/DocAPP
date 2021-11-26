@@ -24,7 +24,8 @@ export const Page1Screen :FC<Page1Props> = observer(function Page1Screen(props) 
   const GetPrayerTimes= async()=>{
     try {
         const response= await fetch("https://api.pray.zone/v2/times/today.json/?city=kenitra");
-        console.log(response.json())
+        const json = await response.json()
+        console.log(response)
     }catch(error){
       console.error(error)
     }
