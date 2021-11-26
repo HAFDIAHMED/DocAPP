@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import { observer } from "mobx-react-lite"
 import { View, ViewStyle } from "react-native"
 import { Screen, Text } from "../../components"
@@ -17,7 +17,9 @@ export const ExamplesScreen = observer(function ExamplesScreen() {
   // const navigation = useNavigation()
   const [selectedLanguage,setSelectedLanguage]=useState("");
   const [translation, setTranslation] = useState(0);
-
+  useEffect(() => {
+    setTranslation(80);
+  }, []);
   return (
     <Screen style={ROOT} preset="scroll">
       <Text preset="header" text="Animations" style={{alignSelf:'center'}} />
