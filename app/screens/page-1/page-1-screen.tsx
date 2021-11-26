@@ -21,16 +21,17 @@ export const Page1Screen :FC<Page1Props> = observer(function Page1Screen(props) 
 
   // Pull in navigation via hook
   //const navigation = useNavigation()
+  const [prayTimes,setPrayTimes]=useState([""])
+
   const GetPrayerTimes= async(cityname)=>{
     try {
         const response= await fetch("https://api.pray.zone/v2/times/today.json/?city="+cityname);
         const json = await response.json()
-        console.log(json.results)
+        console.log(json.results.datetime)
     }catch(error){
       console.error(error)
     }
   }
-  //const [prayTimes,setPrayTimes]=useState([])
   useEffect(()=>{
     GetPrayerTimes("dakhla")
   })
