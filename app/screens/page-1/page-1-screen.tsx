@@ -21,9 +21,9 @@ export const Page1Screen :FC<Page1Props> = observer(function Page1Screen(props) 
 
   // Pull in navigation via hook
   //const navigation = useNavigation()
-  const GetPrayerTimes= async()=>{
+  const GetPrayerTimes= async(cityname)=>{
     try {
-        const response= await fetch("https://api.pray.zone/v2/times/today.json/?city=kenitra");
+        const response= await fetch("https://api.pray.zone/v2/times/today.json/?city="+cityname);
         const json = await response.json()
         console.log(json.results)
     }catch(error){
@@ -31,7 +31,7 @@ export const Page1Screen :FC<Page1Props> = observer(function Page1Screen(props) 
     }
   }
   useEffect(()=>{
-    GetPrayerTimes()
+    GetPrayerTimes("dakhla")
   })
   return (
     <Screen style={ROOT} preset="scroll">
