@@ -101,6 +101,7 @@ export const ExamplesScreen = observer(function ExamplesScreen() {
       {...panResponder.panHandlers}
       >
         <Text style={{alignSelf:'center'}}>Move me </Text>
+        <Image  source ={require("../../../assets/images/basket_ball_png.png")}/>
       </Animated.View>
       <Icon  name="walk" size={50} color="white" style={{
         margin : metrics.heightPercentageToDP(3),
