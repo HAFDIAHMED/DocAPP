@@ -11,6 +11,7 @@ import { TextInput, TouchableOpacity } from "react-native-gesture-handler"
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import {Standard,Night,Retro} from "../map-geo/map_many/mapStyles_variation"
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
+import Geolocation from 'react-native-geolocation-service';
 
 export const MapGeoScreen = observer(function MapGeoScreen() {
   // Pull in one of our MST stores
@@ -22,6 +23,53 @@ export const MapGeoScreen = observer(function MapGeoScreen() {
   const [styleChange , setStyleChange]=useState(true)
  
  const [mapStyles,setMapStyles]=useState(Standard)
+ interface Ilocation {
+   latitude : number;
+   longitude:number;
+ }
+ const [location , setLocation]=useState<Ilocation | undefined >(undefined);
+ const GetUserLocation=()=>{
+   Geolocation.getCurrentPosition(
+     position => {
+       const {latitude,longitude}=position.coords;
+       setLocation({
+         latitude,
+         longitude
+       });
+       
+     },
+     error=>{
+      console.error(error.code,error.message)
+    },
+    {enableHighAcccuracy : true , timeout : 1500,maximumAge : 1000}
+   );
+ }
+ const GetUserLocation_View=()=>{
+    return (
+      <View>
+        {location && (
+          <MapView
+          style={{flex : 1}}
+          initialRegion={{
+            latitude:location.latitude,
+            longitude:location.longitude,
+            latitudeDelta:0.0922,
+            longitudeDelta:0.0421,
+          }}
+          >
+            <Marker 
+            coordinate={{
+              latitude: location.latitude,
+              longitude: location.longitude,
+            }}
+            />
+          
+
+          </MapView>
+        )}
+      </View>
+    );
+ }
   const Map_View =()=>{
 return(
 
@@ -181,12 +229,14 @@ styles={
   
   useEffect(()=>{
     //console.log(Standard)
+    GetUserLocation()
   })
   return (
     <Screen style={ROOT} >
-   <Map_View/>
+      <GetUserLocation_View/>
+  {/* <Map_View/>
   <MAPS/>
-   <AUTOCOMPLETE_SEARCH/>
+   <AUTOCOMPLETE_SEARCH/> */}
     </Screen>
   )
 })
