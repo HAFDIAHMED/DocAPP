@@ -95,12 +95,13 @@ export const ExamplesScreen = observer(function ExamplesScreen() {
         width: 100,
         height: 100,
         borderRadius:50,
-        backgroundColor: 'red',
+        //borderWidth:2,
+        backgroundColor: 'transparent',
         //position : position.getLayout(),
       },position.getLayout()]}
       {...panResponder.panHandlers}
       >
-        <Icon name ="basketball-sharp" size={30}/>        
+        <Icon name ="basketball-sharp" size={95} style={{alignSelf:'center'}} color="orange"/>        
       </Animated.View>
       <Icon  name="walk" size={50} color="white" style={{
         margin : metrics.heightPercentageToDP(3),
