@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { observer } from "mobx-react-lite"
-import { View, ViewStyle,Animated, PanResponder, Button } from "react-native"
+import { View, ViewStyle,Animated, PanResponder, Button, Image } from "react-native"
 import { Screen, Text } from "../../components"
 // import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "../../models"
@@ -101,7 +101,8 @@ export const ExamplesScreen = observer(function ExamplesScreen() {
       {...panResponder.panHandlers}
       >
         <Text style={{alignSelf:'center'}}>Move me </Text>
-        <Image  source ={require("../../../assets/images/basket_ball_png.png")}/>
+        
+        <Image  source ={require("../../../assets/images/basket_ball_png.png")} style={{height:100,width:100}}/>
       </Animated.View>
       <Icon  name="walk" size={50} color="white" style={{
         margin : metrics.heightPercentageToDP(3),
