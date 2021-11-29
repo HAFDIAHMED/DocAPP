@@ -11,7 +11,8 @@ import { TextInput, TouchableOpacity } from "react-native-gesture-handler"
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import {Standard,Night,Retro} from "../map-geo/map_many/mapStyles_variation"
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
-import Geolocation from 'react-native-geolocation-service';
+//import Geolocation from 'react-native-geolocation-service';
+import Geolocation from '@react-native-community/geolocation';
 
 export const MapGeoScreen = observer(function MapGeoScreen() {
   // Pull in one of our MST stores
@@ -29,27 +30,29 @@ export const MapGeoScreen = observer(function MapGeoScreen() {
  }
  const [location , setLocation]=useState<Ilocation | undefined >(undefined);
  const GetUserLocation=()=>{
-   Geolocation.getCurrentPosition(
+   navigator.geolocation.getCurrentPosition(
      position => {
        const {latitude,longitude}=position.coords;
        setLocation({
          latitude,
          longitude
        });
-       
+       //console.log(position)
+      
+      
      },
-     error=>{
-      console.error(error.code,error.message)
-    },
-    {enableHighAcccuracy : true , timeout : 1500,maximumAge : 1000}
+     error=>console.error("error :",JSON.stringify(error)),
+    {enableHighAccuracy : false , timeout : 1500,maximumAge : 1000}
    );
  }
  const GetUserLocation_View=()=>{
     return (
-      <View>
-        {location && (
-          <MapView
-          style={{flex : 1}}
+     
+        <MapView
+          provider={PROVIDER_GOOGLE}
+          style={styles.map}
+          customMapStyle={mapStyles}
+          showsUserLocation={true}
           initialRegion={{
             latitude:location.latitude,
             longitude:location.longitude,
@@ -66,8 +69,7 @@ export const MapGeoScreen = observer(function MapGeoScreen() {
           
 
           </MapView>
-        )}
-      </View>
+    
     );
  }
   const Map_View =()=>{
@@ -78,7 +80,12 @@ return(
 provider={PROVIDER_GOOGLE}
 style={styles.map}
 customMapStyle={mapStyles}
-       showsUserLocation={true} >
+showsUserLocation={true}
+showsMyLocationButton={true}
+showsCompass={true}
+
+       mapType="hybrid"
+       >
 <Marker 
             draggable
             coordinate={{
@@ -229,14 +236,17 @@ styles={
   
   useEffect(()=>{
     //console.log(Standard)
-    GetUserLocation()
+    //GetUserLocation()
   })
   return (
     <Screen style={ROOT} >
-      <GetUserLocation_View/>
-  {/* <Map_View/>
-  <MAPS/>
-   <AUTOCOMPLETE_SEARCH/> */}
+      
+      <Map_View/>
+        <MAPS/>
+        {/*
+       <AUTOCOMPLETE_SEARCH/> 
+       <GetUserLocation_View/>
+       */}
     </Screen>
   )
 })
