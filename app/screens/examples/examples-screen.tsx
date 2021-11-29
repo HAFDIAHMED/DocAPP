@@ -109,6 +109,7 @@ export const ExamplesScreen = observer(function ExamplesScreen() {
         
         transform: [{ translateX: translation }],
         justifyContent:'center',}}/>
+        <Image source={require("../../../assets/images/basket_goal_2.png")} style={{height:100,width:100}}/>
 
     </Screen>
   )
