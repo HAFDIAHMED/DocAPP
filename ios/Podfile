@@ -32,6 +32,8 @@ target 'PizzaApp' do
 
   pod 'RNFS', :path => '../node_modules/react-native-fs'
 
+  pod 'react-native-geolocation-service', :path => '../node_modules/react-native-geolocation-service'
+
   target 'PizzaAppTests' do
     inherit! :complete
     # Pods for testing
