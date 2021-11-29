@@ -100,9 +100,7 @@ export const ExamplesScreen = observer(function ExamplesScreen() {
       },position.getLayout()]}
       {...panResponder.panHandlers}
       >
-        <Text style={{alignSelf:'center'}}>Move me </Text>
-        
-        <Image  source ={require("../../../assets/images/basket_ball_png.png")} style={{height:100,width:100}}/>
+        <Icon name ="basketball-sharp" size={30}/>        
       </Animated.View>
       <Icon  name="walk" size={50} color="white" style={{
         margin : metrics.heightPercentageToDP(3),
